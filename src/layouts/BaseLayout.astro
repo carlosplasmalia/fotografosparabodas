@@ -46,26 +46,13 @@ const schemaOrg = schema ?? {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
 
-    <!-- Fonts: carga no bloqueante -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap"
-      />
-    </noscript>
+    <!-- Fonts: autoalojadas, preload del subset crítico -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-normal.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/lato-400.woff2" crossorigin />
+    <!-- LCP hero preload (solo homepage) -->
+    {canonical === 'https://fotografosparabodas.es/' && (
+      <link rel="preload" as="image" href="/images/hero-boda-800.webp" imagesrcset="/images/hero-boda-800.webp 800w, /images/hero-boda.webp 1440w" imagesizes="100vw" />
+    )}
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />

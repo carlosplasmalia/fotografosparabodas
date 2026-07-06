@@ -10,124 +10,143 @@ const p = {
   slug: 'chema-vela',
   city: 'Madrid',
   citySlug: 'madrid',
-  zone: 'Madrid · Toledo · Castilla · España',
+  zone: 'Madrid · Castilla · España · Internacional',
   style: 'Fine art · Editorial',
   tagline: 'Fotografía de boda de autor: composición, luz y emoción en cada frame.',
-  price: 'Consultar disponibilidad',
   yearsExp: 15,
   instagram: 'plasmalia',
   web: 'https://plasmalia.es',
   avatar: '/images/photographers/plasmalia/logo.webp',
   coverImage: '/images/photographers/plasmalia/foto1.jpg',
-  portfolio: [
-    { src: '/images/photographers/plasmalia/foto1.jpg', alt: 'Boda en Madrid — Plasmalia' },
-    { src: '/images/photographers/plasmalia/foto2.jpg', alt: 'Fotografía de autor boda — Chema Vela' },
-    { src: '/images/photographers/plasmalia/foto3.webp', alt: 'Fine art bodas Madrid — Plasmalia' },
-    { src: '/images/photographers/plasmalia/foto4.webp', alt: 'Boda editorial Madrid — Plasmalia' },
-    { src: '/images/portfolio/malaga-1.jpg',            alt: 'Detalles de boda — Plasmalia' },
-    { src: '/images/portfolio/malaga-3.jpg',            alt: 'Ceremonia boda Madrid — Chema Vela' },
-  ],
   awards: [
     'Fearless Photographers Top 30 Worldwide',
     'ISPWP Top Wedding Photographer',
     'Junebug Weddings Best of 2024',
     'SMP Little Black Book',
   ],
-  bio: `Chema Vela es el fotógrafo detrás de Plasmalia, uno de los estudios de fotografía de bodas de mayor reconocimiento internacional en España. Con más de 15 años de experiencia y cientos de bodas documentadas en Madrid, Castilla, el Mediterráneo y destinos de toda Europa, su trabajo ha aparecido en las principales plataformas de referencia del sector.
-
-Su estilo combina el fine art con una narrativa documental que captura la emoción real del día sin artificios. Las bodas que fotografía Chema tienen una coherencia visual muy reconocible: tonos cálidos, composiciones limpias y una atención a la luz que transforma cualquier escenario en algo memorable.
-
-Trabaja con una agenda muy limitada para garantizar la dedicación total a cada pareja. Si queréis trabajar con Chema, contactad con la máxima antelación posible.`,
-  services: [
-    { title: 'Reportaje de boda completo', desc: 'Cobertura íntegra desde los preparativos hasta el baile. Sin horas extra.' },
-    { title: 'Sesión preboda fine art', desc: 'Una sesión previa con dirección creativa para que os sintáis naturales delante de la cámara.' },
-    { title: 'Galería online y entrega en alta resolución', desc: 'Entre 600 y 1.000 imágenes editadas, entregadas en galería privada en 8 semanas.' },
-    { title: 'Bodas de destino en España y Europa', desc: 'Madrid, Castilla, costa mediterránea, Portugal, Italia y más. Presupuesto personalizado según ubicación.' },
-  ],
 };
+
+const faq = [
+  {
+    q: '¿Chema Vela (Plasmalia) viaja fuera de Madrid?',
+    a: 'Sí. Plasmalia cubre bodas en toda España y en Europa. Han fotografiado bodas en Italia, Portugal, Francia y el Reino Unido. Para bodas fuera de Madrid, consultad los gastos de desplazamiento en el presupuesto.',
+  },
+  {
+    q: '¿Cuánto tiempo antes hay que reservar a Plasmalia?',
+    a: 'Su agenda es muy limitada. Para bodas en Madrid en temporada alta (mayo a octubre), es habitual que se llene con 12-18 meses de antelación. Si tenéis fecha, consultad cuanto antes.',
+  },
+  {
+    q: '¿Qué diferencia hay entre fine art y fotografía documental?',
+    a: 'El estilo documental captura lo que ocurre sin dirección. El fine art incorpora una edición más cuidada y cierta dirección artística sin que parezca posado. Plasmalia trabaja en la intersección de los dos: fotografia lo real, pero con un ojo artístico muy desarrollado que transforma cada imagen.',
+  },
+  {
+    q: '¿Cuántas fotos entrega Plasmalia y en qué tiempo?',
+    a: 'El reportaje completo incluye entre 600 y 1.000 fotografías seleccionadas y editadas en alta resolución, entregadas en galería privada online en aproximadamente 8 semanas tras la boda.',
+  },
+  {
+    q: '¿Trabaja Plasmalia con segundo fotógrafo?',
+    a: 'Sí, en la mayoría de bodas trabajan en equipo. Eso permite documentar los preparativos de ambas partes en paralelo y no perder ningún momento durante la ceremonia o el cóctel.',
+  },
+];
 
 const schemaOrg = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "Person"],
   "@id": `https://${site.domain}/fotografo/${p.slug}/`,
   "name": "Plasmalia — Chema Vela",
-  "description": p.tagline,
+  "jobTitle": "Fotógrafo de bodas",
+  "description": "Fotógrafo de bodas en Madrid. Estilo fine art editorial. Premiado por Fearless Photographers Top 30 Worldwide, ISPWP y Junebug Weddings.",
   "url": `https://${site.domain}/fotografo/${p.slug}/`,
   "areaServed": [
     { "@type": "City", "name": "Madrid" },
     { "@type": "AdministrativeArea", "name": "Castilla" },
     { "@type": "Country", "name": "España" },
   ],
-  "knowsAbout": "Fotografía de bodas fine art",
+  "knowsAbout": ["Fotografía de bodas fine art", "Fotografía editorial de bodas", "Fotografía de destino"],
   "award": p.awards,
-  "sameAs": [
-    `https://instagram.com/${p.instagram}`,
-    p.web,
+  "sameAs": [`https://instagram.com/${p.instagram}`, p.web],
+};
+
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": `https://${site.domain}/` },
+    { "@type": "ListItem", "position": 2, "name": "Madrid", "item": `https://${site.domain}/madrid/` },
+    { "@type": "ListItem", "position": 3, "name": "Chema Vela · Plasmalia", "item": `https://${site.domain}/fotografo/${p.slug}/` },
   ],
+};
+
+const schemaFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
 };
 ---
 
 <BaseLayout
-  title="Chema Vela · Plasmalia — Fotógrafo de Bodas en Madrid | fotografosparabodas.es"
-  description="Plasmalia (Chema Vela), fotógrafo de bodas en Madrid con 15 años de experiencia. Fine art y editorial. Premiado internacionalmente. Consulta disponibilidad."
+  title="Chema Vela · Plasmalia — Fotógrafo de Bodas en Madrid · Fine Art · 2026"
+  description="Plasmalia (Chema Vela), fotógrafo de bodas en Madrid. 15 años, estilo fine art editorial. Fearless Photographers Top 30 Worldwide · ISPWP · Junebug Weddings. Consulta disponibilidad."
   canonical={`https://${site.domain}/fotografo/${p.slug}/`}
   schema={schemaOrg}
 >
   <SiteHeader />
   <main class="pt-16 bg-[#FAF7F2]">
 
-    <section class="relative h-[70vh] min-h-[480px] overflow-hidden bg-[#1C1814]">
+    <!-- HERO portada -->
+    <section class="relative h-[80vh] min-h-[560px] overflow-hidden bg-[#1C1814]">
       <img
         src={p.coverImage}
-        alt={`${p.name} — fotógrafo de bodas en ${p.city}`}
-        class="w-full h-full object-cover opacity-70"
+        alt="Plasmalia — Chema Vela, fotógrafo de bodas en Madrid, estilo fine art"
+        class="w-full h-full object-cover opacity-80"
         fetchpriority="high"
         decoding="async"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-[#1C1814] via-transparent to-transparent"></div>
-      <div class="absolute bottom-0 left-0 right-0 max-w-5xl mx-auto px-6 pb-12">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#1C1814] via-[#1C1814]/20 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 max-w-5xl mx-auto px-6 pb-14">
+        <nav class="flex items-center gap-2 font-['Lato'] text-xs text-white/40 mb-6">
+          <a href="/" class="hover:text-[#B89060] transition-colors">Inicio</a>
+          <span>›</span>
+          <a href="/madrid/" class="hover:text-[#B89060] transition-colors">Madrid</a>
+          <span>›</span>
+          <span class="text-[#B89060]">Plasmalia · Chema Vela</span>
+        </nav>
         <div class="flex items-end gap-6">
           <img
             src={p.avatar}
-            alt={p.name}
-            class="w-20 h-20 rounded-full object-cover border-2 border-[#B89060] shrink-0 shadow-xl bg-white p-1"
+            alt="Plasmalia — logo estudio de fotografía de bodas Madrid"
+            class="w-20 h-20 rounded-full object-cover border-2 border-[#B89060] shrink-0 shadow-xl bg-white p-2"
             loading="eager"
           />
           <div>
             <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] mb-1">
-              Fotógrafo verificado · {p.city}
+              Fotógrafo verificado · Madrid
             </p>
-            <h1 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-semibold text-white leading-none mb-2">
-              Plasmalia<br/><span class="text-2xl text-white/70 font-normal">Chema Vela</span>
+            <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-semibold text-white leading-none mb-1">
+              Plasmalia
             </h1>
-            <p class="font-['Lato'] text-white/70 text-base italic">
-              "{p.tagline}"
-            </p>
+            <p class="font-['Cormorant_Garamond'] text-2xl text-white/60 font-light mb-2">Chema Vela</p>
+            <p class="font-['Lato'] text-white/60 text-sm italic">"{p.tagline}"</p>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="bg-[#1C1814] border-b border-[#2E2520]">
-      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center gap-6">
-        <div class="flex items-center gap-2">
-          <span class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58]">Estilo</span>
-          <span class="font-['Lato'] text-sm text-[#C4A5A0]">{p.style}</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58]">Zona</span>
-          <span class="font-['Lato'] text-sm text-[#C4A5A0]">{p.zone}</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58]">Experiencia</span>
-          <span class="font-['Lato'] text-sm text-[#C4A5A0]">{p.yearsExp} años</span>
-        </div>
+    <!-- META BAR -->
+    <div class="bg-[#1C1814] border-b border-[#2E2520] sticky top-0 z-40">
+      <div class="max-w-5xl mx-auto px-6 py-3 flex flex-wrap items-center gap-4 md:gap-8">
+        <span class="font-['Lato'] text-xs text-[#9A8880]"><strong class="text-[#C4A5A0]">Estilo:</strong> {p.style}</span>
+        <span class="font-['Lato'] text-xs text-[#9A8880]"><strong class="text-[#C4A5A0]">Zona:</strong> {p.zone}</span>
+        <span class="font-['Lato'] text-xs text-[#9A8880]"><strong class="text-[#C4A5A0]">Experiencia:</strong> {p.yearsExp} años</span>
         <div class="ml-auto">
           <a
-            href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20el%20fotógrafo%20Chema%20Vela%20(Plasmalia)%20para%20mi%20boda.%20¿Podéis%20consultarme%20disponibilidad%3F`}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-gold text-sm py-2.5 px-5"
+            href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20Chema%20Vela%20(Plasmalia)%20para%20mi%20boda%20en%20Madrid.%20¿Podéis%20consultarme%20disponibilidad%3F`}
+            target="_blank" rel="noopener noreferrer"
+            class="btn-gold text-xs py-2 px-4"
           >
             Consultar disponibilidad
           </a>
@@ -135,95 +154,160 @@ const schemaOrg = {
       </div>
     </div>
 
-    <div class="max-w-5xl mx-auto px-6 py-16 space-y-20">
+    <div class="max-w-5xl mx-auto px-6 py-16">
 
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        <div>
-          <p class="section-eyebrow mb-4">Sobre el fotógrafo</p>
-          <h2 class="section-title mb-6">Quince años<br/>de fotografía de autor</h2>
-          {p.bio.split('\n\n').map(para => (
-            <p class="font-['Lato'] text-[#6B5E58] text-sm leading-loose mb-4">{para}</p>
+      <!-- DOS FOTOS iniciales lado a lado -->
+      <section class="mb-20">
+        <div class="grid grid-cols-2 gap-2">
+          {[
+            { src: '/images/photographers/plasmalia/foto2.jpg', alt: 'Boda fine art en Madrid — Plasmalia' },
+            { src: '/images/photographers/plasmalia/foto3.webp', alt: 'Fotografía editorial de boda — Chema Vela Plasmalia' },
+          ].map(img => (
+            <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[4/5]">
+              <img src={img.src} alt={img.alt}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy" decoding="async" />
+            </div>
           ))}
-          <p class="font-['Lato'] text-xs text-[#9A8880] mt-2">
-            Fotos: <a href={p.web} target="_blank" rel="noopener noreferrer nofollow" class="text-[#B89060] hover:underline">{p.web}</a>
-          </p>
+        </div>
+        <p class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">
+          Fotos: <a href={p.web} target="_blank" rel="noopener noreferrer nofollow" class="hover:underline text-[#B89060]">plasmalia.es</a>
+        </p>
+      </section>
+
+      <!-- ARTÍCULO + SIDEBAR -->
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+        <div class="lg:col-span-2 space-y-8">
+
+          <div>
+            <p class="section-eyebrow mb-4">Sobre Plasmalia</p>
+            <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#1C1814] mb-6 leading-snug">
+              Quince años construyendo<br/>una firma propia en cada boda
+            </h2>
+            <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+              <p>
+                Chema Vela es el fotógrafo detrás de Plasmalia, uno de los estudios de fotografía de bodas con mayor reconocimiento internacional en España. Más de quince años de trabajo han consolidado una firma visual muy reconocible: tonos cálidos, composición de autor, y una narrativa que captura la emoción real del día sin artificios ni direcciones forzadas.
+              </p>
+              <p>
+                Su trabajo ha sido reconocido por las principales plataformas del sector a nivel mundial: Fearless Photographers Top 30 Worldwide, ISPWP, Junebug Weddings y SMP Little Black Book. No son premios coleccionados por costumbre. Son el resultado de años de boda tras boda produciendo fotos que van más allá de la documentación: fotos que cuentan algo, que tienen un punto de vista y que no envejecen.
+              </p>
+            </div>
+          </div>
+
+          <!-- FOTO ANCHA intercalada -->
+          <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[16/7] my-6">
+            <img
+              src="/images/photographers/plasmalia/foto4.webp"
+              alt="Momento de boda en Madrid capturado por Plasmalia — Chema Vela fotógrafo"
+              class="w-full h-full object-cover"
+              loading="lazy" decoding="async"
+            />
+          </div>
+
+          <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+            <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">
+              El fine art como mirada, no como filtro
+            </h3>
+            <p>
+              Hay una confusión frecuente sobre lo que es la fotografía fine art de bodas. Para algunos, es sinónimo de edición desaturada o de fotos con textura de película. Para Chema, es otra cosa: es una forma de mirar antes de disparar. La composición, el momento, la relación entre la luz y el sujeto. Todo eso ocurre antes de que el archivo llegue al ordenador.
+            </p>
+            <p>
+              Eso es lo que diferencia las fotos de Plasmalia de las de un fotógrafo que simplemente aplica un preset de moda. Hay una intención detrás de cada encuadre que no se puede imitar en postproducción. Y eso es exactamente lo que se nota cuando ves una boda completa suya: hay coherencia, hay voz propia, hay algo que distingue cada imagen de las miles de fotos de boda que se producen cada fin de semana en España.
+            </p>
+
+            <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">
+              Madrid como escenario: de El Retiro a los pazos castellanos
+            </h3>
+            <p>
+              Chema lleva más de una década fotografiando bodas en la Comunidad de Madrid y Castilla. Conoce los palacios del centro, las fincas de la sierra, las bodegas de la meseta y los cortijos de los alrededores con la intimidad de quien ha documentado cientos de días felices en cada uno de esos espacios.
+            </p>
+            <p>
+              Esa experiencia geográfica tiene un valor concreto: sabe a qué hora tiene luz cada venue, cómo manejar la dureza de la luz de verano en una terraza de piedra o cómo aprovechar las corrientes de aire en los jardines históricos para crear fotos con movimiento y vida. Madrid es una ciudad difícil de fotografiar bien, especialmente en verano. Con Chema, esa dificultad desaparece.
+            </p>
+
+            <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">
+              La entrega: lo que recibiréis y cuándo
+            </h3>
+            <p>
+              Plasmalia trabaja habitualmente con un equipo de dos fotógrafos, lo que permite documentar los preparativos de ambas partes en paralelo y no perder ningún momento durante la ceremonia o el cóctel. El reportaje completo incluye entre 600 y 1.000 fotografías seleccionadas y editadas en alta resolución, entregadas en galería privada online en aproximadamente 8 semanas.
+            </p>
+            <p>
+              La agenda de Chema es muy limitada. Solo acepta un número reducido de bodas al año para garantizar la dedicación total a cada pareja. Si tenéis fecha en mente, consultad disponibilidad cuanto antes. Las temporadas altas en Madrid (mayo-octubre) suelen llenarse con más de un año de antelación.
+            </p>
+          </div>
+
         </div>
 
-        <div class="space-y-6">
+        <!-- SIDEBAR -->
+        <div class="space-y-5 lg:sticky lg:top-20 self-start">
+          <div class="bg-[#1C1814] rounded-sm p-6 text-white">
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold mb-3">¿Queréis a Chema?</p>
+            <p class="font-['Lato'] text-sm text-[#9A8880] leading-relaxed mb-5">
+              Consultadnos fecha y ciudad. Confirmamos disponibilidad en menos de 24 horas.
+            </p>
+            <a
+              href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20Chema%20Vela%20(Plasmalia)%20para%20mi%20boda%20en%20Madrid.%20¿Podéis%20consultarme%20disponibilidad%3F`}
+              target="_blank" rel="noopener noreferrer"
+              class="btn-gold w-full text-sm py-3 text-center block"
+            >
+              Consultar por WhatsApp →
+            </a>
+            <p class="font-['Lato'] text-[10px] text-[#6B5E58] text-center mt-3">Sin compromiso · Gratis</p>
+          </div>
+
           <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
             <p class="section-eyebrow mb-4">Reconocimientos</p>
             <ul class="space-y-3">
               {p.awards.map(a => (
-                <li class="flex items-center gap-3">
-                  <span class="text-[#B89060]">🏆</span>
-                  <span class="font-['Lato'] text-sm text-[#1C1814]">{a}</span>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#B89060] mt-0.5 shrink-0">★</span>
+                  <span class="font-['Lato'] text-sm text-[#1C1814] leading-snug">{a}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div class="bg-[#1C1814] rounded-sm p-6 text-white">
-            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold mb-3">¿Queréis trabajar con Chema?</p>
-            <p class="font-['Lato'] text-sm text-[#9A8880] leading-relaxed mb-5">
-              Consultadnos fecha, ciudad y tipo de boda. Confirmamos disponibilidad en menos de 24 horas.
-            </p>
-            <a
-              href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20Chema%20Vela%20(Plasmalia)%20para%20mi%20boda.%20¿Podéis%20consultarme%20disponibilidad%3F`}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-gold w-full text-sm py-3 text-center block"
-            >
-              Consultar disponibilidad →
-            </a>
-            <p class="font-['Lato'] text-[10px] text-[#6B5E58] text-center mt-3">
-              Sin compromiso · Respuesta en 24 horas
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-6">
+            <p class="section-eyebrow mb-4">En cifras</p>
+            <ul class="space-y-4">
+              {[
+                { n: '+15', label: 'años fotografiando bodas' },
+                { n: '+300', label: 'bodas documentadas' },
+                { n: 'España+', label: 'cobertura internacional' },
+                { n: '600–1.000', label: 'fotos editadas por boda' },
+                { n: '8 sem.', label: 'tiempo de entrega' },
+              ].map(s => (
+                <li class="flex items-baseline justify-between gap-2 border-b border-[#E8DDD3] pb-3 last:border-0 last:pb-0">
+                  <span class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#B89060]">{s.n}</span>
+                  <span class="font-['Lato'] text-xs text-[#6B5E58] text-right">{s.label}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-white border border-[#E8DDD3] rounded-sm p-6 text-center">
+            <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-3">Zona de cobertura</p>
+            <p class="font-['Cormorant_Garamond'] text-lg text-[#1C1814] leading-relaxed">
+              Madrid · Toledo<br/>Castilla · España<br/>Portugal · Italia<br/>Europa
             </p>
           </div>
         </div>
       </section>
 
-      <section>
-        <div class="flex items-baseline justify-between mb-8">
-          <div>
-            <p class="section-eyebrow mb-2">Portfolio</p>
-            <h2 class="section-title">Trabajo reciente</h2>
-          </div>
-          <a
-            href={`https://instagram.com/${p.instagram}`}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] hover:underline"
-          >
-            Ver más en IG →
-          </a>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-          {p.portfolio.map((img, i) => (
-            <div class:list={[
-              "overflow-hidden rounded-sm bg-[#E8DDD3]",
-              i === 0 ? "col-span-2 md:col-span-2 row-span-2 aspect-[4/3]" : "aspect-square"
-            ]}>
-              <img
-                src={img.src}
-                alt={img.alt}
-                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                loading={i < 3 ? 'eager' : 'lazy'}
-                decoding="async"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
+      <!-- SERVICIOS -->
+      <section class="mb-20">
         <div class="text-center mb-10">
-          <p class="section-eyebrow mb-4">Lo que incluye</p>
-          <h2 class="section-title">Servicios y paquetes</h2>
+          <p class="section-eyebrow mb-4">Qué incluye</p>
+          <h2 class="section-title">Lo que recibiréis</h2>
           <span class="gold-divider"></span>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {p.services.map(s => (
+          {[
+            { title: 'Reportaje completo en equipo', desc: 'Habitualmente con dos fotógrafos para no perder ningún momento. Cobertura desde preparativos hasta el baile.' },
+            { title: 'Sesión preboda fine art', desc: 'Una sesión previa con dirección creativa para que os sintáis naturales delante de la cámara el día de la boda.' },
+            { title: 'Galería online alta resolución', desc: 'Entre 600 y 1.000 imágenes editadas sin marca de agua, entregadas en galería privada en 8 semanas.' },
+            { title: 'Bodas de destino', desc: 'Madrid, Castilla, costa mediterránea, Portugal, Italia y más. Presupuesto personalizado por ubicación.' },
+          ].map(s => (
             <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
               <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] mb-2">{s.title}</h3>
               <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">{s.desc}</p>
@@ -232,24 +316,50 @@ const schemaOrg = {
         </div>
       </section>
 
-      <section class="bg-[#F2E8D5] rounded-sm p-10 text-center">
-        <p class="section-eyebrow mb-4">¿Conectamos?</p>
-        <h2 class="section-title mb-4">Consultad disponibilidad<br/>sin compromiso</h2>
+      <!-- FAQ -->
+      <section class="mb-20">
+        <div class="text-center mb-10">
+          <p class="section-eyebrow mb-4">Preguntas frecuentes</p>
+          <h2 class="section-title">Todo lo que necesitáis saber<br/>sobre Plasmalia</h2>
+          <span class="gold-divider"></span>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4">
+          {faq.map(item => (
+            <details class="bg-white border border-[#E8DDD3] rounded-sm group">
+              <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
+                <span class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] leading-snug">
+                  {item.q}
+                </span>
+                <span class="text-[#B89060] shrink-0 text-xl font-light group-open:rotate-45 transition-transform duration-200">+</span>
+              </summary>
+              <div class="px-6 pb-5 font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+                {item.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="bg-[#1C1814] rounded-sm p-10 md:p-16 text-center">
+        <p class="section-eyebrow text-[#B89060] mb-4">¿Conectamos?</p>
+        <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-white mb-4">
+          Consultad disponibilidad<br/>sin compromiso
+        </h2>
         <span class="gold-divider"></span>
-        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 max-w-md mx-auto leading-relaxed text-sm">
+        <p class="font-['Lato'] text-[#9A8880] mt-6 mb-8 max-w-md mx-auto leading-relaxed text-sm">
           Contadnos vuestra fecha y dónde es la boda. Confirmamos si Chema está disponible y os enviamos toda la información.
         </p>
         <a
           href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20Chema%20Vela%20(Plasmalia)%20para%20mi%20boda%20en%20Madrid.%20¿Podéis%20consultarme%20disponibilidad%3F`}
-          target="_blank"
-          rel="noopener noreferrer"
+          target="_blank" rel="noopener noreferrer"
           class="btn-gold text-base px-10 py-4 inline-flex items-center gap-3"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           Consultar por WhatsApp
         </a>
-        <p class="font-['Lato'] text-xs text-[#9A8880] mt-4">
-          O vuelve al directorio de <a href={`/${p.citySlug}/`} class="text-[#B89060] hover:underline">fotógrafos en {p.city}</a>
+        <p class="font-['Lato'] text-xs text-[#6B5E58] mt-5">
+          O vuelve a <a href="/madrid/" class="text-[#B89060] hover:underline">fotógrafos de bodas en Madrid</a>
         </p>
       </section>
 
@@ -258,3 +368,6 @@ const schemaOrg = {
   <SiteFooter />
   <WhatsAppFloat city={p.city} />
 </BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaBreadcrumb)} />
+<script type="application/ld+json" set:html={JSON.stringify(schemaFaq)} />

@@ -9,6 +9,7 @@ export const site = {
 };
 
 export const cities = [
+  { slug: 'madrid',     name: 'Madrid',     province: 'Madrid',     region: 'Comunidad de Madrid', avgPrice: '1.600€ – 3.000€' },
   { slug: 'malaga',     name: 'Málaga',     province: 'Málaga',     region: 'Andalucía', avgPrice: '1.400€ – 2.200€' },
   { slug: 'zaragoza',  name: 'Zaragoza',   province: 'Zaragoza',   region: 'Aragón',    avgPrice: '1.200€ – 2.000€' },
   { slug: 'murcia',    name: 'Murcia',     province: 'Murcia',     region: 'Murcia',    avgPrice: '1.100€ – 1.900€' },

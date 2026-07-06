@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import Hero from '../../components/Hero.astro';
-import PhotographerProfile from '../../components/PhotographerProfile.astro';
+import ConciergeCitySection from '../../components/ConciergeCitySection.astro';
 import FAQSection from '../../components/FAQSection.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 import { site } from '../../config/site';
@@ -11,64 +11,20 @@ import { site } from '../../config/site';
 const city = 'Granada';
 const slug = 'granada';
 const avgPrice = '1.300€ – 2.200€';
-
-const photographers = [
-  {
-    name: 'Javier Ruiz',
-    city: 'Granada',
-    zone: 'Granada · Sierra Nevada · Alpujarra',
-    style: 'Fine art y documental',
-    styleDesc: 'La Alhambra como telón de fondo, bodas únicas en el sur',
-    price: 'desde 1.500€',
-    bio: 'Javier Ruiz es granadino y lleva más de 11 años fotografiando bodas en la ciudad y su provincia. La Alhambra, el Albaicín y los cortijos de la Alpujarra son sus escenarios habituales. Reconocido por su capacidad para capturar la emoción de bodas íntimas tanto como grandes celebraciones.',
-    avatar: '/images/cities/granada.jpg',
-    portfolio: [
-      { src: '/images/portfolio/malaga-1.jpg', alt: 'Boda en Granada — Javier Ruiz' },
-      { src: '/images/portfolio/malaga-4.jpg', alt: 'Fotografía boda Alhambra — Javier Ruiz' },
-      { src: '/images/cities/granada.jpg',     alt: 'Bodas Granada — Javier Ruiz' },
-    ],
-    badge: 'Verificado',
-    yearsExp: 11,
-    awards: ['ISPWP Top Photographer', 'Fearless Photographers Associate'],
-    photoCredit: 'Javier Ruiz',
-  },
-];
-
-const schemaOrg = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": `Mejores fotógrafos de bodas en ${city}`,
-  "description": `Directorio de los mejores fotógrafos de bodas en ${city}. Alhambra, Albaicín y Sierra Nevada.`,
-  "url": `https://${site.domain}/${slug}/`,
-  "numberOfItems": photographers.length,
-  "itemListElement": photographers.map((p, i) => ({
-    "@type": "ListItem",
-    "position": i + 1,
-    "item": {
-      "@type": "LocalBusiness",
-      "name": p.name,
-      "description": p.bio,
-      "areaServed": { "@type": "City", "name": city },
-      "priceRange": p.price,
-      "knowsAbout": "Fotografía de bodas",
-    }
-  })),
-};
 ---
 
 <BaseLayout
-  title="Fotógrafos de Bodas en Granada — Alhambra y Albaicín 2026"
-  description="Los mejores fotógrafos de bodas en Granada. Bodas en la Alhambra, Albaicín, Sierra Nevada y cortijos de la Alpujarra. Precio medio: 1.300€ – 2.200€."
+  title="Fotógrafo de Bodas en Granada — Alhambra y Albaicín · Selección 2026"
+  description="Selección personalizada de fotógrafos de bodas en Granada. Alhambra, Albaicín, Sierra Nevada y la Alpujarra. Os encontramos el ideal. Gratis, 24 horas."
   canonical={`https://${site.domain}/${slug}/`}
-  schema={schemaOrg}
 >
   <SiteHeader transparent={true} />
   <main>
     <Hero
       city={city}
-      h1={`Fotógrafos de Bodas\nen Granada`}
-      subtitle="La Alhambra, el Albaicín y los cortijos de la Alpujarra. Granada tiene los escenarios de boda más únicos de Andalucía."
-      ctaText="Ver fotógrafos"
+      h1={`Fotógrafo de Bodas\nen Granada`}
+      subtitle="La Alhambra, el Albaicín y los cortijos de la Alpujarra. Os encontramos el fotógrafo que sabe aprovechar los escenarios únicos de Granada."
+      ctaText="Consultar ahora"
       ctaHref="#fotografos"
       imageSrc="/images/cities/granada.jpg"
     />
@@ -80,10 +36,10 @@ const schemaOrg = {
             <p class="section-eyebrow mb-4">Granada y provincia</p>
             <h2 class="section-title mb-6">La Alhambra<br/>como telón de fondo</h2>
             <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
-              Granada tiene algo que ninguna otra ciudad española puede ofrecer: la Alhambra. Para una boda, que ese monumento sea el fondo de las fotos es un privilegio que cambia completamente el resultado. Pero también exige fotógrafos que sepan manejarse en interiores con luz filtrada y exteriores con vistas de vértigo.
+              Granada tiene algo que ninguna otra ciudad española puede ofrecer: la Alhambra. Para una boda, ese monumento como fondo es un privilegio que cambia completamente el resultado. Pero también exige fotógrafos que sepan manejarse en interiores con luz filtrada y exteriores con vistas de vértigo.
             </p>
             <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
-              Más allá del monumento, los cortijos de la Alpujarra, las villas con vistas a Sierra Nevada o el barrio del Albaicín ofrecen escenarios que mezclan arquitectura árabe, naturaleza y esa luz tan particular del sur en otoño.
+              Los cortijos de la Alpujarra, las villas con vistas a Sierra Nevada o el barrio del Albaicín ofrecen escenarios únicos para bodas con mucho carácter.
             </p>
           </div>
           <div class="bg-[#F2E8D5] rounded-sm p-8">
@@ -91,9 +47,9 @@ const schemaOrg = {
             <ul class="space-y-4">
               {[
                 { label: 'Precio medio', value: avgPrice },
-                { label: 'Fotógrafos verificados', value: `${photographers.length} activo` },
-                { label: 'Temporada alta', value: 'Abril – Junio, Septiembre – Noviembre' },
-                { label: 'Zonas populares', value: 'Alhambra, Albaicín, Alpujarra, Sierra Nevada' },
+                { label: 'Tiempo de respuesta', value: 'menos de 24h' },
+                { label: 'Temporada alta', value: 'Abril – Junio, Sept – Nov' },
+                { label: 'Zonas populares', value: 'Alhambra, Albaicín, Alpujarra' },
               ].map(item => (
                 <li class="flex items-start justify-between gap-4">
                   <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
@@ -106,27 +62,7 @@ const schemaOrg = {
       </div>
     </section>
 
-    <section id="fotografos" class="py-20 bg-[#FAF7F2]">
-      <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center mb-14">
-          <p class="section-eyebrow mb-4">Directorio exclusivo</p>
-          <h2 class="section-title">Fotógrafo de boda<br/>de referencia en Granada</h2>
-          <span class="gold-divider"></span>
-        </div>
-
-        <div class="space-y-8">
-          {photographers.map((p, i) => <PhotographerProfile photographer={p} featured={i === 0} />)}
-        </div>
-
-        <div class="mt-8 border-2 border-dashed border-[#E8DDD3] rounded-sm p-10 text-center">
-          <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#6B5E58] mb-3">Plaza disponible en Granada</p>
-          <p class="font-['Lato'] text-sm text-[#9A8880] max-w-sm mx-auto mb-6 leading-relaxed">
-            Seleccionamos un segundo fotógrafo para Granada y la Alpujarra. ¿Fotografías bodas en la zona?
-          </p>
-          <a href="/unete/" class="btn-outline text-sm px-6 py-3">Solicitar plaza →</a>
-        </div>
-      </div>
-    </section>
+    <ConciergeCitySection city={city} avgPrice={avgPrice} />
 
     <section class="py-16 bg-white">
       <div class="max-w-3xl mx-auto px-6">
@@ -135,10 +71,10 @@ const schemaOrg = {
         </h2>
         <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
           <p>
-            El precio de un fotógrafo de bodas en Granada va de <strong class="text-[#1C1814]">1.300€ a 2.200€</strong>. Para bodas en la Alhambra (que requiere permisos especiales) o en cortijos privados de la Alpujarra, el precio tiende a ser algo superior.
+            El precio de un fotógrafo de bodas en Granada va de <strong class="text-[#1C1814]">1.300€ a 2.200€</strong>. Para bodas cerca de la Alhambra (que requiere permisos especiales) o en cortijos privados de la Alpujarra, el precio suele ser algo superior.
           </p>
           <p>
-            Granada tiene una particularidad: las bodas de otoño e invierno (octubre-diciembre) son muy populares por la luz y las temperaturas suaves. Eso hace que la demanda de fotógrafos sea alta en una franja más larga del año que en otras ciudades andaluzas.
+            Granada tiene una particularidad: las bodas de otoño e invierno son muy populares por la luz y las temperaturas suaves. Eso hace que la demanda de fotógrafos sea alta durante una franja más larga del año.
           </p>
           <p>
             Reservad con 10-12 meses si tenéis una fecha concreta. Los fines de semana de septiembre y octubre se llenan antes que en verano.
@@ -151,17 +87,14 @@ const schemaOrg = {
 
     <section class="py-16 bg-[#F2E8D5]">
       <div class="max-w-5xl mx-auto px-6 text-center">
-        <p class="section-eyebrow mb-4">También en Andalucía</p>
-        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-8">Más ciudades</h2>
+        <p class="section-eyebrow mb-4">También disponemos de fotógrafos en</p>
         <div class="flex flex-wrap justify-center gap-3">
           {[
             { name: 'Málaga', slug: 'malaga' },
             { name: 'Córdoba', slug: 'cordoba' },
             { name: 'Madrid', slug: 'madrid' },
           ].map(c => (
-            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">
-              Fotógrafos en {c.name}
-            </a>
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">Fotógrafos en {c.name}</a>
           ))}
         </div>
       </div>

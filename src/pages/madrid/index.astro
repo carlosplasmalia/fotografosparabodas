@@ -151,6 +151,35 @@ const schemaOrg = {
       </div>
     </section>
 
+    <!-- Precio fotógrafo bodas Madrid -->
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Madrid precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Madrid?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Madrid es una de las ciudades con mayor rango de precios en fotografía de bodas de España. La diferencia entre un fotógrafo sin experiencia y un profesional premiado puede ser enorme, y no siempre se refleja de forma obvia en el portfolio.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '1.200 – 2.000 €', nivel: 'Iniciación', desc: 'Fotógrafos con menos de 3 años de experiencia en bodas. Portfolio en formación, sin premios internacionales.' },
+            { rango: '2.000 – 3.500 €', nivel: 'Intermedio', desc: 'Fotógrafos con trayectoria consolidada, estilo propio y referencias verificables. El rango más común en Madrid.' },
+            { rango: '3.500 – 6.000 €', nivel: 'Referencia', desc: 'Fotógrafos con premios internacionales, agenda muy limitada y publicaciones en medios especializados.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Los fotógrafos de nuestra red en Madrid están en el rango intermedio-referencia. Si queréis saber si encajan con vuestro presupuesto,
+          <a href="/#contacto" class="text-[#8B6A3A] underline">consultadnos sin compromiso</a> y os orientamos antes de que habléis con nadie.
+        </p>
+      </div>
+    </section>
+
     <FAQSection city={city} />
 
     <!-- Related cities -->

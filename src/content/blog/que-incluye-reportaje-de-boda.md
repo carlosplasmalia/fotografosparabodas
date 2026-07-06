@@ -48,7 +48,7 @@ Si queréis ver qué incluyen los fotógrafos de nuestro directorio, podéis con
 
 ---
 
-*¿Tenéis ya claro lo que buscáis? Consultad disponibilidad en el [directorio de fotógrafos de bodas](/malaga/) más cercano a vuestra celebración.*
+*¿Tenéis ya claro lo que buscáis? Consultad disponibilidad en el [directorio de fotógrafos](/malaga/) más cercano a vuestra celebración.*
 
 ---
 

@@ -54,7 +54,7 @@ Los fotógrafos más solicitados llenan su agenda entre mayo y octubre con mucha
 
 Comparar precios sin ver bodas completas. Un fotógrafo puede tener 15 fotos perfectas en Instagram y un reportaje final mediocre. Pedid siempre ver el trabajo de una boda entera, no solo los mejores momentos del portfolio. Eso os dará una idea real de la consistencia del trabajo.
 
-Si queréis ver fotógrafos verificados con distintos rangos de precio, podéis explorar el [directorio de fotógrafos de bodas en Málaga](/malaga/) o en [Madrid](/madrid/) y consultar disponibilidad directamente desde la ficha de cada profesional.
+Si queréis ver fotógrafos verificados con distintos rangos de precio, podéis explorar el [fotógrafos de bodas en Málaga](/malaga/) o en [Madrid](/madrid/) y consultar disponibilidad directamente desde la ficha de cada profesional.
 
 ---
 

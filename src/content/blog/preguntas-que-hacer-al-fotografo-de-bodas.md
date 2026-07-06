@@ -58,7 +58,7 @@ Esta no es una pregunta que le hagáis al fotógrafo, sino que os hacéis vosotr
 
 ---
 
-Si queréis empezar a explorar sin presión, en el [directorio de fotógrafos de bodas](/malaga/) podéis ver perfiles verificados y consultar disponibilidad directamente. Todas las consultas son gratuitas y sin compromiso.
+Si queréis empezar a explorar sin presión, en el [directorio de fotógrafos](/malaga/) podéis ver perfiles verificados y consultar disponibilidad directamente. Todas las consultas son gratuitas y sin compromiso.
 
 *¿Ya tenéis fotógrafo en mente? Leed también [qué incluye un reportaje de boda completo](/blog/que-incluye-reportaje-de-boda/) para saber qué pedir por escrito antes de firmar.*
 

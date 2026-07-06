@@ -3,8 +3,8 @@ title: "Qué incluye un reportaje de boda completo (y qué son extras)"
 description: "Todo lo que deberías recibir al contratar un fotógrafo de bodas en España: fotos, edición, entrega, álbum y lo que no está incluido si no lo pedís."
 date: "2026-06-01"
 categoria: "Guías"
-imagen: "/images/blog/reportaje-boda-completo.jpg"
-imagenAlt: "Fotógrafo editando fotos de boda en su ordenador"
+imagen: "/images/portfolio/malaga-1.jpg"
+imagenAlt: "Reportaje completo de boda en Málaga — fotografía de Albert Pamies"
 featured: false
 ---
 

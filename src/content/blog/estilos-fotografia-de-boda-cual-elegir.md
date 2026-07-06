@@ -3,8 +3,8 @@ title: "Estilos de fotografía de boda: cuál elegir según vuestra personalidad
 description: "Documental, romántico, editorial o fine art. Explicamos cada estilo de fotografía de bodas con ejemplos para que encuentres el que encaja con vosotros."
 date: "2026-06-10"
 categoria: "Guías"
-imagen: "/images/blog/estilos-fotografia-boda.jpg"
-imagenAlt: "Collage de estilos de fotografía de bodas: documental, romántico y editorial"
+imagen: "/images/photographers/albert/foto3.jpg"
+imagenAlt: "Fotografía de boda en estilo documental emocional por Albert Pamies, Málaga"
 featured: false
 ---
 
@@ -22,6 +22,11 @@ Este estilo funciona especialmente bien para parejas a quienes no les gusta posa
 
 El inconveniente, si se puede llamar así, es que el resultado depende mucho de lo que pase durante la boda. Un fotógrafo documental excelente saca magia de momentos ordinarios, pero no puede crear momentos que no existieron.
 
+<figure>
+<img src="/images/photographers/albert/foto1.jpg" alt="Fotografía documental de boda: momento espontáneo capturado en Málaga" loading="lazy" />
+<figcaption>Estilo documental emocional · Foto: <a href="/fotografo/albert-pamies/">Albert Pamies</a></figcaption>
+</figure>
+
 ## Fotografía romántica: emoción y luz trabajadas
 
 El estilo romántico incorpora más dirección. El fotógrafo sí busca ciertos momentos, ciertos fondos y ciertas luces, y pide a la pareja que se coloque en una posición concreta. Pero lo hace con delicadeza, sin que parezca forzado.
@@ -38,6 +43,11 @@ No es para todo el mundo, y eso está bien. Requiere parejas dispuestas a dedica
 
 El resultado, cuando encaja, es impresionante. Fotos que parecen campañas publicitarias. Imágenes que una publicación de bodas publicaría sin dudar.
 
+<figure>
+<img src="/images/photographers/plasmalia/foto3.webp" alt="Fotografía editorial de boda en Madrid con composición y luz trabajadas" loading="lazy" />
+<figcaption>Estilo editorial · Foto: <a href="/fotografo/chema-vela/">Plasmalia</a></figcaption>
+</figure>
+
 ## Fine art: cuando la fotografía es arte
 
 El fine art es un subgénero del estilo romántico con influencias del editorial. Se caracteriza por una edición muy cuidada, con paletas de color propias del fotógrafo, texturas que recuerdan a la fotografía en película y una estética atemporal que no envejece.
@@ -50,7 +60,7 @@ La forma más rápida de encontrar vuestro estilo es pasar una tarde mirando fot
 
 Luego buscad un fotógrafo cuyo trabajo se parezca a esa colección. No os conforméis con uno que "también hace ese estilo". Buscad a alguien cuyo portfolio natural ya se parezca a lo que queréis, sin necesidad de pedírselo.
 
-En nuestro directorio podéis filtrar por estilo. [Albert Pamies](/fotografo/albert-pamies/), por ejemplo, trabaja el documental emocional con una sensibilidad muy próxima al fine art. Podéis consultar su disponibilidad en Málaga y la Costa del Sol directamente desde su perfil.
+Si tenéis claro el estilo pero no sabéis por dónde empezar, podemos orientaros. [Albert Pamies](/fotografo/albert-pamies/), por ejemplo, trabaja el documental emocional con una sensibilidad muy próxima al fine art y cubre Málaga y la Costa del Sol. Os lo presentamos si encaja con lo que buscáis.
 
 ---
 

@@ -3,8 +3,8 @@ title: "12 preguntas que debes hacer al fotógrafo de bodas antes de contratar"
 description: "Las preguntas esenciales para hacer al fotógrafo de bodas antes de firmar. Evita sorpresas y asegúrate de que es el indicado para vosotros."
 date: "2026-05-20"
 categoria: "Guías"
-imagen: "/images/blog/preguntas-fotografo-boda.jpg"
-imagenAlt: "Pareja reunida con un fotógrafo de bodas revisando su trabajo"
+imagen: "/images/photographers/plasmalia/foto1.jpg"
+imagenAlt: "Fotografía de boda en Madrid por Plasmalia — momento de ceremonia"
 featured: false
 ---
 

@@ -3,8 +3,8 @@ title: "Cómo elegir al fotógrafo de bodas perfecto (sin arrepentirte)"
 description: "Guía práctica para elegir el fotógrafo de bodas que encaje con vosotros. Qué mirar más allá del precio y el portfolio."
 date: "2026-06-20"
 categoria: "Guías"
-imagen: "/images/blog/elegir-fotografo-boda.jpg"
-imagenAlt: "Pareja mirando un portfolio de fotos de boda con el fotógrafo"
+imagen: "/images/photographers/plasmalia/foto2.jpg"
+imagenAlt: "Reportaje de boda en Madrid fotografiado por Plasmalia"
 featured: true
 ---
 
@@ -23,6 +23,11 @@ Cada respuesta corresponde a un estilo diferente: romántico, documental o edito
 El portfolio de un fotógrafo es su colección de mejores momentos. El problema es que nadie pone en su web las fotos de la hora muerta, la luz horrible del comedor o los invitados borrosos del baile.
 
 Pedid ver el reportaje completo de al menos una boda. Una boda entera, de principio a fin. Ahí veréis si la calidad se mantiene durante todo el día o solo en condiciones perfectas. Un buen fotógrafo no tiene problema en enseñaros una boda completa. Quien pone excusas, preocupa.
+
+<figure>
+<img src="/images/photographers/plasmalia/foto4.webp" alt="Fotograma de un reportaje completo de boda en Madrid — Plasmalia" loading="lazy" />
+<figcaption>De un reportaje completo · Foto: <a href="/fotografo/chema-vela/">Plasmalia</a></figcaption>
+</figure>
 
 ## La química personal importa más de lo que parece
 
@@ -44,7 +49,7 @@ Elegir el fotógrafo más barato disponible es un error frecuente. La fotografí
 
 Eso no significa que haya que gastar una fortuna. Significa que si tenéis que elegir entre ahorrar en flores o en fotógrafo, ahorrad en flores.
 
-Si el presupuesto es limitado, buscad fotógrafos emergentes con portfolio sólido. Hay talento enorme en personas que llevan pocos años pero han trabajado su ojo y su técnica con seriedad. En el [directorio de fotógrafos de bodas](/malaga/) podéis encontrar perfiles verificados con distintos rangos de precio y consultar disponibilidad sin compromiso.
+Si el presupuesto es limitado, buscad fotógrafos emergentes con portfolio sólido. Hay talento enorme en personas que llevan pocos años pero han trabajado su ojo y su técnica con seriedad. Contadnos vuestro presupuesto y ciudad y os buscamos el fotógrafo que encaja. Es gratis y sin compromiso: [consultadnos por WhatsApp](https://wa.me/34625677487?text=Hola%2C%20busco%20fotógrafo%20de%20bodas.%20¿Podéis%20ayudarme%3F) y os respondemos en 24 horas.
 
 ## Un truco que funciona: preguntad a otros novios
 

@@ -1,19 +1,19 @@
 ---
 import { cities } from '../config/site';
 
-const cityImages: Record<string, string> = {
-  madrid: '/images/photographers/plasmalia/foto2.webp',
-  malaga: '/images/cities/malaga.webp',
-  zaragoza: '/images/cities/zaragoza.webp',
-  murcia: '/images/cities/murcia.webp',
-  bilbao: '/images/cities/bilbao.webp',
-  cordoba: '/images/cities/cordoba.webp',
-  alicante: '/images/cities/alicante.webp',
-  valladolid: '/images/cities/valladolid.webp',
-  granada: '/images/cities/granada.webp',
-  'san-sebastian': '/images/cities/san-sebastian.webp',
-  sevilla: '/images/cities/sevilla.webp',
-  valencia: '/images/cities/valencia.webp',
+const cityImages: Record<string, { full: string; sm: string }> = {
+  madrid:          { full: '/images/photographers/plasmalia/foto2.webp',    sm: '/images/photographers/plasmalia/foto2-sm.webp' },
+  malaga:          { full: '/images/cities/malaga.webp',          sm: '/images/cities/malaga-sm.webp' },
+  zaragoza:        { full: '/images/cities/zaragoza.webp',        sm: '/images/cities/zaragoza-sm.webp' },
+  murcia:          { full: '/images/cities/murcia.webp',          sm: '/images/cities/murcia-sm.webp' },
+  bilbao:          { full: '/images/cities/bilbao.webp',          sm: '/images/cities/bilbao-sm.webp' },
+  cordoba:         { full: '/images/cities/cordoba.webp',         sm: '/images/cities/cordoba-sm.webp' },
+  alicante:        { full: '/images/cities/alicante.webp',        sm: '/images/cities/alicante-sm.webp' },
+  valladolid:      { full: '/images/cities/valladolid.webp',      sm: '/images/cities/valladolid-sm.webp' },
+  granada:         { full: '/images/cities/granada.webp',         sm: '/images/cities/granada-sm.webp' },
+  'san-sebastian': { full: '/images/cities/san-sebastian.webp',   sm: '/images/cities/san-sebastian-sm.webp' },
+  sevilla:         { full: '/images/cities/sevilla.webp',         sm: '/images/cities/sevilla-sm.webp' },
+  valencia:        { full: '/images/cities/valencia.webp',        sm: '/images/cities/valencia-sm.webp' },
 };
 ---
 
@@ -35,7 +35,9 @@ const cityImages: Record<string, string> = {
           class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-[#E8DDD3]"
         >
           <img
-            src={cityImages[city.slug] ?? '/images/hero-boda.webp'}
+            src={cityImages[city.slug]?.full ?? '/images/hero-boda.webp'}
+            srcset={cityImages[city.slug] ? `${cityImages[city.slug].sm} 200w, ${cityImages[city.slug].full} 380w` : undefined}
+            sizes="(max-width: 640px) calc(50vw - 28px), 380px"
             alt={`Fotógrafo de bodas en ${city.name}`}
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             width="380"

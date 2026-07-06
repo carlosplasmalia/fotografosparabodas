@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import PhotographerProfile from '../../components/PhotographerProfile.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import type { PhotographerFull } from '../../components/PhotographerProfile.astro';
+
+const city = 'Madrid';
+const slug = 'madrid';
+
+const photographers: PhotographerFull[] = [
+  {
+    name: 'Plasmalia — Chema Vela',
+    city: 'Madrid',
+    zone: 'Madrid · Castilla · España · Internacional',
+    style: 'Fine art · Editorial',
+    styleDesc: 'Composición de autor, luz trabajada, fotos que duran generaciones',
+    price: 'Consultar disponibilidad',
+    bio: 'Chema Vela lleva más de 15 años fotografiando bodas en Madrid y toda España. Su estudio Plasmalia es referencia internacional en fine art y fotografía editorial de bodas. Premiado por Fearless Photographers, ISPWP y Junebug Weddings. Agenda muy limitada.',
+    avatar: '/images/photographers/plasmalia/logo.webp',
+    portfolio: [
+      { src: '/images/photographers/plasmalia/foto1.jpg', alt: 'Boda en Madrid — Plasmalia' },
+      { src: '/images/photographers/plasmalia/foto2.jpg', alt: 'Fine art bodas Madrid — Chema Vela' },
+      { src: '/images/photographers/plasmalia/foto3.webp', alt: 'Editorial boda Madrid — Plasmalia' },
+    ],
+    web: 'https://plasmalia.es',
+    instagram: 'plasmalia',
+    profileSlug: 'chema-vela',
+    badge: 'Verificado',
+    yearsExp: 15,
+    awards: ['Fearless Photographers Top 30 Worldwide', 'ISPWP Top Wedding Photographer', 'Junebug Weddings Best of 2024'],
+    photoCredit: 'Plasmalia.es',
+  },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `Fotógrafos de bodas en ${city}`,
+  "description": `Directorio de los mejores fotógrafos de bodas en ${city}. Compara estilos y precios.`,
+  "url": `https://fotografosparabodas.es/${slug}/`,
+  "numberOfItems": photographers.length,
+  "itemListElement": photographers.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": p.name,
+      "description": p.bio,
+      "areaServed": { "@type": "City", "name": city },
+      "priceRange": p.price,
+    }
+  })),
+};
+---
+
+<BaseLayout
+  title="Fotógrafos de Bodas en Madrid — Precios y Disponibilidad 2026"
+  description="Encuentra los mejores fotógrafos de bodas en Madrid. Compara estilos, precios (desde 1.600€) y disponibilidad. Fotógrafos verificados con contacto directo."
+  canonical={`https://fotografosparabodas.es/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafos de Bodas\nen Madrid`}
+      subtitle="Los mejores fotógrafos de bodas de Madrid, seleccionados a mano. Contacto directo, sin intermediarios ni comisiones extra."
+      ctaText="Ver fotógrafos en Madrid"
+      ctaHref="#fotografos"
+      imageSrc="/images/cities/malaga.jpg"
+    />
+
+    <!-- Local intro -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Madrid y Comunidad</p>
+            <h2 class="section-title mb-6">La capital tiene<br/>los mejores escenarios</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              Desde los jardines del Retiro y los palacios del Siglo de Oro hasta las bodegas contemporáneas de las afueras, Madrid ofrece un marco infinito para cada tipo de boda.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              Los fotógrafos de bodas en Madrid están acostumbrados a trabajar en interiores con luz difícil, exteriores con luz dura de verano y los tonos mágicos del atardecer madrileño. Eso se nota en el resultado.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Precio medio', value: '1.600€ – 3.000€' },
+                { label: 'Fotógrafos listados', value: `${photographers.length} verificados` },
+                { label: 'Temporada alta', value: 'Mayo – Octubre' },
+                { label: 'Zonas populares', value: 'Retiro, El Escorial, Chinchón, Moraleja' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photographers -->
+    <section id="fotografos" class="py-20 bg-[#FAF7F2]">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-eyebrow mb-4">Directorio</p>
+          <h2 class="section-title">Fotógrafos de boda<br/>disponibles en Madrid</h2>
+          <span class="gold-divider"></span>
+        </div>
+
+        <div class="space-y-6">
+          {photographers.map((p, i) => <PhotographerProfile photographer={p} featured={i === 0} />)}
+        </div>
+
+        <div class="mt-12 bg-white border border-[#E8DDD3] rounded-sm p-8 text-center">
+          <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-3">
+            Plaza disponible en Madrid
+          </p>
+          <p class="font-['Lato'] text-sm text-[#6B5E58] mb-6 max-w-md mx-auto">
+            Solo aceptamos 2 fotógrafos por ciudad. Hay una plaza libre. Si tu portfolio encaja, es tuya.
+          </p>
+          <a href="/unete/" class="btn-gold">Solicitar mi plaza →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO text -->
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cuánto cuesta un fotógrafo de bodas en Madrid?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            Madrid es una de las ciudades con los precios más altos para fotografía de bodas en España. El rango habitual en 2026 está entre <strong class="text-[#1C1814]">1.600€ y 3.000€</strong> para una cobertura completa, aunque los fotógrafos más demandados pueden superar los 4.000€.
+          </p>
+          <p>
+            El precio varía según si se incluye segundo fotógrafo, sesión preboda, álbum artesanal y número de horas. La demanda en Madrid es muy alta en temporada (mayo-octubre), por lo que reservar con mínimo 9-12 meses de antelación es imprescindible.
+          </p>
+          <p>
+            Los fotógrafos basados en la Comunidad de Madrid suelen cubrir bodas en localidades como El Escorial, Chinchón, Moraleja, Guadalajara o Toledo sin coste de desplazamiento adicional. Confirmad siempre este punto en el presupuesto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <!-- Related cities -->
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">Cerca de Madrid</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-8">
+          También cubrimos
+        </h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[
+            { name: 'Valladolid', slug: 'valladolid' },
+            { name: 'Zaragoza', slug: 'zaragoza' },
+            { name: 'Bilbao', slug: 'bilbao' },
+          ].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">
+              Fotógrafos en {c.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

@@ -1,0 +1,266 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+
+const p = {
+  name: 'Albert Pamies',
+  slug: 'albert-pamies',
+  city: 'Málaga',
+  citySlug: 'malaga',
+  zone: 'Málaga · Marbella · Costa del Sol · España y Europa',
+  style: 'Documental emocional',
+  tagline: 'Naturalidad, emoción y elegancia en cada fotograma.',
+  price: 'Consultar disponibilidad',
+  yearsExp: 12,
+  instagram: 'albertpamies',
+  web: 'https://albertpamies.com',
+  avatar: '/images/photographers/albert/avatar.jpg',
+  coverImage: '/images/photographers/albert/foto1.jpg',
+  portfolio: [
+    { src: '/images/photographers/albert/foto1.jpg', alt: 'Boda en Málaga — Albert Pamies' },
+    { src: '/images/photographers/albert/foto2.jpg', alt: 'Pareja en Costa del Sol — Albert Pamies' },
+    { src: '/images/photographers/albert/foto3.jpg', alt: 'Momento íntimo de boda — Albert Pamies' },
+    { src: '/images/cities/malaga.jpg',              alt: 'Boda al atardecer Málaga — Albert Pamies' },
+    { src: '/images/portfolio/malaga-1.jpg',         alt: 'Detalles de boda — Albert Pamies' },
+    { src: '/images/portfolio/malaga-2.jpg',         alt: 'Ceremonia nupcial — Albert Pamies' },
+  ],
+  awards: ['Fearless Photographers USA', 'MyWed #1 Mundial 2019', 'Inspiration Photographers Brazil'],
+  bio: `Albert Pamies lleva más de doce años fotografiando bodas en Málaga, la Costa del Sol y el resto de España. Su estilo fusiona el reportaje documental con una sensibilidad artística que convierte cada imagen en algo más que un recuerdo: en una obra que perdura.
+
+Nacido en Almayate (Málaga), conoce la luz mediterránea mejor que nadie. Esa luz dorada que transforma las fincas de Ronda, las playas de Nerja y las plazas del centro histórico de Málaga en escenarios únicos e irrepetibles.
+
+No trabaja con poses estudiadas. Se funde entre los invitados, anticipa los momentos y los captura antes de que desaparezcan. El resultado es un reportaje que parece filmado por alguien que simplemente estuvo allí —y que lo vivió con vosotros.`,
+  services: [
+    { title: 'Cobertura del día completo', desc: 'Desde los preparativos hasta el baile. Sin límite de horas, sin prisas.' },
+    { title: 'Sesión preboda', desc: 'Una sesión previa para que os conozcáis delante de la cámara y lleguéis relajados al gran día.' },
+    { title: 'Galería privada online', desc: 'Entrega de entre 500 y 800 imágenes editadas en alta resolución en menos de 6 semanas.' },
+    { title: 'Bodas de destino', desc: 'Viaja a toda España y Europa. Más de 50 bodas de destino documentadas.' },
+  ],
+};
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `https://fotografosparabodas.es/fotografo/${p.slug}/`,
+  "name": p.name,
+  "description": p.tagline,
+  "url": `https://fotografosparabodas.es/fotografo/${p.slug}/`,
+  "image": `https://fotografosparabodas.es${p.avatar}`,
+  "areaServed": [
+    { "@type": "City", "name": "Málaga" },
+    { "@type": "City", "name": "Marbella" },
+    { "@type": "AdministrativeArea", "name": "Andalucía" },
+  ],
+  "knowsAbout": "Fotografía de bodas",
+  "award": p.awards,
+  "sameAs": [
+    `https://instagram.com/${p.instagram}`,
+    p.web,
+  ],
+};
+---
+
+<BaseLayout
+  title={`${p.name} — Fotógrafo de Bodas en ${p.city} | fotografosparabodas.es`}
+  description={`${p.name}, fotógrafo de bodas en ${p.city} con ${p.yearsExp} años de experiencia. ${p.tagline} Premiado internacionalmente. Consulta disponibilidad.`}
+  canonical={`https://fotografosparabodas.es/fotografo/${p.slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <!-- COVER: editorial full-bleed -->
+    <section class="relative h-[70vh] min-h-[480px] overflow-hidden bg-[#1C1814]">
+      <img
+        src={p.coverImage}
+        alt={`${p.name} — fotógrafo de bodas en ${p.city}`}
+        class="w-full h-full object-cover opacity-70"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#1C1814] via-transparent to-transparent"></div>
+
+      <!-- Identidad del fotógrafo sobre la imagen -->
+      <div class="absolute bottom-0 left-0 right-0 max-w-5xl mx-auto px-6 pb-12">
+        <div class="flex items-end gap-6">
+          <img
+            src={p.avatar}
+            alt={p.name}
+            class="w-20 h-20 rounded-full object-cover border-2 border-[#B89060] shrink-0 shadow-xl"
+            loading="eager"
+          />
+          <div>
+            <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] mb-1">
+              Fotógrafo verificado · {p.city}
+            </p>
+            <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-semibold text-white leading-none mb-2">
+              {p.name}
+            </h1>
+            <p class="font-['Lato'] text-white/70 text-base italic">
+              "{p.tagline}"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- META BAR: datos rápidos -->
+    <div class="bg-[#1C1814] border-b border-[#2E2520]">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center gap-6">
+        <div class="flex items-center gap-2">
+          <span class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58]">Estilo</span>
+          <span class="font-['Lato'] text-sm text-[#C4A5A0]">{p.style}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58]">Zona</span>
+          <span class="font-['Lato'] text-sm text-[#C4A5A0]">{p.zone}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58]">Experiencia</span>
+          <span class="font-['Lato'] text-sm text-[#C4A5A0]">{p.yearsExp} años</span>
+        </div>
+        <div class="ml-auto flex items-center gap-3">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20el%20fotógrafo%20${encodeURIComponent(p.name)}.%20¿Podéis%20consultarme%20disponibilidad%3F`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gold text-sm py-2.5 px-5"
+          >
+            Consultar disponibilidad
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 py-16 space-y-20">
+
+      <!-- BIO: estilo editorial, columnas -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="section-eyebrow mb-4">Sobre el fotógrafo</p>
+          <h2 class="section-title mb-6">Doce años<br/>capturando amor real</h2>
+          {p.bio.split('\n\n').map(para => (
+            <p class="font-['Lato'] text-[#6B5E58] text-sm leading-loose mb-4">{para}</p>
+          ))}
+        </div>
+
+        <!-- Awards + datos -->
+        <div class="space-y-6">
+          {p.awards.length > 0 && (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="section-eyebrow mb-4">Reconocimientos</p>
+              <ul class="space-y-3">
+                {p.awards.map(a => (
+                  <li class="flex items-center gap-3">
+                    <span class="text-[#B89060]">🏆</span>
+                    <span class="font-['Lato'] text-sm text-[#1C1814]">{a}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <!-- CTA card -->
+          <div class="bg-[#1C1814] rounded-sm p-6 text-white">
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold mb-3">¿Queréis trabajar con {p.name.split(' ')[0]}?</p>
+            <p class="font-['Lato'] text-sm text-[#9A8880] leading-relaxed mb-5">
+              Consultadnos fecha, ciudad y estilo. Os confirmamos disponibilidad en menos de 24 horas.
+            </p>
+            <a
+              href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20${encodeURIComponent(p.name)}%20para%20mi%20boda.%20¿Podéis%20consultarme%20disponibilidad%3F`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-gold w-full text-sm py-3 text-center block"
+            >
+              Consultar disponibilidad →
+            </a>
+            <p class="font-['Lato'] text-[10px] text-[#6B5E58] text-center mt-3">
+              Sin compromiso · Respuesta en 24 horas
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO GRID: editorial masonry-ish -->
+      <section>
+        <div class="flex items-baseline justify-between mb-8">
+          <div>
+            <p class="section-eyebrow mb-2">Portfolio</p>
+            <h2 class="section-title">Trabajo reciente</h2>
+          </div>
+          <a
+            href={`https://instagram.com/${p.instagram}`}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] hover:underline flex items-center gap-1"
+          >
+            Ver más en IG →
+          </a>
+        </div>
+
+        <!-- Grid editorial: imagen grande + pequeñas -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+          {p.portfolio.map((img, i) => (
+            <div class:list={[
+              "overflow-hidden rounded-sm bg-[#E8DDD3]",
+              i === 0 ? "col-span-2 md:col-span-2 row-span-2 aspect-[4/3]" : "aspect-square"
+            ]}>
+              <img
+                src={img.src}
+                alt={img.alt}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading={i < 3 ? 'eager' : 'lazy'}
+                decoding="async"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section>
+        <div class="text-center mb-10">
+          <p class="section-eyebrow mb-4">Lo que incluye</p>
+          <h2 class="section-title">Servicios y paquetes</h2>
+          <span class="gold-divider"></span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {p.services.map(s => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] mb-2">{s.title}</h3>
+              <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="bg-[#F2E8D5] rounded-sm p-10 text-center">
+        <p class="section-eyebrow mb-4">¿Conectamos?</p>
+        <h2 class="section-title mb-4">Consultad disponibilidad<br/>sin compromiso</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 max-w-md mx-auto leading-relaxed text-sm">
+          Contadnos vuestra fecha y dónde es la boda. Confirmamos si {p.name.split(' ')[0]} está disponible ese día y os enviamos toda la información.
+        </p>
+        <a
+          href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20${encodeURIComponent(p.name)}%20para%20mi%20boda.%20¿Podéis%20consultarme%20disponibilidad%3F`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-gold text-base px-10 py-4 inline-flex items-center gap-3"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Consultar por WhatsApp
+        </a>
+        <p class="font-['Lato'] text-xs text-[#9A8880] mt-4">
+          O vuelve al directorio de <a href={`/${p.citySlug}/`} class="text-[#B89060] hover:underline">fotógrafos en {p.city}</a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={p.city} />
+</BaseLayout>

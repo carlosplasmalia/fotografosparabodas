@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import PhotographerProfile from '../../components/PhotographerProfile.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+
+const city = 'Bilbao';
+const slug = 'bilbao';
+const avgPrice = '1.500€ – 2.500€';
+
+const photographers = [
+  {
+    name: 'Ane Aguirre',
+    city: 'Bilbao',
+    zone: 'Bilbao · País Vasco · Cantabria',
+    style: 'Fine art y documental',
+    styleDesc: 'Luz tenue del norte, emociones sin filtro, composición limpia',
+    price: 'desde 1.700€',
+    bio: 'Ane Aguirre trabaja bodas en el País Vasco y Cantabria con un enfoque que abraza la luz gris del norte en lugar de luchar contra ella. Sus imágenes tienen una calidad pictórica infrecuente en la fotografía de boda convencional. Diez años fotografiando parejas en caseríos, bodegas y la costa vasca.',
+    avatar: '/images/cities/bilbao.jpg',
+    portfolio: [
+      { src: '/images/portfolio/malaga-2.jpg', alt: 'Boda en Bilbao — Ane Aguirre' },
+      { src: '/images/portfolio/malaga-5.jpg', alt: 'Bodas País Vasco — Ane Aguirre' },
+      { src: '/images/cities/bilbao.jpg',      alt: 'Fotografía boda Bilbao — Ane Aguirre' },
+    ],
+    badge: 'Verificado',
+    yearsExp: 10,
+    awards: ['ISPWP Top Photographer', 'Junebug Weddings'],
+    photoCredit: 'Ane Aguirre',
+  },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `Mejores fotógrafos de bodas en ${city}`,
+  "description": `Directorio de los mejores fotógrafos de bodas en ${city} y País Vasco.`,
+  "url": `https://${site.domain}/${slug}/`,
+  "numberOfItems": photographers.length,
+  "itemListElement": photographers.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": p.name,
+      "description": p.bio,
+      "areaServed": { "@type": "City", "name": city },
+      "priceRange": p.price,
+      "knowsAbout": "Fotografía de bodas",
+    }
+  })),
+};
+---
+
+<BaseLayout
+  title="Fotógrafos de Bodas en Bilbao — País Vasco 2026"
+  description="Los mejores fotógrafos de bodas en Bilbao y el País Vasco. Especialistas en la luz del norte, caseríos y bodas de destino. Precio medio: 1.500€ – 2.500€."
+  canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafos de Bodas\nen Bilbao`}
+      subtitle="Especialistas en la luz y los escenarios únicos del País Vasco. Caseríos, bodegas de Rioja Alavesa y costa cantábrica."
+      ctaText="Ver fotógrafos"
+      ctaHref="#fotografos"
+      imageSrc="/images/cities/bilbao.jpg"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Bilbao y País Vasco</p>
+            <h2 class="section-title mb-6">La luz del norte<br/>como ventaja</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              La luz difusa del norte de España es, para los fotógrafos que la conocen, una ventaja enorme. No hay sombras duras, los colores son más ricos y las fotos en exteriores tienen una calidad casi cinematográfica. Los mejores fotógrafos vascos saben sacarle todo el partido.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              Bilbao y el País Vasco ofrecen escenarios únicos: caseríos con piedra centenaria, bodegas de Rioja Alavesa, el litoral de Getaria o los jardines de Donostia. Cada uno con una personalidad muy distinta que influye en cómo se fotografía el día.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Precio medio', value: avgPrice },
+                { label: 'Fotógrafos verificados', value: `${photographers.length} activo` },
+                { label: 'Temporada alta', value: 'Junio – Septiembre' },
+                { label: 'Zonas populares', value: 'Rioja Alavesa, costa, caseríos' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fotografos" class="py-20 bg-[#FAF7F2]">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-eyebrow mb-4">Directorio exclusivo</p>
+          <h2 class="section-title">Fotógrafo de boda<br/>de referencia en Bilbao</h2>
+          <span class="gold-divider"></span>
+        </div>
+
+        <div class="space-y-8">
+          {photographers.map((p, i) => <PhotographerProfile photographer={p} featured={i === 0} />)}
+        </div>
+
+        <div class="mt-8 border-2 border-dashed border-[#E8DDD3] rounded-sm p-10 text-center">
+          <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#6B5E58] mb-3">Plaza disponible en Bilbao</p>
+          <p class="font-['Lato'] text-sm text-[#9A8880] max-w-sm mx-auto mb-6 leading-relaxed">
+            Buscamos un segundo fotógrafo para cubrir Bilbao y el País Vasco. ¿Eres fotógrafo de bodas en la zona?
+          </p>
+          <a href="/unete/" class="btn-outline text-sm px-6 py-3">Solicitar plaza →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cuánto cuesta un fotógrafo de bodas en Bilbao?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            El precio de un fotógrafo de bodas en Bilbao y el País Vasco está entre <strong class="text-[#1C1814]">1.500€ y 2.500€</strong>. Es uno de los rangos más altos de España, en línea con el nivel económico de la región y la demanda de bodas de destino.
+          </p>
+          <p>
+            Para bodas en bodegas de Rioja Alavesa o en caseríos con mucha demanda, el plazo de reserva habitual es de 12-18 meses. Los fines de semana de septiembre y octubre son los más solicitados.
+          </p>
+          <p>
+            Un paquete estándar incluye cobertura completa del día, 500-800 fotos editadas y galería privada. Los fotógrafos vascos suelen incluir desplazamientos dentro del País Vasco sin coste adicional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">Norte de España</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-8">Más ciudades</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[
+            { name: 'San Sebastián', slug: 'san-sebastian' },
+            { name: 'Valladolid', slug: 'valladolid' },
+            { name: 'Zaragoza', slug: 'zaragoza' },
+          ].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">
+              Fotógrafos en {c.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

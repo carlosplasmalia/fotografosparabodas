@@ -1,0 +1,56 @@
+---
+const steps = [
+  {
+    num: '01',
+    title: 'Elige tu ciudad',
+    body: 'Navega por el directorio y filtra por ciudad. Verás los perfiles de fotógrafos disponibles con su estilo, precio y portfolio.',
+  },
+  {
+    num: '02',
+    title: 'Contacta sin compromiso',
+    body: 'Envía tu fecha y cuéntanos cómo imaginas la boda. El fotógrafo te responde en menos de 24 horas con disponibilidad y presupuesto.',
+  },
+  {
+    num: '03',
+    title: 'Reserva y disfruta',
+    body: 'Si conectas con el fotógrafo, confirmad la reserva directamente. Sin intermediarios, sin comisiones extra para vosotros.',
+  },
+];
+---
+
+<section id="como-funciona" class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="section-eyebrow mb-4">El proceso</p>
+      <h2 class="section-title">Tan sencillo como<br/>tres pasos</h2>
+      <span class="gold-divider"></span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+      <!-- Connector line (desktop) -->
+      <div class="hidden md:block absolute top-8 left-1/6 right-1/6 h-px bg-[#E8DDD3]" style="left:16.66%;right:16.66%"></div>
+
+      {steps.map(step => (
+        <div class="flex flex-col items-center text-center relative">
+          <div class="w-16 h-16 rounded-full bg-[#FAF7F2] border border-[#B89060] flex items-center justify-center mb-6 z-10">
+            <span class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#B89060]">
+              {step.num}
+            </span>
+          </div>
+          <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-3">
+            {step.title}
+          </h3>
+          <p class="font-['Lato'] text-[#6B5E58] text-sm leading-relaxed max-w-xs">
+            {step.body}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-14">
+      <a href="/#ciudades" class="btn-gold">
+        Empezar ahora
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,152 @@
+---
+import { site } from '../config/site';
+
+export interface PhotographerFull {
+  name: string;
+  city: string;
+  zone: string;
+  style: string;
+  styleDesc: string;
+  price: string;
+  bio: string;
+  avatar: string;
+  portfolio: { src: string; alt: string }[];
+  web?: string;
+  instagram?: string;
+  profileSlug?: string;
+  photoCredit?: string;
+  badge?: string;
+  yearsExp: number;
+  awards?: string[];
+  instagramPosts?: string[];
+}
+
+interface Props {
+  photographer: PhotographerFull;
+  featured?: boolean;
+}
+
+const { photographer: p, featured = false } = Astro.props;
+---
+
+<article class:list={[
+  "bg-white rounded-sm overflow-hidden border",
+  featured ? "border-[#B89060] shadow-lg shadow-[#B89060]/10" : "border-[#E8DDD3] shadow-sm"
+]}>
+
+  {featured && (
+    <div class="bg-[#B89060] text-white text-center py-1.5">
+      <span class="font-['Lato'] text-xs font-bold tracking-widest uppercase">
+        ✦ Fotógrafo Destacado
+      </span>
+    </div>
+  )}
+
+  <!-- Portfolio strip: 3 columnas -->
+  <div class="grid grid-cols-3 h-56 overflow-hidden">
+    {p.portfolio.slice(0, 3).map((img) => (
+      <div class="overflow-hidden relative group">
+        <img
+          src={img.src}
+          alt={img.alt}
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    ))}
+  </div>
+  {p.photoCredit && (
+    <p class="font-['Lato'] text-[10px] text-[#9A8880] text-right px-3 py-1 bg-[#FAF7F2]">
+      Fotos: <a href={p.web ?? '#'} target="_blank" rel="noopener noreferrer" class="hover:underline">{p.photoCredit}</a>
+    </p>
+  )}
+
+  <!-- Info -->
+  <div class="p-6">
+    <div class="flex items-start gap-4 mb-4">
+      <img
+        src={p.avatar}
+        alt={`Fotógrafo ${p.name}`}
+        class="w-16 h-16 rounded-full object-cover border-2 border-[#F2E8D5] shrink-0"
+        loading="lazy"
+      />
+      <div class="flex-1">
+        <div class="flex items-center gap-2 flex-wrap">
+          <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">
+            {p.name}
+          </h3>
+          {p.badge && (
+            <span class="text-[10px] font-['Lato'] font-bold px-2 py-0.5 bg-[#F2E8D5] text-[#9A7545] rounded-sm tracking-wide uppercase">
+              {p.badge}
+            </span>
+          )}
+        </div>
+        <p class="font-['Lato'] text-xs text-[#6B5E58] mt-0.5">
+          {p.zone} · {p.yearsExp} años · <span class="text-[#B89060] font-semibold">{p.style}</span>
+        </p>
+      </div>
+    </div>
+
+    <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed mb-4">
+      {p.bio}
+    </p>
+
+    <!-- Style tag -->
+    <div class="flex items-center gap-2 mb-4 pb-4 border-b border-[#F2E8D5]">
+      <span class="text-xs font-['Lato'] px-3 py-1 bg-[#FAF7F2] border border-[#E8DDD3] text-[#6B5E58] rounded-sm">
+        {p.styleDesc}
+      </span>
+      <span class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] ml-auto">
+        {p.price}
+      </span>
+    </div>
+
+    {p.awards && p.awards.length > 0 && (
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        {p.awards.map(a => (
+          <span class="text-[10px] font-['Lato'] px-2 py-0.5 border border-[#B89060]/40 text-[#9A7545] rounded-sm">
+            🏆 {a}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- Enlace al perfil editorial completo -->
+    {p.profileSlug && (
+      <a
+        href={`/fotografo/${p.profileSlug}/`}
+        class="block w-full text-center font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] hover:text-[#9A7545] py-2 mb-2 transition-colors"
+      >
+        Ver perfil completo →
+      </a>
+    )}
+
+    <!-- CTAs — todo pasa por el directorio -->
+    <div class="flex flex-col sm:flex-row gap-3">
+      <a
+        href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20el%20fotógrafo%20${encodeURIComponent(p.name)}%20en%20${encodeURIComponent(p.city)}.%20¿Podéis%20consultarme%20disponibilidad%20y%20precio%3F`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-gold flex-1 text-sm py-3 text-center"
+      >
+        Consultar disponibilidad
+      </a>
+
+      {p.instagram && (
+        <a
+          href={`https://instagram.com/${p.instagram}`}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          class="btn-outline text-sm py-3 px-4 flex items-center gap-2"
+          aria-label="Ver Instagram"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          @{p.instagram}
+        </a>
+      )}
+    </div>
+  </div>
+</article>

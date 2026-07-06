@@ -1,0 +1,89 @@
+---
+interface Props {
+  city?: string;
+  h1?: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaHref?: string;
+  imageSrc?: string;
+}
+
+const {
+  city,
+  h1 = 'Los Fotógrafos de Boda\nque Buscabas',
+  subtitle = 'Compara estilo, precio y disponibilidad de los mejores fotógrafos de bodas de España. Sin sorpresas, sin compromiso.',
+  ctaText = 'Ver fotógrafos disponibles',
+  ctaHref = '/#ciudades',
+  imageSrc = '/images/hero-boda.jpg',
+} = Astro.props;
+---
+
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img
+      src={imageSrc}
+      alt={city ? `Fotógrafo de bodas en ${city}` : 'Fotógrafo de bodas en España'}
+      class="w-full h-full object-cover object-center"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <!-- Gradient overlay: dark at bottom, semi-dark top -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/70"></div>
+    <!-- Warm tone overlay -->
+    <div class="absolute inset-0 bg-[#3D1A00]/20 mix-blend-multiply"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-24 text-white">
+    <p class="section-eyebrow text-[#F2E8D5] mb-6">
+      {city ? `Fotógrafos en ${city}` : 'Directorio de fotógrafos de boda en España'}
+    </p>
+
+    <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-semibold leading-[1.08] mb-6 max-w-3xl"
+      style="text-shadow: 0 2px 20px rgba(0,0,0,0.4)">
+      {h1.split('\n').map((line, i) => (
+        <span>
+          {i > 0 && <br />}
+          {line}
+        </span>
+      ))}
+    </h1>
+
+    <p class="font-['Lato'] text-lg md:text-xl text-white/80 max-w-xl leading-relaxed mb-10">
+      {subtitle}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href={ctaHref} class="btn-gold text-base px-8 py-4">
+        {ctaText}
+      </a>
+      <a href="/#como-funciona" class="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm font-['Lato'] font-medium py-4">
+        <span class="w-5 h-5 rounded-full border border-white/50 flex items-center justify-center text-xs">→</span>
+        ¿Cómo funciona?
+      </a>
+    </div>
+
+    <!-- Quick trust signals -->
+    <div class="mt-16 flex flex-wrap gap-6 text-xs font-['Lato'] font-medium text-white/60 tracking-wide uppercase">
+      <span class="flex items-center gap-2">
+        <span class="w-1 h-1 rounded-full bg-[#B89060]"></span>
+        Fotógrafos verificados
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="w-1 h-1 rounded-full bg-[#B89060]"></span>
+        Sin coste de consulta
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="w-1 h-1 rounded-full bg-[#B89060]"></span>
+        +9 ciudades en España
+      </span>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
+    <span class="text-xs font-['Lato'] tracking-widest uppercase">Descubrir</span>
+    <div class="w-px h-10 bg-gradient-to-b from-white/40 to-transparent animate-pulse"></div>
+  </div>
+</section>

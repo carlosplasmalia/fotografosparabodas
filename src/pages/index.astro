@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Hero from '../components/Hero.astro';
+import CitiesGrid from '../components/CitiesGrid.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import TestimonialSection from '../components/TestimonialSection.astro';
+import FAQSection from '../components/FAQSection.astro';
+import { site } from '../config/site';
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": ["WebSite", "LocalBusiness"],
+  "@id": "https://fotografosparabodas.es/#organization",
+  "name": "Fotógrafos para Bodas",
+  "url": "https://fotografosparabodas.es",
+  "description": site.description,
+  "areaServed": {
+    "@type": "Country",
+    "name": "España"
+  },
+  "knowsAbout": ["Fotografía de bodas", "Reportaje nupcial", "Fotografía artística de boda"],
+};
+---
+
+<BaseLayout
+  title="Fotógrafos para Bodas en España — Encuentra tu Fotógrafo Ideal"
+  description="Directorio de los mejores fotógrafos de bodas en España. Compara estilos, precios y disponibilidad. Fotógrafos verificados en Málaga, Zaragoza, Murcia y más ciudades."
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero />
+    <CitiesGrid />
+    <HowItWorks />
+
+    <!-- Why us strip -->
+    <section class="py-20 bg-[#1C1814]">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="section-eyebrow text-[#B89060] mb-4">Por qué elegirnos</p>
+          <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-white">
+            No somos un directorio más
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { icon: '✓', title: 'Fotógrafos verificados', body: 'Revisamos portfolio y referencias antes de incluir a cada profesional.' },
+            { icon: '↔', title: 'Contacto directo', body: 'Hablas directamente con el fotógrafo, sin intermediarios ni comisiones extra.' },
+            { icon: '◎', title: 'Estilos variados', body: 'Documental, editorial, romántico… Hay un estilo para cada pareja.' },
+            { icon: '0', title: 'Sin coste para ti', body: 'Consultar disponibilidad y precios no cuesta nada. Siempre.' },
+          ].map(item => (
+            <div class="text-center">
+              <div class="w-12 h-12 rounded-full border border-[#B89060]/40 flex items-center justify-center mx-auto mb-4 text-[#B89060] text-lg font-['Cormorant_Garamond'] font-semibold">
+                {item.icon}
+              </div>
+              <h3 class="font-['Cormorant_Garamond'] text-lg font-semibold text-white mb-2">{item.title}</h3>
+              <p class="font-['Lato'] text-xs text-[#9A8880] leading-relaxed">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <TestimonialSection />
+    <FAQSection />
+
+    <!-- Contact CTA -->
+    <section id="contacto" class="py-24 bg-white">
+      <div class="max-w-2xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">Consulta sin compromiso</p>
+        <h2 class="section-title mb-4">¿Ya tenéis fecha?<br/>Buscad fotógrafo ahora</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-10 leading-relaxed">
+          Cuéntanos vuestra fecha, ciudad y estilo y os recomendamos los fotógrafos disponibles. Gratis, en menos de 24 horas.
+        </p>
+        <!-- Alternativa rápida: WhatsApp directo -->
+        <div class="mb-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="https://wa.me/34625677487?text=Hola%2C%20busco%20fotógrafo%20de%20bodas.%20¿Podéis%20ayudarme%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gold text-base px-8 py-4 flex items-center justify-center gap-2"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Consultar por WhatsApp
+          </a>
+          <span class="flex items-center justify-center font-['Lato'] text-sm text-[#9A8880]">— o rellena el formulario —</span>
+        </div>
+
+        <form
+          action="https://formspree.io/f/XXXXXXXX"
+          method="POST"
+          class="space-y-4 text-left"
+        >
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">
+                Nombre
+              </label>
+              <input
+                type="text"
+                name="nombre"
+                required
+                placeholder="Laura y Marcos"
+                class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors"
+              />
+            </div>
+            <div>
+              <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">
+                Fecha de boda
+              </label>
+              <input
+                type="date"
+                name="fecha"
+                required
+                class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">
+              Ciudad de la boda
+            </label>
+            <input
+              type="text"
+              name="ciudad"
+              required
+              placeholder="Málaga"
+              class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors"
+            />
+          </div>
+          <div>
+            <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">
+              ¿Qué estilo buscáis?
+            </label>
+            <select
+              name="estilo"
+              class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors"
+            >
+              <option value="">No lo tengo claro aún</option>
+              <option value="documental">Documental / Natural</option>
+              <option value="romantico">Romántico / Emocional</option>
+              <option value="editorial">Editorial / Artístico</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">
+              Email de contacto
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="hola@vosotros.com"
+              class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors"
+            />
+          </div>
+          <button type="submit" class="btn-gold w-full py-4 text-base mt-2">
+            Buscar fotógrafo disponible →
+          </button>
+          <p class="font-['Lato'] text-xs text-[#6B5E58] text-center">
+            Sin compromiso. Os respondemos en menos de 24 horas.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+</BaseLayout>

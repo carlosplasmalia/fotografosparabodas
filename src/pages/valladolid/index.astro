@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import PhotographerProfile from '../../components/PhotographerProfile.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+
+const city = 'Valladolid';
+const slug = 'valladolid';
+const avgPrice = '1.100€ – 1.800€';
+
+const photographers = [
+  {
+    name: 'Elena Campos',
+    city: 'Valladolid',
+    zone: 'Valladolid · Burgos · Palencia',
+    style: 'Clásico contemporáneo',
+    styleDesc: 'Elegancia castellana, luz natural, bodas atemporales',
+    price: 'desde 1.200€',
+    bio: 'Elena Campos lleva 7 años fotografiando bodas en Castilla y León. Su trabajo refleja la elegancia serena del interior castellano: bodegas de la Ribera del Duero, iglesias románicas y haciendas con siglos de historia. Especialista en bodas de corte clásico con resultado atemporal.',
+    avatar: '/images/cities/valladolid.jpg',
+    portfolio: [
+      { src: '/images/portfolio/malaga-2.jpg', alt: 'Boda en Valladolid — Elena Campos' },
+      { src: '/images/portfolio/malaga-5.jpg', alt: 'Bodas Castilla León — Elena Campos' },
+      { src: '/images/cities/valladolid.jpg',  alt: 'Fotografía de boda Valladolid — Elena Campos' },
+    ],
+    badge: 'Verificado',
+    yearsExp: 7,
+    awards: ['Best of Castilla y León Weddings 2024'],
+    photoCredit: 'Elena Campos',
+  },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `Mejores fotógrafos de bodas en ${city}`,
+  "description": `Directorio de los mejores fotógrafos de bodas en ${city} y Castilla y León.`,
+  "url": `https://${site.domain}/${slug}/`,
+  "numberOfItems": photographers.length,
+  "itemListElement": photographers.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": p.name,
+      "description": p.bio,
+      "areaServed": { "@type": "City", "name": city },
+      "priceRange": p.price,
+      "knowsAbout": "Fotografía de bodas",
+    }
+  })),
+};
+---
+
+<BaseLayout
+  title="Fotógrafos de Bodas en Valladolid — Castilla y León 2026"
+  description="Los mejores fotógrafos de bodas en Valladolid. Bodegas Ribera del Duero, haciendas castellanas y bodas clásicas atemporales. Precio medio: 1.100€ – 1.800€."
+  canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafos de Bodas\nen Valladolid`}
+      subtitle="Bodegas de la Ribera del Duero, haciendas castellanas y bodas con carácter en el corazón de Castilla."
+      ctaText="Ver fotógrafos"
+      ctaHref="#fotografos"
+      imageSrc="/images/cities/valladolid.jpg"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Valladolid y Castilla</p>
+            <h2 class="section-title mb-6">Piedra, viñedos<br/>y luz del interior</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              Valladolid tiene una oferta de venues únicos que pocas ciudades pueden igualar: bodegas centenarias de la Ribera del Duero, haciendas con arquitectura castellana y palacios en el centro histórico. La luz del interior en otoño, especialmente, tiene una calidad dorada excepcional.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              El precio de la fotografía de bodas en Valladolid es uno de los más competitivos de las ciudades grandes, sin renunciar a calidad. Un argumento a tener muy en cuenta si buscáis relación calidad-precio.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Precio medio', value: avgPrice },
+                { label: 'Fotógrafos verificados', value: `${photographers.length} activo` },
+                { label: 'Temporada alta', value: 'Mayo – Octubre' },
+                { label: 'Zonas populares', value: 'Ribera del Duero, Rueda, Simancas, centro' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fotografos" class="py-20 bg-[#FAF7F2]">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-eyebrow mb-4">Directorio exclusivo</p>
+          <h2 class="section-title">Fotógrafo de boda<br/>de referencia en Valladolid</h2>
+          <span class="gold-divider"></span>
+        </div>
+
+        <div class="space-y-8">
+          {photographers.map((p, i) => <PhotographerProfile photographer={p} featured={i === 0} />)}
+        </div>
+
+        <div class="mt-8 border-2 border-dashed border-[#E8DDD3] rounded-sm p-10 text-center">
+          <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#6B5E58] mb-3">Plaza disponible en Valladolid</p>
+          <p class="font-['Lato'] text-sm text-[#9A8880] max-w-sm mx-auto mb-6 leading-relaxed">
+            Seleccionamos un segundo fotógrafo para Valladolid y Castilla. ¿Fotografías bodas en la región?
+          </p>
+          <a href="/unete/" class="btn-outline text-sm px-6 py-3">Solicitar plaza →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cuánto cuesta un fotógrafo de bodas en Valladolid?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            En Valladolid, el precio de un fotógrafo de bodas oscila entre <strong class="text-[#1C1814]">1.100€ y 1.800€</strong>. Es uno de los mercados más asequibles de las ciudades medias españolas, con un nivel de calidad muy alto respecto al precio.
+          </p>
+          <p>
+            Para bodas en bodegas de la Ribera del Duero, confirmad siempre si el desplazamiento está incluido. Algunas bodegas están a más de 60 km de la ciudad y pueden generar coste extra.
+          </p>
+          <p>
+            Septiembre y octubre son los meses más demandados por la vendimia y el color del paisaje. Reservad con 8-10 meses de antelación para esas fechas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">Castilla peninsular</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-8">Más ciudades</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[
+            { name: 'Madrid', slug: 'madrid' },
+            { name: 'Bilbao', slug: 'bilbao' },
+            { name: 'Zaragoza', slug: 'zaragoza' },
+          ].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">
+              Fotógrafos en {c.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

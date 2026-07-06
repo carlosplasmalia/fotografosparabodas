@@ -1,0 +1,63 @@
+---
+import { cities } from '../config/site';
+
+const cityImages: Record<string, string> = {
+  malaga: '/images/cities/malaga.jpg',
+  zaragoza: '/images/cities/zaragoza.jpg',
+  murcia: '/images/cities/murcia.jpg',
+  bilbao: '/images/cities/bilbao.jpg',
+  cordoba: '/images/cities/cordoba.jpg',
+  alicante: '/images/cities/alicante.jpg',
+  valladolid: '/images/cities/valladolid.jpg',
+  granada: '/images/cities/granada.jpg',
+  'san-sebastian': '/images/cities/san-sebastian.jpg',
+};
+---
+
+<section id="ciudades" class="py-24 bg-[#FAF7F2]">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="section-eyebrow mb-4">Dónde trabajamos</p>
+      <h2 class="section-title mb-4">Fotógrafos de boda<br/>en toda España</h2>
+      <span class="gold-divider"></span>
+      <p class="font-['Lato'] text-[#6B5E58] max-w-lg mx-auto mt-6 leading-relaxed">
+        Selecciona tu ciudad y encuentra el fotógrafo que mejor conecte con vuestra historia.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+      {cities.map(city => (
+        <a
+          href={`/${city.slug}/`}
+          class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-[#E8DDD3]"
+        >
+          <img
+            src={cityImages[city.slug] ?? '/images/hero-boda.jpg'}
+            alt={`Fotógrafo de bodas en ${city.name}`}
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+          />
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          <!-- Text -->
+          <div class="absolute bottom-0 left-0 right-0 p-4">
+            <p class="font-['Cormorant_Garamond'] text-xl font-semibold text-white leading-tight">
+              {city.name}
+            </p>
+            <p class="font-['Lato'] text-xs text-[#F2E8D5] mt-1 tracking-wide">
+              {city.avgPrice}
+            </p>
+          </div>
+          <!-- Gold border on hover -->
+          <div class="absolute inset-0 border border-[#B89060]/0 group-hover:border-[#B89060]/60 transition-all duration-300 pointer-events-none rounded-sm"></div>
+        </a>
+      ))}
+    </div>
+
+    <p class="text-center font-['Lato'] text-sm text-[#6B5E58] mt-8">
+      ¿Tu ciudad no aparece?
+      <a href="/#contacto" class="text-[#B89060] hover:underline ml-1">Consúltanos</a>
+    </p>
+  </div>
+</section>

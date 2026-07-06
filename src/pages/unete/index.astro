@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+---
+
+<BaseLayout
+  title="Únete al Directorio — Solo para Fotógrafos de Bodas de Élite"
+  description="¿Eres fotógrafo de bodas? Llega a parejas que ya están buscando. Solo aceptamos 2 fotógrafos por ciudad. Solicita tu plaza ahora."
+  canonical="https://fotografosparabodas.es/unete/"
+  noindex={false}
+>
+  <SiteHeader />
+  <main class="pt-16">
+
+    <!-- Hero exclusivo -->
+    <section class="bg-[#1C1814] py-24">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] mb-6">
+          Para fotógrafos de bodas
+        </p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-semibold text-white leading-tight mb-6">
+          No aceptamos a cualquiera.<br/>
+          <em class="text-[#B89060] not-italic">Y eso es exactamente el punto.</em>
+        </h1>
+        <p class="font-['Lato'] text-[#9A8880] text-lg max-w-xl mx-auto leading-relaxed mb-10">
+          Solo listamos a los mejores fotógrafos de bodas de cada ciudad. Máximo dos por zona. Si tu trabajo habla por sí solo, queremos que estés aquí.
+        </p>
+        <a href="#solicitar" class="btn-gold text-base px-10 py-4">
+          Solicitar mi plaza →
+        </a>
+      </div>
+    </section>
+
+    <!-- Por qué es diferente -->
+    <section class="py-20 bg-[#FAF7F2]">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-eyebrow mb-4">Lo que te ofrecemos</p>
+          <h2 class="section-title">Leads reales.<br/>Sin comisiones. Cuota fija.</h2>
+          <span class="gold-divider"></span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              num: '01',
+              title: 'Visibilidad SEO real',
+              body: 'Posicionamos el directorio en Google para las búsquedas más rentables de tu ciudad. Cada consulta de pareja llega directamente a ti.',
+            },
+            {
+              num: '02',
+              title: 'Sin comisiones por boda',
+              body: 'Pagas una cuota mensual fija. Todo lo que cierres es tuyo al 100%. No compartimos tu facturación ni te pedimos porcentaje.',
+            },
+            {
+              num: '03',
+              title: 'Máximo 2 fotógrafos por ciudad',
+              body: 'No somos un directorio masivo de 500 nombres. Tu perfil compite solo con otro fotógrafo. La exclusividad es real.',
+            },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-8">
+              <div class="w-12 h-12 rounded-full border border-[#B89060] flex items-center justify-center mb-6">
+                <span class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#B89060]">{item.num}</span>
+              </div>
+              <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-3">{item.title}</h3>
+              <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso de selección -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Proceso de selección</p>
+            <h2 class="section-title mb-6">Revisamos cada<br/>portfolio personalmente</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-6">
+              Antes de publicar ningún perfil, revisamos el trabajo del fotógrafo. No hay pago que compre un puesto si el portfolio no lo justifica.
+            </p>
+            <ul class="space-y-4">
+              {[
+                'Envías tu solicitud con tu web o Instagram',
+                'Revisamos tu portfolio en 48 horas',
+                'Si encajas, configuramos tu perfil juntos',
+                'Publicas y empiezas a recibir consultas',
+              ].map((step, i) => (
+                <li class="flex items-start gap-4">
+                  <span class="w-6 h-6 rounded-full bg-[#F2E8D5] border border-[#B89060]/40 flex items-center justify-center shrink-0 font-['Lato'] text-xs font-bold text-[#B89060]">
+                    {i + 1}
+                  </span>
+                  <span class="font-['Lato'] text-sm text-[#1C1814] leading-relaxed">{step}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Pricing -->
+          <div class="bg-[#1C1814] rounded-sm p-8 text-white">
+            <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] mb-6">Tarifa</p>
+            <div class="mb-6">
+              <div class="flex items-baseline gap-2 mb-2">
+                <span class="font-['Cormorant_Garamond'] text-5xl font-semibold text-white">150€</span>
+                <span class="font-['Lato'] text-[#9A8880] text-sm">/mes</span>
+              </div>
+              <p class="font-['Lato'] text-[#9A8880] text-sm">
+                Si la web no te trae ni 1 boda extra al año, cancelas y listo.
+              </p>
+            </div>
+            <ul class="space-y-3 mb-8">
+              {[
+                'Perfil completo con portfolio',
+                'Botón WhatsApp directo',
+                'Badge "Fotógrafo Verificado"',
+                'Máx. 2 fotógrafos por ciudad',
+                'Informes mensuales de visitas',
+                'Sin permanencia mínima',
+              ].map(item => (
+                <li class="flex items-center gap-3 font-['Lato'] text-sm text-[#C4A5A0]">
+                  <span class="text-[#B89060]">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="border-t border-[#2E2520] pt-6">
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">
+                Los primeros 3 meses son <strong class="text-[#B89060]">gratuitos</strong> mientras posicionamos la web. Pagáis solo cuando hay tráfico real.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de solicitud -->
+    <section id="solicitar" class="py-20 bg-[#FAF7F2]">
+      <div class="max-w-xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <p class="section-eyebrow mb-4">Solicitud de plaza</p>
+          <h2 class="section-title">¿Es tu momento?</h2>
+          <span class="gold-divider"></span>
+          <p class="font-['Lato'] text-[#6B5E58] mt-6 text-sm leading-relaxed">
+            Rellena el formulario y te respondemos en 48 horas. Si tu ciudad ya tiene 2 fotógrafos, te ponemos en lista de espera con prioridad.
+          </p>
+        </div>
+
+        <form
+          action="https://formspree.io/f/XXXXXXXX"
+          method="POST"
+          class="space-y-4 bg-white border border-[#E8DDD3] rounded-sm p-8"
+          data-subject="Nueva solicitud fotógrafo — fotografosparabodas.es"
+        >
+          <input type="hidden" name="_subject" value="Nueva solicitud fotógrafo — fotografosparabodas.es" />
+
+          <div>
+            <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">Nombre y apellidos</label>
+            <input type="text" name="nombre" required placeholder="Tu nombre"
+              class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors" />
+          </div>
+
+          <div>
+            <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">Email</label>
+            <input type="email" name="email" required placeholder="tu@email.com"
+              class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors" />
+          </div>
+
+          <div>
+            <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">Ciudad en la que operas</label>
+            <input type="text" name="ciudad" required placeholder="Málaga, Zaragoza..."
+              class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors" />
+          </div>
+
+          <div>
+            <label class="block font-['Lato'] text-xs font-bold tracking-widests uppercase text-[#6B5E58] mb-2">Tu estilo</label>
+            <select name="estilo"
+              class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors">
+              <option value="documental">Documental</option>
+              <option value="romantico">Romántico</option>
+              <option value="editorial">Editorial / Artístico</option>
+              <option value="clasico">Clásico</option>
+              <option value="mixto">Mixto</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">Tu web o Instagram</label>
+            <input type="url" name="portfolio" required placeholder="https://tuportfolio.com"
+              class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-[#FAF7F2] focus:outline-none focus:border-[#B89060] transition-colors" />
+          </div>
+
+          <button type="submit" class="btn-gold w-full py-4 text-base">
+            Solicitar mi plaza →
+          </button>
+          <p class="font-['Lato'] text-xs text-[#9A8880] text-center">
+            Los primeros 3 meses son gratuitos. Sin compromisos.
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+  <SiteFooter />
+</BaseLayout>

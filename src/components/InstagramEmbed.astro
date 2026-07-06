@@ -1,0 +1,22 @@
+---
+interface Props {
+  postUrl: string;
+  caption?: string;
+}
+const { postUrl, caption } = Astro.props;
+---
+
+<div class="instagram-embed-wrapper" style="max-width:540px;margin:0 auto;">
+  <blockquote
+    class="instagram-media"
+    data-instgrm-captioned
+    data-instgrm-permalink={postUrl}
+    data-instgrm-version="14"
+    style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:1px;max-width:540px;min-width:326px;padding:0;width:99.375%;"
+  >
+    <a href={postUrl} target="_blank" rel="noopener noreferrer">
+      {caption ?? 'Ver en Instagram'}
+    </a>
+  </blockquote>
+  <script async src="//www.instagram.com/embed.js"></script>
+</div>

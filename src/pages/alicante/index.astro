@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import PhotographerProfile from '../../components/PhotographerProfile.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+
+const city = 'Alicante';
+const slug = 'alicante';
+const avgPrice = '1.300€ – 2.100€';
+
+const photographers = [
+  {
+    name: 'Marco Ferri',
+    city: 'Alicante',
+    zone: 'Alicante · Costa Blanca · Murcia',
+    style: 'Romántico mediterráneo',
+    styleDesc: 'Luz cálida, playa, bodas de destino internacionales',
+    price: 'desde 1.500€',
+    bio: 'Marco Ferri fotografía bodas en Alicante y la Costa Blanca desde 2014. Su trabajo mezcla el romanticismo mediterráneo con una narrativa documental discreta. Habituado a bodas internacionales de destino en Dénia, Altea y Jávea, con clientes de toda Europa.',
+    avatar: '/images/cities/alicante.jpg',
+    portfolio: [
+      { src: '/images/portfolio/malaga-3.jpg', alt: 'Boda en Alicante — Marco Ferri' },
+      { src: '/images/portfolio/malaga-6.jpg', alt: 'Fotografía boda Costa Blanca — Marco Ferri' },
+      { src: '/images/cities/alicante.jpg',    alt: 'Bodas destino Alicante — Marco Ferri' },
+    ],
+    badge: 'Verificado',
+    yearsExp: 11,
+    awards: ['Destination Wedding Photographers Global', 'Junebug Weddings'],
+    photoCredit: 'Marco Ferri',
+  },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `Mejores fotógrafos de bodas en ${city}`,
+  "description": `Directorio de los mejores fotógrafos de bodas en ${city} y Costa Blanca.`,
+  "url": `https://${site.domain}/${slug}/`,
+  "numberOfItems": photographers.length,
+  "itemListElement": photographers.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": p.name,
+      "description": p.bio,
+      "areaServed": { "@type": "City", "name": city },
+      "priceRange": p.price,
+      "knowsAbout": "Fotografía de bodas",
+    }
+  })),
+};
+---
+
+<BaseLayout
+  title="Fotógrafos de Bodas en Alicante — Costa Blanca 2026"
+  description="Los mejores fotógrafos de bodas en Alicante y Costa Blanca. Especialistas en bodas de destino, Altea, Jávea y Dénia. Precio medio: 1.300€ – 2.100€."
+  canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafos de Bodas\nen Alicante`}
+      subtitle="Bodas en la Costa Blanca: Altea, Jávea, Dénia y Alicante. Especialistas en bodas de destino con clientes de toda Europa."
+      ctaText="Ver fotógrafos"
+      ctaHref="#fotografos"
+      imageSrc="/images/cities/alicante.jpg"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Alicante y Costa Blanca</p>
+            <h2 class="section-title mb-6">El Mediterráneo<br/>como escenario</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              Alicante y la Costa Blanca son uno de los destinos de boda más demandados de Europa. Parejas de Alemania, Reino Unido y Países Bajos eligen esta costa para casarse. Eso ha creado una generación de fotógrafos habituados a trabajar con clientes internacionales y venues de alto nivel en Altea, Jávea y Dénia.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              La luz del levante español tiene una temperatura cálida muy diferente a la del sur. Las horas doradas en la costa alicantina duran más y son especialmente fotogénicas. Un argumento real, no marketing.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Precio medio', value: avgPrice },
+                { label: 'Fotógrafos verificados', value: `${photographers.length} activo` },
+                { label: 'Temporada alta', value: 'Mayo – Octubre' },
+                { label: 'Zonas populares', value: 'Altea, Jávea, Dénia, Benidorm, capital' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fotografos" class="py-20 bg-[#FAF7F2]">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-eyebrow mb-4">Directorio exclusivo</p>
+          <h2 class="section-title">Fotógrafo de boda<br/>de referencia en Alicante</h2>
+          <span class="gold-divider"></span>
+        </div>
+
+        <div class="space-y-8">
+          {photographers.map((p, i) => <PhotographerProfile photographer={p} featured={i === 0} />)}
+        </div>
+
+        <div class="mt-8 border-2 border-dashed border-[#E8DDD3] rounded-sm p-10 text-center">
+          <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#6B5E58] mb-3">Plaza disponible en Alicante</p>
+          <p class="font-['Lato'] text-sm text-[#9A8880] max-w-sm mx-auto mb-6 leading-relaxed">
+            Seleccionamos un segundo fotógrafo para la Costa Blanca. ¿Fotografías bodas en Alicante y provincia?
+          </p>
+          <a href="/unete/" class="btn-outline text-sm px-6 py-3">Solicitar plaza →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cuánto cuesta un fotógrafo de bodas en Alicante?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            El precio medio de un fotógrafo de bodas en Alicante y la Costa Blanca está entre <strong class="text-[#1C1814]">1.300€ y 2.100€</strong>. Para bodas de destino en Altea o Jávea, los precios de los mejores fotógrafos pueden superar los 2.500€.
+          </p>
+          <p>
+            Muchos fotógrafos de la zona tienen experiencia con bodas internacionales y cobran desplazamientos fuera de la provincia. Si vuestra boda es en la Costa Blanca norte (Altea, Calpe, Moraira), confirmad siempre los gastos de viaje.
+          </p>
+          <p>
+            La temporada alta es larga: de mayo a octubre. Reservad con al menos 10-12 meses de antelación para asegurar disponibilidad en verano.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">Levante peninsular</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-8">Más ciudades</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[
+            { name: 'Murcia', slug: 'murcia' },
+            { name: 'Málaga', slug: 'malaga' },
+            { name: 'Madrid', slug: 'madrid' },
+          ].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">
+              Fotógrafos en {c.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

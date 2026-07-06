@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import PhotographerProfile from '../../components/PhotographerProfile.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import type { PhotographerFull } from '../../components/PhotographerProfile.astro';
+
+const city = 'Málaga';
+const slug = 'malaga';
+
+const photographers: PhotographerFull[] = [
+  {
+    name: 'Albert Pamies',
+    city: 'Málaga',
+    zone: 'Málaga · Marbella · Costa del Sol',
+    style: 'Documental emocional',
+    styleDesc: 'Naturalidad, emoción y elegancia sin poses forzadas',
+    price: 'Consultar disponibilidad',
+    bio: 'Albert Pamies captura bodas en Málaga y la Costa del Sol con un estilo documental que mezcla emoción y elegancia. Más de 12 años fotografiando historias de amor únicas, reconocido por Fearless Photographers (USA) y clasificado #1 mundial en MyWed en 2019.',
+    avatar: '/images/photographers/albert/avatar.jpg',
+    portfolio: [
+      { src: '/images/photographers/albert/foto1.jpg', alt: 'Boda en Málaga — Albert Pamies' },
+      { src: '/images/photographers/albert/foto2.jpg', alt: 'Fotografía de boda Costa del Sol — Albert Pamies' },
+      { src: '/images/photographers/albert/foto3.jpg', alt: 'Pareja de novios Málaga — Albert Pamies' },
+    ],
+    web: 'https://albertpamies.com',
+    instagram: 'albertpamies',
+    profileSlug: 'albert-pamies',
+    badge: 'Verificado',
+    yearsExp: 12,
+    awards: ['Fearless Photographers USA', 'MyWed #1 Mundial 2019', 'Inspiration Photographers Brazil'],
+    photoCredit: 'albertpamies.com',
+  },
+  {
+    name: 'Serafín Castillo',
+    city: 'Marbella',
+    zone: 'Marbella · Costa del Sol · Nerja',
+    style: 'Fine art documental',
+    styleDesc: 'Film y digital, elegancia mediterránea atemporal',
+    price: 'desde 2.000€',
+    bio: 'Serafín Castillo es de Nerja y tiene su base en Marbella. Su trabajo combina el feeling del film con la emoción documental. Reconocido por Vogue y con bodas en toda España, Europa y destinos internacionales. 51K seguidores en Instagram.',
+    avatar: '/images/photographers/serafin/foto1.jpg',
+    portfolio: [
+      { src: '/images/photographers/serafin/foto2.jpg', alt: 'Boda Marbella — Serafín Castillo' },
+      { src: '/images/photographers/serafin/foto3.jpg', alt: 'Fotografía boda finca Málaga — Serafín Castillo' },
+      { src: '/images/cities/malaga.jpg',               alt: 'Wedding photographer Costa del Sol — Serafín Castillo' },
+    ],
+    web: 'https://www.serafincastillo.com',
+    instagram: 'serafin_castillo',
+    profileSlug: 'serafin-castillo',
+    badge: 'Verificado',
+    yearsExp: 10,
+    awards: ['Reconocido por Vogue', 'Fearless Photographers'],
+    photoCredit: 'serafincastillo.com',
+  },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `Mejores fotógrafos de bodas en ${city}`,
+  "description": `Directorio de los mejores fotógrafos de bodas en ${city} y Costa del Sol. Compara estilos y precios.`,
+  "url": `https://fotografosparabodas.es/${slug}/`,
+  "numberOfItems": photographers.length,
+  "itemListElement": photographers.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": p.name,
+      "description": p.bio,
+      "url": p.web,
+      "areaServed": { "@type": "City", "name": city },
+      "priceRange": p.price,
+      "knowsAbout": "Fotografía de bodas",
+    }
+  })),
+};
+---
+
+<BaseLayout
+  title="Fotógrafos de Bodas en Málaga — Albert Pamies y más · 2026"
+  description="Los mejores fotógrafos de bodas en Málaga y Costa del Sol. Albert Pamies (premiado internacionalmente), Serafín Castillo y más. Contacto directo y sin comisiones."
+  canonical={`https://fotografosparabodas.es/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafos de Bodas\nen Málaga`}
+      subtitle="Dos de los fotógrafos más reconocidos de la Costa del Sol. Contacta directamente, sin intermediarios ni comisiones extra."
+      ctaText="Ver fotógrafos"
+      ctaHref="#fotografos"
+      imageSrc="/images/cities/malaga.jpg"
+    />
+
+    <!-- Intro local -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Málaga y Costa del Sol</p>
+            <h2 class="section-title mb-6">La luz mediterránea<br/>que lo cambia todo</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              Málaga tiene una luz dorada única. Las fincas del interior, las playas de Nerja o los jardines de Ronda crean escenarios que los mejores fotógrafos saben aprovechar para crear imágenes atemporales.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              Los fotógrafos listados aquí conocen cada recoveco de la provincia y tienen experiencia trabajando con la luz directa del sur. Eso no se improvisa.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Precio medio', value: '1.400€ – 2.500€' },
+                { label: 'Fotógrafos listados', value: `${photographers.length} verificados` },
+                { label: 'Temporada alta', value: 'Abril – Octubre' },
+                { label: 'Zonas populares', value: 'Marbella, Ronda, Nerja, centro Málaga' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photographers -->
+    <section id="fotografos" class="py-20 bg-[#FAF7F2]">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-eyebrow mb-4">Directorio exclusivo</p>
+          <h2 class="section-title">Los fotógrafos de boda<br/>de referencia en Málaga</h2>
+          <span class="gold-divider"></span>
+          <p class="font-['Lato'] text-[#6B5E58] max-w-lg mx-auto mt-4 text-sm leading-relaxed">
+            Solo listamos 2 fotógrafos por ciudad. Ambos han pasado nuestra revisión de portfolio.
+          </p>
+        </div>
+
+        <div class="space-y-8">
+          {photographers.map((p, i) => <PhotographerProfile photographer={p} featured={i === 0} />)}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO content -->
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cuánto cuesta un fotógrafo de bodas en Málaga en 2026?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            El precio de un fotógrafo de bodas en Málaga varía según experiencia, horas y extras incluidos. En 2026, el rango habitual es <strong class="text-[#1C1814]">1.400€ – 2.500€</strong>. Los fotógrafos premiados internacionalmente como Albert Pamies o Serafín Castillo trabajan bajo consulta previa de disponibilidad.
+          </p>
+          <p>
+            En zonas como Marbella, Estepona o Ronda los precios tienden a ser más altos (+15-25%) por la demanda de bodas de destino. Si tenéis una boda en una finca de lujo, reservad con al menos 12 meses de antelación.
+          </p>
+          <p>
+            Un paquete estándar incluye cobertura del día completo, edición de 400-700 fotos, galería online privada y entrega en alta resolución. Los extras habituales son la sesión preboda, segundo fotógrafo y álbum impreso artesanal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <!-- Related -->
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">También en Andalucía</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-8">Más ciudades</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[
+            { name: 'Córdoba', slug: 'cordoba' },
+            { name: 'Granada', slug: 'granada' },
+            { name: 'Sevilla', slug: 'sevilla' },
+          ].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">
+              Fotógrafos en {c.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

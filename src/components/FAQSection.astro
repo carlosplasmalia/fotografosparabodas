@@ -1,0 +1,79 @@
+---
+interface Props {
+  city?: string;
+}
+const { city } = Astro.props;
+
+const faqs = [
+  {
+    q: city
+      ? `¿Cuánto cuesta un fotógrafo de bodas en ${city}?`
+      : '¿Cuánto cuesta un fotógrafo de bodas en España?',
+    a: city
+      ? `El precio medio de un fotógrafo de bodas en ${city} oscila entre 1.200€ y 2.500€ para una cobertura completa. El rango varía según la experiencia del fotógrafo, el número de horas, si se incluye un segundo fotógrafo y los extras (álbum, sesión preboda).`
+      : 'El precio medio en España oscila entre 1.200€ y 2.500€ para una cobertura completa. Las ciudades grandes como Madrid o San Sebastián suelen tener tarifas más altas. Te recomendamos pedir presupuesto sin compromiso para conocer el precio exacto.',
+  },
+  {
+    q: '¿Con cuánta antelación debo reservar?',
+    a: 'Lo ideal es reservar entre 9 y 12 meses antes de la boda, sobre todo si vuestra fecha cae en temporada alta (mayo-octubre). Los mejores fotógrafos se agotan rápido. Si ya tenéis fecha, buscad cuanto antes.',
+  },
+  {
+    q: '¿Qué estilos de fotografía de boda existen?',
+    a: 'Los principales son: reportaje documental (natural, sin poses), editorial o artístico (más posado y cuidado), y romántico (enfocado en la emoción y la luz). Muchos fotógrafos combinan estilos. En los perfiles podéis ver ejemplos reales de su trabajo.',
+  },
+  {
+    q: '¿Qué incluye un reportaje de boda completo?',
+    a: 'Normalmente incluye: cobertura desde preparativos hasta el baile, edición y selección de fotos (entre 400 y 800 imágenes), galería privada online y entrega en alta resolución. Los extras habituales son: sesión preboda, segundo fotógrafo, álbum impreso y vídeo.',
+  },
+  {
+    q: '¿Puedo contratar directamente con el fotógrafo?',
+    a: 'Sí. Nuestro directorio es un punto de encuentro: conectamos a las parejas con los fotógrafos. El contrato, el pago y todo lo demás se gestiona directamente entre vosotros y el fotógrafo, sin intermediarios.',
+  },
+  {
+    q: '¿Qué pasa si el fotógrafo tiene una emergencia el día de la boda?',
+    a: 'Pregunta siempre al fotógrafo qué protocolo tiene para estas situaciones. Los profesionales verificados en nuestro directorio tienen red de contactos y suelen poder gestionar un sustituto en casos extremos. Es algo que siempre se debe incluir en el contrato.',
+  },
+];
+
+const schemaFAQ = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  })),
+};
+---
+
+<section id="faq" class="py-24 bg-[#FAF7F2]">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="section-eyebrow mb-4">FAQ</p>
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <span class="gold-divider"></span>
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((faq, i) => (
+        <details class="group bg-white rounded-sm border border-[#E8DDD3] overflow-hidden" open={i === 0}>
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none select-none gap-4">
+            <span class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] pr-4">
+              {faq.q}
+            </span>
+            <span class="shrink-0 w-6 h-6 rounded-full border border-[#B89060] flex items-center justify-center text-[#B89060] text-sm transition-transform group-open:rotate-45">
+              +
+            </span>
+          </summary>
+          <div class="px-6 pb-6">
+            <p class="font-['Lato'] text-[#6B5E58] text-sm leading-relaxed">
+              {faq.a}
+            </p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaFAQ)} />

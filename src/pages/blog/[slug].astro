@@ -1,0 +1,229 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+const keywords = post.id.split('-').filter(w => w.length > 4);
+const related = allPosts
+  .filter(p => p.id !== post.id)
+  .map(p => ({
+    post: p,
+    score: keywords.filter(kw => p.id.includes(kw) || p.data.title.toLowerCase().includes(kw)).length,
+  }))
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 2)
+  .map(s => s.post);
+
+const dateFormatted = new Date(post.data.date).toLocaleDateString('es-ES', {
+  year: 'numeric', month: 'long', day: 'numeric',
+});
+
+const pageUrl = `https://${site.domain}/blog/${post.id}/`;
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.data.title,
+  "description": post.data.description,
+  "datePublished": post.data.date,
+  "dateModified": post.data.date,
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "author": { "@type": "Organization", "name": site.name, "url": `https://${site.domain}` },
+  "publisher": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`,
+    "logo": { "@type": "ImageObject", "url": `https://${site.domain}/favicon.svg` },
+  },
+};
+
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": `https://${site.domain}/` },
+    { "@type": "ListItem", "position": 2, "name": "Guías", "item": `https://${site.domain}/blog/` },
+    { "@type": "ListItem", "position": 3, "name": post.data.title, "item": pageUrl },
+  ],
+};
+---
+
+<BaseLayout
+  title={`${post.data.title} | Fotógrafos para Bodas`}
+  description={post.data.description}
+  canonical={pageUrl}
+  schema={schemaOrg}
+  ogImage={post.data.imagen}
+>
+  <SiteHeader />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <!-- Hero artículo -->
+    <section class="relative bg-[#1C1814] overflow-hidden">
+      {post.data.imagen && (
+        <>
+          <img
+            src={post.data.imagen}
+            alt={post.data.imagenAlt ?? post.data.title}
+            class="absolute inset-0 w-full h-full object-cover opacity-25"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#1C1814] via-[#1C1814]/85 to-[#1C1814]/50"></div>
+        </>
+      )}
+      <div class="relative max-w-3xl mx-auto px-6 py-20 text-center">
+        <nav class="flex items-center justify-center gap-2 font-['Lato'] text-xs text-[#6B5E58] mb-6">
+          <a href="/" class="hover:text-[#B89060] transition-colors">Inicio</a>
+          <span>›</span>
+          <a href="/blog/" class="hover:text-[#B89060] transition-colors">Guías</a>
+          {post.data.categoria && (
+            <>
+              <span>›</span>
+              <span class="text-[#B89060]">{post.data.categoria}</span>
+            </>
+          )}
+        </nav>
+        <h1 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-semibold text-white leading-tight mb-6">
+          {post.data.title}
+        </h1>
+        <p class="font-['Lato'] text-[#9A8880] text-sm">{dateFormatted}</p>
+      </div>
+    </section>
+
+    <!-- Contenido -->
+    <div class="max-w-3xl mx-auto px-6 py-16">
+      <article class="prose-boda">
+        <Content />
+      </article>
+
+      <!-- CTA inline -->
+      <div class="mt-12 bg-[#F2E8D5] border-l-4 border-[#B89060] rounded-sm p-6">
+        <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-2">
+          ¿Buscáis fotógrafo de bodas?
+        </p>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] mb-5 leading-relaxed">
+          Explorad el directorio y consultad disponibilidad sin compromiso. Respondemos en menos de 24 horas.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20busco%20fotógrafo%20de%20bodas.%20¿Podéis%20ayudarme%3F`}
+            target="_blank" rel="noopener noreferrer"
+            class="btn-gold text-sm py-2.5 px-5 flex items-center gap-2"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Consultar gratis
+          </a>
+          <a href="/malaga/" class="btn-outline text-sm py-2.5 px-4">Fotógrafos en Málaga</a>
+          <a href="/madrid/" class="btn-outline text-sm py-2.5 px-4">Fotógrafos en Madrid</a>
+        </div>
+      </div>
+
+      <!-- Artículos relacionados -->
+      {related.length > 0 && (
+        <div class="mt-14 pt-10 border-t border-[#E8DDD3]">
+          <p class="section-eyebrow mb-6">Seguir leyendo</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {related.map(p => (
+              <a
+                href={`/blog/${p.id}/`}
+                class="group bg-white border border-[#E8DDD3] rounded-sm p-5 hover:shadow-md transition-shadow"
+              >
+                {p.data.categoria && (
+                  <span class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060]">
+                    {p.data.categoria}
+                  </span>
+                )}
+                <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] mt-2 group-hover:text-[#B89060] transition-colors leading-tight">
+                  {p.data.title}
+                </h3>
+                <span class="inline-block mt-3 font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060]">
+                  Leer →
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div class="mt-10 text-center">
+        <a href="/blog/" class="font-['Lato'] text-sm text-[#6B5E58] hover:text-[#B89060] transition-colors">
+          ← Ver todas las guías
+        </a>
+      </div>
+    </div>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat />
+</BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
+<script type="application/ld+json" set:html={JSON.stringify(schemaBreadcrumb)} />
+
+<style is:global>
+  .prose-boda h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #1C1814;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .prose-boda h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #1C1814;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-boda p {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9375rem;
+    color: #4A3E38;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+  }
+  .prose-boda strong { color: #1C1814; font-weight: 700; }
+  .prose-boda a { color: #B89060; text-decoration: underline; text-underline-offset: 3px; }
+  .prose-boda a:hover { color: #9A7545; }
+  .prose-boda ul { list-style: none; padding: 0; margin: 1.25rem 0; }
+  .prose-boda ul li {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9375rem;
+    color: #4A3E38;
+    line-height: 1.7;
+    padding-left: 1.25rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+  .prose-boda ul li::before { content: '·'; color: #B89060; font-weight: 700; position: absolute; left: 0; }
+  .prose-boda hr { border: none; border-top: 1px solid #E8DDD3; margin: 2.5rem 0; }
+  .prose-boda em { font-style: italic; color: #6B5E58; }
+  .prose-boda blockquote {
+    border-left: 3px solid #B89060;
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #6B5E58;
+  }
+</style>

@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SiteHeader from '../../../components/SiteHeader.astro';
+import SiteFooter from '../../../components/SiteFooter.astro';
+import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
+import { site } from '../../../config/site';
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fotografía romántica de bodas: emoción, luz y paletas cálidas",
+  "description": "Todo sobre el estilo romántico en fotografía de bodas: cómo se trabaja la luz, qué resultado obtenéis y para qué tipo de boda es ideal.",
+  "url": `https://${site.domain}/estilo/romantico/`,
+  "author": { "@type": "Organization", "name": site.name },
+};
+---
+
+<BaseLayout
+  title="Fotografía Romántica de Bodas — Luz, emoción y color · 2026"
+  description="El estilo romántico en fotografía de bodas: luz suave, paletas cálidas y emoción trabajada. Qué resultado obtenéis y cómo elegir al fotógrafo adecuado."
+  canonical={`https://${site.domain}/estilo/romantico/`}
+  schema={schemaOrg}
+>
+  <SiteHeader />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <section class="bg-[#1C1814] py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <nav class="flex items-center justify-center gap-2 font-['Lato'] text-xs text-[#6B5E58] mb-6">
+          <a href="/" class="hover:text-[#B89060] transition-colors">Inicio</a>
+          <span>›</span>
+          <span class="text-[#B89060]">Estilos</span>
+          <span>›</span>
+          <span class="text-[#B89060]">Romántico</span>
+        </nav>
+        <p class="section-eyebrow text-[#B89060] mb-4">Estilos de fotografía</p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl font-semibold text-white leading-tight mb-6">
+          Fotografía romántica<br/>de bodas
+        </h1>
+        <p class="font-['Lato'] text-[#9A8880] text-lg max-w-xl mx-auto">
+          Emoción, luz trabajada y paletas cálidas. El estilo más demandado en España para parejas que buscan imágenes íntimas y sentidas.
+        </p>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 py-16">
+      <article class="prose-boda">
+
+        <h2>Qué es la fotografía romántica de bodas</h2>
+        <p>
+          El estilo romántico combina la naturalidad del documental con un cuidado específico por la luz, el color y la emoción. El fotógrafo trabaja para crear imágenes que transmitan sentimiento, no solo que documenten lo que ocurrió. El resultado son fotos con una temperatura cálida, una paleta de colores suaves y una atmósfera íntima que hace que el espectador sienta algo al verlas.
+        </p>
+        <p>
+          Es el estilo más popular en España y también el más malinterpretado. No se trata de hacer fotos "bonitas" de forma genérica: el estilo romántico bien ejecutado tiene una coherencia visual muy específica que requiere tanto habilidad técnica como sensibilidad para las personas.
+        </p>
+
+        <h2>Cómo trabaja la luz un fotógrafo romántico</h2>
+        <p>
+          La luz lo es todo en este estilo. Los fotógrafos románticos buscan la hora dorada (los 30-60 minutos antes del atardecer), la luz filtrada por cortinas o ventanas, y evitan activamente el flash directo y el sol de mediodía. Por eso suelen programar la sesión de pareja al final del cóctel, cuando la luz es más suave.
+        </p>
+        <p>
+          En interiores, trabajan con la luz natural de las ventanas o con flashes rebotados que imitan esa suavidad. La diferencia entre un flash bien usado y mal usado es enorme en el resultado final.
+        </p>
+        <p>
+          En la edición también se nota: las fotos románticas tienden a tener sombras suaves, altas luces sin quemar y una dominante cálida (dorados, cremas, rosados) que cohesiona el conjunto.
+        </p>
+
+        <h2>Qué fotos obtenéis</h2>
+        <p>
+          El estilo romántico bien ejecutado da fotos de pareja que parecen sacadas de una película: miradas, susurros, manos entrelazadas, reacciones espontáneas capturadas con la luz perfecta. También fotos de grupo más naturales y emotivas que el estilo clásico, aunque con menos perfección formal.
+        </p>
+        <p>
+          Para las fotos de ceremonia y banquete, el enfoque sigue siendo la emoción: las lágrimas del padre, el abrazo de los abuelos, el brillo en los ojos durante los votos. Momentos que en el estilo romántico se iluminan y encuadran de una forma específica para maximizar su impacto emocional.
+        </p>
+
+        <h2>Para qué parejas es ideal</h2>
+        <p>
+          Es el estilo más versátil y el que funciona bien en casi cualquier tipo de boda. Funciona especialmente bien en bodas al aire libre con mucha luz natural, en venues con buena arquitectura y en parejas que no tienen miedo a mostrarse afecto delante de la cámara.
+        </p>
+        <p>
+          Si queréis fotos que podáis colgar en casa y que os emocionen al verlas, el estilo romántico es casi siempre la mejor elección. Si lo que buscáis es precisión formal y grupos perfectamente organizados, el estilo clásico os encajará mejor.
+        </p>
+
+        <h2>Cómo elegir un fotógrafo romántico</h2>
+        <p>
+          Fijaos en la coherencia de la paleta de color a lo largo de todo su portfolio. Un buen fotógrafo romántico tiene un "preset" o una edición reconocible que da unidad a su trabajo. Si veis que cada boda tiene colores completamente distintos, probablemente no tenga un estilo definido.
+        </p>
+        <p>
+          Pedid también ver el trabajo en boda completa, no solo los highlights. Un fotógrafo romántico mantiene la calidad incluso en las situaciones difíciles: interiores sin luz, mediodía con sol duro, banquete nocturno. Eso es lo que diferencia a los buenos de los que solo brillan en condiciones perfectas.
+        </p>
+
+      </article>
+
+      <div class="mt-12 bg-[#F2E8D5] border-l-4 border-[#B89060] rounded-sm p-6">
+        <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-2">
+          ¿Buscáis fotógrafo romántico?
+        </p>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] mb-5 leading-relaxed">
+          Consultad disponibilidad con fotógrafos especializados en estilo romántico en vuestro ciudad.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20busco%20fotógrafo%20romántico%20de%20bodas.%20¿Podéis%20ayudarme%3F`}
+            target="_blank" rel="noopener noreferrer"
+            class="btn-gold text-sm py-2.5 px-5"
+          >
+            Consultar disponibilidad
+          </a>
+          <a href="/malaga/" class="btn-outline text-sm py-2.5 px-4">Fotógrafos en Málaga</a>
+          <a href="/madrid/" class="btn-outline text-sm py-2.5 px-4">Fotógrafos en Madrid</a>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-10 border-t border-[#E8DDD3]">
+        <p class="section-eyebrow mb-6">Otros estilos</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            { slug: 'documental', title: 'Documental', desc: 'La boda tal como fue, sin poses' },
+            { slug: 'editorial',  title: 'Editorial',  desc: 'Composición de moda, estética revista' },
+            { slug: 'clasico',    title: 'Clásico',    desc: 'Elegancia atemporal y posados perfectos' },
+          ].map(s => (
+            <a href={`/estilo/${s.slug}/`} class="group bg-white border border-[#E8DDD3] rounded-sm p-5 hover:shadow-md transition-shadow">
+              <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] group-hover:text-[#B89060] transition-colors">{s.title}</h3>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] mt-2">{s.desc}</p>
+              <span class="inline-block mt-3 font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060]">Ver estilo →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/blog/" class="font-['Lato'] text-sm text-[#6B5E58] hover:text-[#B89060] transition-colors">
+          ← Ver todas las guías
+        </a>
+      </div>
+    </div>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat />
+</BaseLayout>
+
+<style is:global>
+  .prose-boda h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.875rem; font-weight: 600; color: #1C1814; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+  .prose-boda p { font-family: 'Lato', sans-serif; font-size: 0.9375rem; color: #4A3E38; line-height: 1.85; margin-bottom: 1.25rem; }
+  .prose-boda strong { color: #1C1814; font-weight: 700; }
+  .prose-boda a { color: #B89060; text-decoration: underline; text-underline-offset: 3px; }
+</style>

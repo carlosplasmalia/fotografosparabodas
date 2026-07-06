@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SiteHeader from '../../../components/SiteHeader.astro';
+import SiteFooter from '../../../components/SiteFooter.astro';
+import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
+import { site } from '../../../config/site';
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fotografía documental de bodas: qué es y para qué parejas es ideal",
+  "description": "Guía completa sobre el estilo documental en fotografía de bodas. Cómo funciona, qué resultado da y cómo saber si es el estilo adecuado para vosotros.",
+  "url": `https://${site.domain}/estilo/documental/`,
+  "author": { "@type": "Organization", "name": site.name },
+};
+---
+
+<BaseLayout
+  title="Fotografía Documental de Bodas — Qué es y para quién · 2026"
+  description="Todo sobre el estilo documental en fotografía de bodas: cómo trabaja el fotógrafo, qué tipo de fotos obtenéis y si es el estilo adecuado para vosotros."
+  canonical={`https://${site.domain}/estilo/documental/`}
+  schema={schemaOrg}
+>
+  <SiteHeader />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <section class="bg-[#1C1814] py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <nav class="flex items-center justify-center gap-2 font-['Lato'] text-xs text-[#6B5E58] mb-6">
+          <a href="/" class="hover:text-[#B89060] transition-colors">Inicio</a>
+          <span>›</span>
+          <span class="text-[#B89060]">Estilos</span>
+          <span>›</span>
+          <span class="text-[#B89060]">Documental</span>
+        </nav>
+        <p class="section-eyebrow text-[#B89060] mb-4">Estilos de fotografía</p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl font-semibold text-white leading-tight mb-6">
+          Fotografía documental<br/>de bodas
+        </h1>
+        <p class="font-['Lato'] text-[#9A8880] text-lg max-w-xl mx-auto">
+          La boda tal como fue, sin poses ni escenas preparadas. El estilo más honesto y más difícil de ejecutar bien.
+        </p>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 py-16">
+      <article class="prose-boda">
+
+        <h2>Qué es la fotografía documental de bodas</h2>
+        <p>
+          El estilo documental, también llamado fotorreportaje o wedding photojournalism, consiste en fotografiar la boda como si fuera un evento periodístico. El fotógrafo no pide poses, no organiza grupos, no redirige a los invitados. Simplemente observa y dispara en el momento justo.
+        </p>
+        <p>
+          El resultado es una narración visual cronológica de vuestro día: la abuela llorando durante la ceremonia, el primer abrazo de los padrinos, la carcajada espontánea durante el baile. Momentos que existen exactamente una vez y que un fotógrafo documental sabe anticipar y capturar.
+        </p>
+
+        <h2>Cómo trabaja un fotógrafo documental</h2>
+        <p>
+          La diferencia operativa es grande respecto a otros estilos. Un fotógrafo documental llega, se presenta y prácticamente desaparece. No lidera la sesión de fotos, no para a los novios para reencuadrar, no interrumpe conversaciones para conseguir "la foto perfecta". Esto tiene una consecuencia directa: los invitados se olvidan de que hay un fotógrafo y actúan con naturalidad.
+        </p>
+        <p>
+          Esa naturalidad es justamente el objetivo. Un buen fotógrafo documental tiene la capacidad de leer el espacio, anticipar el momento y estar exactamente en el lugar correcto cuando ocurre algo que vale la pena fotografiar. Eso requiere años de práctica y un sexto sentido para las personas que no se aprende en ningún curso.
+        </p>
+
+        <h2>Qué fotos obtenéis (y cuáles no)</h2>
+        <p>
+          Con fotografía documental obtenéis una narración completa y honesta de vuestro día. Fotos que os van a emocionar cuando las reviséis dentro de diez años porque capturan exactamente cómo fue aquella jornada, no cómo querías que pareciera.
+        </p>
+        <p>
+          Lo que no obtenéis son fotos de pareja muy trabajadas con luz artificial, sesiones de retratos elaboradas ni fotos de grupo perfectamente organizadas. Si eso es importante para vosotros, el estilo documental puro no es vuestra opción.
+        </p>
+        <p>
+          Muchos fotógrafos combinan el documental con una pequeña sesión de pareja (20-30 minutos durante el cóctel o al atardecer) para que tengáis ambas cosas. Es la solución más habitual y más sensata.
+        </p>
+
+        <h2>Para qué parejas es ideal</h2>
+        <p>
+          El estilo documental funciona especialmente bien con parejas que no se sienten cómodas posando, que valoran la espontaneidad por encima de la perfección estética, y que prefieren fotos que cuenten una historia a fotos que "queden bonitas" en Instagram.
+        </p>
+        <p>
+          También es el estilo más adecuado para bodas con mucha emoción y acción: bodas grandes con mucha gente, celebraciones con música en directo, bodas en las que sabéis que va a pasar de todo. Cuanto más vivo esté el ambiente, mejor trabaja el fotógrafo documental.
+        </p>
+
+        <h2>Cómo reconocer un buen fotógrafo documental</h2>
+        <p>
+          La clave está en pedirle una boda completa, no el portfolio. Un portfolio muestra los mejores momentos de cien bodas distintas. Una boda completa muestra si el fotógrafo mantiene la calidad durante todo el día o solo en los momentos más evidentes.
+        </p>
+        <p>
+          Fijáos también en si las fotos capturan miradas, conexiones entre personas y momentos inesperados, no solo el momento obvio (el beso, el primer baile). Eso distingue a los fotógrafos documentales de los que dicen serlo.
+        </p>
+
+      </article>
+
+      <div class="mt-12 bg-[#F2E8D5] border-l-4 border-[#B89060] rounded-sm p-6">
+        <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-2">
+          ¿Buscáis fotógrafo documental?
+        </p>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] mb-5 leading-relaxed">
+          Consultad disponibilidad con los fotógrafos de nuestro directorio especializados en estilo documental. Sin compromiso.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20busco%20fotógrafo%20documental%20de%20bodas.%20¿Podéis%20ayudarme%3F`}
+            target="_blank" rel="noopener noreferrer"
+            class="btn-gold text-sm py-2.5 px-5"
+          >
+            Consultar disponibilidad
+          </a>
+          <a href="/malaga/" class="btn-outline text-sm py-2.5 px-4">Fotógrafos en Málaga</a>
+          <a href="/madrid/" class="btn-outline text-sm py-2.5 px-4">Fotógrafos en Madrid</a>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-10 border-t border-[#E8DDD3]">
+        <p class="section-eyebrow mb-6">Otros estilos</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            { slug: 'romantico', title: 'Romántico', desc: 'Emoción, luz suave y paletas cálidas' },
+            { slug: 'editorial', title: 'Editorial', desc: 'Composición de moda, estética revista' },
+            { slug: 'clasico',   title: 'Clásico',   desc: 'Elegancia atemporal y posados perfectos' },
+          ].map(s => (
+            <a href={`/estilo/${s.slug}/`} class="group bg-white border border-[#E8DDD3] rounded-sm p-5 hover:shadow-md transition-shadow">
+              <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] group-hover:text-[#B89060] transition-colors">{s.title}</h3>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] mt-2">{s.desc}</p>
+              <span class="inline-block mt-3 font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060]">Ver estilo →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/blog/" class="font-['Lato'] text-sm text-[#6B5E58] hover:text-[#B89060] transition-colors">
+          ← Ver todas las guías
+        </a>
+      </div>
+    </div>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat />
+</BaseLayout>
+
+<style is:global>
+  .prose-boda h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.875rem; font-weight: 600; color: #1C1814; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+  .prose-boda p { font-family: 'Lato', sans-serif; font-size: 0.9375rem; color: #4A3E38; line-height: 1.85; margin-bottom: 1.25rem; }
+  .prose-boda strong { color: #1C1814; font-weight: 700; }
+  .prose-boda a { color: #B89060; text-decoration: underline; text-underline-offset: 3px; }
+</style>

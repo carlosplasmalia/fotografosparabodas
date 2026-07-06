@@ -1,0 +1,105 @@
+---
+export interface Photographer {
+  name: string;
+  city: string;
+  style: string;
+  price: string;
+  description: string;
+  photo: string;
+  portfolio: string[];
+  whatsapp?: string;
+  instagram?: string;
+  awards?: string[];
+  yearsExp: number;
+}
+
+interface Props {
+  photographer: Photographer;
+}
+
+const { photographer: p } = Astro.props;
+---
+
+<article class="bg-white rounded-sm overflow-hidden shadow-sm border border-[#E8DDD3] group">
+  <!-- Portfolio strip -->
+  <div class="grid grid-cols-3 h-48 overflow-hidden">
+    {p.portfolio.slice(0, 3).map((img, i) => (
+      <div class="overflow-hidden">
+        <img
+          src={img}
+          alt={`Fotografía de boda de ${p.name}`}
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    ))}
+  </div>
+
+  <!-- Info -->
+  <div class="p-6">
+    <div class="flex items-start gap-4">
+      <!-- Avatar -->
+      <img
+        src={p.photo}
+        alt={p.name}
+        class="w-14 h-14 rounded-full object-cover border-2 border-[#F2E8D5] shrink-0"
+        loading="lazy"
+      />
+      <div class="flex-1 min-w-0">
+        <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814]">{p.name}</h3>
+        <p class="font-['Lato'] text-xs text-[#6B5E58] mt-0.5">
+          {p.city} · {p.yearsExp} años de experiencia
+        </p>
+      </div>
+    </div>
+
+    <!-- Style tag + price -->
+    <div class="flex items-center gap-2 mt-4">
+      <span class="text-xs font-['Lato'] font-medium px-2 py-1 bg-[#F2E8D5] text-[#9A7545] rounded-sm">
+        {p.style}
+      </span>
+      <span class="text-xs font-['Lato'] text-[#6B5E58]">·</span>
+      <span class="text-xs font-['Lato'] font-semibold text-[#1C1814]">{p.price}</span>
+    </div>
+
+    <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed mt-3 line-clamp-2">
+      {p.description}
+    </p>
+
+    {p.awards && p.awards.length > 0 && (
+      <div class="flex flex-wrap gap-1 mt-3">
+        {p.awards.map(award => (
+          <span class="text-[10px] font-['Lato'] px-2 py-0.5 border border-[#B89060]/40 text-[#9A7545] rounded-sm">
+            🏆 {award}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- CTAs -->
+    <div class="flex gap-3 mt-5">
+      {p.whatsapp && (
+        <a
+          href={`https://wa.me/${p.whatsapp}?text=Hola%20${encodeURIComponent(p.name)}%2C%20os%20encontré%20en%20fotografosparabodas.es%20y%20me%20gustaría%20consultar%20disponibilidad.`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-gold flex-1 text-sm py-2.5 text-center"
+        >
+          Consultar vía WhatsApp
+        </a>
+      )}
+      {p.instagram && (
+        <a
+          href={`https://instagram.com/${p.instagram}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-outline text-sm py-2.5 px-3"
+          aria-label="Ver Instagram"
+        >
+          IG
+        </a>
+      )}
+    </div>
+  </div>
+</article>

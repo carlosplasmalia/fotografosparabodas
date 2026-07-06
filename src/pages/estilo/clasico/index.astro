@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SiteHeader from '../../../components/SiteHeader.astro';
+import SiteFooter from '../../../components/SiteFooter.astro';
+import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
+import { site } from '../../../config/site';
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fotografía clásica de bodas: elegancia atemporal y grupos perfectos",
+  "description": "El estilo clásico en fotografía de bodas: posados, grupos bien organizados y fotos que duran generaciones. Cuándo elegirlo y qué esperar del resultado.",
+  "url": `https://${site.domain}/estilo/clasico/`,
+  "author": { "@type": "Organization", "name": site.name },
+};
+---
+
+<BaseLayout
+  title="Fotografía Clásica de Bodas — Elegancia atemporal y grupos perfectos · 2026"
+  description="El estilo clásico en fotografía de bodas: posados formales, grupos bien organizados y elegancia atemporal. Para qué bodas funciona mejor y cómo encontrar al fotógrafo."
+  canonical={`https://${site.domain}/estilo/clasico/`}
+  schema={schemaOrg}
+>
+  <SiteHeader />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <section class="bg-[#1C1814] py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <nav class="flex items-center justify-center gap-2 font-['Lato'] text-xs text-[#6B5E58] mb-6">
+          <a href="/" class="hover:text-[#B89060] transition-colors">Inicio</a>
+          <span>›</span>
+          <span class="text-[#B89060]">Estilos</span>
+          <span>›</span>
+          <span class="text-[#B89060]">Clásico</span>
+        </nav>
+        <p class="section-eyebrow text-[#B89060] mb-4">Estilos de fotografía</p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl font-semibold text-white leading-tight mb-6">
+          Fotografía clásica<br/>de bodas
+        </h1>
+        <p class="font-['Lato'] text-[#9A8880] text-lg max-w-xl mx-auto">
+          Posados formales, grupos organizados y elegancia atemporal. El estilo que lleva décadas funcionando por una razón.
+        </p>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 py-16">
+      <article class="prose-boda">
+
+        <h2>Qué es la fotografía clásica de bodas</h2>
+        <p>
+          El estilo clásico es el más tradicional de la fotografía de bodas. Combina posados formales de pareja, fotos de grupo bien organizadas y una cobertura ordenada del día que sigue una estructura previsible: preparativos, llegada, ceremonia, grupos, pareja, banquete. El fotógrafo tiene un papel más activo en organizar lo que ocurre delante de la cámara.
+        </p>
+        <p>
+          Cuando la gente habla de "las fotos de boda de toda la vida", hablan de este estilo. Y el hecho de que lleve décadas siendo la opción predeterminada dice algo: funciona. Las fotos son formalmente correctas, todo el mundo sale bien y se cubren los momentos clave sin sorpresas.
+        </p>
+
+        <h2>Qué incluye el trabajo clásico</h2>
+        <p>
+          La columna vertebral del trabajo clásico son las fotos de grupo. El fotógrafo tiene una lista preacordada de combinaciones (familia completa, familia de novio, amigos del cole, compañeros de trabajo) y las ejecuta con eficiencia durante el cóctel. En una boda de 150 personas con 20 fotos de grupo, eso puede llevar 45-60 minutos bien gestionados.
+        </p>
+        <p>
+          La sesión de pareja también tiene un carácter más formal: poses acordadas, localizaciones elegidas por el fotógrafo con antelación y un trabajo de luz más predecible. No hay improvisación ni búsqueda de momentos inesperados. El resultado es más uniforme y controlado.
+        </p>
+        <p>
+          La cobertura documental existe pero es secundaria. El fotógrafo clásico tiene la cámara levantada durante la ceremonia y el banquete, pero su foco está en conseguir las fotos planificadas, no en explorar lo que ocurre entre bambalinas.
+        </p>
+
+        <h2>Las ventajas del estilo clásico</h2>
+        <p>
+          La principal ventaja es la previsibilidad. Sabéis exactamente qué vais a tener antes de ver las fotos: grupos perfectos, pareja bien iluminada, cobertura de los momentos clave. No hay sorpresas, ni positivas ni negativas.
+        </p>
+        <p>
+          También es el estilo más adecuado cuando hay invitados de distintas generaciones con expectativas tradicionales. Los abuelos, los tíos de otra época, los compañeros de trabajo que no conocéis demasiado: todos se sienten cómodos en una foto de grupo clásica de una forma que no ocurre con el documental.
+        </p>
+        <p>
+          Y el precio. Los fotógrafos clásicos tienden a ser más asequibles que los editoriales o los documentales de primer nivel, porque su trabajo es más estandarizable y requiere menos años de desarrollo de un estilo personal.
+        </p>
+
+        <h2>Cuándo el estilo clásico no es la mejor opción</h2>
+        <p>
+          Si para vosotros lo más importante es capturar la emoción real del día, tal como ocurrió, el estilo clásico puede quedarse corto. Las fotos de grupo perfectas no sustituyen a la foto de vuestra madre llorando cuando os veis por primera vez. Esos momentos existen, y el fotógrafo clásico los captura, pero no son el centro de su trabajo.
+        </p>
+        <p>
+          Tampoco es el estilo ideal si tenéis una boda muy dinámica o íntima donde los grupos formales rompen el ritmo de la celebración. Para bodas pequeñas de menos de 50 personas, el documental o el romántico suelen dar un resultado más coherente con el espíritu de la celebración.
+        </p>
+
+        <h2>Cómo combinarlo con otros estilos</h2>
+        <p>
+          Muchas parejas resuelven esto eligiendo un fotógrafo que trabaje principalmente en estilo documental o romántico pero que también sea capaz de organizar los grupos necesarios con eficiencia. No es una contradicción: un buen fotógrafo puede hacer fotos de grupo correctas en 30 minutos y dedicar el resto del día al trabajo más espontáneo.
+        </p>
+        <p>
+          La clave es acordarlo por escrito: qué grupos son imprescindibles, cuánto tiempo tenéis para ellos y cómo se integra esa sesión en el ritmo general del día.
+        </p>
+
+      </article>
+
+      <div class="mt-12 bg-[#F2E8D5] border-l-4 border-[#B89060] rounded-sm p-6">
+        <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-2">
+          ¿Buscáis fotógrafo clásico?
+        </p>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] mb-5 leading-relaxed">
+          Consultad disponibilidad en el directorio y encontrad al fotógrafo adecuado para vuestra boda.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20busco%20fotógrafo%20de%20bodas%20en%20estilo%20clásico.%20¿Podéis%20ayudarme%3F`}
+            target="_blank" rel="noopener noreferrer"
+            class="btn-gold text-sm py-2.5 px-5"
+          >
+            Consultar disponibilidad
+          </a>
+          <a href="/malaga/" class="btn-outline text-sm py-2.5 px-4">Fotógrafos en Málaga</a>
+          <a href="/madrid/" class="btn-outline text-sm py-2.5 px-4">Fotógrafos en Madrid</a>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-10 border-t border-[#E8DDD3]">
+        <p class="section-eyebrow mb-6">Otros estilos</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            { slug: 'documental', title: 'Documental', desc: 'La boda tal como fue, sin poses' },
+            { slug: 'romantico',  title: 'Romántico',  desc: 'Emoción, luz suave y paletas cálidas' },
+            { slug: 'editorial',  title: 'Editorial',  desc: 'Composición de moda, estética revista' },
+          ].map(s => (
+            <a href={`/estilo/${s.slug}/`} class="group bg-white border border-[#E8DDD3] rounded-sm p-5 hover:shadow-md transition-shadow">
+              <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] group-hover:text-[#B89060] transition-colors">{s.title}</h3>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] mt-2">{s.desc}</p>
+              <span class="inline-block mt-3 font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060]">Ver estilo →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/blog/" class="font-['Lato'] text-sm text-[#6B5E58] hover:text-[#B89060] transition-colors">
+          ← Ver todas las guías
+        </a>
+      </div>
+    </div>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat />
+</BaseLayout>
+
+<style is:global>
+  .prose-boda h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.875rem; font-weight: 600; color: #1C1814; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+  .prose-boda p { font-family: 'Lato', sans-serif; font-size: 0.9375rem; color: #4A3E38; line-height: 1.85; margin-bottom: 1.25rem; }
+  .prose-boda strong { color: #1C1814; font-weight: 700; }
+  .prose-boda a { color: #B89060; text-decoration: underline; text-underline-offset: 3px; }
+</style>

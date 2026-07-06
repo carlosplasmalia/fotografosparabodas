@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import PhotographerProfile from '../../components/PhotographerProfile.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+
+const city = 'San Sebastián';
+const slug = 'san-sebastian';
+const avgPrice = '1.800€ – 3.000€';
+
+const photographers = [
+  {
+    name: 'Jokin Azpeitia',
+    city: 'San Sebastián',
+    zone: 'San Sebastián · Gipuzkoa · Navarra',
+    style: 'Editorial y documental',
+    styleDesc: 'Estética nórdica, emoción vasca, bodas de autor',
+    price: 'desde 2.000€',
+    bio: 'Jokin Azpeitia es de San Sebastián y trabaja bodas en Gipuzkoa y todo el País Vasco con un estilo que mezcla la estética editorial con la narración documental. Sus bodas han aparecido en blogs internacionales de referencia. Especialista en bodas en caseríos con txakoli, bodegas de Rioja Alavesa y ceremonias civiles íntimas.',
+    avatar: '/images/cities/san-sebastian.jpg',
+    portfolio: [
+      { src: '/images/portfolio/malaga-3.jpg', alt: 'Boda en San Sebastián — Jokin Azpeitia' },
+      { src: '/images/portfolio/malaga-6.jpg', alt: 'Fotografía boda Gipuzkoa — Jokin Azpeitia' },
+      { src: '/images/cities/san-sebastian.jpg', alt: 'Bodas San Sebastián — Jokin Azpeitia' },
+    ],
+    badge: 'Verificado',
+    yearsExp: 8,
+    awards: ['Junebug Weddings Best of 2024', 'WPJA Top Photographer'],
+    photoCredit: 'Jokin Azpeitia',
+  },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `Mejores fotógrafos de bodas en ${city}`,
+  "description": `Directorio de los mejores fotógrafos de bodas en ${city} y Gipuzkoa.`,
+  "url": `https://${site.domain}/${slug}/`,
+  "numberOfItems": photographers.length,
+  "itemListElement": photographers.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": p.name,
+      "description": p.bio,
+      "areaServed": { "@type": "City", "name": city },
+      "priceRange": p.price,
+      "knowsAbout": "Fotografía de bodas",
+    }
+  })),
+};
+---
+
+<BaseLayout
+  title="Fotógrafos de Bodas en San Sebastián — Donostia 2026"
+  description="Los mejores fotógrafos de bodas en San Sebastián y Gipuzkoa. Caseríos, txakolís y bodas de autor en el País Vasco. Precio medio: 1.800€ – 3.000€."
+  canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafos de Bodas\nen San Sebastián`}
+      subtitle="Caseríos, txakolís, la Concha y bodas de nivel en Donostia y toda Gipuzkoa. Fotógrafos que conocen cada recoveco del norte."
+      ctaText="Ver fotógrafos"
+      ctaHref="#fotografos"
+      imageSrc="/images/cities/san-sebastian.jpg"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Donostia y Gipuzkoa</p>
+            <h2 class="section-title mb-6">La perla del norte<br/>para vuestra boda</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              San Sebastián tiene una concentración de talento fotográfico fuera de lo normal para su tamaño. La ciudad tiene una sensibilidad estética propia, influida por la gastronomía, la arquitectura y la cultura vasca, que se traslada al trabajo de sus fotógrafos.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              Las bodas en Gipuzkoa suelen ser de alto nivel en términos de producción: venues exclusivos, catering de primer nivel, invitados exigentes. Los fotógrafos de aquí están habituados a ese entorno y saben moverse con discreción en bodas que se planifican durante dos años.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Precio medio', value: avgPrice },
+                { label: 'Fotógrafos verificados', value: `${photographers.length} activo` },
+                { label: 'Temporada alta', value: 'Junio – Septiembre' },
+                { label: 'Zonas populares', value: 'La Concha, caseríos, Rioja Alavesa, Zarautz' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fotografos" class="py-20 bg-[#FAF7F2]">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-eyebrow mb-4">Directorio exclusivo</p>
+          <h2 class="section-title">Fotógrafo de boda<br/>de referencia en San Sebastián</h2>
+          <span class="gold-divider"></span>
+        </div>
+
+        <div class="space-y-8">
+          {photographers.map((p, i) => <PhotographerProfile photographer={p} featured={i === 0} />)}
+        </div>
+
+        <div class="mt-8 border-2 border-dashed border-[#E8DDD3] rounded-sm p-10 text-center">
+          <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#6B5E58] mb-3">Plaza disponible en San Sebastián</p>
+          <p class="font-['Lato'] text-sm text-[#9A8880] max-w-sm mx-auto mb-6 leading-relaxed">
+            Seleccionamos un segundo fotógrafo para Donostia y Gipuzkoa. ¿Trabajas bodas en el País Vasco?
+          </p>
+          <a href="/unete/" class="btn-outline text-sm px-6 py-3">Solicitar plaza →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cuánto cuesta un fotógrafo de bodas en San Sebastián?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            San Sebastián tiene los precios más altos de las ciudades de nuestro directorio: entre <strong class="text-[#1C1814]">1.800€ y 3.000€</strong>. El nivel de los venues, la exigencia de las bodas y el talento concentrado en la zona justifican ese rango.
+          </p>
+          <p>
+            Para bodas en venues de primer nivel (Aquarium, hoteles de lujo, caseríos exclusivos), los fotógrafos más demandados tienen lista de espera de 18-24 meses. Si tenéis fecha fija, contactad cuanto antes.
+          </p>
+          <p>
+            Un paquete estándar incluye cobertura completa, 600-900 fotos editadas y galería online. Los fotógrafos de Donostia suelen incluir desplazamientos por toda Gipuzkoa sin extra.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">Norte de España</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-8">Más ciudades</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[
+            { name: 'Bilbao', slug: 'bilbao' },
+            { name: 'Zaragoza', slug: 'zaragoza' },
+            { name: 'Madrid', slug: 'madrid' },
+          ].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">
+              Fotógrafos en {c.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

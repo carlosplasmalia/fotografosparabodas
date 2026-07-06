@@ -1,0 +1,226 @@
+---
+import { cities } from '../config/site';
+
+interface Props {
+  transparent?: boolean;
+}
+const { transparent = false } = Astro.props;
+
+const estilos = [
+  { name: 'Documental', slug: 'documental', desc: 'Natural y espontáneo' },
+  { name: 'Romántico',  slug: 'romantico',  desc: 'Emocional y cálido'   },
+  { name: 'Editorial',  slug: 'editorial',  desc: 'Artístico y de autor'  },
+  { name: 'Clásico',    slug: 'clasico',    desc: 'Elegante y atemporal'  },
+];
+
+const guias = [
+  { name: '¿Cuánto cuesta un fotógrafo de boda?', slug: 'cuanto-cuesta-fotografo-boda-espana-2026'   },
+  { name: 'Cómo elegir fotógrafo de bodas',        slug: 'como-elegir-fotografo-de-bodas'            },
+  { name: 'Estilos de fotografía de boda',         slug: 'estilos-fotografia-de-boda-cual-elegir'    },
+  { name: 'Qué incluye un reportaje de boda',      slug: 'que-incluye-reportaje-de-boda'             },
+  { name: 'Preguntas que hacer al fotógrafo',      slug: 'preguntas-que-hacer-al-fotografo-de-bodas' },
+];
+---
+
+<header
+  id="site-header"
+  class:list={[
+    'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+    transparent ? 'bg-transparent' : 'bg-[#FAF7F2] shadow-sm border-b border-[#E8DDD3]',
+  ]}
+  data-transparent={transparent ? 'true' : undefined}
+>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="/" class="shrink-0">
+        <span
+          class="font-['Cormorant_Garamond'] text-xl font-semibold tracking-wide transition-colors"
+          style={transparent ? 'color:#fff' : 'color:#1C1814'}
+        >
+          Fotógrafos para Bodas
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-0.5">
+
+        <!-- Ciudades dropdown -->
+        <div class="relative group">
+          <button
+            class="flex items-center gap-1 text-sm font-['Lato'] font-medium px-3 py-2 rounded transition-colors hover:bg-black/5"
+            style={transparent ? 'color:rgba(255,255,255,0.85)' : 'color:#1C1814'}
+          >
+            Ciudades
+            <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+            <div class="bg-white border border-[#E8DDD3] rounded-sm shadow-xl shadow-black/10 w-64 p-2">
+              <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060] px-3 py-2">
+                Fotógrafos por ciudad
+              </p>
+              <div class="grid grid-cols-2 gap-x-1">
+                {cities.map(c => (
+                  <a
+                    href={`/${c.slug}/`}
+                    class="flex flex-col px-3 py-2 rounded hover:bg-[#FAF7F2] transition-colors"
+                  >
+                    <span class="font-['Lato'] text-sm font-medium text-[#1C1814]">{c.name}</span>
+                    <span class="font-['Lato'] text-[10px] text-[#9A8880]">{c.avgPrice}</span>
+                  </a>
+                ))}
+              </div>
+              <div class="border-t border-[#F2E8D5] mt-2 pt-2 px-3 pb-1">
+                <a href="/#ciudades" class="font-['Lato'] text-xs text-[#B89060] hover:underline">
+                  Ver todas las ciudades →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estilos dropdown -->
+        <div class="relative group">
+          <button
+            class="flex items-center gap-1 text-sm font-['Lato'] font-medium px-3 py-2 rounded transition-colors hover:bg-black/5"
+            style={transparent ? 'color:rgba(255,255,255,0.85)' : 'color:#1C1814'}
+          >
+            Estilos
+            <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+            <div class="bg-white border border-[#E8DDD3] rounded-sm shadow-xl shadow-black/10 w-56 p-2">
+              <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060] px-3 py-2">
+                Estilo fotográfico
+              </p>
+              {estilos.map(e => (
+                <a
+                  href={`/estilo/${e.slug}/`}
+                  class="flex items-start gap-3 px-3 py-2 rounded hover:bg-[#FAF7F2] transition-colors"
+                >
+                  <div>
+                    <p class="font-['Lato'] text-sm font-medium text-[#1C1814]">{e.name}</p>
+                    <p class="font-['Lato'] text-[10px] text-[#9A8880]">{e.desc}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Guías dropdown -->
+        <div class="relative group">
+          <button
+            class="flex items-center gap-1 text-sm font-['Lato'] font-medium px-3 py-2 rounded transition-colors hover:bg-black/5"
+            style={transparent ? 'color:rgba(255,255,255,0.85)' : 'color:#1C1814'}
+          >
+            Guías
+            <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+            <div class="bg-white border border-[#E8DDD3] rounded-sm shadow-xl shadow-black/10 w-72 p-2">
+              <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060] px-3 py-2">
+                Guías para novios
+              </p>
+              {guias.map(g => (
+                <a
+                  href={`/blog/${g.slug}/`}
+                  class="block px-3 py-2 rounded hover:bg-[#FAF7F2] transition-colors font-['Lato'] text-sm text-[#1C1814] hover:text-[#B89060]"
+                >
+                  {g.name}
+                </a>
+              ))}
+              <div class="border-t border-[#F2E8D5] mt-2 pt-2 px-3 pb-1">
+                <a href="/blog/" class="font-['Lato'] text-xs text-[#B89060] hover:underline">
+                  Ver todas las guías →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Para fotógrafos (CTA secundario) -->
+        <a
+          href="/unete/"
+          class="text-sm font-['Lato'] font-medium px-3 py-2 rounded transition-colors hover:bg-black/5"
+          style={transparent ? 'color:rgba(255,255,255,0.85)' : 'color:#6B5E58'}
+        >
+          Para fotógrafos
+        </a>
+
+        <!-- CTA principal -->
+        <a href="/#ciudades" class="ml-2 btn-gold text-sm py-2 px-5">
+          Encontrar fotógrafo
+        </a>
+      </nav>
+
+      <!-- Mobile: hamburger + CTA -->
+      <div class="lg:hidden flex items-center gap-3">
+        <a href="/#ciudades" class="btn-gold text-xs py-2 px-4">
+          Buscar
+        </a>
+        <button
+          id="mobile-menu-btn"
+          class="p-2 rounded"
+          style={transparent ? 'color:#fff' : 'color:#1C1814'}
+          aria-label="Menú"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-[#FAF7F2] border-t border-[#E8DDD3]">
+    <div class="max-w-6xl mx-auto px-6 py-4 space-y-1">
+      <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060] px-2 pt-2 pb-1">Ciudades</p>
+      <div class="grid grid-cols-2 gap-1 mb-3">
+        {cities.slice(0, 6).map(c => (
+          <a href={`/${c.slug}/`} class="font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">
+            {c.name}
+          </a>
+        ))}
+      </div>
+      <div class="border-t border-[#E8DDD3] pt-3 space-y-1">
+        <a href="/estilo/documental/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Estilo Documental</a>
+        <a href="/estilo/romantico/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Estilo Romántico</a>
+        <a href="/blog/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Guías para novios</a>
+        <a href="/unete/" class="block font-['Lato'] text-sm font-semibold text-[#B89060] px-2 py-1.5">Para fotógrafos →</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Scroll: transparent → solid
+  const header = document.getElementById('site-header');
+  if (header?.dataset.transparent) {
+    const updateHeader = () => {
+      const solid = window.scrollY > 60;
+      header.classList.toggle('bg-transparent', !solid);
+      header.classList.toggle('bg-[#FAF7F2]', solid);
+      header.classList.toggle('shadow-sm', solid);
+      header.classList.toggle('border-b', solid);
+      header.classList.toggle('border-[#E8DDD3]', solid);
+      header.querySelectorAll('[data-text-color]').forEach(el => {
+        (el as HTMLElement).style.color = solid ? '#1C1814' : '';
+      });
+    };
+    window.addEventListener('scroll', updateHeader, { passive: true });
+  }
+
+  // Mobile toggle
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+</script>

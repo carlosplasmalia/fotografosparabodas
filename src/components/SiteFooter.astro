@@ -1,0 +1,60 @@
+---
+import { cities } from '../config/site';
+---
+
+<footer class="bg-[#1C1814] text-[#C4A5A0]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <!-- Brand -->
+      <div>
+        <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-white mb-4">
+          Fotógrafos para Bodas
+        </p>
+        <p class="text-sm leading-relaxed text-[#9A8880] max-w-xs">
+          Conectamos a las parejas con los mejores fotógrafos de boda de España. Cada historia merece ser contada con luz, emoción y arte.
+        </p>
+      </div>
+
+      <!-- Cities -->
+      <div>
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] mb-5">
+          Ciudades
+        </p>
+        <ul class="grid grid-cols-2 gap-x-4 gap-y-2">
+          {cities.map(c => (
+            <li>
+              <a href={`/${c.slug}/`}
+                class="text-sm text-[#9A8880] hover:text-white transition-colors">
+                {c.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] mb-5">
+          Información
+        </p>
+        <ul class="space-y-2">
+          <li><a href="/blog/" class="text-sm text-[#9A8880] hover:text-white transition-colors">Guías y consejos</a></li>
+          <li><a href="/#faq" class="text-sm text-[#9A8880] hover:text-white transition-colors">Preguntas frecuentes</a></li>
+          <li><a href="/#contacto" class="text-sm text-[#9A8880] hover:text-white transition-colors">Consultar disponibilidad</a></li>
+          <li><a href="/aviso-legal/" class="text-sm text-[#9A8880] hover:text-white transition-colors">Aviso legal</a></li>
+          <li><a href="/privacidad/" class="text-sm text-[#9A8880] hover:text-white transition-colors">Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-[#2E2520] flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-[#6B5E58]">
+        © {new Date().getFullYear()} fotografosparabodas.es — Todos los derechos reservados
+      </p>
+      <p class="text-xs text-[#6B5E58]">
+        Hecho con ❤ para todas las parejas de España
+      </p>
+    </div>
+  </div>
+</footer>

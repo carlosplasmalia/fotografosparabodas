@@ -3,8 +3,8 @@
 @layer base {
   :root {
     --color-cream: #FAF7F2;
-    --color-gold: #B89060;
-    --color-gold-dark: #9A7545;
+    --color-gold: #8B6A3A;
+    --color-gold-dark: #7A5C32;
     --color-gold-light: #F2E8D5;
     --color-charcoal: #1C1814;
     --color-rose: #C4A5A0;
@@ -98,7 +98,7 @@
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--color-gold);
+    color: #7A5C38;
   }
 
   .gold-divider {

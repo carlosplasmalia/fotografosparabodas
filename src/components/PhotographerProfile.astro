@@ -30,11 +30,11 @@ const { photographer: p, featured = false } = Astro.props;
 
 <article class:list={[
   "bg-white rounded-sm overflow-hidden border",
-  featured ? "border-[#B89060] shadow-lg shadow-[#B89060]/10" : "border-[#E8DDD3] shadow-sm"
+  featured ? "border-[#8B6A3A] shadow-lg shadow-[#8B6A3A]/10" : "border-[#E8DDD3] shadow-sm"
 ]}>
 
   {featured && (
-    <div class="bg-[#B89060] text-white text-center py-1.5">
+    <div class="bg-[#8B6A3A] text-white text-center py-1.5">
       <span class="font-['Lato'] text-xs font-bold tracking-widest uppercase">
         ✦ Fotógrafo Destacado
       </span>
@@ -56,7 +56,7 @@ const { photographer: p, featured = false } = Astro.props;
     ))}
   </div>
   {p.photoCredit && (
-    <p class="font-['Lato'] text-[10px] text-[#9A8880] text-right px-3 py-1 bg-[#FAF7F2]">
+    <p class="font-['Lato'] text-[10px] text-[#6B5E58] text-right px-3 py-1 bg-[#FAF7F2]">
       Fotos: <a href={p.web ?? '#'} target="_blank" rel="noopener noreferrer" class="hover:underline">{p.photoCredit}</a>
     </p>
   )}
@@ -82,7 +82,7 @@ const { photographer: p, featured = false } = Astro.props;
           )}
         </div>
         <p class="font-['Lato'] text-xs text-[#6B5E58] mt-0.5">
-          {p.zone} · {p.yearsExp} años · <span class="text-[#B89060] font-semibold">{p.style}</span>
+          {p.zone} · {p.yearsExp} años · <span class="text-[#8B6A3A] font-semibold">{p.style}</span>
         </p>
       </div>
     </div>
@@ -101,7 +101,7 @@ const { photographer: p, featured = false } = Astro.props;
     {p.awards && p.awards.length > 0 && (
       <div class="flex flex-wrap gap-1.5 mb-4">
         {p.awards.map(a => (
-          <span class="text-[10px] font-['Lato'] px-2 py-0.5 border border-[#B89060]/40 text-[#9A7545] rounded-sm">
+          <span class="text-[10px] font-['Lato'] px-2 py-0.5 border border-[#8B6A3A]/40 text-[#9A7545] rounded-sm">
             🏆 {a}
           </span>
         ))}

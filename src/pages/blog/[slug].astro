@@ -92,20 +92,20 @@ const schemaBreadcrumb = {
       )}
       <div class="relative max-w-3xl mx-auto px-6 py-20 text-center">
         <nav class="flex items-center justify-center gap-2 font-['Lato'] text-xs text-[#6B5E58] mb-6">
-          <a href="/" class="hover:text-[#B89060] transition-colors">Inicio</a>
+          <a href="/" class="hover:text-[#8B6A3A] transition-colors">Inicio</a>
           <span>›</span>
-          <a href="/blog/" class="hover:text-[#B89060] transition-colors">Guías</a>
+          <a href="/blog/" class="hover:text-[#8B6A3A] transition-colors">Guías</a>
           {post.data.categoria && (
             <>
               <span>›</span>
-              <span class="text-[#B89060]">{post.data.categoria}</span>
+              <span class="text-[#8B6A3A]">{post.data.categoria}</span>
             </>
           )}
         </nav>
         <h1 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-semibold text-white leading-tight mb-6">
           {post.data.title}
         </h1>
-        <p class="font-['Lato'] text-[#9A8880] text-sm">{dateFormatted}</p>
+        <p class="font-['Lato'] text-[#6B5E58] text-sm">{dateFormatted}</p>
       </div>
     </section>
 
@@ -116,7 +116,7 @@ const schemaBreadcrumb = {
       </article>
 
       <!-- CTA inline -->
-      <div class="mt-12 bg-[#F2E8D5] border-l-4 border-[#B89060] rounded-sm p-6">
+      <div class="mt-12 bg-[#F2E8D5] border-l-4 border-[#8B6A3A] rounded-sm p-6">
         <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-2">
           ¿Buscáis fotógrafo de bodas?
         </p>
@@ -148,14 +148,14 @@ const schemaBreadcrumb = {
                 class="group bg-white border border-[#E8DDD3] rounded-sm p-5 hover:shadow-md transition-shadow"
               >
                 {p.data.categoria && (
-                  <span class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060]">
+                  <span class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A]">
                     {p.data.categoria}
                   </span>
                 )}
-                <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] mt-2 group-hover:text-[#B89060] transition-colors leading-tight">
+                <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] mt-2 group-hover:text-[#8B6A3A] transition-colors leading-tight">
                   {p.data.title}
                 </h3>
-                <span class="inline-block mt-3 font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060]">
+                <span class="inline-block mt-3 font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A]">
                   Leer →
                 </span>
               </a>
@@ -165,7 +165,7 @@ const schemaBreadcrumb = {
       )}
 
       <div class="mt-10 text-center">
-        <a href="/blog/" class="font-['Lato'] text-sm text-[#6B5E58] hover:text-[#B89060] transition-colors">
+        <a href="/blog/" class="font-['Lato'] text-sm text-[#6B5E58] hover:text-[#8B6A3A] transition-colors">
           ← Ver todas las guías
         </a>
       </div>
@@ -204,7 +204,7 @@ const schemaBreadcrumb = {
     margin-bottom: 1.25rem;
   }
   .prose-boda strong { color: #1C1814; font-weight: 700; }
-  .prose-boda a { color: #B89060; text-decoration: underline; text-underline-offset: 3px; }
+  .prose-boda a { color: #8B6A3A; text-decoration: underline; text-underline-offset: 3px; }
   .prose-boda a:hover { color: #9A7545; }
   .prose-boda ul { list-style: none; padding: 0; margin: 1.25rem 0; }
   .prose-boda ul li {
@@ -216,7 +216,7 @@ const schemaBreadcrumb = {
     position: relative;
     margin-bottom: 0.5rem;
   }
-  .prose-boda ul li::before { content: '·'; color: #B89060; font-weight: 700; position: absolute; left: 0; }
+  .prose-boda ul li::before { content: '·'; color: #8B6A3A; font-weight: 700; position: absolute; left: 0; }
   .prose-boda hr { border: none; border-top: 1px solid #E8DDD3; margin: 2.5rem 0; }
   .prose-boda em { font-style: italic; color: #6B5E58; }
   .prose-boda blockquote {
@@ -237,13 +237,13 @@ const schemaBreadcrumb = {
   .prose-boda figcaption {
     font-family: 'Lato', sans-serif;
     font-size: 0.75rem;
-    color: #9A8880;
+    color: #6B5E58;
     margin-top: 0.5rem;
     text-align: right;
     letter-spacing: 0.02em;
   }
   .prose-boda figcaption a {
-    color: #B89060;
+    color: #8B6A3A;
     text-decoration: none;
   }
   .prose-boda img {

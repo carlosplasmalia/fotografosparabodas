@@ -59,7 +59,7 @@ const guias = [
           </button>
           <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
             <div class="bg-white border border-[#E8DDD3] rounded-sm shadow-xl shadow-black/10 w-64 p-2">
-              <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060] px-3 py-2">
+              <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] px-3 py-2">
                 Fotógrafos por ciudad
               </p>
               <div class="grid grid-cols-2 gap-x-1">
@@ -74,7 +74,7 @@ const guias = [
                 ))}
               </div>
               <div class="border-t border-[#F2E8D5] mt-2 pt-2 px-3 pb-1">
-                <a href="/#ciudades" class="font-['Lato'] text-xs text-[#B89060] hover:underline">
+                <a href="/#ciudades" class="font-['Lato'] text-xs text-[#8B6A3A] hover:underline">
                   Ver todas las ciudades →
                 </a>
               </div>
@@ -95,7 +95,7 @@ const guias = [
           </button>
           <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
             <div class="bg-white border border-[#E8DDD3] rounded-sm shadow-xl shadow-black/10 w-56 p-2">
-              <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060] px-3 py-2">
+              <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] px-3 py-2">
                 Estilo fotográfico
               </p>
               {estilos.map(e => (
@@ -126,19 +126,19 @@ const guias = [
           </button>
           <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
             <div class="bg-white border border-[#E8DDD3] rounded-sm shadow-xl shadow-black/10 w-72 p-2">
-              <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060] px-3 py-2">
+              <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] px-3 py-2">
                 Guías para novios
               </p>
               {guias.map(g => (
                 <a
                   href={`/blog/${g.slug}/`}
-                  class="block px-3 py-2 rounded hover:bg-[#FAF7F2] transition-colors font-['Lato'] text-sm text-[#1C1814] hover:text-[#B89060]"
+                  class="block px-3 py-2 rounded hover:bg-[#FAF7F2] transition-colors font-['Lato'] text-sm text-[#1C1814] hover:text-[#8B6A3A]"
                 >
                   {g.name}
                 </a>
               ))}
               <div class="border-t border-[#F2E8D5] mt-2 pt-2 px-3 pb-1">
-                <a href="/blog/" class="font-['Lato'] text-xs text-[#B89060] hover:underline">
+                <a href="/blog/" class="font-['Lato'] text-xs text-[#8B6A3A] hover:underline">
                   Ver todas las guías →
                 </a>
               </div>
@@ -183,7 +183,7 @@ const guias = [
   <!-- Mobile menu (hidden by default) -->
   <div id="mobile-menu" class="hidden lg:hidden bg-[#FAF7F2] border-t border-[#E8DDD3]">
     <div class="max-w-6xl mx-auto px-6 py-4 space-y-1">
-      <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#B89060] px-2 pt-2 pb-1">Ciudades</p>
+      <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] px-2 pt-2 pb-1">Ciudades</p>
       <div class="grid grid-cols-2 gap-1 mb-3">
         {cities.slice(0, 6).map(c => (
           <a href={`/${c.slug}/`} class="font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">
@@ -195,7 +195,7 @@ const guias = [
         <a href="/estilo/documental/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Estilo Documental</a>
         <a href="/estilo/romantico/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Estilo Romántico</a>
         <a href="/blog/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Guías para novios</a>
-        <a href="/unete/" class="block font-['Lato'] text-sm font-semibold text-[#B89060] px-2 py-1.5">Para fotógrafos →</a>
+        <a href="/unete/" class="block font-['Lato'] text-sm font-semibold text-[#8B6A3A] px-2 py-1.5">Para fotógrafos →</a>
       </div>
     </div>
   </div>

@@ -66,6 +66,48 @@ const schemaOrg = {
     <TestimonialSection />
     <FAQSection />
 
+    <!-- Guías internas -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="section-eyebrow mb-4">Recursos para novios</p>
+          <h2 class="section-title mb-4">Todo lo que necesitáis<br/>antes de elegir</h2>
+          <span class="gold-divider"></span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {[
+            {
+              href: '/blog/mejores-fotografos-de-bodas-espana/',
+              eyebrow: 'Selección',
+              title: 'Los mejores fotógrafos de bodas en España',
+              desc: 'Qué distingue a un fotógrafo de referencia y cómo encontrar el que encaja con vosotros.',
+            },
+            {
+              href: '/blog/cuanto-cuesta-fotografo-boda-espana-2026/',
+              eyebrow: 'Precios',
+              title: 'Cuánto cuesta un fotógrafo de bodas en España',
+              desc: 'Rangos reales por experiencia y ciudad, sin letra pequeña. Lo que necesitáis para presupuestar.',
+            },
+            {
+              href: '/blog/estilos-fotografia-de-boda-cual-elegir/',
+              eyebrow: 'Estilos',
+              title: 'Estilos de fotografía de boda: cuál elegir',
+              desc: 'Documental, romántico, editorial o fine art. Con ejemplos para que encontréis vuestro estilo.',
+            },
+          ].map(g => (
+            <a href={g.href} class="group block bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-6 hover:border-[#8B6A3A]/50 transition-colors">
+              <p class="section-eyebrow mb-3">{g.eyebrow}</p>
+              <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] mb-3 group-hover:text-[#8B6A3A] transition-colors leading-snug">{g.title}</h3>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{g.desc}</p>
+            </a>
+          ))}
+        </div>
+        <p class="text-center mt-8">
+          <a href="/blog/" class="font-['Lato'] text-sm font-bold text-[#8B6A3A] underline tracking-wide">Ver todas las guías →</a>
+        </p>
+      </div>
+    </section>
+
     <!-- Contact CTA -->
     <section id="contacto" class="py-24 bg-white">
       <div class="max-w-2xl mx-auto px-6 text-center">

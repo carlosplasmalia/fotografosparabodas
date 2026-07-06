@@ -17,7 +17,7 @@ const p = {
   instagram: 'albertpamies',
   web: 'https://albertpamies.com',
   avatar: '/images/photographers/albert/avatar.jpg',
-  coverImage: '/images/photographers/albert/foto1.jpg',
+  coverImage: '/images/photographers/albert/ap06.jpg',
   awards: ['Fearless Photographers USA', 'MyWed #1 Mundial 2019', 'Inspiration Photographers Brazil'],
 };
 
@@ -151,19 +151,17 @@ const schemaFaq = {
 
     <div class="max-w-5xl mx-auto px-6 py-16">
 
-      <!-- TIRA FOTOGRÁFICA inicial: 3 fotos en horizontal -->
+      <!-- TIRA FOTOGRÁFICA inicial: 3 fotos en masonry -->
       <section class="mb-20">
-        <div class="grid grid-cols-3 gap-2">
+        <div class="columns-3 gap-2">
           {[
-            { src: '/images/photographers/albert/foto2.jpg', alt: 'Boda en Málaga — Albert Pamies' },
-            { src: '/images/photographers/albert/foto3.jpg', alt: 'Momento íntimo boda Costa del Sol — Albert Pamies' },
-            { src: '/images/portfolio/malaga-1.jpg', alt: 'Ceremonia boda Málaga — Albert Pamies' },
+            { src: '/images/photographers/albert/ap01.jpg', alt: 'Boda en Málaga — Albert Pamies fotógrafo documental' },
+            { src: '/images/photographers/albert/ap02.jpg', alt: 'Fotografía documental de bodas — Albert Pamies' },
+            { src: '/images/photographers/albert/ap03.jpg', alt: 'Fotografia de boda Albert Pamies — Málaga' },
           ].map(img => (
-            <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[3/4]">
-              <img src={img.src} alt={img.alt}
-                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                loading="lazy" decoding="async" />
-            </div>
+            <img src={img.src} alt={img.alt}
+              class="w-full mb-2 rounded-sm block"
+              loading="lazy" decoding="async" />
           ))}
         </div>
         <p class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">
@@ -173,7 +171,7 @@ const schemaFaq = {
 
       <!-- ARTÍCULO EDITORIAL + SIDEBAR -->
       <section class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
-        <div class="lg:col-span-2 space-y-8">
+        <div class="lg:col-span-2 space-y-10">
 
           <div>
             <p class="section-eyebrow mb-4">Sobre Albert Pamies</p>
@@ -191,14 +189,15 @@ const schemaFaq = {
           </div>
 
           <!-- FOTO ANCHA intercalada -->
-          <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[16/7] my-6">
+          <figure>
             <img
-              src="/images/portfolio/malaga-2.jpg"
-              alt="Boda al atardecer en la Costa del Sol — Albert Pamies fotógrafo Málaga"
-              class="w-full h-full object-cover"
+              src="/images/photographers/albert/ap04.jpg"
+              alt="Fotógrafo de bodas Albert Pamies — Costa del Sol Málaga"
+              class="w-full rounded-sm block"
               loading="lazy" decoding="async"
             />
-          </div>
+            <figcaption class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">© albertpamies.com</figcaption>
+          </figure>
 
           <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
             <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">
@@ -212,17 +211,15 @@ const schemaFaq = {
             </p>
           </div>
 
-          <!-- DOS FOTOS en grid 2 columnas -->
-          <div class="grid grid-cols-2 gap-2 my-6">
+          <!-- DOS FOTOS en masonry 2 columnas -->
+          <div class="columns-2 gap-2">
             {[
-              { src: '/images/portfolio/malaga-3.jpg', alt: 'Sesión preboda en Ronda — Albert Pamies' },
-              { src: '/images/portfolio/malaga-4.jpg', alt: 'Boda finca Málaga — Albert Pamies fotógrafo' },
+              { src: '/images/photographers/albert/ap05.jpg', alt: 'Boda en finca Málaga — Albert Pamies reportaje' },
+              { src: '/images/photographers/albert/ap06.jpg', alt: 'Momento boda Costa del Sol — Albert Pamies' },
             ].map(img => (
-              <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[4/5]">
-                <img src={img.src} alt={img.alt}
-                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  loading="lazy" decoding="async" />
-              </div>
+              <img src={img.src} alt={img.alt}
+                class="w-full mb-2 rounded-sm block"
+                loading="lazy" decoding="async" />
             ))}
           </div>
 
@@ -241,15 +238,16 @@ const schemaFaq = {
             </p>
           </div>
 
-          <!-- FOTO VERTICAL a ancho completo -->
-          <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[16/6] my-6">
+          <!-- FOTO individual a ancho completo -->
+          <figure>
             <img
-              src="/images/portfolio/malaga-5.jpg"
-              alt="Ceremonia boda Nerja — Albert Pamies fotógrafo bodas Málaga"
-              class="w-full h-full object-cover"
+              src="/images/photographers/albert/ap07.jpg"
+              alt="Ceremonia boda Málaga — Albert Pamies fotógrafo documental"
+              class="w-full rounded-sm block"
               loading="lazy" decoding="async"
             />
-          </div>
+            <figcaption class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">© albertpamies.com</figcaption>
+          </figure>
 
           <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
             <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">
@@ -266,15 +264,25 @@ const schemaFaq = {
             </p>
           </div>
 
-          <!-- FOTO PANORÁMICA final del artículo -->
-          <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[21/9] my-6">
+          <!-- DOS FOTOS individuales finales -->
+          <figure>
             <img
-              src="/images/portfolio/malaga-6.jpg"
-              alt="Boda en Marbella — Albert Pamies fotógrafo Costa del Sol"
-              class="w-full h-full object-cover object-center"
+              src="/images/photographers/albert/ap08.jpg"
+              alt="Postboda en Santorini — Albert Pamies fotógrafo de destino"
+              class="w-full rounded-sm block"
               loading="lazy" decoding="async"
             />
-          </div>
+            <figcaption class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">© albertpamies.com</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/photographers/albert/ap09.jpg"
+              alt="Sesión preboda — Albert Pamies fotógrafo Málaga"
+              class="w-full rounded-sm block"
+              loading="lazy" decoding="async"
+            />
+            <figcaption class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">© albertpamies.com</figcaption>
+          </figure>
 
         </div>
 

@@ -3,10 +3,9 @@ import { site } from '../config/site';
 
 interface Props {
   city: string;
-  avgPrice: string;
 }
 
-const { city, avgPrice } = Astro.props;
+const { city } = Astro.props;
 
 const waText = encodeURIComponent(
   `Hola, buscamos fotógrafo de bodas en ${city}. ¿Podéis ayudarnos a encontrar el ideal para nuestra boda?`
@@ -87,7 +86,7 @@ const waText = encodeURIComponent(
         { n: '< 24h', label: 'Tiempo de respuesta' },
         { n: '100%', label: 'Gratuito para novios' },
         { n: '+9',   label: 'Ciudades en España' },
-        { n: avgPrice, label: 'Precio medio en ' + city },
+        { n: 'Curado', label: 'Selección manual de cada fotógrafo' },
       ].map(s => (
         <div class="bg-white border border-[#E8DDD3] rounded-sm p-4 text-center">
           <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#B89060]">{s.n}</p>

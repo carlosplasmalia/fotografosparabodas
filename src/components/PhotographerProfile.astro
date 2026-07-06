@@ -7,7 +7,6 @@ export interface PhotographerFull {
   zone: string;
   style: string;
   styleDesc: string;
-  price: string;
   bio: string;
   avatar: string;
   portfolio: { src: string; alt: string }[];
@@ -96,9 +95,6 @@ const { photographer: p, featured = false } = Astro.props;
     <div class="flex items-center gap-2 mb-4 pb-4 border-b border-[#F2E8D5]">
       <span class="text-xs font-['Lato'] px-3 py-1 bg-[#FAF7F2] border border-[#E8DDD3] text-[#6B5E58] rounded-sm">
         {p.styleDesc}
-      </span>
-      <span class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] ml-auto">
-        {p.price}
       </span>
     </div>
 

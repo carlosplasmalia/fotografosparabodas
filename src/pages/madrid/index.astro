@@ -18,7 +18,6 @@ const photographers: PhotographerFull[] = [
     zone: 'Madrid · Castilla · España · Internacional',
     style: 'Fine art · Editorial',
     styleDesc: 'Composición de autor, luz trabajada, fotos que duran generaciones',
-    price: 'Consultar disponibilidad',
     bio: 'Chema Vela lleva más de 15 años fotografiando bodas en Madrid y toda España. Su estudio Plasmalia es referencia internacional en fine art y fotografía editorial de bodas. Premiado por Fearless Photographers, ISPWP y Junebug Weddings. Agenda muy limitada.',
     avatar: '/images/photographers/plasmalia/logo.webp',
     portfolio: [
@@ -40,7 +39,7 @@ const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": `Fotógrafos de bodas en ${city}`,
-  "description": `Directorio de los mejores fotógrafos de bodas en ${city}. Compara estilos y precios.`,
+  "description": `Los mejores fotógrafos de bodas en ${city}, seleccionados a mano. Solo fotógrafos con premios internacionales y trayectoria verificada.`,
   "url": `https://fotografosparabodas.es/${slug}/`,
   "numberOfItems": photographers.length,
   "itemListElement": photographers.map((p, i) => ({
@@ -51,15 +50,14 @@ const schemaOrg = {
       "name": p.name,
       "description": p.bio,
       "areaServed": { "@type": "City", "name": city },
-      "priceRange": p.price,
     }
   })),
 };
 ---
 
 <BaseLayout
-  title="Fotógrafos de Bodas en Madrid — Precios y Disponibilidad 2026"
-  description="Encuentra los mejores fotógrafos de bodas en Madrid. Compara estilos, precios (desde 1.600€) y disponibilidad. Fotógrafos verificados con contacto directo."
+  title="Fotógrafos de Bodas en Madrid — Selección de Autor 2026"
+  description="Los mejores fotógrafos de bodas en Madrid, seleccionados a mano. Solo fotógrafos con premios internacionales y agenda limitada. Contacto directo, sin intermediarios."
   canonical={`https://fotografosparabodas.es/${slug}/`}
   schema={schemaOrg}
 >
@@ -68,10 +66,10 @@ const schemaOrg = {
     <Hero
       city={city}
       h1={`Fotógrafos de Bodas\nen Madrid`}
-      subtitle="Los mejores fotógrafos de bodas de Madrid, seleccionados a mano. Contacto directo, sin intermediarios ni comisiones extra."
+      subtitle="Los mejores fotógrafos de bodas de Madrid, seleccionados a mano. Solo fotógrafos con premios internacionales y trayectoria verificada."
       ctaText="Ver fotógrafos en Madrid"
       ctaHref="#fotografos"
-      imageSrc="/images/photographers/plasmalia/foto1.jpg"
+      imageSrc="/images/photographers/plasmalia/fotografo-boda-madrid.webp"
     />
 
     <!-- Local intro -->
@@ -92,8 +90,8 @@ const schemaOrg = {
             <p class="section-eyebrow mb-6">Datos de interés</p>
             <ul class="space-y-4">
               {[
-                { label: 'Precio medio', value: '1.600€ – 3.000€' },
                 { label: 'Fotógrafos listados', value: `${photographers.length} verificados` },
+                { label: 'Selección', value: 'Solo premiados internacionalmente' },
                 { label: 'Temporada alta', value: 'Mayo – Octubre' },
                 { label: 'Zonas populares', value: 'Retiro, El Escorial, Chinchón, Moraleja' },
               ].map(item => (
@@ -137,17 +135,17 @@ const schemaOrg = {
     <section class="py-16 bg-white">
       <div class="max-w-3xl mx-auto px-6">
         <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
-          ¿Cuánto cuesta un fotógrafo de bodas en Madrid?
+          ¿Cómo elegir fotógrafo de bodas en Madrid?
         </h2>
         <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
           <p>
-            Madrid es una de las ciudades con los precios más altos para fotografía de bodas en España. El rango habitual en 2026 está entre <strong class="text-[#1C1814]">1.600€ y 3.000€</strong> para una cobertura completa, aunque los fotógrafos más demandados pueden superar los 4.000€.
+            Madrid concentra algunos de los fotógrafos de bodas más premiados de España. La oferta es enorme y la diferencia de calidad también. Por eso nuestra selección es intencionalmente pequeña: solo fotógrafos con premios internacionales contrastados, con años de trayectoria en la ciudad y con un estilo propio reconocible.
           </p>
           <p>
-            El precio varía según si se incluye segundo fotógrafo, sesión preboda, álbum artesanal y número de horas. La demanda en Madrid es muy alta en temporada (mayo-octubre), por lo que reservar con mínimo 9-12 meses de antelación es imprescindible.
+            La temporada alta en Madrid es de mayo a octubre. Para esas fechas, los mejores fotógrafos cierran agenda con más de un año de antelación. Si tenéis fecha confirmada, consultad disponibilidad cuanto antes.
           </p>
           <p>
-            Los fotógrafos basados en la Comunidad de Madrid suelen cubrir bodas en localidades como El Escorial, Chinchón, Moraleja, Guadalajara o Toledo sin coste de desplazamiento adicional. Confirmad siempre este punto en el presupuesto.
+            Los fotógrafos de nuestra red en Madrid cubren bodas en toda la Comunidad: El Escorial, Chinchón, Moraleja, Guadalajara y Toledo, sin desplazamiento adicional. Confirmad siempre este punto al consultar.
           </p>
         </div>
       </div>

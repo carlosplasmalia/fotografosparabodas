@@ -6,8 +6,8 @@ import { site } from '../../config/site';
 ---
 
 <BaseLayout
-  title="Colabora con Nosotros — Red de Fotógrafos de Bodas"
-  description="¿Eres fotógrafo de bodas? Únete a nuestra red de colaboradores. Te enviamos parejas pre-cualificadas. Sin cuota mensual, solo pagas si cierras la boda."
+  title="Colabora con Nosotros — Portal de Referencia para Fotógrafos Pro"
+  description="Solo trabajamos con fotógrafos de bodas de alto nivel. Si tu trabajo es excepcional y buscas parejas que valoran la calidad, hablamos."
   canonical={`https://${site.domain}/unete/`}
   noindex={false}
 >
@@ -18,54 +18,51 @@ import { site } from '../../config/site';
     <section class="bg-[#1C1814] py-24">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] mb-6">
-          Para fotógrafos de bodas
+          Para fotógrafos de bodas profesionales
         </p>
         <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-semibold text-white leading-tight mb-6">
-          Parejas pre-cualificadas,<br/>
-          <em class="text-[#B89060] not-italic">listas para reservar.</em>
+          El portal de referencia<br/>
+          <em class="text-[#B89060] not-italic">para fotógrafos de alto nivel.</em>
         </h1>
         <p class="font-['Lato'] text-[#9A8880] text-lg max-w-xl mx-auto leading-relaxed mb-10">
-          Somos un servicio de selección personalizada para novios. Cuando una pareja nos pide fotógrafo para su ciudad, os la enviamos directamente. Sin cuota mensual. Solo pagas si se confirma la boda.
+          No somos un directorio masivo. Somos un portal de selección exclusiva donde solo tienen cabida los fotógrafos cuyo trabajo habla por sí solo. Parejas exigentes buscan exactamente eso.
         </p>
         <a href="#solicitar" class="btn-gold text-base px-10 py-4">
-          Quiero colaborar →
+          Solicitar acceso →
         </a>
       </div>
     </section>
 
-    <!-- Cómo funciona -->
-    <section class="py-20 bg-[#FAF7F2]">
-      <div class="max-w-5xl mx-auto px-6">
+    <!-- A quién va dirigido -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-14">
-          <p class="section-eyebrow mb-4">El modelo</p>
-          <h2 class="section-title">Sin riesgo.<br/>Sin cuota fija.</h2>
+          <p class="section-eyebrow mb-4">Criterio de selección</p>
+          <h2 class="section-title">Solo los mejores.<br/>Sin excepciones.</h2>
           <span class="gold-divider"></span>
           <p class="font-['Lato'] text-[#6B5E58] mt-6 max-w-lg mx-auto text-sm leading-relaxed">
-            No cobramos por estar en la red. Solo cobramos una comisión cuando vuestra relación con la pareja se convierte en una boda reservada.
+            Revisamos cada solicitud a mano. Aceptamos únicamente fotógrafos con una trayectoria real, un estilo propio reconocible y el nivel que esperan nuestras parejas.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
-              num: '01',
-              title: 'Una pareja nos contacta',
-              body: 'Alguien busca fotógrafo en vuestra ciudad o zona. Nos envía fecha, venue y estilo. Nosotros cualificamos la consulta antes de pasárosla.',
+              title: 'Trayectoria contrastada',
+              body: 'Años de experiencia y un portfolio que lo demuestra. No hace falta tener premios internacionales, pero sí un trabajo que resistiría la comparación con los mejores.',
             },
             {
-              num: '02',
-              title: 'Os la presentamos a vosotros',
-              body: 'Si encajáis con el perfil que buscan, os enviamos la consulta directamente. La pareja va con vuestro nombre, portfolio y contexto ya preparado.',
+              title: 'Estilo propio y coherente',
+              body: 'Buscamos fotógrafos con una firma visual reconocible. Que alguien vea veinte fotos y sepa que son tuyas. Sin eso, no hay diferenciación real.',
             },
             {
-              num: '03',
-              title: 'Si se confirma, pagáis comisión',
-              body: 'Si la pareja reserva con vosotros, nos avisáis y liquidamos una comisión acordada. Nada de cuotas si el mes está flojo. Cero riesgo.',
+              title: 'Orientados a bodas de calidad',
+              body: 'Nuestras parejas valoran el trabajo bien hecho y no comparan por precio. Si trabajas en ese segmento, o quieres hacerlo, encajas aquí.',
             },
           ].map(item => (
-            <div class="bg-white border border-[#E8DDD3] rounded-sm p-8">
-              <div class="w-12 h-12 rounded-full border border-[#B89060] flex items-center justify-center mb-6">
-                <span class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#B89060]">{item.num}</span>
+            <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-8">
+              <div class="w-10 h-10 rounded-full border border-[#B89060] flex items-center justify-center mb-6">
+                <span class="text-[#B89060] text-lg">★</span>
               </div>
               <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-3">{item.title}</h3>
               <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">{item.body}</p>
@@ -75,24 +72,24 @@ import { site } from '../../config/site';
       </div>
     </section>
 
-    <!-- Qué incluye -->
-    <section class="py-20 bg-white">
+    <!-- Lo que incluye estar en la red -->
+    <section class="py-20 bg-[#FAF7F2]">
       <div class="max-w-4xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <p class="section-eyebrow mb-4">Lo que obtenéis</p>
-            <h2 class="section-title mb-6">Más que una<br/>referencia</h2>
+            <h2 class="section-title mb-6">Visibilidad que<br/>trabaja para vosotros</h2>
             <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-6">
-              Los fotógrafos de nuestra red tienen un perfil editorial propio en la web. Una página diseñada para convertir, con portfolio real, texto SEO y botón de contacto directo. La mantenemos nosotros.
+              Cada fotógrafo de nuestra red tiene una página de perfil editorial propia, diseñada para convertir. Con portfolio real, texto SEO posicionado con vuestro nombre y zona, y botón de contacto directo. La mantenemos nosotros.
             </p>
             <ul class="space-y-4">
               {[
-                'Página de perfil completa con portfolio',
-                'Texto editorial escrito para posicionar vuestro nombre',
-                'Botón WhatsApp con mensaje pre-cargado',
-                'Visibilidad desde las páginas de ciudad',
-                'Consultas pre-cualificadas: ya saben tu precio aproximado',
-                'Sin cuota mensual — solo comisión por boda cerrada',
+                'Página de perfil editorial con portfolio real',
+                'Texto SEO posicionado por nombre y ciudad',
+                'Visibilidad desde las páginas de ciudad de toda España',
+                'Parejas que ya conocen vuestro trabajo antes de contactar',
+                'Sin directorio masivo — posición destacada garantizada',
+                'Condiciones acordadas directamente, sin letra pequeña',
               ].map((item) => (
                 <li class="flex items-start gap-4">
                   <span class="text-[#B89060] font-bold mt-0.5">✓</span>
@@ -102,58 +99,49 @@ import { site } from '../../config/site';
             </ul>
           </div>
 
-          <!-- Comisión -->
           <div class="bg-[#1C1814] rounded-sm p-8 text-white">
-            <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] mb-6">Condiciones</p>
-            <div class="mb-8">
-              <div class="flex items-baseline gap-2 mb-2">
-                <span class="font-['Cormorant_Garamond'] text-5xl font-semibold text-white">10%</span>
-                <span class="font-['Lato'] text-[#9A8880] text-sm">por boda cerrada</span>
-              </div>
-              <p class="font-['Lato'] text-[#9A8880] text-sm leading-relaxed">
-                Sobre el presupuesto acordado con la pareja. Sin mínimos, sin cuota, sin permanencia.
-              </p>
-            </div>
-            <ul class="space-y-3 mb-8">
+            <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#B89060] mb-8">Por qué aquí</p>
+            <ul class="space-y-6">
               {[
-                'Sin cuota mensual ni de entrada',
-                'Pagas solo si cierras la boda',
-                'Perfil editorial incluido sin coste',
-                'Comisión acordada antes de cada referencia',
-                'Liquidación sencilla por transferencia',
-                'Podéis salir cuando queráis',
+                {
+                  t: 'Selección, no masificación',
+                  d: 'Máximo dos fotógrafos por ciudad. Vuestro perfil no compite con cien más en la misma página.',
+                },
+                {
+                  t: 'Parejas de alto nivel',
+                  d: 'Trabajamos para que os lleguen parejas que valoran la fotografía como inversión, no como gasto.',
+                },
+                {
+                  t: 'Posicionamiento a largo plazo',
+                  d: 'Vuestro perfil posiciona en Google por vuestro nombre y ciudad. Un activo que crece con el tiempo.',
+                },
               ].map(item => (
-                <li class="flex items-center gap-3 font-['Lato'] text-sm text-[#C4A5A0]">
-                  <span class="text-[#B89060]">✓</span>
-                  {item}
+                <li class="border-b border-[#2E2520] pb-6 last:border-0 last:pb-0">
+                  <p class="font-['Cormorant_Garamond'] text-xl font-semibold text-white mb-1">{item.t}</p>
+                  <p class="font-['Lato'] text-sm text-[#9A8880] leading-relaxed">{item.d}</p>
                 </li>
               ))}
             </ul>
-            <div class="border-t border-[#2E2520] pt-6">
-              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">
-                La comisión exacta se pacta con cada fotógrafo según ciudad y perfil. Hablamos sin compromiso.
-              </p>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Proceso de selección -->
-    <section class="py-20 bg-[#FAF7F2]">
+    <!-- Proceso -->
+    <section class="py-20 bg-white">
       <div class="max-w-3xl mx-auto px-6 text-center">
         <p class="section-eyebrow mb-4">Cómo empezar</p>
-        <h2 class="section-title mb-6">Cuatro pasos<br/>y estáis dentro</h2>
+        <h2 class="section-title mb-6">El proceso,<br/>sin rodeos</h2>
         <span class="gold-divider mb-12"></span>
         <div class="space-y-6 text-left">
           {[
-            { n: '1', t: 'Mandadnos vuestra web o Instagram', d: 'Revisamos el portfolio. Esto no es un directorio masivo: solo trabajamos con fotógrafos cuyo nivel justifica nuestra recomendación a las parejas.' },
-            { n: '2', t: 'Revisión en 48 horas', d: 'Si el trabajo encaja, os lo decimos rápido. Si hay algún perfil mejor posicionado en vuestra ciudad, también os lo decimos con honestidad.' },
-            { n: '3', t: 'Acordamos las condiciones', d: 'Una conversación corta para pactar la comisión, el tipo de parejas en las que pensamos y cómo gestionamos los leads.' },
-            { n: '4', t: 'Publicamos vuestro perfil', d: 'Montamos la página, escribimos el texto editorial y quedáis visibles desde las páginas de ciudad y los resultados de búsqueda.' },
+            { n: '1', t: 'Mandadnos vuestro trabajo', d: 'Web o Instagram. Revisamos el portfolio antes de contestar. Si el nivel no encaja, os lo decimos con honestidad — preferimos eso a haceros perder el tiempo.' },
+            { n: '2', t: 'Revisión en 48 horas', d: 'Evaluamos trayectoria, estilo y coherencia. Si encajáis en nuestra selección, os contactamos para hablar.' },
+            { n: '3', t: 'Una conversación directa', d: 'Hablamos de cómo funciona la colaboración, qué tipo de parejas buscamos para vosotros y cómo se gestiona todo. Sin letra pequeña.' },
+            { n: '4', t: 'Publicamos vuestro perfil', d: 'Creamos la página editorial, escribimos el texto SEO y quedáis visibles desde las páginas de ciudad. Vosotros, a fotografiar.' },
           ].map(s => (
-            <div class="flex items-start gap-6 bg-white border border-[#E8DDD3] rounded-sm p-6">
-              <div class="w-10 h-10 rounded-full bg-[#F2E8D5] border border-[#B89060]/40 flex items-center justify-center shrink-0 font-['Cormorant_Garamond'] text-lg font-semibold text-[#B89060]">
+            <div class="flex items-start gap-6 bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-6">
+              <div class="w-10 h-10 rounded-full bg-white border border-[#B89060]/40 flex items-center justify-center shrink-0 font-['Cormorant_Garamond'] text-lg font-semibold text-[#B89060]">
                 {s.n}
               </div>
               <div>
@@ -166,21 +154,23 @@ import { site } from '../../config/site';
       </div>
     </section>
 
-    <!-- Formulario de contacto -->
-    <section id="solicitar" class="py-20 bg-white">
+    <!-- Contacto -->
+    <section id="solicitar" class="py-20 bg-[#1C1814]">
       <div class="max-w-xl mx-auto px-6">
         <div class="text-center mb-10">
-          <p class="section-eyebrow mb-4">Contacto inicial</p>
-          <h2 class="section-title">Hablamos sin compromiso</h2>
+          <p class="section-eyebrow text-[#B89060] mb-4">Solicitar acceso</p>
+          <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-white mb-4">
+            Hablamos sin compromiso
+          </h2>
           <span class="gold-divider"></span>
-          <p class="font-['Lato'] text-[#6B5E58] mt-6 text-sm leading-relaxed">
-            Rellena el formulario o escríbenos por WhatsApp. Te respondemos en 48 horas.
+          <p class="font-['Lato'] text-[#9A8880] mt-6 text-sm leading-relaxed">
+            Envíanos tu portfolio. Respondemos en 48 horas. Si no encajas ahora, te decimos por qué — y eso también tiene valor.
           </p>
         </div>
 
         <div class="mb-6 text-center">
           <a
-            href="https://wa.me/34625677487?text=Hola%2C%20soy%20fotógrafo%20de%20bodas%20y%20me%20interesa%20colaborar%20con%20vosotros"
+            href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20soy%20fotógrafo%20de%20bodas%20y%20me%20interesa%20colaborar%20con%20vosotros`}
             target="_blank"
             rel="noopener noreferrer"
             class="btn-gold inline-flex items-center gap-2 px-8 py-3"
@@ -191,7 +181,7 @@ import { site } from '../../config/site';
         </div>
 
         <div class="text-center mb-6">
-          <span class="font-['Lato'] text-sm text-[#9A8880]">— o usa el formulario —</span>
+          <span class="font-['Lato'] text-sm text-[#6B5E58]">— o usa el formulario —</span>
         </div>
 
         <form
@@ -199,10 +189,10 @@ import { site } from '../../config/site';
           method="POST"
           class="space-y-4 bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-8"
         >
-          <input type="hidden" name="_subject" value="Nueva solicitud colaboración fotógrafo — fotografosparabodas.es" />
+          <input type="hidden" name="_subject" value="Solicitud colaboración fotógrafo — fotografosparabodas.es" />
 
           <div>
-            <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">Nombre</label>
+            <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">Nombre o estudio</label>
             <input type="text" name="nombre" required placeholder="Tu nombre o nombre de estudio"
               class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-white focus:outline-none focus:border-[#B89060] transition-colors" />
           </div>
@@ -215,7 +205,7 @@ import { site } from '../../config/site';
 
           <div>
             <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">Ciudad o zona donde operas</label>
-            <input type="text" name="ciudad" required placeholder="Málaga, Costa del Sol..."
+            <input type="text" name="ciudad" required placeholder="Málaga, Costa del Sol, España..."
               class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-white focus:outline-none focus:border-[#B89060] transition-colors" />
           </div>
 
@@ -227,7 +217,7 @@ import { site } from '../../config/site';
 
           <div>
             <label class="block font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-2">¿Algo que quieras contarnos?</label>
-            <textarea name="mensaje" rows="3" placeholder="Bodas por las que estáis más especializados, zonas, precio medio..."
+            <textarea name="mensaje" rows="3" placeholder="Especialización, zonas, tipo de bodas que más fotografías..."
               class="w-full border border-[#E8DDD3] rounded-sm px-4 py-3 font-['Lato'] text-sm text-[#1C1814] bg-white focus:outline-none focus:border-[#B89060] transition-colors resize-none"></textarea>
           </div>
 
@@ -235,7 +225,7 @@ import { site } from '../../config/site';
             Enviar solicitud →
           </button>
           <p class="font-['Lato'] text-xs text-[#9A8880] text-center">
-            Sin compromiso. Revisamos y respondemos en 48 horas.
+            Revisamos cada solicitud a mano. Respuesta en 48 horas.
           </p>
         </form>
       </div>

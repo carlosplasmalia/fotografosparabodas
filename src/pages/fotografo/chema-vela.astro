@@ -179,15 +179,13 @@ const schemaFaq = {
 
     <div class="max-w-5xl mx-auto px-6 py-16">
 
-      <!-- TIRA INICIAL: 3 fotos en formato portrait -->
+      <!-- TIRA INICIAL: 3 fotos en columnas masonry -->
       <section class="mb-20">
-        <div class="grid grid-cols-3 gap-2">
+        <div class="columns-3 gap-2">
           {fotos.slice(0,3).map(img => (
-            <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[3/4]">
-              <img src={img.src} alt={img.alt}
-                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                loading="lazy" decoding="async" />
-            </div>
+            <img src={img.src} alt={img.alt}
+              class="w-full mb-2 rounded-sm block"
+              loading="lazy" decoding="async" />
           ))}
         </div>
         <p class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">
@@ -197,7 +195,7 @@ const schemaFaq = {
 
       <!-- ARTÍCULO LARGO + SIDEBAR -->
       <section class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
-        <article class="lg:col-span-2 space-y-8">
+        <article class="lg:col-span-2 space-y-10">
 
           <header>
             <p class="section-eyebrow mb-4">Fotógrafo de bodas en Madrid</p>
@@ -215,10 +213,11 @@ const schemaFaq = {
           </header>
 
           <!-- FOTO ANCHA 1 -->
-          <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[16/7]">
+          <figure>
             <img src={fotos[3].src} alt={fotos[3].alt}
-              class="w-full h-full object-cover" loading="lazy" decoding="async" />
-          </div>
+              class="w-full rounded-sm block" loading="lazy" decoding="async" />
+            <figcaption class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">© plasmalia.es</figcaption>
+          </figure>
 
           <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
             <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">
@@ -235,16 +234,17 @@ const schemaFaq = {
             </p>
           </div>
 
-          <!-- GRID 2 FOTOS -->
-          <div class="grid grid-cols-2 gap-2">
-            {fotos.slice(4,6).map(img => (
-              <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[4/5]">
-                <img src={img.src} alt={img.alt}
-                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  loading="lazy" decoding="async" />
-              </div>
-            ))}
-          </div>
+          <!-- 2 FOTOS individuales a ancho completo -->
+          <figure>
+            <img src={fotos[4].src} alt={fotos[4].alt}
+              class="w-full rounded-sm block" loading="lazy" decoding="async" />
+            <figcaption class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">© plasmalia.es</figcaption>
+          </figure>
+          <figure>
+            <img src={fotos[5].src} alt={fotos[5].alt}
+              class="w-full rounded-sm block" loading="lazy" decoding="async" />
+            <figcaption class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">© plasmalia.es</figcaption>
+          </figure>
 
           <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
             <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">
@@ -258,11 +258,12 @@ const schemaFaq = {
             </p>
           </div>
 
-          <!-- FOTO PORTRAIT centrada -->
-          <div class="max-w-sm mx-auto overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[3/4]">
+          <!-- FOTO individual ancha -->
+          <figure>
             <img src={fotos[6].src} alt={fotos[6].alt}
-              class="w-full h-full object-cover" loading="lazy" decoding="async" />
-          </div>
+              class="w-full rounded-sm block" loading="lazy" decoding="async" />
+            <figcaption class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">© plasmalia.es</figcaption>
+          </figure>
 
           <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
             <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">
@@ -276,15 +277,18 @@ const schemaFaq = {
             </p>
           </div>
 
-          <!-- TIRA DE 3 FOTOS -->
-          <div class="grid grid-cols-3 gap-2">
-            {fotos.slice(7,10).map(img => (
-              <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-square">
+          <!-- 2 FOTOS side-by-side + 1 ancha -->
+          <div class="space-y-2">
+            <div class="grid grid-cols-2 gap-2">
+              {fotos.slice(7,9).map(img => (
                 <img src={img.src} alt={img.alt}
-                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  class="w-full rounded-sm block"
                   loading="lazy" decoding="async" />
-              </div>
-            ))}
+              ))}
+            </div>
+            <img src={fotos[9].src} alt={fotos[9].alt}
+              class="w-full rounded-sm block"
+              loading="lazy" decoding="async" />
           </div>
 
           <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
@@ -312,11 +316,12 @@ const schemaFaq = {
             </p>
           </div>
 
-          <!-- FOTO PANORÁMICA -->
-          <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[21/8]">
+          <!-- FOTO ancho completo -->
+          <figure>
             <img src={fotos[11].src} alt={fotos[11].alt}
-              class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
-          </div>
+              class="w-full rounded-sm block" loading="lazy" decoding="async" />
+            <figcaption class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">© plasmalia.es</figcaption>
+          </figure>
 
           <!-- CTA inline -->
           <div class="bg-[#F2E8D5] border-l-4 border-[#B89060] rounded-sm p-6">
@@ -332,14 +337,12 @@ const schemaFaq = {
             </a>
           </div>
 
-          <!-- 2 FOTOS finales -->
-          <div class="grid grid-cols-2 gap-2">
-            {fotos.slice(12,14).map(img => (
-              <div class="overflow-hidden rounded-sm bg-[#E8DDD3] aspect-[4/3]">
-                <img src={img.src} alt={img.alt}
-                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  loading="lazy" decoding="async" />
-              </div>
+          <!-- 2 FOTOS finales en columnas masonry -->
+          <div class="columns-2 gap-2">
+            {fotos.slice(10,12).map(img => (
+              <img src={img.src} alt={img.alt}
+                class="w-full mb-2 rounded-sm block"
+                loading="lazy" decoding="async" />
             ))}
           </div>
 

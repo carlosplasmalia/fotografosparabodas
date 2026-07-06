@@ -18,13 +18,12 @@ const photographers: PhotographerFull[] = [
     zone: 'Málaga · Marbella · Costa del Sol',
     style: 'Documental emocional',
     styleDesc: 'Naturalidad, emoción y elegancia sin poses forzadas',
-    price: 'Consultar disponibilidad',
     bio: 'Albert Pamies captura bodas en Málaga y la Costa del Sol con un estilo documental que mezcla emoción y elegancia. Más de 12 años fotografiando historias de amor únicas, reconocido por Fearless Photographers (USA) y clasificado #1 mundial en MyWed en 2019.',
     avatar: '/images/photographers/albert/avatar.jpg',
     portfolio: [
-      { src: '/images/photographers/albert/foto1.jpg', alt: 'Boda en Málaga — Albert Pamies' },
-      { src: '/images/photographers/albert/foto2.jpg', alt: 'Fotografía de boda Costa del Sol — Albert Pamies' },
-      { src: '/images/photographers/albert/foto3.jpg', alt: 'Pareja de novios Málaga — Albert Pamies' },
+      { src: '/images/photographers/albert/ap01.jpg', alt: 'Boda en Málaga — Albert Pamies' },
+      { src: '/images/photographers/albert/ap03.jpg', alt: 'Fotografía de boda Costa del Sol — Albert Pamies' },
+      { src: '/images/photographers/albert/ap05.jpg', alt: 'Pareja de novios Málaga — Albert Pamies' },
     ],
     web: 'https://albertpamies.com',
     instagram: 'albertpamies',
@@ -34,35 +33,13 @@ const photographers: PhotographerFull[] = [
     awards: ['Fearless Photographers USA', 'MyWed #1 Mundial 2019', 'Inspiration Photographers Brazil'],
     photoCredit: 'albertpamies.com',
   },
-  {
-    name: 'Serafín Castillo',
-    city: 'Marbella',
-    zone: 'Marbella · Costa del Sol · Nerja',
-    style: 'Fine art documental',
-    styleDesc: 'Film y digital, elegancia mediterránea atemporal',
-    price: 'desde 2.000€',
-    bio: 'Serafín Castillo es de Nerja y tiene su base en Marbella. Su trabajo combina el feeling del film con la emoción documental. Reconocido por Vogue y con bodas en toda España, Europa y destinos internacionales. 51K seguidores en Instagram.',
-    avatar: '/images/photographers/serafin/foto1.jpg',
-    portfolio: [
-      { src: '/images/photographers/serafin/foto2.jpg', alt: 'Boda Marbella — Serafín Castillo' },
-      { src: '/images/photographers/serafin/foto3.jpg', alt: 'Fotografía boda finca Málaga — Serafín Castillo' },
-      { src: '/images/cities/malaga.jpg',               alt: 'Wedding photographer Costa del Sol — Serafín Castillo' },
-    ],
-    web: 'https://www.serafincastillo.com',
-    instagram: 'serafin_castillo',
-    profileSlug: 'serafin-castillo',
-    badge: 'Verificado',
-    yearsExp: 10,
-    awards: ['Reconocido por Vogue', 'Fearless Photographers'],
-    photoCredit: 'serafincastillo.com',
-  },
 ];
 
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": `Mejores fotógrafos de bodas en ${city}`,
-  "description": `Directorio de los mejores fotógrafos de bodas en ${city} y Costa del Sol. Compara estilos y precios.`,
+  "description": `Los mejores fotógrafos de bodas en ${city} y Costa del Sol. Selección exclusiva de fotógrafos con premios internacionales.`,
   "url": `https://fotografosparabodas.es/${slug}/`,
   "numberOfItems": photographers.length,
   "itemListElement": photographers.map((p, i) => ({
@@ -74,7 +51,6 @@ const schemaOrg = {
       "description": p.bio,
       "url": p.web,
       "areaServed": { "@type": "City", "name": city },
-      "priceRange": p.price,
       "knowsAbout": "Fotografía de bodas",
     }
   })),
@@ -82,8 +58,8 @@ const schemaOrg = {
 ---
 
 <BaseLayout
-  title="Fotógrafos de Bodas en Málaga — Albert Pamies y más · 2026"
-  description="Los mejores fotógrafos de bodas en Málaga y Costa del Sol. Albert Pamies (premiado internacionalmente), Serafín Castillo y más. Contacto directo y sin comisiones."
+  title="Fotógrafo de Bodas en Málaga — Albert Pamies · Costa del Sol 2026"
+  description="Albert Pamies, el fotógrafo de bodas de referencia en Málaga y la Costa del Sol. MyWed #1 Mundial 2019 · Fearless Photographers USA. Selección exclusiva, contacto directo."
   canonical={`https://fotografosparabodas.es/${slug}/`}
   schema={schemaOrg}
 >
@@ -91,11 +67,11 @@ const schemaOrg = {
   <main>
     <Hero
       city={city}
-      h1={`Fotógrafos de Bodas\nen Málaga`}
-      subtitle="Dos de los fotógrafos más reconocidos de la Costa del Sol. Contacta directamente, sin intermediarios ni comisiones extra."
-      ctaText="Ver fotógrafos"
+      h1={`Fotógrafo de Bodas\nen Málaga`}
+      subtitle="El fotógrafo más reconocido de la Costa del Sol, disponible a través de nosotros. Contacto directo, sin intermediarios."
+      ctaText="Ver fotógrafo"
       ctaHref="#fotografos"
-      imageSrc="/images/cities/malaga.jpg"
+      imageSrc="/images/photographers/albert/ap06.jpg"
     />
 
     <!-- Intro local -->
@@ -109,17 +85,17 @@ const schemaOrg = {
               Málaga tiene una luz dorada única. Las fincas del interior, las playas de Nerja o los jardines de Ronda crean escenarios que los mejores fotógrafos saben aprovechar para crear imágenes atemporales.
             </p>
             <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
-              Los fotógrafos listados aquí conocen cada recoveco de la provincia y tienen experiencia trabajando con la luz directa del sur. Eso no se improvisa.
+              El fotógrafo de nuestra red en Málaga conoce cada recoveco de la provincia y lleva más de doce años trabajando con la luz directa del sur. Eso no se improvisa.
             </p>
           </div>
           <div class="bg-[#F2E8D5] rounded-sm p-8">
             <p class="section-eyebrow mb-6">Datos de interés</p>
             <ul class="space-y-4">
               {[
-                { label: 'Precio medio', value: '1.400€ – 2.500€' },
-                { label: 'Fotógrafos listados', value: `${photographers.length} verificados` },
+                { label: 'Fotógrafo listado', value: '1 · selección exclusiva' },
+                { label: 'Premios internacionales', value: 'MyWed #1 · Fearless USA' },
                 { label: 'Temporada alta', value: 'Abril – Octubre' },
-                { label: 'Zonas populares', value: 'Marbella, Ronda, Nerja, centro Málaga' },
+                { label: 'Zonas populares', value: 'Marbella, Ronda, Nerja, Málaga' },
               ].map(item => (
                 <li class="flex items-start justify-between gap-4">
                   <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
@@ -136,16 +112,26 @@ const schemaOrg = {
     <section id="fotografos" class="py-20 bg-[#FAF7F2]">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-14">
-          <p class="section-eyebrow mb-4">Directorio exclusivo</p>
-          <h2 class="section-title">Los fotógrafos de boda<br/>de referencia en Málaga</h2>
+          <p class="section-eyebrow mb-4">Selección exclusiva</p>
+          <h2 class="section-title">El fotógrafo de referencia<br/>en Málaga y Costa del Sol</h2>
           <span class="gold-divider"></span>
           <p class="font-['Lato'] text-[#6B5E58] max-w-lg mx-auto mt-4 text-sm leading-relaxed">
-            Solo listamos 2 fotógrafos por ciudad. Ambos han pasado nuestra revisión de portfolio.
+            Solo trabajamos con fotógrafos con premios internacionales contrastados y trayectoria verificada. En Málaga, solo Albert Pamies cumple nuestros criterios.
           </p>
         </div>
 
         <div class="space-y-8">
           {photographers.map((p, i) => <PhotographerProfile photographer={p} featured={i === 0} />)}
+        </div>
+
+        <div class="mt-12 bg-white border border-[#E8DDD3] rounded-sm p-8 text-center">
+          <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-3">
+            Plaza disponible en Málaga
+          </p>
+          <p class="font-['Lato'] text-sm text-[#6B5E58] mb-6 max-w-md mx-auto">
+            Solo aceptamos 2 fotógrafos por ciudad. Hay una plaza libre. Si tu portfolio y trayectoria encajan, es tuya.
+          </p>
+          <a href="/unete/" class="btn-gold">Solicitar mi plaza →</a>
         </div>
       </div>
     </section>
@@ -154,17 +140,17 @@ const schemaOrg = {
     <section class="py-16 bg-white">
       <div class="max-w-3xl mx-auto px-6">
         <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
-          ¿Cuánto cuesta un fotógrafo de bodas en Málaga en 2026?
+          ¿Cómo elegir fotógrafo de bodas en Málaga?
         </h2>
         <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
           <p>
-            El precio de un fotógrafo de bodas en Málaga varía según experiencia, horas y extras incluidos. En 2026, el rango habitual es <strong class="text-[#1C1814]">1.400€ – 2.500€</strong>. Los fotógrafos premiados internacionalmente como Albert Pamies o Serafín Castillo trabajan bajo consulta previa de disponibilidad.
+            La Costa del Sol concentra una oferta enorme de fotógrafos de boda, especialmente en Marbella y Estepona por la demanda de bodas de destino. La diferencia de calidad entre los mejores y el resto es muy grande. Nuestra selección es intencionalmente pequeña: solo fotógrafos con premios internacionales reales, trayectoria demostrable y un estilo propio reconocible.
           </p>
           <p>
-            En zonas como Marbella, Estepona o Ronda los precios tienden a ser más altos (+15-25%) por la demanda de bodas de destino. Si tenéis una boda en una finca de lujo, reservad con al menos 12 meses de antelación.
+            Para bodas en temporada alta en la Costa del Sol (abril a octubre), los mejores fotógrafos cierran agenda con 12 meses o más de antelación. Si tenéis fecha confirmada, consultad disponibilidad cuanto antes.
           </p>
           <p>
-            Un paquete estándar incluye cobertura del día completo, edición de 400-700 fotos, galería online privada y entrega en alta resolución. Los extras habituales son la sesión preboda, segundo fotógrafo y álbum impreso artesanal.
+            Albert Pamies trabaja en toda la provincia: Marbella, Ronda, Nerja, Estepona, Antequera y el centro de Málaga. Para bodas fuera de la Costa del Sol o en destinos europeos, contactadnos para confirmar disponibilidad y desplazamiento.
           </p>
         </div>
       </div>
@@ -181,7 +167,6 @@ const schemaOrg = {
           {[
             { name: 'Córdoba', slug: 'cordoba' },
             { name: 'Granada', slug: 'granada' },
-            { name: 'Sevilla', slug: 'sevilla' },
           ].map(c => (
             <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">
               Fotógrafos en {c.name}

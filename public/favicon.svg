@@ -1,10 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <circle cx="32" cy="32" r="30" fill="#B89060"/>
-  <!-- Camera lens -->
-  <circle cx="32" cy="32" r="14" stroke="white" stroke-width="2.5" fill="none"/>
-  <circle cx="32" cy="32" r="6" fill="white" opacity="0.9"/>
-  <!-- Camera body shape hint -->
-  <rect x="18" y="22" width="28" height="20" rx="3" stroke="white" stroke-width="2" fill="none"/>
-  <rect x="26" y="18" width="12" height="5" rx="2" fill="white" opacity="0.7"/>
-  <circle cx="44" cy="25" r="2" fill="white" opacity="0.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fondo oscuro -->
+  <rect width="64" height="64" rx="12" fill="#1C1814"/>
+  <!-- Anillo izquierdo -->
+  <circle cx="24" cy="32" r="11" fill="none" stroke="#B89060" stroke-width="4.5"/>
+  <!-- Anillo derecho (superpuesto) -->
+  <circle cx="40" cy="32" r="11" fill="none" stroke="#D4A96A" stroke-width="4.5"/>
+  <!-- Zona de solape: tapamos arco izquierdo con color anillo derecho y viceversa para dar sensación de entrelazado -->
+  <!-- Semiluna derecha del anillo izquierdo en color fondo para dar profundidad -->
+  <path d="M32 21.5 a11 11 0 0 1 0 21" fill="none" stroke="#1C1814" stroke-width="5.5"/>
+  <!-- Redibujamos el arco izquierdo del anillo derecho encima -->
+  <path d="M32 21.5 a11 11 0 0 0 0 21" fill="none" stroke="#D4A96A" stroke-width="4.5"/>
 </svg>

@@ -65,3 +65,7 @@ Si tenéis claro el estilo pero no sabéis por dónde empezar, podemos orientaro
 ---
 
 *¿Ya tenéis claro vuestro estilo? El siguiente paso es saber [cuánto cuesta un fotógrafo de bodas en España](/blog/cuanto-cuesta-fotografo-boda-espana-2026/) para ajustar el presupuesto.*
+
+---
+
+**Encontrad vuestro fotógrafo por ciudad:** [Madrid](/madrid/) · [Málaga](/malaga/) · [Granada](/granada/) · [Bilbao](/bilbao/) · [San Sebastián](/san-sebastian/) · [Alicante](/alicante/) · [Córdoba](/cordoba/) · [Murcia](/murcia/) · [Valladolid](/valladolid/) · [Zaragoza](/zaragoza/)

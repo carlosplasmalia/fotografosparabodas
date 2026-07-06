@@ -60,3 +60,7 @@ La mayoría de los fotógrafos de referencia tienen decenas de parejas que habla
 ---
 
 *¿Ya tenéis claro qué estilo buscáis? Explorad los [estilos de fotografía de bodas](/blog/estilos-fotografia-de-boda-cual-elegir/) para afinar antes de contactar con ningún fotógrafo.*
+
+---
+
+**Buscad fotógrafo por ciudad:** [Madrid](/madrid/) · [Málaga](/malaga/) · [Granada](/granada/) · [Bilbao](/bilbao/) · [San Sebastián](/san-sebastian/) · [Alicante](/alicante/) · [Córdoba](/cordoba/) · [Murcia](/murcia/) · [Valladolid](/valladolid/) · [Zaragoza](/zaragoza/)

@@ -63,4 +63,4 @@ La mayoría de los fotógrafos de referencia tienen decenas de parejas que habla
 
 ---
 
-**Buscad fotógrafo por ciudad:** [Madrid](/madrid/) · [Málaga](/malaga/) · [Granada](/granada/) · [Bilbao](/bilbao/) · [San Sebastián](/san-sebastian/) · [Alicante](/alicante/) · [Córdoba](/cordoba/) · [Murcia](/murcia/) · [Valladolid](/valladolid/) · [Zaragoza](/zaragoza/)
+**Buscad fotógrafo por ciudad:** [Madrid](/madrid/) · [Málaga](/malaga/) · [Granada](/granada/) · [Bilbao](/bilbao/) · [San Sebastián](/san-sebastian/) · [Alicante](/alicante/) · [Córdoba](/cordoba/) · [Murcia](/murcia/) · [Valladolid](/valladolid/) · [Zaragoza](/zaragoza/) · [Sevilla](/sevilla/) · [Valencia](/valencia/)

@@ -19,4 +19,6 @@ export const cities = [
   { slug: 'valladolid',    name: 'Valladolid',    province: 'Valladolid',region: 'Castilla' },
   { slug: 'granada',       name: 'Granada',       province: 'Granada',   region: 'Andalucía' },
   { slug: 'san-sebastian', name: 'San Sebastián', province: 'Gipuzkoa', region: 'País Vasco' },
+  { slug: 'sevilla',       name: 'Sevilla',       province: 'Sevilla',   region: 'Andalucía' },
+  { slug: 'valencia',      name: 'Valencia',      province: 'Valencia',  region: 'Valencia' },
 ];

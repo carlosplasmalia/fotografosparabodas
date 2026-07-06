@@ -68,4 +68,4 @@ Si tenéis claro el estilo pero no sabéis por dónde empezar, podemos orientaro
 
 ---
 
-**Encontrad vuestro fotógrafo por ciudad:** [Madrid](/madrid/) · [Málaga](/malaga/) · [Granada](/granada/) · [Bilbao](/bilbao/) · [San Sebastián](/san-sebastian/) · [Alicante](/alicante/) · [Córdoba](/cordoba/) · [Murcia](/murcia/) · [Valladolid](/valladolid/) · [Zaragoza](/zaragoza/)
+**Encontrad vuestro fotógrafo por ciudad:** [Madrid](/madrid/) · [Málaga](/malaga/) · [Granada](/granada/) · [Bilbao](/bilbao/) · [San Sebastián](/san-sebastian/) · [Alicante](/alicante/) · [Córdoba](/cordoba/) · [Murcia](/murcia/) · [Valladolid](/valladolid/) · [Zaragoza](/zaragoza/) · [Sevilla](/sevilla/) · [Valencia](/valencia/)

@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import ConciergeCitySection from '../../components/ConciergeCitySection.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+
+const city = 'Sevilla';
+const slug = 'sevilla';
+---
+
+<BaseLayout
+  title="Fotógrafo de Bodas en Sevilla — Flamenco, Palacetes y Luz Andaluza · 2026"
+  description="Selección personalizada de fotógrafos de bodas en Sevilla. Palacetes, haciendas y la luz única del sur. Os encontramos el ideal. Gratis, respuesta en 24 horas."
+  canonical={`https://${site.domain}/${slug}/`}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafo de Bodas\nen Sevilla`}
+      subtitle="Palacetes del Arenal, haciendas de olivar y la luz más cálida de Andalucía. Os encontramos el fotógrafo que sabe leer esa luz única del sur."
+      ctaText="Consultar ahora"
+      ctaHref="#fotografos"
+      imageSrc="/images/cities/sevilla.webp"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Sevilla y provincia</p>
+            <h2 class="section-title mb-6">La ciudad más<br/>fotogénica de España</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              Sevilla tiene algo difícil de explicar y muy fácil de ver en las fotos: una luz que transforma cualquier espacio en escenario. Las haciendas del Aljarafe, los palacetes del centro histórico y las fincas del Bajo Guadalquivir llevan décadas siendo destino de bodas internacionales, y los mejores fotógrafos de la ciudad conocen ese mundo como nadie.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              La Catedral, el Real Alcázar, el barrio de Santa Cruz y la Giralda forman un telón que pocas ciudades del mundo pueden igualar. Para una boda civil o religiosa en el centro, la calidad de la luz en primavera y otoño es sencillamente excepcional.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Tiempo de respuesta', value: 'menos de 24h' },
+                { label: 'Temporada alta', value: 'Marzo – Junio, Sept – Nov' },
+                { label: 'Zonas populares', value: 'Aljarafe, Santa Cruz, Triana' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <ConciergeCitySection city={city} />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cómo elegir fotógrafo de bodas en Sevilla?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            Sevilla es uno de los grandes destinos de boda en España, y la oferta de fotógrafos es amplia. Lo que distingue a los mejores no es solo su técnica sino su conocimiento de los espacios: las haciendas del Aljarafe tienen una luz de tarde que dura apenas veinte minutos y que cambia completamente el resultado del reportaje. Un fotógrafo que conoce esos venues sabe posicionarse con antelación.
+          </p>
+          <p>
+            La primavera sevillana, con la ciudad en flor antes del verano, es la temporada más solicitada. Abril y mayo se reservan con 12 o 14 meses de antelación en los casos más habituales. Si vuestros planes son para esas fechas, no esperéis. Los fotógrafos de referencia en Sevilla tienen agenda completa mucho antes de lo que parece razonable.
+          </p>
+          <p>
+            Al revisar portfolios, prestad atención a cómo trabajan la luz de interior en las haciendas. La mezcla de luz natural por los arcos y la iluminación artificial de las salas de banquete es uno de los retos técnicos más comunes en las bodas sevillanas. Si no sabéis qué estilo buscáis, nuestra <a href="/blog/estilos-fotografia-de-boda-cual-elegir/" class="text-[#8B6A3A] underline">guía de estilos de fotografía de boda</a> puede ayudaros antes de empezar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">También disponemos de fotógrafos en</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[
+            { name: 'Málaga', slug: 'malaga' },
+            { name: 'Granada', slug: 'granada' },
+            { name: 'Madrid', slug: 'madrid' },
+          ].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">Fotógrafos en {c.name}</a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

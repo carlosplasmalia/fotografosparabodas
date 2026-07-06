@@ -3,7 +3,7 @@ title: "Estilos de fotografía de boda: cuál elegir según vuestra personalidad
 description: "Documental, romántico, editorial o fine art. Explicamos cada estilo de fotografía de bodas con ejemplos para que encuentres el que encaja con vosotros."
 date: "2026-06-10"
 categoria: "Guías"
-imagen: "/images/photographers/albert/foto3.jpg"
+imagen: "/images/photographers/albert/foto3.webp"
 imagenAlt: "Fotografía de boda en estilo documental emocional por Albert Pamies, Málaga"
 featured: false
 ---

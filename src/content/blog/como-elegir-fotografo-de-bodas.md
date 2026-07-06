@@ -3,7 +3,7 @@ title: "Cómo elegir al fotógrafo de bodas perfecto (sin arrepentirte)"
 description: "Guía práctica para elegir el fotógrafo de bodas que encaje con vosotros. Qué mirar más allá del precio y el portfolio."
 date: "2026-06-20"
 categoria: "Guías"
-imagen: "/images/photographers/plasmalia/foto2.jpg"
+imagen: "/images/photographers/plasmalia/foto2.webp"
 imagenAlt: "Reportaje de boda en Madrid fotografiado por Plasmalia"
 featured: true
 ---

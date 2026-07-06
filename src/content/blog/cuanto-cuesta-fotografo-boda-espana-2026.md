@@ -3,7 +3,7 @@ title: "Cuánto cuesta un fotógrafo de bodas en España (2026)"
 description: "Guía de precios reales de fotografía de bodas en España 2026. Rangos por experiencia, ciudad y extras. Sin letra pequeña."
 date: "2026-07-01"
 categoria: "Precios"
-imagen: "/images/photographers/albert/ap05.jpg"
+imagen: "/images/photographers/albert/ap05.webp"
 imagenAlt: "Boda en Málaga fotografiada por Albert Pamies — Costa del Sol"
 featured: true
 ---
@@ -59,3 +59,7 @@ Si queréis ver fotógrafos verificados con distintos rangos de precio, podéis 
 ---
 
 *Última actualización: julio 2026*
+
+---
+
+**Encontrad vuestro fotógrafo por ciudad:** [Madrid](/madrid/) · [Málaga](/malaga/) · [Granada](/granada/) · [Bilbao](/bilbao/) · [San Sebastián](/san-sebastian/) · [Alicante](/alicante/) · [Córdoba](/cordoba/) · [Murcia](/murcia/) · [Valladolid](/valladolid/) · [Zaragoza](/zaragoza/)

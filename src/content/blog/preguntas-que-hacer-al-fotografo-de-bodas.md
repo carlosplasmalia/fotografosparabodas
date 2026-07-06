@@ -3,7 +3,7 @@ title: "12 preguntas que debes hacer al fotógrafo de bodas antes de contratar"
 description: "Las preguntas esenciales para hacer al fotógrafo de bodas antes de firmar. Evita sorpresas y asegúrate de que es el indicado para vosotros."
 date: "2026-05-20"
 categoria: "Guías"
-imagen: "/images/photographers/plasmalia/foto1.jpg"
+imagen: "/images/photographers/plasmalia/foto1.webp"
 imagenAlt: "Fotografía de boda en Madrid por Plasmalia — momento de ceremonia"
 featured: false
 ---
@@ -61,3 +61,7 @@ Esta no es una pregunta que le hagáis al fotógrafo, sino que os hacéis vosotr
 Si queréis empezar a explorar sin presión, en el [directorio de fotógrafos de bodas](/malaga/) podéis ver perfiles verificados y consultar disponibilidad directamente. Todas las consultas son gratuitas y sin compromiso.
 
 *¿Ya tenéis fotógrafo en mente? Leed también [qué incluye un reportaje de boda completo](/blog/que-incluye-reportaje-de-boda/) para saber qué pedir por escrito antes de firmar.*
+
+---
+
+**Buscad fotógrafo por ciudad:** [Madrid](/madrid/) · [Málaga](/malaga/) · [Granada](/granada/) · [Bilbao](/bilbao/) · [San Sebastián](/san-sebastian/) · [Alicante](/alicante/) · [Córdoba](/cordoba/) · [Murcia](/murcia/) · [Valladolid](/valladolid/) · [Zaragoza](/zaragoza/)

@@ -23,8 +23,12 @@ const {
   <div class="absolute inset-0">
     <img
       src={imageSrc}
+      srcset={imageSrc === '/images/hero-boda.webp' ? '/images/hero-boda-800.webp 800w, /images/hero-boda.webp 1440w' : undefined}
+      sizes={imageSrc === '/images/hero-boda.webp' ? '100vw' : undefined}
       alt={city ? `Fotógrafo de bodas en ${city}` : 'Fotógrafo de bodas en España'}
       class="w-full h-full object-cover object-center"
+      width="1440"
+      height="960"
       fetchpriority="high"
       decoding="async"
     />

@@ -33,9 +33,11 @@ const cityImages: Record<string, string> = {
           class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-[#E8DDD3]"
         >
           <img
-            src={cityImages[city.slug] ?? '/images/hero-boda.jpg'}
+            src={cityImages[city.slug] ?? '/images/hero-boda.webp'}
             alt={`Fotógrafo de bodas en ${city.name}`}
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            width="470"
+            height="263"
             loading="lazy"
             decoding="async"
           />

@@ -38,17 +38,21 @@ España tiene talento fotográfico repartido por todo el territorio. No hay que 
 
 **Granada y Andalucía** concentran algunos de los escenarios más fotogénicos de Europa. La Alhambra, las cortijadas del interior, las fincas de olivar. La fotografía de bodas en Granada tiene una tradición larga y algunos de sus fotógrafos llevan décadas perfeccionando su mirada sobre esos espacios. [Fotógrafos de bodas en Granada →](/granada/)
 
-## Cómo usar esta guía para encontrar al vuestro
+**Sevilla** es la capital de la boda andaluza: haciendas centenarias, cortijos con historia, palacios barrocos. La oferta de fotógrafos de bodas en Sevilla ha crecido mucho y el nivel medio es muy alto. Para bodas en primavera o en octubre, reservad con mucha antelación. [Fotógrafos de bodas en Sevilla →](/sevilla/)
+
+**Bilbao y el País Vasco** tienen la luz más fotogénica de la península. La lluvia, los cielos encapotados y la arquitectura vasca producen fotos con una identidad visual muy reconocible. La oferta de fotógrafos especializados en el norte es pequeña pero de gran nivel. [Fotógrafos de bodas en Bilbao →](/bilbao/)
+
+## Cómo usar esta guía para encontrar al fotógrafo de bodas ideal
 
 Una lista de los mejores fotógrafos de bodas en España tiene un problema inherente: el mejor para otra pareja puede no ser el mejor para vosotros. El estilo importa, y mucho.
 
-Si buscáis algo más documental, fotos que parezcan sacadas de un momento real sin poses ni direcciones, el fotógrafo que hace fine art editorial puede no ser vuestra opción aunque técnicamente sea el más premiado. Y al revés.
+Si buscáis algo más [documental](/estilo/documental/), fotos que parezcan sacadas de un momento real sin poses ni direcciones, el fotógrafo que hace [fine art editorial](/estilo/editorial/) puede no ser vuestra opción aunque técnicamente sea el más premiado. Y al revés.
 
 Por eso el primer paso no es buscar al más famoso sino definir qué tipo de fotografía os representa. Si aún no lo tenéis claro, nuestra [guía de estilos de fotografía de boda](/blog/estilos-fotografia-de-boda-cual-elegir/) puede ayudaros.
 
 Una vez que sabéis lo que buscáis, el proceso es más sencillo: identificad tres o cuatro fotógrafos cuyo trabajo os guste de verdad, pedid referencias y disponibilidad para vuestra fecha, y elegid al que os genere más confianza en la conversación.
 
-## Qué hacer si no sabéis por dónde empezar
+## Qué hacer si no sabéis por dónde empezar a buscar fotógrafo de bodas
 
 Si tenéis fecha y ciudad pero no sabéis a quién contratar, podéis consultarnos. Contadnos vuestro estilo, vuestra fecha y vuestro presupuesto aproximado y os recomendamos fotógrafos de nuestra red que estén disponibles y encajen con lo que buscáis.
 

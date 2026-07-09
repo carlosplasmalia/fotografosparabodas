@@ -50,7 +50,10 @@ const schemaFAQ = {
   <div class="max-w-3xl mx-auto px-6">
     <div class="text-center mb-16">
       <p class="section-eyebrow mb-4">FAQ</p>
-      <h2 class="section-title">Preguntas frecuentes</h2>
+      {city
+        ? <h2 class="section-title">Preguntas frecuentes sobre<br/>fotógrafos de bodas en {city}</h2>
+        : <h2 class="section-title">Preguntas frecuentes</h2>
+      }
       <span class="gold-divider"></span>
     </div>
 

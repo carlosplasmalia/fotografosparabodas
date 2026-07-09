@@ -33,7 +33,7 @@ Con premios internacionales, publicaciones en revistas especializadas o portfoli
 
 Las bodas en Madrid, Barcelona o San Sebastián cuestan entre un 20% y un 40% más que la media nacional. La demanda es mayor y los fotógrafos de esas ciudades suelen tener carteras de clientes con presupuestos más altos.
 
-En ciudades medianas como Málaga, Zaragoza, Murcia o Valladolid, el mercado es más accesible. Es posible encontrar fotógrafos con premios internacionales a precios que en Madrid serían impensables. Serafín Castillo, por ejemplo, tiene base en Marbella y fotografía bodas en toda Europa a tarifas que sorprenden a quien solo ha mirado precios en Madrid.
+En ciudades medianas como Málaga, Zaragoza, Murcia o Valladolid, el mercado es más accesible. Es posible encontrar fotógrafos con premios internacionales a precios que en Madrid serían impensables. [Serafín Castillo](/fotografo/serafin-castillo/), por ejemplo, tiene base en Marbella y fotografía bodas en toda Europa a tarifas que sorprenden a quien solo ha mirado precios en Madrid.
 
 ## Qué suele incluir el precio del fotógrafo de bodas en cada rango
 

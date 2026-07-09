@@ -10,12 +10,26 @@ import { site } from '../../config/site';
 
 const city = 'Sevilla';
 const slug = 'sevilla';
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
 ---
 
 <BaseLayout
   title="Fotógrafo de Bodas en Sevilla — Flamenco, Palacetes y Luz Andaluza · 2026"
   description="Selección personalizada de fotógrafos de bodas en Sevilla. Palacetes, haciendas y la luz única del sur. Os encontramos el ideal. Gratis, respuesta en 24 horas."
   canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
 >
   <SiteHeader transparent={true} />
   <main>

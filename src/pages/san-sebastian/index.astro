@@ -10,12 +10,26 @@ import { site } from '../../config/site';
 
 const city = 'San Sebastián';
 const slug = 'san-sebastian';
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
 ---
 
 <BaseLayout
   title="Fotógrafo de Bodas en San Sebastián — Donostia · Selección 2026"
   description="Selección personalizada de fotógrafos de bodas en San Sebastián y Gipuzkoa. Caseríos, txakolís y bodas de nivel en Donostia. Gratis, respuesta en 24 horas."
   canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
 >
   <SiteHeader transparent={true} />
   <main>

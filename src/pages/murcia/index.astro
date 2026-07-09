@@ -10,12 +10,26 @@ import { site } from '../../config/site';
 
 const city = 'Murcia';
 const slug = 'murcia';
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
 ---
 
 <BaseLayout
   title="Fotógrafo de Bodas en Murcia — Encontramos el ideal para vosotros · 2026"
   description="Servicio de selección de fotógrafos de bodas en Murcia y Costa Cálida. Os presentamos al profesional que mejor encaja con vuestra boda. Gratis, en 24 horas."
   canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
 >
   <SiteHeader transparent={true} />
   <main>

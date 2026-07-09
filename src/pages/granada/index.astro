@@ -10,12 +10,26 @@ import { site } from '../../config/site';
 
 const city = 'Granada';
 const slug = 'granada';
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
 ---
 
 <BaseLayout
   title="Fotógrafo de Bodas en Granada — Alhambra y Albaicín · Selección 2026"
   description="Selección personalizada de fotógrafos de bodas en Granada. Alhambra, Albaicín, Sierra Nevada y la Alpujarra. Os encontramos el ideal. Gratis, 24 horas."
   canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
 >
   <SiteHeader transparent={true} />
   <main>

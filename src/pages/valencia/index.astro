@@ -10,12 +10,26 @@ import { site } from '../../config/site';
 
 const city = 'Valencia';
 const slug = 'valencia';
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
 ---
 
 <BaseLayout
   title="Fotógrafo de Bodas en Valencia — Mediterráneo, Huerta y Luz Dorada · 2026"
   description="Selección personalizada de fotógrafos de bodas en Valencia. Masías de la huerta, playas y la luz mediterránea del Levante. Os encontramos el ideal. Gratis, 24 horas."
   canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
 >
   <SiteHeader transparent={true} />
   <main>

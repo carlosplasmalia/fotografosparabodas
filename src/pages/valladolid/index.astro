@@ -10,12 +10,26 @@ import { site } from '../../config/site';
 
 const city = 'Valladolid';
 const slug = 'valladolid';
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
 ---
 
 <BaseLayout
   title="Fotógrafo de Bodas en Valladolid — Ribera del Duero · Selección 2026"
   description="Selección personalizada de fotógrafos de bodas en Valladolid. Bodegas de la Ribera del Duero, haciendas castellanas y bodas atemporales. Gratis, 24 horas."
   canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
 >
   <SiteHeader transparent={true} />
   <main>

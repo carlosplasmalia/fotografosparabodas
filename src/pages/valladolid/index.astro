@@ -81,6 +81,33 @@ const slug = 'valladolid';
       </div>
     </section>
 
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Valladolid precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Valladolid?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Valladolid y la Ribera del Duero ofrecen precios más competitivos que Madrid o Barcelona, con fotógrafos de primerísimo nivel a tarifas que sorprenden. En 2026, el mercado se distribuye así:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '900 – 1.500 €', nivel: 'Iniciación', desc: 'Fotógrafos emergentes con buen ojo y portfolio en crecimiento. Buena opción si tenéis presupuesto ajustado y verificáis bodas completas.' },
+            { rango: '1.500 – 2.800 €', nivel: 'Intermedio', desc: 'Fotógrafos consolidados con experiencia en bodegas y fincas de la Ribera. El rango más solicitado en Valladolid para bodas de nivel medio.' },
+            { rango: '2.800 – 5.000 €', nivel: 'Referencia', desc: 'Fotógrafos con reconocimiento internacional habituados a los mejores venues de Castilla. Agenda muy limitada para septiembre y octubre.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Para bodas en bodegas fuera de Valladolid capital, confirmad siempre si el desplazamiento está incluido. Si queréis saber qué fotógrafos de nuestra red tienen disponibilidad para vuestra fecha, <a href="/#contacto" class="text-[#8B6A3A] underline">consultadnos sin compromiso</a>.
+        </p>
+      </div>
+    </section>
+
     <FAQSection city={city} />
 
     <section class="py-16 bg-[#F2E8D5]">

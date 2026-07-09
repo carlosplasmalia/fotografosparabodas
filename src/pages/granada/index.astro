@@ -81,6 +81,33 @@ const slug = 'granada';
       </div>
     </section>
 
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Granada precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Granada?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Granada tiene una oferta fotográfica muy sólida, con profesionales especializados en los venues más icónicos de la ciudad: la Alhambra, el Albaicín, cármenes con vistas a Sierra Nevada. Los precios en 2026 se mueven en estos rangos:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '1.000 – 1.600 €', nivel: 'Iniciación', desc: 'Fotógrafos emergentes con experiencia en la ciudad y buena base técnica. Revisar bodas completas antes de decidir.' },
+            { rango: '1.600 – 2.800 €', nivel: 'Intermedio', desc: 'Fotógrafos consolidados habituados a los cármenes y venues históricos de Granada. El rango más frecuente para bodas de nivel.' },
+            { rango: '2.800 – 5.500 €', nivel: 'Referencia', desc: 'Fotógrafos con proyección nacional e internacional, especializados en bodas de destino en la Alhambra y entornos únicos de Granada.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Los fotógrafos de bodas en Granada suelen cubrir también la Costa Tropical sin coste adicional. Para bodas en la Alhambra, consultad disponibilidad con mucha antelación: son las fechas que primero se llenan. <a href="/#contacto" class="text-[#8B6A3A] underline">Consultadnos sin compromiso</a>.
+        </p>
+      </div>
+    </section>
+
     <FAQSection city={city} />
 
     <section class="py-16 bg-[#F2E8D5]">

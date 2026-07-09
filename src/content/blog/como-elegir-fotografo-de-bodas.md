@@ -12,11 +12,11 @@ El fotógrafo de bodas es probablemente el proveedor que más tiempo va a pasar 
 
 Hay parejas que contratan a su fotógrafo de bodas en tres días y quedan encantadas. Otras tardan meses, consultan a doce profesionales y aun así tienen dudas hasta el día antes. No hay un proceso perfecto, pero sí hay criterios que marcan la diferencia entre acertar y lamentarlo.
 
-## Primero, definid qué estilo queréis
+## Primero, definid qué estilo de fotografía de bodas queréis
 
 Antes de mirar un solo portfolio, hablad entre vosotros de qué tipo de fotos os emocionan. ¿Las que parecen sacadas de una película, con luz de atardecer y colores cálidos? ¿Las que capturan a alguien riéndose sin saber que los fotografiaban? ¿Las que parecen editoriales de revista con poses muy trabajadas?
 
-Cada respuesta corresponde a un estilo diferente: romántico, documental o editorial. Y mezclar estilos es posible, pero lo que no funciona es contratar a un fotógrafo documental esperando poses elaboradas, o viceversa. El estilo tiene que coincidir antes de hablar de precios.
+Cada respuesta corresponde a un estilo diferente: [romántico](/estilo/romantico/), [documental](/estilo/documental/) o [editorial](/estilo/editorial/). Y mezclar estilos es posible, pero lo que no funciona es contratar a un fotógrafo documental esperando poses elaboradas, o viceversa. El estilo tiene que coincidir antes de hablar de precios.
 
 ## Mirad bodas completas, no solo el portfolio
 
@@ -29,13 +29,13 @@ Pedid ver el reportaje completo de al menos una boda. Una boda entera, de princi
 <figcaption>De un reportaje completo · Foto: <a href="/fotografo/chema-vela/">Plasmalia</a></figcaption>
 </figure>
 
-## La química personal importa más de lo que parece
+## La química personal con el fotógrafo de bodas importa más de lo que parece
 
 Vais a pasar entre seis y doce horas con esta persona. Si hay tensión, se nota en las fotos. Si hay confianza, se nota también.
 
 En la reunión inicial, prestad atención a si el fotógrafo escucha o solo habla de sí mismo, a si hace preguntas sobre cómo imaginais el día o si aplica el mismo discurso a todos, y a si os sentís cómodos contándole cosas personales de vuestra historia. Si la conversación fluye con naturalidad, eso es una señal muy buena. Si os sentís juzgados o presionados, buscad a otro.
 
-## Las preguntas que hay que hacer antes de firmar
+## Las preguntas que hacer al fotógrafo de bodas antes de firmar
 
 Hay una lista corta de cosas que conviene aclarar por escrito antes de cerrar ningún trato:
 
@@ -43,7 +43,7 @@ Hay una lista corta de cosas que conviene aclarar por escrito antes de cerrar ni
 
 Y una que muy pocos hacen y es de las más importantes: ¿hacéis copia de seguridad de las tarjetas durante la boda? La respuesta correcta es sí.
 
-## El precio como último criterio, no el primero
+## El precio del fotógrafo de bodas como último criterio, no el primero
 
 Elegir el fotógrafo más barato disponible es un error frecuente. La fotografía de la boda es lo único que queda para siempre. El menú se olvida. El vestido se guarda. Las fotos se ven toda la vida.
 

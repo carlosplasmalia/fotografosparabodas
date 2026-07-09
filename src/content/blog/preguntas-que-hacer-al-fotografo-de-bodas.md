@@ -12,7 +12,7 @@ La primera reunión con un fotógrafo de bodas puede ser intimidante si no sabé
 
 No hace falta hacer todas en la primera llamada. Pero sí antes de firmar nada.
 
-## Sobre el trabajo y el estilo
+## Preguntas sobre el trabajo y el estilo del fotógrafo de bodas
 
 **¿Puedes enseñarme una boda completa?**
 No el portfolio, sino una boda entera, de principio a fin. Es la pregunta más importante. Los portfolios muestran los mejores momentos de cien bodas distintas. Una boda completa muestra la consistencia real del trabajo.
@@ -23,7 +23,7 @@ Si el fotógrafo tarda mucho en responder o da una respuesta muy genérica, pued
 **¿Has trabajado antes en mi tipo de venue o localización?**
 Un fotógrafo que conoce las iglesias oscuras, las fincas sin luz artificial o las bodas de playa al mediodía tiene ventaja. No es excluyente, pero es un punto a valorar.
 
-## Sobre la logística del día
+## Preguntas sobre la logística el día de vuestra boda
 
 **¿Cuántas horas de cobertura incluye el precio?**
 Aseguraos de que el horario cuadra con vuestra boda. Si los preparativos empiezan a las 10 y el baile acaba a las 2, necesitáis esas horas cubiertas.
@@ -34,7 +34,7 @@ Para bodas grandes o con eventos simultáneos (preparativos de novio y novia a l
 **¿Qué equipo de respaldo lleváis?**
 La respuesta correcta es que tienen al menos dos cuerpos de cámara y un sistema de backup para las tarjetas. Si trabajan con un solo cuerpo sin respaldo, ese es un riesgo innecesario para vosotros.
 
-## Sobre la entrega
+## Preguntas sobre la entrega del reportaje de boda
 
 **¿Cuántas fotos editadas entrego y en qué plazo?**
 La media está entre 400 y 700 fotos editadas en cuatro a ocho semanas. Si alguien promete 1.500 fotos en una semana, preguntaos qué tipo de edición hacen.
@@ -45,7 +45,7 @@ Deberían entregarse en alta resolución, sin marca de agua, con derechos de uso
 **¿Hacéis backup durante la boda?**
 Esta es no negociable. Un profesional graba en dos tarjetas simultáneamente o hace volcados durante los descansos. Las tarjetas de memoria fallan. No con frecuencia, pero fallan.
 
-## Sobre el contrato y las contingencias
+## Preguntas sobre el contrato del fotógrafo de bodas
 
 **¿Hay contrato por escrito?**
 Siempre tiene que haber contrato. Si alguien trabaja solo de palabra, no lo contratéis. El contrato protege a las dos partes.

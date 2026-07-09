@@ -81,6 +81,33 @@ const slug = 'sevilla';
       </div>
     </section>
 
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Sevilla precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Sevilla?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Sevilla es una de las plazas más activas de España en fotografía de bodas, con una demanda muy alta en primavera y otoño. La concentración de talento es notable y los precios reflejan esa competencia. Estos son los rangos en 2026:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '1.100 – 1.800 €', nivel: 'Iniciación', desc: 'Fotógrafos con uno a tres años de trayectoria en bodas sevillanas. Buena opción con presupuesto ajustado si verificáis el trabajo completo.' },
+            { rango: '1.800 – 3.200 €', nivel: 'Intermedio', desc: 'Fotógrafos con experiencia en haciendas, cortijos y palacios de Sevilla. El rango más habitual para bodas de nivel medio-alto en la ciudad.' },
+            { rango: '3.200 – 6.000 €', nivel: 'Referencia', desc: 'Fotógrafos con premios nacionales e internacionales. Habituales en los mejores venues de la capital andaluza y bodas de destino en la región.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          En Sevilla, abril y mayo (temporada de bodas primaverales) junto con octubre son los meses más demandados. Los fotógrafos de referencia llenan esas fechas con 12 meses de antelación. Si vuestra boda es en esa época, <a href="/#contacto" class="text-[#8B6A3A] underline">consultad disponibilidad cuanto antes</a>.
+        </p>
+      </div>
+    </section>
+
     <FAQSection city={city} />
 
     <section class="py-16 bg-[#F2E8D5]">

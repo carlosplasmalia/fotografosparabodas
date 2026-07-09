@@ -12,7 +12,7 @@ Una de las conversaciones más incómodas que tiene una pareja con su fotógrafo
 
 Aquí va un mapa claro de lo que deberías esperar de cualquier fotógrafo profesional en España.
 
-## Lo que siempre debería estar incluido
+## Lo que siempre incluye un reportaje de boda completo
 
 **Cobertura del día completo.** Un reportaje estándar cubre desde los preparativos hasta aproximadamente una hora después del baile. Eso son entre 8 y 12 horas de trabajo. Si el fotógrafo solo cubre desde la ceremonia, no es un reportaje completo.
 
@@ -22,7 +22,7 @@ Aquí va un mapa claro de lo que deberías esperar de cualquier fotógrafo profe
 
 **Derechos de uso personal.** Las fotos son vuestras para uso personal. Podéis imprimirlas, compartirlas y enmárcarlas. Lo que no podéis hacer sin permiso expreso es venderlas o usarlas con fines comerciales.
 
-## Lo que se paga aparte (y merece la pena considerar)
+## Extras del reportaje de boda: lo que se paga aparte
 
 **Sesión preboda.** Una sesión de una o dos horas antes de la boda, en una localización elegida por vosotros, sin invitados ni agenda. Sirve para conocer al fotógrafo, romper el hielo con la cámara y llegar al gran día sin poneros tensos cuando os apunte el objetivo. Vale mucho más de lo que cuesta, que suele ser entre 150€ y 350€ extra.
 
@@ -32,13 +32,13 @@ Aquí va un mapa claro de lo que deberías esperar de cualquier fotógrafo profe
 
 **Desplazamiento.** Los fotógrafos suelen incluir desplazamientos en un radio de 50-100 km sin coste. Fuera de ese radio, el precio del viaje y el alojamiento si es necesario va aparte. Confirmadlo siempre en el presupuesto, especialmente para bodas en zonas rurales o destinos.
 
-## Qué preguntar sobre la entrega
+## Qué preguntar al fotógrafo de bodas sobre la entrega
 
 El plazo de entrega varía bastante. Algunos fotógrafos entregan en tres semanas, otros tardan entre dos y tres meses. La media está en cuatro a seis semanas. Si el plazo os importa, pedidlo por escrito en el contrato.
 
 Preguntad también si las fotos tienen marca de agua y si podéis imprimir sin restricciones. La respuesta correcta a ambas es no tienen marca de agua y sí podéis imprimir donde queráis, aunque para uso comercial necesitéis permiso.
 
-## Sobre los backups: la pregunta que salva bodas
+## Backups y seguridad: la pregunta que salva el reportaje de boda
 
 Esta es la que más se olvida y más importa. ¿Qué pasa si una tarjeta de memoria falla durante la boda?
 

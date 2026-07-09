@@ -156,6 +156,33 @@ const schemaOrg = {
       </div>
     </section>
 
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Málaga precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Málaga?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Málaga y la Costa del Sol tienen una demanda de bodas de destino muy alta, con parejas internacionales que elevan el nivel medio del mercado. Los fotógrafos de la zona están habituados a ese entorno y sus tarifas reflejan esa especialización. Estos son los rangos en 2026:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '1.000 – 1.800 €', nivel: 'Iniciación', desc: 'Fotógrafos con trayectoria inicial en la Costa del Sol. Buena opción para bodas con presupuesto ajustado si verificáis que conocen vuestro venue.' },
+            { rango: '1.800 – 3.200 €', nivel: 'Intermedio', desc: 'Fotógrafos consolidados con experiencia en Marbella, Ronda y la Costa del Sol. El rango más habitual para bodas de nivel en la provincia.' },
+            { rango: '3.200 – 6.000 €', nivel: 'Referencia', desc: 'Fotógrafos con premios internacionales habituados a bodas de destino en la Costa del Sol. Albert Pamies, clasificado #1 mundial en MyWed, trabaja en este segmento.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Los fotógrafos de bodas en Málaga suelen cubrir toda la Costa del Sol sin coste adicional de desplazamiento. Para bodas en Ronda o fuera de la provincia, confirmadlo al pedir presupuesto. Si queréis ver disponibilidad para vuestra fecha, <a href="/#contacto" class="text-[#8B6A3A] underline">consultadnos sin compromiso</a>.
+        </p>
+      </div>
+    </section>
+
     <FAQSection city={city} />
 
     <!-- Related -->

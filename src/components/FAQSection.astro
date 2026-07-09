@@ -20,6 +20,7 @@ const faqs = [
   {
     q: '¿Qué estilos de fotografía de boda existen?',
     a: 'Los principales son: reportaje documental (natural, sin poses), editorial o artístico (más posado y cuidado), y romántico (enfocado en la emoción y la luz). Muchos fotógrafos combinan estilos. En los perfiles podéis ver ejemplos reales de su trabajo.',
+    html: 'Los principales son: <a href="/estilo/documental/" class="text-[#8B6A3A] underline">reportaje documental</a> (natural, sin poses), <a href="/estilo/editorial/" class="text-[#8B6A3A] underline">editorial o artístico</a> (más posado y cuidado), y <a href="/estilo/romantico/" class="text-[#8B6A3A] underline">romántico</a> (enfocado en la emoción y la luz). Muchos fotógrafos combinan estilos. En los perfiles podéis ver ejemplos reales de su trabajo.',
   },
   {
     q: '¿Qué incluye un reportaje de boda completo?',
@@ -69,9 +70,7 @@ const schemaFAQ = {
             </span>
           </summary>
           <div class="px-6 pb-6">
-            <p class="font-['Lato'] text-[#6B5E58] text-sm leading-relaxed">
-              {faq.a}
-            </p>
+            <p class="font-['Lato'] text-[#6B5E58] text-sm leading-relaxed" set:html={faq.html ?? faq.a} />
           </div>
         </details>
       ))}

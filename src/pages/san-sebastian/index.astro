@@ -33,7 +33,7 @@ const slug = 'san-sebastian';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <p class="section-eyebrow mb-4">Donostia y Gipuzkoa</p>
-            <h2 class="section-title mb-6">La perla del norte<br/>para vuestra boda</h2>
+            <h2 class="section-title mb-6">Fotógrafos de bodas en San Sebastián<br/>y Donostia: la perla del norte</h2>
             <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
               San Sebastián tiene una concentración de talento fotográfico fuera de lo normal para su tamaño. La ciudad tiene una sensibilidad estética propia, influida por la gastronomía y la cultura vasca, que se traslada al trabajo de sus mejores fotógrafos.
             </p>
@@ -78,6 +78,34 @@ const slug = 'san-sebastian';
             Si no tenéis claro qué estilo fotográfico buscáis para vuestra boda, nuestra <a href="/blog/estilos-fotografia-de-boda-cual-elegir/" class="text-[#8B6A3A] underline">guía de estilos de fotografía de boda</a> explica las diferencias entre documental, romántico y editorial con ejemplos reales. Es un buen punto de partida antes de hablar con ningún fotógrafo.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Precio fotógrafo bodas San Sebastián -->
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas San Sebastián precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Donostia?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Los fotógrafos de bodas en San Sebastián y Donostia trabajan habitualmente en venues de alto nivel: palacios, caseríos con historia, restaurantes con estrella Michelin y fincas con vistas al Cantábrico. Eso se refleja en el precio, que suele ser ligeramente superior a la media nacional. Estos son los rangos del mercado en Gipuzkoa en 2026:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '1.400 – 2.200 €', nivel: 'Iniciación', desc: 'Fotógrafos con menos de 3 años de experiencia en bodas en el País Vasco. Disponibles para bodas con presupuesto ajustado.' },
+            { rango: '2.200 – 3.800 €', nivel: 'Intermedio', desc: 'Fotógrafos con trayectoria consolidada en Donostia y Gipuzkoa. El rango más habitual para bodas de nivel medio-alto.' },
+            { rango: '3.800 – 6.500 €', nivel: 'Referencia', desc: 'Fotógrafos con premios internacionales y agenda muy limitada. Habituales en los mejores venues de la Costa Vasca.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Los fotógrafos de bodas en San Sebastián y Donostia suelen cubrir toda Gipuzkoa sin coste adicional de desplazamiento. Para bodas en Álava o Vizcaya consultad si hay suplemento. Si queréis saber si el presupuesto de nuestra red encaja con el vuestro, <a href="/#contacto" class="text-[#8B6A3A] underline">consultadnos sin compromiso</a>.
+        </p>
       </div>
     </section>
 

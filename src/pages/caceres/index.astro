@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import ConciergeCitySection from '../../components/ConciergeCitySection.astro';
+import FeaturedPhotographer from '../../components/FeaturedPhotographer.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+import { getPhotographerByCity } from '../../data/photographers';
+
+const city = 'Cáceres';
+const slug = 'caceres';
+const featured = getPhotographerByCity(slug);
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
+---
+
+<BaseLayout
+  title='Fotógrafo de Bodas en Cáceres — Extremadura Monumental · Selección 2026'
+  description='Selección personalizada de fotógrafos de bodas en Cáceres y Extremadura. Casco medieval, dehesas y el Valle del Jerte. Os encontramos el ideal. Gratis, 24 horas.'
+  canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafo de Bodas\nen Cáceres`}
+      subtitle='Un casco medieval Patrimonio de la Humanidad, dehesas infinitas y el Valle del Jerte en flor. Extremadura es el secreto mejor guardado de las bodas en España.'
+      ctaText="Consultar ahora"
+      ctaHref="#fotografos"
+      imageSrc="/images/hero-boda.webp"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Cáceres y Extremadura</p>
+            <h2 class="section-title mb-6">Fotógrafo de bodas en Cáceres:<br/>piedra medieval y dehesa</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              El casco antiguo de Cáceres es un plató medieval intacto: palacios, torres y callejones de piedra dorada que al atardecer se encienden. Alrededor, las dehesas de encinas, los castillos y las fincas señoriales completan un escenario de boda con una personalidad enorme.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              Extremadura sigue siendo un territorio poco masificado para bodas, y eso se nota en los precios y en la disponibilidad de los venues. La primavera del Valle del Jerte, con los cerezos en flor, es uno de los espectáculos naturales más buscados por las parejas.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Tiempo de respuesta', value: 'menos de 24h' },
+                { label: 'Temporada alta', value: 'Abril – Junio, Sept – Oct' },
+                { label: 'Zonas populares', value: 'Casco antiguo, dehesas, Valle del Jerte' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {featured && <FeaturedPhotographer photographer={featured} />}
+
+    <ConciergeCitySection city={city} />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cómo elegir fotógrafo de bodas en Cáceres?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            En Extremadura las distancias son largas y los venues suelen estar en fincas rurales. Confirmad qué desplazamientos incluye cada fotógrafo y si conoce vuestro venue; la luz de una dehesa en verano, dura y dorada, tiene su técnica.
+          </p>
+          <p>
+            El casco monumental de Cáceres al atardecer es un regalo para cualquier fotógrafo, pero las sesiones allí requieren conocer los rincones y las horas de menos turismo. Los profesionales locales llevan años puliendo ese mapa.
+          </p>
+          <p>
+            La región cuenta con estudios veteranos con premios nacionales y experiencia en bodas de destino, así que el nivel disponible es más alto de lo que su fama sugiere. Si no sabéis qué estilo buscáis, nuestra <a href="/blog/estilos-fotografia-de-boda-cual-elegir/" class="text-[#8B6A3A] underline">guía de estilos de fotografía de boda</a> puede ayudaros a definirlo antes de empezar a buscar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Cáceres precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Cáceres?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Extremadura tiene los precios más accesibles entre las regiones con buen nivel fotográfico. Rangos habituales en 2026:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '800 – 1.300 €', nivel: 'Iniciación', desc: 'Fotógrafos emergentes de la zona. Revisar bodas completas en fincas y en el casco histórico.' },
+            { rango: '1.300 – 2.200 €', nivel: 'Intermedio', desc: 'Profesionales consolidados que trabajan toda Extremadura. El rango más habitual para bodas de nivel.' },
+            { rango: '2.200 – 4.000 €', nivel: 'Referencia', desc: 'Los estudios de referencia de la región, con premios nacionales y experiencia en bodas de destino.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Los fotógrafos extremeños suelen cubrir las dos provincias sin coste adicional y muchos trabajan también Madrid, Toledo y el norte de Andalucía. <a href="/#contacto" class="text-[#8B6A3A] underline">Consultadnos sin compromiso</a>.
+        </p>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">También disponemos de fotógrafos en</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[{"name": "Toledo", "slug": "toledo"}, {"name": "Sevilla", "slug": "sevilla"}, {"name": "Madrid", "slug": "madrid"}].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">Fotógrafos en {c.name}</a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

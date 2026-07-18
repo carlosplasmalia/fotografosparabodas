@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import ConciergeCitySection from '../../components/ConciergeCitySection.astro';
+import FeaturedPhotographer from '../../components/FeaturedPhotographer.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+import { getPhotographerByCity } from '../../data/photographers';
+
+const city = 'Oviedo';
+const slug = 'oviedo';
+const featured = getPhotographerByCity(slug);
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
+---
+
+<BaseLayout
+  title='Fotógrafo de Bodas en Oviedo — Asturias, Paraíso Natural · Selección 2026'
+  description='Selección personalizada de fotógrafos de bodas en Oviedo y Asturias. Llagares, praderías con los Picos de fondo y la costa verde. Os encontramos el ideal. Gratis, 24 horas.'
+  canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafo de Bodas\nen Oviedo`}
+      subtitle='Llagares centenarios, praderías con los Picos de Europa de fondo y las playas de la costa verde. En Asturias el paisaje hace la mitad del reportaje.'
+      ctaText="Consultar ahora"
+      ctaHref="#fotografos"
+      imageSrc="/images/hero-boda.webp"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Oviedo y Asturias</p>
+            <h2 class="section-title mb-6">Fotógrafo de bodas en Oviedo:<br/>el paraíso como telón de fondo</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              Asturias ofrece a una boda lo que pocas regiones pueden: verde en cualquier mes del año, montañas que cortan la respiración y una costa de acantilados y playas salvajes a menos de una hora de cualquier punto. Los llagares y caserías añaden el toque de autenticidad que muchas parejas buscan.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              Oviedo y Gijón concentran la mayoría de los profesionales, acostumbrados a moverse por toda la región y a trabajar la luz cambiante del norte.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Tiempo de respuesta', value: 'menos de 24h' },
+                { label: 'Temporada alta', value: 'Mayo – Septiembre' },
+                { label: 'Zonas populares', value: 'Llagares, costa verde, Picos de Europa' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {featured && <FeaturedPhotographer photographer={featured} />}
+
+    <ConciergeCitySection city={city} />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cómo elegir fotógrafo de bodas en Oviedo?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            En Asturias el venue suele estar en plena naturaleza, y eso condiciona la elección: buscad fotógrafos con reportajes reales en fincas y llagares similares al vuestro. Manejar una pradería a pleno sol de agosto o el interior de piedra de un llagar exige recursos distintos.
+          </p>
+          <p>
+            Como en toda la cornisa, el tiempo es variable. Los profesionales asturianos con oficio convierten el día gris en atmósfera y el orbayu en textura. Desconfiad de portfolios donde solo salen días de sol: en Asturias eso es media verdad.
+          </p>
+          <p>
+            La escena local es cercana y honesta, con fotógrafos discretos de enfoque documental que encajan muy bien con el carácter de las celebraciones asturianas. Si no sabéis qué estilo buscáis, nuestra <a href="/blog/estilos-fotografia-de-boda-cual-elegir/" class="text-[#8B6A3A] underline">guía de estilos de fotografía de boda</a> puede ayudaros a definirlo antes de empezar a buscar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Oviedo precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Oviedo?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Los precios en Asturias se mantienen en rangos contenidos. Habituales en 2026:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '900 – 1.400 €', nivel: 'Iniciación', desc: 'Fotógrafos emergentes de la región. Revisar bodas completas y soltura con clima cambiante.' },
+            { rango: '1.400 – 2.400 €', nivel: 'Intermedio', desc: 'Profesionales consolidados que conocen los llagares y fincas asturianas. El rango más habitual para bodas de nivel.' },
+            { rango: '2.400 – 4.500 €', nivel: 'Referencia', desc: 'Los fotógrafos de referencia del Principado, con membresías y reconocimientos internacionales.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Los fotógrafos de Oviedo y Gijón cubren toda Asturias sin coste adicional y suelen trabajar también León, Cantabria y Galicia oriental. <a href="/#contacto" class="text-[#8B6A3A] underline">Consultadnos sin compromiso</a>.
+        </p>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">También disponemos de fotógrafos en</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[{"name": "Santander", "slug": "santander"}, {"name": "Galicia", "slug": "galicia"}, {"name": "Valladolid", "slug": "valladolid"}].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">Fotógrafos en {c.name}</a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

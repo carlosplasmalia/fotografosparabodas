@@ -1,0 +1,60 @@
+---
+import { site } from '../config/site';
+import type { Photographer } from '../data/photographers';
+
+interface Props {
+  photographer: Photographer;
+}
+
+const { photographer: p } = Astro.props;
+
+const waText = encodeURIComponent(
+  `Hola, nos interesa ${p.name} para nuestra boda en ${p.city}. ¿Podéis consultar disponibilidad o recomendarnos opciones similares?`
+);
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <p class="section-eyebrow mb-4">Fotógrafo destacado en {p.city}</p>
+      <h2 class="section-title">Nuestra recomendación:<br/>{p.name}</h2>
+      <span class="gold-divider"></span>
+    </div>
+
+    <div class="bg-[#1C1814] rounded-sm overflow-hidden">
+      <div class="p-8 md:p-10">
+        <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-4">
+          <p class="font-['Cormorant_Garamond'] text-3xl font-semibold text-white">{p.name}</p>
+          <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A]">{p.style}</p>
+        </div>
+        <p class="font-['Lato'] text-sm text-[#9A8880] leading-relaxed mb-6 max-w-2xl">
+          {p.bio[0]}
+        </p>
+        {p.recognitions.length > 0 && (
+          <div class="flex flex-wrap gap-2 mb-6">
+            {p.recognitions.map(r => (
+              <span class="font-['Lato'] text-[10px] px-2 py-1 bg-[#8B6A3A]/20 border border-[#8B6A3A]/40 text-[#F2E8D5] rounded-sm">★ {r}</span>
+            ))}
+          </div>
+        )}
+        <div class="flex flex-wrap items-center gap-4">
+          <a href={`/fotografo/${p.slug}/`} class="btn-gold text-sm py-2.5 px-6">
+            Ver perfil completo →
+          </a>
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=${waText}`}
+            target="_blank" rel="noopener noreferrer"
+            class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#C4A5A0] hover:text-white transition-colors"
+          >
+            Consultar disponibilidad
+          </a>
+          {p.phone && (
+            <span class="font-['Lato'] text-xs text-[#6B5E58]">
+              Tel. directo: <a href={`tel:+34${p.phone.replace(/\s/g, '')}`} class="text-[#9A8880] hover:text-white transition-colors">{p.phone}</a>
+            </span>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

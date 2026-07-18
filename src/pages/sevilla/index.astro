@@ -4,12 +4,15 @@ import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import Hero from '../../components/Hero.astro';
 import ConciergeCitySection from '../../components/ConciergeCitySection.astro';
+import FeaturedPhotographer from '../../components/FeaturedPhotographer.astro';
+import { getPhotographerByCity } from '../../data/photographers';
 import FAQSection from '../../components/FAQSection.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 import { site } from '../../config/site';
 
 const city = 'Sevilla';
 const slug = 'sevilla';
+const featured = getPhotographerByCity(slug);
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -73,6 +76,8 @@ const schemaOrg = {
         </div>
       </div>
     </section>
+
+    {featured && <FeaturedPhotographer photographer={featured} />}
 
     <ConciergeCitySection city={city} />
 

@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import ConciergeCitySection from '../../components/ConciergeCitySection.astro';
+import FeaturedPhotographer from '../../components/FeaturedPhotographer.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+import { getPhotographerByCity } from '../../data/photographers';
+
+const city = 'Galicia';
+const slug = 'galicia';
+const featured = getPhotographerByCity(slug);
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
+---
+
+<BaseLayout
+  title='Fotógrafo de Bodas en Galicia — Rías, Pazos y Atlántico · Selección 2026'
+  description='Selección personalizada de fotógrafos de bodas en Galicia. Pazos señoriales, rías, Costa da Morte y bodas en Santiago o Vigo. Os encontramos el ideal. Gratis, 24 horas.'
+  canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafo de Bodas\nen Galicia`}
+      subtitle='Pazos entre eucaliptos, rías en calma y el Atlántico salvaje de la Costa da Morte. Galicia tiene los escenarios de boda más atmosféricos de España.'
+      ctaText="Consultar ahora"
+      ctaHref="#fotografos"
+      imageSrc="/images/hero-boda.webp"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Galicia al completo</p>
+            <h2 class="section-title mb-6">Fotógrafo de bodas en Galicia:<br/>la tierra de los pazos</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              La boda gallega tiene un escenario propio que no existe en el resto de España: el pazo. Casas señoriales de piedra entre jardines centenarios, con hórreo, capilla y carballeira. Sumadle las rías, las playas salvajes del Atlántico y ciudades como Santiago, y el resultado es un catálogo de escenarios inagotable.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              Los fotógrafos gallegos dominan una luz difícil y cambiante que, bien trabajada, produce reportajes con una atmósfera única. No es casualidad que varios estudios gallegos acumulen premios internacionales.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Tiempo de respuesta', value: 'menos de 24h' },
+                { label: 'Temporada alta', value: 'Mayo – Septiembre' },
+                { label: 'Zonas populares', value: 'Pazos, Rías Baixas, Santiago' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {featured && <FeaturedPhotographer photographer={featured} />}
+
+    <ConciergeCitySection city={city} />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cómo elegir fotógrafo de bodas en Galicia?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            Galicia es grande y las distancias engañan: de Vigo a Ribadeo hay más de tres horas. Elegid un fotógrafo que conozca vuestra zona concreta o confirmad bien los desplazamientos. Los pazos más solicitados de las Rías Baixas se reservan, junto a los mejores fotógrafos, con más de un año de antelación.
+          </p>
+          <p>
+            El orballo y los cielos cubiertos son parte del paisaje. Los buenos profesionales gallegos no venden sol: venden atmósfera. Un reportaje bajo la niebla en una carballeira puede ser más memorable que cualquier atardecer despejado. Mirad cómo resuelve cada fotógrafo los días grises de su portfolio.
+          </p>
+          <p>
+            La comunidad tiene estudios familiares con décadas de oficio y premios internacionales, sobre todo en las provincias de A Coruña y Pontevedra. Si no sabéis qué estilo buscáis, nuestra <a href="/blog/estilos-fotografia-de-boda-cual-elegir/" class="text-[#8B6A3A] underline">guía de estilos de fotografía de boda</a> puede ayudaros a definirlo antes de empezar a buscar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Galicia precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Galicia?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Los precios en Galicia son de los más razonables entre las regiones con alta calidad fotográfica. Rangos habituales en 2026:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '900 – 1.400 €', nivel: 'Iniciación', desc: 'Fotógrafos emergentes. Revisar bodas completas en pazo e iglesia antes de decidir, la luz gallega exige oficio.' },
+            { rango: '1.400 – 2.500 €', nivel: 'Intermedio', desc: 'Profesionales consolidados que conocen los pazos y venues de su provincia de memoria. El rango más habitual.' },
+            { rango: '2.500 – 5.000 €', nivel: 'Referencia', desc: 'Los estudios de referencia de Galicia, varios con premios internacionales de primer nivel.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Confirmad siempre la zona de cobertura: muchos fotógrafos gallegos trabajan toda la comunidad, pero los desplazamientos largos entre provincias pueden tener suplemento. <a href="/#contacto" class="text-[#8B6A3A] underline">Consultadnos sin compromiso</a>.
+        </p>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">También disponemos de fotógrafos en</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[{"name": "Oviedo", "slug": "oviedo"}, {"name": "Santander", "slug": "santander"}, {"name": "Madrid", "slug": "madrid"}].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">Fotógrafos en {c.name}</a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

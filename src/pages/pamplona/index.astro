@@ -5,13 +5,13 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import Hero from '../../components/Hero.astro';
 import ConciergeCitySection from '../../components/ConciergeCitySection.astro';
 import FeaturedPhotographer from '../../components/FeaturedPhotographer.astro';
-import { getPhotographerByCity } from '../../data/photographers';
 import FAQSection from '../../components/FAQSection.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 import { site } from '../../config/site';
+import { getPhotographerByCity } from '../../data/photographers';
 
-const city = 'Valladolid';
-const slug = 'valladolid';
+const city = 'Pamplona';
+const slug = 'pamplona';
 const featured = getPhotographerByCity(slug);
 const schemaOrg = {
   "@context": "https://schema.org",
@@ -29,8 +29,8 @@ const schemaOrg = {
 ---
 
 <BaseLayout
-  title="Fotógrafo de Bodas en Valladolid — Ribera del Duero · Selección 2026"
-  description="Selección personalizada de fotógrafos de bodas en Valladolid. Bodegas de la Ribera del Duero, haciendas castellanas y bodas atemporales. Gratis, 24 horas."
+  title='Fotógrafo de Bodas en Pamplona — Navarra al completo · Selección 2026'
+  description='Selección personalizada de fotógrafos de bodas en Pamplona y Navarra. Del Pirineo a las Bardenas, palacios y fincas de la Zona Media. Os encontramos el ideal. Gratis, 24 horas.'
   canonical={`https://${site.domain}/${slug}/`}
   schema={schemaOrg}
 >
@@ -38,24 +38,24 @@ const schemaOrg = {
   <main>
     <Hero
       city={city}
-      h1={`Fotógrafo de Bodas\nen Valladolid`}
-      subtitle="Bodegas de la Ribera del Duero, haciendas castellanas y bodas con carácter en el corazón de Castilla. Os encontramos el fotógrafo ideal."
+      h1={`Fotógrafo de Bodas\nen Pamplona`}
+      subtitle='Del Pirineo a las Bardenas Reales, con los palacios y señoríos de la Zona Media entre medias. Navarra es un plató natural y os encontramos quien sabe usarlo.'
       ctaText="Consultar ahora"
       ctaHref="#fotografos"
-      imageSrc="/images/cities/valladolid.webp"
+      imageSrc="/images/hero-boda.webp"
     />
 
     <section class="py-16 bg-white">
       <div class="max-w-4xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <p class="section-eyebrow mb-4">Valladolid y Castilla</p>
-            <h2 class="section-title mb-6">Fotógrafo de bodas en Valladolid:<br/>piedra, viñedos y luz del interior</h2>
+            <p class="section-eyebrow mb-4">Pamplona y Navarra</p>
+            <h2 class="section-title mb-6">Fotógrafo de bodas en Pamplona:<br/>de la montaña al desierto</h2>
             <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
-              Valladolid tiene una oferta de venues únicos: bodegas centenarias de la Ribera del Duero, haciendas con arquitectura castellana y palacios en el centro histórico. La luz del interior en otoño tiene una calidad dorada excepcional.
+              Navarra concentra en pocos kilómetros una variedad de paisajes única: los bosques del Pirineo y el Irati, los viñedos de la Ribera, el desierto de las Bardenas Reales y una Zona Media llena de palacios, señoríos y bodegas para celebrar.
             </p>
             <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
-              La fotografía de bodas en Valladolid concentra talento de primer nivel con una oferta muy cuidada.
+              Pamplona funciona como centro de todo ese mapa. Los fotógrafos navarros están acostumbrados a moverse entre escenarios radicalmente distintos, y esa versatilidad se nota en los reportajes.
             </p>
           </div>
           <div class="bg-[#F2E8D5] rounded-sm p-8">
@@ -64,7 +64,7 @@ const schemaOrg = {
               {[
                 { label: 'Tiempo de respuesta', value: 'menos de 24h' },
                 { label: 'Temporada alta', value: 'Mayo – Octubre' },
-                { label: 'Zonas populares', value: 'Ribera del Duero, Rueda, Simancas' },
+                { label: 'Zonas populares', value: 'Zona Media, Pirineo, Bardenas' },
               ].map(item => (
                 <li class="flex items-start justify-between gap-4">
                   <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
@@ -84,17 +84,17 @@ const schemaOrg = {
     <section class="py-16 bg-white">
       <div class="max-w-3xl mx-auto px-6">
         <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
-          ¿Cómo elegir fotógrafo de bodas en Valladolid?
+          ¿Cómo elegir fotógrafo de bodas en Pamplona?
         </h2>
         <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
           <p>
-            Valladolid tiene una oferta de venues de boda muy particular: bodegas centenarias de la Ribera del Duero, haciendas con arquitectura castellana, palacios del siglo XVI en el centro histórico y fincas rodeadas de viñedos en Rueda o Cigales. La luz del interior peninsular cambia mucho según la estación. En verano es muy directa y cálida; en otoño, durante la vendimia, tiene una calidad dorada excepcional que pocos sitios de España pueden igualar. Los fotógrafos de bodas en Valladolid que trabajan bien conocen esta diferencia y saben cómo sacarle partido.
+            En Navarra el venue condiciona mucho la elección del fotógrafo. Una boda en un palacio de la Zona Media pide un registro distinto que una celebración en una borda del Pirineo o una sesión al atardecer en las Bardenas. Buscad reportajes en entornos parecidos al vuestro.
           </p>
           <p>
-            Septiembre y octubre son los meses más demandados por la vendimia y el color del paisaje. Los fotógrafos con experiencia en la Ribera del Duero se llenan rápido para esas fechas. Reservad con 8-10 meses de antelación como mínimo. Para bodas en bodegas fuera de la ciudad, algunas a más de 60 km, confirmad siempre si el desplazamiento está incluido en el presupuesto.
+            El clima navarro es cambiante: un buen fotógrafo local sabe convertir un día gris del norte en un reportaje con atmósfera en lugar de lamentarlo. Preguntad cómo resuelve la lluvia; la respuesta dice mucho del oficio de cada profesional.
           </p>
           <p>
-            Al elegir, revisad que el fotógrafo tenga experiencia en interiores de piedra con luz difusa, que es el caso de muchas bodegas y palacios de la zona. No todos trabajan igual en esas condiciones. Si os ayuda a orientaros, nuestra <a href="/blog/como-elegir-fotografo-de-bodas/" class="text-[#8B6A3A] underline">guía para elegir fotógrafo de bodas</a> explica qué mirar más allá del portfolio.
+            La escena local es más pequeña que la de Madrid o Barcelona, pero tiene profesionales de nivel con cientos de bodas a la espalda y precios más razonables que en las grandes capitales. Si no sabéis qué estilo buscáis, nuestra <a href="/blog/estilos-fotografia-de-boda-cual-elegir/" class="text-[#8B6A3A] underline">guía de estilos de fotografía de boda</a> puede ayudaros a definirlo antes de empezar a buscar.
           </p>
         </div>
       </div>
@@ -102,17 +102,17 @@ const schemaOrg = {
 
     <section class="py-16 bg-[#FAF7F2]">
       <div class="max-w-3xl mx-auto px-6">
-        <p class="section-eyebrow mb-4">Fotógrafo bodas Valladolid precio</p>
-        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Valladolid?</h2>
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Pamplona precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Pamplona?</h2>
         <span class="gold-divider"></span>
         <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
-          Valladolid y la Ribera del Duero ofrecen precios más competitivos que Madrid o Barcelona, con fotógrafos de primerísimo nivel a tarifas que sorprenden. En 2026, el mercado se distribuye así:
+          Los precios en Navarra son sensiblemente más contenidos que en Madrid o Barcelona. Rangos habituales en 2026:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
           {[
-            { rango: '900 – 1.500 €', nivel: 'Iniciación', desc: 'Fotógrafos emergentes con buen ojo y portfolio en crecimiento. Buena opción si tenéis presupuesto ajustado y verificáis bodas completas.' },
-            { rango: '1.500 – 2.800 €', nivel: 'Intermedio', desc: 'Fotógrafos consolidados con experiencia en bodegas y fincas de la Ribera. El rango más solicitado en Valladolid para bodas de nivel medio.' },
-            { rango: '2.800 – 5.000 €', nivel: 'Referencia', desc: 'Fotógrafos con reconocimiento internacional habituados a los mejores venues de Castilla. Agenda muy limitada para septiembre y octubre.' },
+            { rango: '900 – 1.400 €', nivel: 'Iniciación', desc: 'Fotógrafos emergentes de la zona. Revisar bodas completas y comprobar cómo resuelven interiores con poca luz.' },
+            { rango: '1.400 – 2.400 €', nivel: 'Intermedio', desc: 'Profesionales consolidados con años de experiencia en los venues navarros. El rango más habitual para bodas de nivel.' },
+            { rango: '2.400 – 4.500 €', nivel: 'Referencia', desc: 'Los fotógrafos de referencia de la comunidad, con cientos de bodas y estilo propio reconocible.' },
           ].map(item => (
             <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
               <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
@@ -122,7 +122,7 @@ const schemaOrg = {
           ))}
         </div>
         <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
-          Para bodas en bodegas fuera de Valladolid capital, confirmad siempre si el desplazamiento está incluido. Si queréis saber qué fotógrafos de nuestra red tienen disponibilidad para vuestra fecha, <a href="/#contacto" class="text-[#8B6A3A] underline">consultadnos sin compromiso</a>.
+          Los fotógrafos de Pamplona suelen cubrir toda Navarra sin coste adicional y muchos trabajan también La Rioja, Gipuzkoa y Aragón. <a href="/#contacto" class="text-[#8B6A3A] underline">Consultadnos sin compromiso</a>.
         </p>
       </div>
     </section>
@@ -133,11 +133,7 @@ const schemaOrg = {
       <div class="max-w-5xl mx-auto px-6 text-center">
         <p class="section-eyebrow mb-4">También disponemos de fotógrafos en</p>
         <div class="flex flex-wrap justify-center gap-3">
-          {[
-            { name: 'Madrid', slug: 'madrid' },
-            { name: 'Bilbao', slug: 'bilbao' },
-            { name: 'Zaragoza', slug: 'zaragoza' },
-          ].map(c => (
+          {[{"name": "Logroño", "slug": "logrono"}, {"name": "Bilbao", "slug": "bilbao"}, {"name": "Zaragoza", "slug": "zaragoza"}].map(c => (
             <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">Fotógrafos en {c.name}</a>
           ))}
         </div>

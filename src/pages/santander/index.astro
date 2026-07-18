@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import ConciergeCitySection from '../../components/ConciergeCitySection.astro';
+import FeaturedPhotographer from '../../components/FeaturedPhotographer.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+import { getPhotographerByCity } from '../../data/photographers';
+
+const city = 'Santander';
+const slug = 'santander';
+const featured = getPhotographerByCity(slug);
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
+---
+
+<BaseLayout
+  title='Fotógrafo de Bodas en Santander — Mar y Montaña · Selección 2026'
+  description='Selección personalizada de fotógrafos de bodas en Santander y Cantabria. Acantilados, playas de Liencres y valles pasiegos. Os encontramos el ideal. Gratis, 24 horas.'
+  canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafo de Bodas\nen Santander`}
+      subtitle='Acantilados sobre el Cantábrico, las playas de Liencres y los valles pasiegos. Cantabria es mar y montaña en el mismo reportaje.'
+      ctaText="Consultar ahora"
+      ctaHref="#fotografos"
+      imageSrc="/images/hero-boda.webp"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Santander y Cantabria</p>
+            <h2 class="section-title mb-6">Fotógrafo de bodas en Santander:<br/>el Cantábrico como decorado</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              Cantabria permite algo casi imposible en otras regiones: una sesión de pareja en un acantilado sobre el mar y otra en plena montaña el mismo fin de semana. La bahía de Santander, las playas de Liencres y Somo, los Picos de Europa y los valles pasiegos caben en una sola provincia.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              Los fotógrafos cántabros dominan la luz atlántica, cambiante y dramática, que bien manejada produce reportajes con una atmósfera que la luz plana del sur no puede dar.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Tiempo de respuesta', value: 'menos de 24h' },
+                { label: 'Temporada alta', value: 'Mayo – Septiembre' },
+                { label: 'Zonas populares', value: 'Bahía, Liencres, valles pasiegos' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {featured && <FeaturedPhotographer photographer={featured} />}
+
+    <ConciergeCitySection city={city} />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cómo elegir fotógrafo de bodas en Santander?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            El tiempo en Cantabria es un factor real: puede llover en cualquier mes del año. Los buenos fotógrafos locales no solo lo asumen, lo aprovechan; un cielo de nubes rotas sobre el Cantábrico da fotos más potentes que un sol plano. Preguntad siempre cómo resuelven un día pasado por agua.
+          </p>
+          <p>
+            Muchas bodas cántabras combinan ceremonia en la ciudad con celebración en fincas de los valles. Confirmad los desplazamientos incluidos y si el fotógrafo conoce el venue: la luz de un valle pasiego a última hora de la tarde tiene truco.
+          </p>
+          <p>
+            La escena local tiene nombres con reconocimiento nacional e internacional, y los precios son más amables que en las grandes capitales. Si no sabéis qué estilo buscáis, nuestra <a href="/blog/estilos-fotografia-de-boda-cual-elegir/" class="text-[#8B6A3A] underline">guía de estilos de fotografía de boda</a> puede ayudaros a definirlo antes de empezar a buscar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Santander precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Santander?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Los precios en Cantabria se mueven por debajo de los de Madrid, Barcelona o el País Vasco. Rangos habituales en 2026:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '900 – 1.400 €', nivel: 'Iniciación', desc: 'Fotógrafos emergentes de la zona. Revisar reportajes completos con clima variable antes de decidir.' },
+            { rango: '1.400 – 2.500 €', nivel: 'Intermedio', desc: 'Profesionales consolidados habituados a las fincas y playas cántabras. El rango más habitual para bodas de nivel.' },
+            { rango: '2.500 – 4.500 €', nivel: 'Referencia', desc: 'Los fotógrafos de referencia de la comunidad, con premios y proyección más allá de Cantabria.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Los fotógrafos de Santander cubren toda Cantabria sin coste adicional y muchos trabajan también Bizkaia, Asturias y el norte de Castilla. <a href="/#contacto" class="text-[#8B6A3A] underline">Consultadnos sin compromiso</a>.
+        </p>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">También disponemos de fotógrafos en</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[{"name": "Bilbao", "slug": "bilbao"}, {"name": "Oviedo", "slug": "oviedo"}, {"name": "Galicia", "slug": "galicia"}].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">Fotógrafos en {c.name}</a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

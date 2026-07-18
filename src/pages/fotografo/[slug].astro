@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+import { photographers } from '../../data/photographers';
+
+export function getStaticPaths() {
+  return photographers.map(p => ({ params: { slug: p.slug }, props: { p } }));
+}
+
+const { p } = Astro.props;
+
+const waText = encodeURIComponent(
+  `Hola, nos interesa ${p.name} para nuestra boda en ${p.city}. ¿Podéis consultar disponibilidad o recomendarnos opciones similares?`
+);
+const waHref = `https://wa.me/${site.whatsapp}?text=${waText}`;
+
+const webHost = p.web ? new URL(p.web).hostname.replace('www.', '') : null;
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `https://${site.domain}/fotografo/${p.slug}/`,
+  "name": p.name,
+  "description": `Fotógrafo de bodas en ${p.city}. Estilo ${p.style.toLowerCase()}.`,
+  "url": `https://${site.domain}/fotografo/${p.slug}/`,
+  ...(p.phone ? { "telephone": `+34${p.phone.replace(/\s/g, '')}` } : {}),
+  "address": { "@type": "PostalAddress", "addressLocality": p.city, "addressCountry": "ES" },
+  "areaServed": [
+    { "@type": "City", "name": p.city },
+    { "@type": "AdministrativeArea", "name": p.region },
+  ],
+  "knowsAbout": "Fotografía de bodas",
+  "sameAs": [
+    ...(p.instagram ? [`https://instagram.com/${p.instagram}`] : []),
+    ...(p.web ? [p.web] : []),
+  ],
+};
+
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": `https://${site.domain}/` },
+    { "@type": "ListItem", "position": 2, "name": p.city, "item": `https://${site.domain}/${p.citySlug}/` },
+    { "@type": "ListItem", "position": 3, "name": p.name, "item": `https://${site.domain}/fotografo/${p.slug}/` },
+  ],
+};
+---
+
+<BaseLayout
+  title={`${p.name} — Fotógrafo de Bodas en ${p.city} · ${p.style}`}
+  description={`${p.name}, fotógrafo de bodas en ${p.city} (${p.region}). Estilo ${p.style.toLowerCase()}. Perfil editorial con datos de contacto y portfolio. Consulta disponibilidad gratis.`}
+  canonical={`https://${site.domain}/fotografo/${p.slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <!-- HERO tipográfico oscuro -->
+    <section class="bg-[#1C1814] relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.04] pointer-events-none select-none flex items-center justify-center">
+        <span class="font-['Cormorant_Garamond'] text-[28vw] font-semibold text-white whitespace-nowrap leading-none">
+          {p.city}
+        </span>
+      </div>
+      <div class="max-w-5xl mx-auto px-6 pt-20 pb-14 relative">
+        <nav class="flex items-center gap-2 font-['Lato'] text-xs text-white/40 mb-10">
+          <a href="/" class="hover:text-[#8B6A3A] transition-colors">Inicio</a>
+          <span>›</span>
+          <a href={`/${p.citySlug}/`} class="hover:text-[#8B6A3A] transition-colors">{p.city}</a>
+          <span>›</span>
+          <span class="text-[#8B6A3A]">{p.name}</span>
+        </nav>
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-3">
+          Fotógrafo destacado · {p.city} · {p.region}
+        </p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-semibold text-white leading-none mb-4">
+          {p.name}
+        </h1>
+        <p class="font-['Cormorant_Garamond'] text-2xl text-white/60 font-light">
+          {p.style}
+        </p>
+      </div>
+    </section>
+
+    <!-- BARRA DE DATOS -->
+    <div class="bg-[#1C1814] border-t border-b border-[#2E2520]">
+      <div class="max-w-5xl mx-auto px-6 py-4 grid grid-cols-2 md:flex md:flex-wrap items-center gap-x-8 gap-y-3">
+        <span class="font-['Lato'] text-xs text-[#9A8880]"><strong class="text-[#C4A5A0] block md:inline md:mr-1">Estilo:</strong> {p.style}</span>
+        <span class="font-['Lato'] text-xs text-[#9A8880]"><strong class="text-[#C4A5A0] block md:inline md:mr-1">Zona:</strong> {p.zone}</span>
+        <span class="font-['Lato'] text-xs text-[#9A8880]"><strong class="text-[#C4A5A0] block md:inline md:mr-1">Trayectoria:</strong> {p.experience}</span>
+        {p.phone && (
+          <span class="font-['Lato'] text-xs text-[#9A8880]"><strong class="text-[#C4A5A0] block md:inline md:mr-1">Teléfono:</strong> <a href={`tel:+34${p.phone.replace(/\s/g, '')}`} class="hover:text-white transition-colors">{p.phone}</a></span>
+        )}
+        {webHost && (
+          <span class="font-['Lato'] text-xs text-[#9A8880]"><strong class="text-[#C4A5A0] block md:inline md:mr-1">Web:</strong> <a href={p.web} target="_blank" rel="noopener noreferrer nofollow" class="hover:text-white transition-colors">{webHost}</a></span>
+        )}
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 py-16">
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+
+        <!-- ARTÍCULO -->
+        <article class="lg:col-span-2 space-y-10">
+          <header>
+            <p class="section-eyebrow mb-4">Fotógrafo de bodas en {p.city}</p>
+            <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#1C1814] mb-6 leading-snug">
+              Por qué destaca {p.name}
+            </h2>
+            <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+              {p.bio.map(paragraph => <p>{paragraph}</p>)}
+            </div>
+          </header>
+
+          {p.recognitions.length > 0 && (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="section-eyebrow mb-4">Reconocimientos</p>
+              <ul class="space-y-3">
+                {p.recognitions.map(r => (
+                  <li class="flex items-start gap-3">
+                    <span class="text-[#8B6A3A] mt-0.5 shrink-0">★</span>
+                    <span class="font-['Lato'] text-sm text-[#1C1814] leading-snug">{r}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <!-- PORTFOLIO: embed de Instagram (contenido propio del fotógrafo) -->
+          {p.instagram && (
+            <div>
+              <p class="section-eyebrow mb-4">Portfolio</p>
+              <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-4">
+                Su trabajo, en su propio Instagram
+              </h3>
+              <div class="bg-white border border-[#E8DDD3] rounded-sm overflow-hidden">
+                <iframe
+                  src={`https://www.instagram.com/${p.instagram}/embed`}
+                  title={`Instagram de ${p.name}`}
+                  class="w-full h-[480px] border-0"
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <p class="font-['Lato'] text-[10px] text-[#9A8880] text-right mt-2">
+                Fotos © {p.name} — <a href={`https://instagram.com/${p.instagram}`} target="_blank" rel="noopener noreferrer nofollow" class="text-[#8B6A3A] hover:underline">@{p.instagram}</a>
+                {webHost && <> · <a href={p.web} target="_blank" rel="noopener noreferrer nofollow" class="text-[#8B6A3A] hover:underline">{webHost}</a></>}
+              </p>
+            </div>
+          )}
+          {!p.instagram && webHost && (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="section-eyebrow mb-3">Portfolio</p>
+              <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed mb-4">
+                El portfolio completo de {p.name} está disponible en su web oficial.
+              </p>
+              <a href={p.web} target="_blank" rel="noopener noreferrer nofollow" class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] hover:underline">
+                Ver portfolio en {webHost} →
+              </a>
+            </div>
+          )}
+
+          <!-- CTA inline -->
+          <div class="bg-[#F2E8D5] border-l-4 border-[#8B6A3A] rounded-sm p-6">
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-2">
+              ¿No sabéis si encaja con vuestra boda?
+            </p>
+            <p class="font-['Lato'] text-sm text-[#6B5E58] mb-4 leading-relaxed">
+              Contadnos fecha, venue y estilo. Os decimos gratis si {p.name} encaja con lo que buscáis, y si no, os proponemos alternativas de nuestra red en {p.city}. Sin compromiso.
+            </p>
+            <a href={waHref} target="_blank" rel="noopener noreferrer" class="btn-gold text-sm py-2.5 px-6 inline-block">
+              Pedir asesoramiento gratis →
+            </a>
+          </div>
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="space-y-5 lg:sticky lg:top-20 self-start">
+          <div class="bg-[#1C1814] rounded-sm p-6 text-white">
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold mb-2">¿Boda en {p.city}?</p>
+            <p class="font-['Lato'] text-xs text-[#9A8880] leading-relaxed mb-5">
+              Os asesoramos gratis: consultamos disponibilidad, comparamos opciones de nuestra red y os ayudamos a decidir. Respuesta en menos de 24 horas.
+            </p>
+            <a href={waHref} target="_blank" rel="noopener noreferrer" class="btn-gold w-full text-sm py-3 text-center block">
+              Consultar por WhatsApp →
+            </a>
+            <p class="font-['Lato'] text-[10px] text-[#6B5E58] text-center mt-3">
+              Gratis · Sin compromiso · Respuesta en 24h
+            </p>
+          </div>
+
+          <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+            <p class="section-eyebrow mb-4">Contacto directo</p>
+            <ul class="space-y-3">
+              {p.phone && (
+                <li class="flex items-start gap-3">
+                  <span class="text-[#8B6A3A] shrink-0 font-['Lato'] text-xs font-bold uppercase tracking-widest mt-0.5">Tel.</span>
+                  <a href={`tel:+34${p.phone.replace(/\s/g, '')}`} class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] hover:text-[#8B6A3A] transition-colors">{p.phone}</a>
+                </li>
+              )}
+              {webHost && (
+                <li class="flex items-start gap-3">
+                  <span class="text-[#8B6A3A] shrink-0 font-['Lato'] text-xs font-bold uppercase tracking-widest mt-0.5">Web</span>
+                  <a href={p.web} target="_blank" rel="noopener noreferrer nofollow" class="font-['Lato'] text-sm text-[#1C1814] hover:text-[#8B6A3A] transition-colors break-all">{webHost}</a>
+                </li>
+              )}
+              {p.instagram && (
+                <li class="flex items-start gap-3">
+                  <span class="text-[#8B6A3A] shrink-0 font-['Lato'] text-xs font-bold uppercase tracking-widest mt-0.5">IG</span>
+                  <a href={`https://instagram.com/${p.instagram}`} target="_blank" rel="noopener noreferrer nofollow" class="font-['Lato'] text-sm text-[#1C1814] hover:text-[#8B6A3A] transition-colors break-all">@{p.instagram}</a>
+                </li>
+              )}
+            </ul>
+            <p class="font-['Lato'] text-[10px] text-[#9A8880] leading-relaxed mt-4 pt-4 border-t border-[#F2E8D5]">
+              Datos públicos del propio fotógrafo. Perfil editorial elaborado por {site.name}; no implica relación comercial salvo indicación expresa.
+            </p>
+          </div>
+
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-6 text-center">
+            <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#6B5E58] mb-3">Zona de trabajo</p>
+            <p class="font-['Cormorant_Garamond'] text-lg text-[#1C1814] leading-relaxed">
+              {p.zone.split(' · ').map((z, i, arr) => (
+                <>{z}{i < arr.length - 1 && <br/>}</>
+              ))}
+            </p>
+          </div>
+
+          <div class="bg-white border border-[#E8DDD3] rounded-sm p-6 text-center">
+            <p class="font-['Lato'] text-sm text-[#6B5E58] mb-3 leading-relaxed">
+              ¿Eres {p.name} y quieres actualizar o retirar este perfil?
+            </p>
+            <a href={`mailto:${site.email}`} class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] hover:underline">
+              Escríbenos →
+            </a>
+          </div>
+        </aside>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="bg-[#1C1814] rounded-sm p-10 md:p-16 text-center">
+        <p class="section-eyebrow text-[#8B6A3A] mb-4">Selección {p.city}</p>
+        <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-white mb-4">
+          Encontrad a vuestro fotógrafo<br/>sin equivocaros
+        </h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#9A8880] mt-6 mb-8 max-w-md mx-auto leading-relaxed text-sm">
+          Los mejores se llenan con más de un año de antelación. Contadnos vuestra fecha y os decimos qué opciones reales tenéis en {p.city}, gratis y en menos de 24 horas.
+        </p>
+        <a href={waHref} target="_blank" rel="noopener noreferrer" class="btn-gold text-base px-10 py-4 inline-block">
+          Consultar disponibilidad gratis
+        </a>
+        <p class="font-['Lato'] text-xs text-[#6B5E58] mt-5">
+          O volved a <a href={`/${p.citySlug}/`} class="text-[#8B6A3A] hover:underline">fotógrafos de bodas en {p.city}</a>
+        </p>
+      </section>
+    </div>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={p.city} />
+</BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaBreadcrumb)} />

@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import Hero from '../../components/Hero.astro';
+import ConciergeCitySection from '../../components/ConciergeCitySection.astro';
+import FeaturedPhotographer from '../../components/FeaturedPhotographer.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+import { site } from '../../config/site';
+import { getPhotographerByCity } from '../../data/photographers';
+
+const city = 'Tenerife';
+const slug = 'tenerife';
+const featured = getPhotographerByCity(slug);
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Selección de fotógrafo de bodas en ${city}`,
+  "url": `https://${site.domain}/${slug}/`,
+  "serviceType": "Selección de fotógrafo de bodas",
+  "areaServed": { "@type": "City", "name": city },
+  "provider": {
+    "@type": "Organization",
+    "name": site.name,
+    "url": `https://${site.domain}`
+  }
+};
+---
+
+<BaseLayout
+  title='Fotógrafo de Bodas en Tenerife — Canarias · Selección 2026'
+  description='Selección personalizada de fotógrafos de bodas en Tenerife y Canarias. Del Teide a las playas, bodas locales y de destino todo el año. Os encontramos el ideal. Gratis, 24 horas.'
+  canonical={`https://${site.domain}/${slug}/`}
+  schema={schemaOrg}
+>
+  <SiteHeader transparent={true} />
+  <main>
+    <Hero
+      city={city}
+      h1={`Fotógrafo de Bodas\nen Tenerife`}
+      subtitle='Del mar de nubes del Teide a las playas del sur. En Tenerife se puede celebrar una boda espectacular cualquier mes del año.'
+      ctaText="Consultar ahora"
+      ctaHref="#fotografos"
+      imageSrc="/images/hero-boda.webp"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="section-eyebrow mb-4">Tenerife y Canarias</p>
+            <h2 class="section-title mb-6">Fotógrafo de bodas en Tenerife:<br/>bodas los 365 días del año</h2>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed mb-4">
+              Tenerife juega con una ventaja que ninguna otra región tiene: el clima. Aquí se celebran bodas espectaculares en pleno enero, y eso atrae tanto a parejas locales como a europeos que buscan sol en invierno. El Teide, los paisajes volcánicos y las playas ofrecen escenarios que parecen de otro planeta.
+            </p>
+            <p class="font-['Lato'] text-[#6B5E58] leading-relaxed">
+              La escena fotográfica insular está curtida en ese doble mercado: bodas canarias tradicionales y bodas de destino internacionales, a menudo íntimas, con sesiones al borde del mar o sobre el mar de nubes.
+            </p>
+          </div>
+          <div class="bg-[#F2E8D5] rounded-sm p-8">
+            <p class="section-eyebrow mb-6">Datos de interés</p>
+            <ul class="space-y-4">
+              {[
+                { label: 'Tiempo de respuesta', value: 'menos de 24h' },
+                { label: 'Temporada alta', value: 'Todo el año (pico mayo – octubre)' },
+                { label: 'Zonas populares', value: 'Teide, Costa Adeje, La Laguna' },
+              ].map(item => (
+                <li class="flex items-start justify-between gap-4">
+                  <span class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#6B5E58]">{item.label}</span>
+                  <span class="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1C1814] text-right">{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {featured && <FeaturedPhotographer photographer={featured} />}
+
+    <ConciergeCitySection city={city} />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-6">
+          ¿Cómo elegir fotógrafo de bodas en Tenerife?
+        </h2>
+        <div class="font-['Lato'] text-[#6B5E58] text-sm leading-loose space-y-4">
+          <p>
+            En Tenerife una sesión de pareja puede hacerse a 2.000 metros de altitud sobre el mar de nubes, algo único en España. Pero exige logística: permisos del Teide, horarios de luz y transporte. Elegid un fotógrafo que ya lo haya hecho; la improvisación ahí sale cara.
+          </p>
+          <p>
+            El contraste de microclimas es real: puede hacer sol en el sur y estar nublado en La Laguna a la misma hora. Los fotógrafos locales lo saben y planifican con alternativas; los que vienen de fuera, no siempre.
+          </p>
+          <p>
+            Si vuestra boda es de destino, confirmad los idiomas de trabajo del fotógrafo y su experiencia con ceremonias simbólicas al aire libre, el formato más habitual entre parejas extranjeras. Si no sabéis qué estilo buscáis, nuestra <a href="/blog/estilos-fotografia-de-boda-cual-elegir/" class="text-[#8B6A3A] underline">guía de estilos de fotografía de boda</a> puede ayudaros a definirlo antes de empezar a buscar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">Fotógrafo bodas Tenerife precio</p>
+        <h2 class="section-title mb-4">¿Cuánto cuesta un fotógrafo<br/>de bodas en Tenerife?</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 mb-8 leading-relaxed">
+          Los precios en Canarias se mueven en rangos intermedios, con el mercado de destino empujando el segmento alto. En 2026:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[
+            { rango: '900 – 1.500 €', nivel: 'Iniciación', desc: 'Fotógrafos emergentes de las islas. Buena opción para bodas íntimas y elopements.' },
+            { rango: '1.500 – 2.600 €', nivel: 'Intermedio', desc: 'Profesionales consolidados con experiencia en bodas locales y de destino. El rango más habitual en Tenerife.' },
+            { rango: '2.600 – 5.000 €', nivel: 'Referencia', desc: 'Los fotógrafos de referencia del archipiélago, con reconocimiento internacional y clientela europea.' },
+          ].map(item => (
+            <div class="bg-white border border-[#E8DDD3] rounded-sm p-6">
+              <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#8B6A3A] mb-1">{item.rango}</p>
+              <p class="font-['Lato'] text-xs font-bold uppercase tracking-widest text-[#1C1814] mb-3">{item.nivel}</p>
+              <p class="font-['Lato'] text-xs text-[#6B5E58] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed">
+          Muchos fotógrafos de Tenerife cubren el resto de las islas con suplemento de vuelo. Para sesiones en el Teide, preguntad por los permisos: los buenos profesionales los gestionan ellos. <a href="/#contacto" class="text-[#8B6A3A] underline">Consultadnos sin compromiso</a>.
+        </p>
+      </div>
+    </section>
+
+    <FAQSection city={city} />
+
+    <section class="py-16 bg-[#F2E8D5]">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">También disponemos de fotógrafos en</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {[{"name": "Mallorca", "slug": "mallorca"}, {"name": "Sevilla", "slug": "sevilla"}, {"name": "Madrid", "slug": "madrid"}].map(c => (
+            <a href={`/${c.slug}/`} class="btn-outline text-sm px-6 py-2.5">Fotógrafos en {c.name}</a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat city={city} />
+</BaseLayout>

@@ -3,7 +3,7 @@ title: "Boda en invierno: lo que cambia en la fotografía y por qué puede ser m
 description: "Las bodas de invierno en España tienen ventajas fotográficas que pocas parejas conocen. Qué cambia con la luz, el clima y el mercado en los meses de noviembre a febrero."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/p07.webp"
+imagen: "/images/photographers/plasmalia/fotografo-postboda-madrid-arboles.jpg"
 imagenAlt: "Boda de invierno fotografiada con luz dorada de tarde fría"
 featured: false
 ---

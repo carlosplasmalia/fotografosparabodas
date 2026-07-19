@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Madrid: guía para elegir bien en 2026"
 description: "Cómo elegir fotógrafo de bodas en Madrid sin equivocarse. Precios reales, estilos que funcionan en la capital y los errores más frecuentes al contratar."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/plasmalia/foto2.jpg"
+imagen: "/images/photographers/plasmalia/fotografo-boda-comunidad-madrid.jpg"
 imagenAlt: "Boda en Madrid fotografiada en estilo fine art — Plasmalia"
 featured: false
 ---

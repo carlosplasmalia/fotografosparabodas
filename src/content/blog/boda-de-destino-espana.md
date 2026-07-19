@@ -3,7 +3,7 @@ title: "Boda de destino en España: cómo coordinar al fotógrafo"
 description: "Qué hay que tener en cuenta cuando el fotógrafo de bodas tiene que desplazarse o vosotros os casáis fuera de vuestra ciudad. Logística real sin complicarla."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/p11.webp"
+imagen: "/images/photographers/plasmalia/fotografia-postboda-madrid-luz.webp"
 imagenAlt: "Fotógrafo de bodas de destino llegando a finca con equipo de cámaras"
 featured: false
 ---

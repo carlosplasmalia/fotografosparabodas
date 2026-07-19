@@ -3,7 +3,7 @@ title: "Fotógrafo para boda civil: lo que cambia respecto a una boda religiosa"
 description: "Contratar fotógrafo para una boda civil tiene particularidades que pocos os cuentan. Aquí van las diferencias concretas, los espacios más habituales y qué pedir."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/foto3.jpg"
+imagen: "/images/photographers/plasmalia/fotografos-bodas-madrid-novios.webp"
 imagenAlt: "Ceremonia civil fotografiada en jardín con luz natural"
 featured: false
 ---

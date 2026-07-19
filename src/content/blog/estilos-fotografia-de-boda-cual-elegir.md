@@ -44,7 +44,7 @@ No es para todo el mundo, y eso está bien. Requiere parejas dispuestas a dedica
 El resultado, cuando encaja, es impresionante. Fotos que parecen campañas publicitarias. Imágenes que una publicación de bodas publicaría sin dudar.
 
 <figure>
-<img src="/images/photographers/plasmalia/foto3.webp" alt="Fotografía editorial de boda en Madrid con composición y luz trabajadas" loading="lazy" />
+<img src="/images/photographers/plasmalia/fotografos-bodas-madrid-novios.webp" alt="Fotografía editorial de boda en Madrid con composición y luz trabajadas" loading="lazy" />
 <figcaption>Estilo editorial · Foto: <a href="/fotografo/chema-vela/">Plasmalia</a></figcaption>
 </figure>
 

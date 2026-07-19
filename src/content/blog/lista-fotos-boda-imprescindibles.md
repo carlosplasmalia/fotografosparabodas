@@ -3,7 +3,7 @@ title: "Lista de fotos imprescindibles para la boda: qué darle al fotógrafo"
 description: "Qué fotos no pueden faltar en una boda y cómo comunicárselo al fotógrafo. La lista que de verdad importa y cómo no obsesionarse con ella."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/foto3.jpg"
+imagen: "/images/photographers/plasmalia/fotografos-bodas-madrid-novios.webp"
 imagenAlt: "Lista de fotos de boda con notas escritas a mano"
 featured: false
 ---

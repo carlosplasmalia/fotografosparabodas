@@ -3,7 +3,7 @@ title: "Cuándo reservar el fotógrafo de bodas: guía de tiempos reales"
 description: "Con cuánta antelación hay que reservar el fotógrafo de bodas en España. Depende de la ciudad, la época y el nivel del fotógrafo. Aquí los tiempos reales."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/foto1.jpg"
+imagen: "/images/photographers/plasmalia/reportaje-fotos-boda-madrid.jpg"
 imagenAlt: "Agenda de fotógrafo de bodas con fechas marcadas"
 featured: false
 ---

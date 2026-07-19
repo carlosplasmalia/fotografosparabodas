@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Ibiza: guía completa 2026"
 description: "Cómo elegir fotógrafo de bodas en Ibiza. Fincas de lujo, cliffs del atardecer y el mercado internacional de bodas: qué esperar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/plasmalia/p10.webp"
+imagen: "/images/photographers/plasmalia/fotografia-postboda-madrid-estanque.jpg"
 imagenAlt: "Boda de destino en Ibiza fotografiada con puesta de sol sobre el Mediterráneo"
 featured: false
 ---

@@ -3,7 +3,7 @@ title: "Fotografía para bodas pequeñas e íntimas: lo que cambia"
 description: "Cómo enfocar la fotografía en una boda íntima o microboda. Lo que cambia respecto a una boda grande y qué tipo de fotógrafo conviene buscar."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/p03.webp"
+imagen: "/images/photographers/plasmalia/fotografia-bodas-madrid-ramo-novia.webp"
 imagenAlt: "Boda íntima fotografiada en jardín con pocos invitados"
 featured: false
 ---

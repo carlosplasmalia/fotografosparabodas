@@ -3,7 +3,7 @@ title: "Contrato con el fotógrafo de bodas: qué debe incluir"
 description: "Qué cláusulas debe tener el contrato con el fotógrafo de bodas. Qué protege a la pareja, qué protege al fotógrafo y qué señales de alerta hay que reconocer."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/foto2.jpg"
+imagen: "/images/photographers/plasmalia/fotografo-boda-comunidad-madrid.jpg"
 imagenAlt: "Contrato firmado junto a fotos de boda impresionadas"
 featured: false
 ---

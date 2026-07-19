@@ -3,7 +3,7 @@ title: "Cómo elegir al fotógrafo de bodas perfecto (sin arrepentirte)"
 description: "Guía práctica para elegir el fotógrafo de bodas que encaje con vosotros. Qué mirar más allá del precio y el portfolio."
 date: "2026-06-20"
 categoria: "Guías"
-imagen: "/images/photographers/plasmalia/foto2.webp"
+imagen: "/images/photographers/plasmalia/fotografo-boda-comunidad-madrid.webp"
 imagenAlt: "Reportaje de boda en Madrid fotografiado por Plasmalia"
 featured: true
 ---
@@ -25,7 +25,7 @@ El portfolio de un fotógrafo es su colección de mejores momentos. El problema 
 Pedid ver el reportaje completo de al menos una boda. Una boda entera, de principio a fin. Ahí veréis si la calidad se mantiene durante todo el día o solo en condiciones perfectas. Un buen fotógrafo no tiene problema en enseñaros una boda completa. Quien pone excusas, preocupa.
 
 <figure>
-<img src="/images/photographers/plasmalia/foto4.webp" alt="Fotograma de un reportaje completo de boda en Madrid — Plasmalia" loading="lazy" />
+<img src="/images/photographers/plasmalia/reportaje-fotos-boda-madrid-novia.webp" alt="Fotograma de un reportaje completo de boda en Madrid — Plasmalia" loading="lazy" />
 <figcaption>De un reportaje completo · Foto: <a href="/fotografo/chema-vela/">Plasmalia</a></figcaption>
 </figure>
 

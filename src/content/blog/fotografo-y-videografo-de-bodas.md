@@ -3,7 +3,7 @@ title: "Fotógrafo y videógrafo de bodas: juntos o por separado"
 description: "Cómo decidir si contratar fotógrafo y videógrafo juntos o por separado, qué ventajas tiene cada opción y qué preguntar antes de elegir."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/p01.webp"
+imagen: "/images/photographers/plasmalia/fotografo-bodas-madrid-novia-byn.webp"
 imagenAlt: "Fotógrafo y videógrafo trabajando juntos durante ceremonia de boda"
 featured: false
 ---

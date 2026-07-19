@@ -3,7 +3,7 @@ title: "Álbum de fotos de boda: precio, tipos y cómo elegir"
 description: "Qué tipos de álbum de fotos de boda existen, cuánto cuesta cada uno y cómo elegir el que realmente merece la pena. Sin artificios de marketing."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/foto1.jpg"
+imagen: "/images/photographers/plasmalia/reportaje-fotos-boda-madrid.jpg"
 imagenAlt: "Álbum de fotos de boda artesanal abierto sobre mesa de madera"
 featured: false
 ---

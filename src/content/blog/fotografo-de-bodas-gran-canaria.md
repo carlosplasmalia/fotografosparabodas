@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Gran Canaria: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Gran Canaria. Las dunas de Maspalomas, los barrancos del interior y las casas coloniales de Las Palmas: qué esperar en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/plasmalia/p12.webp"
+imagen: "/images/photographers/plasmalia/reportaje-fotos-postboda-estanque.webp"
 imagenAlt: "Boda de destino en Gran Canaria fotografiada con dunas de Maspalomas al fondo"
 featured: false
 ---

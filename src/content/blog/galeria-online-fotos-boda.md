@@ -3,7 +3,7 @@ title: "Galería online de boda: cómo funciona la entrega de fotos"
 description: "Cómo funciona la entrega de fotos de boda en galería digital, qué plataformas usan los fotógrafos y cuánto tiempo suelen estar disponibles las imágenes."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/plasmalia/foto1.webp"
+imagen: "/images/photographers/plasmalia/reportaje-fotos-boda-madrid.webp"
 imagenAlt: "Pantalla con galería online de fotos de boda"
 featured: false
 ---

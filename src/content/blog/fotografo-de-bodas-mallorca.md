@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Mallorca: guía completa para 2026"
 description: "Cómo elegir fotógrafo de bodas en Mallorca. Desde fincas rústicas hasta villas de lujo, qué buscar, qué preguntar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/sandra-manas/sm01.webp"
+imagen: "/images/photographers/serafin/boda-02.webp"
 imagenAlt: "Boda en Mallorca fotografiada en finca rústica al atardecer"
 featured: false
 ---

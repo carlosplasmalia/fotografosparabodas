@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Barcelona: cómo elegir en 2026"
 description: "Guía práctica para encontrar fotógrafo de bodas en Barcelona. Precios actualizados, estilos más demandados y qué preguntar antes de firmar."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/victor-lax/vlax01.webp"
+imagen: "/images/photographers/serafin/boda-01.jpg"
 imagenAlt: "Boda en Barcelona fotografiada en estilo documental"
 featured: false
 ---

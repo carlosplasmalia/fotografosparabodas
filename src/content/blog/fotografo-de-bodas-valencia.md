@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Valencia: guía y precios 2026"
 description: "Cómo elegir fotógrafo de bodas en Valencia. Precios reales, espacios más fotografiados y lo que marca la diferencia entre un buen fotógrafo y uno extraordinario."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/victor-lax/vlax01.webp"
+imagen: "/images/photographers/serafin/boda-01.jpg"
 imagenAlt: "Boda en Valencia fotografiada en estilo documental natural"
 featured: false
 ---

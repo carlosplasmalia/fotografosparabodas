@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Sevilla: guía completa 2026"
 description: "Cómo encontrar el fotógrafo de bodas adecuado en Sevilla. Precios reales, mejores épocas para casarse y los estilos que mejor funcionan en Andalucía."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/antonio-montesinos/am01.webp"
+imagen: "/images/photographers/albert/ap02.webp"
 imagenAlt: "Boda en Sevilla fotografiada al atardecer — estilo emocional"
 featured: false
 ---

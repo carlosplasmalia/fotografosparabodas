@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Logroño: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Logroño. Los viñedos de La Rioja, las bodegas de diseño y el Camino de Santiago: qué buscar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-11.webp"
+imagen: "/images/photographers/plasmalia/boda-11.webp"
 imagenAlt: "Boda en Logroño fotografiada en viñedo riojano con bodega al fondo"
 featured: false
 ---

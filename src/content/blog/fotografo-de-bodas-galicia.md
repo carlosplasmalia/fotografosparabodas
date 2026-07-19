@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Galicia: guía para A Coruña, Vigo y Santiago"
 description: "Cómo elegir fotógrafo de bodas en Galicia. La lluvia, la luz atlántica, los pazos y las rías: qué buscar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-03.webp"
+imagen: "/images/photographers/plasmalia/boda-03.webp"
 imagenAlt: "Boda en Galicia fotografiada en pazo con jardín atlántico"
 featured: false
 ---

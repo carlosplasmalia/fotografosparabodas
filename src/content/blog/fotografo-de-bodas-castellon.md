@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Castellón: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Castellón. Las masías del interior, el Maestrazgo y el litoral mediterráneo: qué buscar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-02.webp"
+imagen: "/images/photographers/plasmalia/boda-02.webp"
 imagenAlt: "Boda en Castellón fotografiada con masía rural y mediterráneo al fondo"
 featured: false
 ---

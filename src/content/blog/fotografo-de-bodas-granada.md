@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Granada: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Granada. La Alhambra, las cuevas del Sacromonte y los cortijos de la Alpujarra: qué fotógrafo encaja con cada espacio."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-03.webp"
+imagen: "/images/photographers/plasmalia/boda-03.webp"
 imagenAlt: "Boda en Granada con la Alhambra al fondo — fotografía de bodas"
 featured: false
 ---

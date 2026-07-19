@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Pamplona: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Pamplona. La ciudad amurallada, la Cuenca de Pamplona y los palacios navarros: qué buscar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-08.webp"
+imagen: "/images/photographers/plasmalia/boda-08.webp"
 imagenAlt: "Boda en Pamplona fotografiada en palacio navarro con jardín"
 featured: false
 ---

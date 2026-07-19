@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Cádiz: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Cádiz. El mar en tres lados, las casas coloniales y las bodegas de Jerez: qué buscar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-01.jpg"
+imagen: "/images/photographers/plasmalia/boda-01.jpg"
 imagenAlt: "Boda en Cádiz fotografiada con el océano Atlántico al fondo"
 featured: false
 ---

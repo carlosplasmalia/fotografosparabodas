@@ -3,7 +3,7 @@ title: "Cuántas fotos entrega el fotógrafo de bodas: lo que es razonable esper
 description: "Cuántas fotos debe entregar el fotógrafo de bodas según las horas de cobertura y el tipo de celebración. Sin artificios de marketing."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/serafin/p06.webp"
+imagen: "/images/photographers/plasmalia/p06.webp"
 imagenAlt: "Galería de fotos de boda en pantalla con pareja revisando imágenes"
 featured: false
 ---

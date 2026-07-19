@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Vitoria-Gasteiz: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Vitoria. La ciudad más verde de España, el casco medieval y los palacios alaveses: qué buscar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-03.webp"
+imagen: "/images/photographers/plasmalia/boda-03.webp"
 imagenAlt: "Boda en Vitoria fotografiada en el casco medieval con arcos de piedra"
 featured: false
 ---

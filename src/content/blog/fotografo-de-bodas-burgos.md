@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Burgos: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Burgos. La catedral gótica, el Camino de Santiago y los páramos de la Meseta: qué buscar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-02.jpg"
+imagen: "/images/photographers/plasmalia/boda-02.webp"
 imagenAlt: "Boda en Burgos fotografiada con la catedral gótica al fondo"
 featured: false
 ---

@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Oviedo: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Oviedo. La catedral, los prerromanos y los hórreos del campo asturiano: qué esperar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-10.webp"
+imagen: "/images/photographers/plasmalia/boda-10.webp"
 imagenAlt: "Boda en Oviedo fotografiada en catedral asturiana con jardines en flor"
 featured: false
 ---

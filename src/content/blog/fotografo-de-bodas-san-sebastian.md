@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en San Sebastián: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en San Sebastián. La bahía de La Concha, el casco viejo y los caseríos del interior: qué pedir y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-06.webp"
+imagen: "/images/photographers/plasmalia/boda-06.webp"
 imagenAlt: "Boda en San Sebastián fotografiada con la bahía de La Concha al fondo"
 featured: false
 ---

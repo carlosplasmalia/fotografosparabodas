@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Toledo: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Toledo. La ciudad imperial, el Tajo y las posadas con historia: qué esperar, qué preguntar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-07.webp"
+imagen: "/images/photographers/plasmalia/boda-07.webp"
 imagenAlt: "Boda en Toledo fotografiada en el casco histórico con la catedral al fondo"
 featured: false
 ---

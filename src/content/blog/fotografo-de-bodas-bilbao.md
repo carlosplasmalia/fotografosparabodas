@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Bilbao y el País Vasco: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Bilbao, San Sebastián y el País Vasco. Qué pasa cuando llueve, qué espacios son los más fotografiados y cuánto cuesta."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-04.webp"
+imagen: "/images/photographers/plasmalia/boda-04.webp"
 imagenAlt: "Boda en el País Vasco fotografiada en caserío con luz de otoño"
 featured: false
 ---

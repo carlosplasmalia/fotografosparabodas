@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Tenerife: guía completa 2026"
 description: "Cómo elegir fotógrafo de bodas en Tenerife. Desde el Teide hasta las playas del sur, qué esperar, qué preguntar y cuánto cuesta contratar en la isla."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-05.webp"
+imagen: "/images/photographers/plasmalia/boda-05.webp"
 imagenAlt: "Boda en Tenerife fotografiada con el Teide al fondo"
 featured: false
 ---

@@ -3,7 +3,7 @@ title: "Edición de fotos de boda: qué incluye y qué no"
 description: "Qué significa que las fotos de boda estén editadas, qué se hace en la edición básica y qué es trabajo extra. Sin tecnicismos innecesarios."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/serafin/p05.webp"
+imagen: "/images/photographers/plasmalia/p05.webp"
 imagenAlt: "Pantalla con edición de fotos de boda en Lightroom"
 featured: false
 ---

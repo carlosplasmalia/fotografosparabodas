@@ -3,7 +3,7 @@ title: "Fotografía espontánea vs. posada en bodas: cuál elegir"
 description: "La diferencia entre el estilo documental y el posado en fotografía de bodas. Qué ofrece cada uno y qué estilo se adapta mejor a cada tipo de boda."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/serafin/p08.webp"
+imagen: "/images/photographers/plasmalia/p08.webp"
 imagenAlt: "Momento espontáneo de risa durante boda fotografiado en reportaje documental"
 featured: false
 ---

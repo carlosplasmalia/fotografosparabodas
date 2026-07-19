@@ -3,7 +3,7 @@ title: "Fotos de boda en iglesia: restricciones, luz y qué preguntar"
 description: "Cómo gestionar la fotografía de una boda religiosa en iglesia. Las restricciones más habituales, la luz, el movimiento y qué preguntar al fotógrafo antes."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/serafin/p02.webp"
+imagen: "/images/photographers/plasmalia/p02.webp"
 imagenAlt: "Ceremonia religiosa fotografiada en iglesia con luz natural"
 featured: false
 ---

@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Lanzarote: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Lanzarote. Los volcanes de Timanfaya, las salinas de Janubio y la arquitectura de César Manrique: qué esperar y cuánto cuesta."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/p09.webp"
+imagen: "/images/photographers/plasmalia/p09.webp"
 imagenAlt: "Boda en Lanzarote fotografiada con paisaje volcánico de Timanfaya"
 featured: false
 ---

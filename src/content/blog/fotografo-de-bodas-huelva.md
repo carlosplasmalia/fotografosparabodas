@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Huelva: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Huelva. Las marismas de Doñana, las aldeas del Rocío y los pueblos de la Sierra de Aracena: qué esperar y cuánto cuesta."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-04.webp"
+imagen: "/images/photographers/plasmalia/boda-04.webp"
 imagenAlt: "Boda en Huelva fotografiada en aldea del Rocío con paisaje de marismas"
 featured: false
 ---

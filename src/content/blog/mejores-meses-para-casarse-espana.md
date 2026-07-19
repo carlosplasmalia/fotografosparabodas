@@ -3,7 +3,7 @@ title: "Mejores meses para casarse en España si quieres buenas fotos"
 description: "Cuáles son los mejores meses para casarse en España desde el punto de vista fotográfico. Luz, temperatura y temporada por región."
 date: "2026-07-19"
 categoria: "Consejos"
-imagen: "/images/photographers/serafin/p04.webp"
+imagen: "/images/photographers/plasmalia/p04.webp"
 imagenAlt: "Ceremonia de boda en octubre con luz dorada de otoño"
 featured: false
 ---

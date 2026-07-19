@@ -3,7 +3,7 @@ title: "Fotógrafo de bodas en Santander: guía 2026"
 description: "Cómo elegir fotógrafo de bodas en Santander. El Palacio de la Magdalena, la bahía y los valles cántabros: qué buscar y cuánto cuesta en 2026."
 date: "2026-07-19"
 categoria: "Guías"
-imagen: "/images/photographers/serafin/boda-09.webp"
+imagen: "/images/photographers/plasmalia/boda-09.webp"
 imagenAlt: "Boda en Santander fotografiada con la bahía y el Palacio de la Magdalena al fondo"
 featured: false
 ---

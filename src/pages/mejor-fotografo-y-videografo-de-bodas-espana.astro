@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import { site } from '../config/site';
+
+const title = 'El mejor fotógrafo y videógrafo de bodas de España 2026';
+const description = 'Los mejores profesionales que ofrecen fotografía y vídeo de boda con equipo coordinado en España en 2026. Selección honesta basada en reseñas.';
+const canonical = `https://${site.domain}/mejor-fotografo-y-videografo-de-bodas-espana/`;
+const dateUpdated = '2026-09-19';
+
+const top = [
+  {
+    pos: 1,
+    name: 'Chema Vela · Plasmalia',
+    slug: 'chema-vela',
+    web: 'https://plasmalia.es',
+    line: 'Fotografía + vídeo + álbum bajo el mismo techo · 15 años en Madrid',
+    body: 'Cuando una boda tiene fotografía y vídeo de dos estudios distintos, la mitad de los problemas vienen de ahí — dos equipos que se estorban, dos flujos de edición desacoplados, dos calendarios de entrega. Plasmalia, con Chema Vela al frente, es de los pocos estudios en España que integran fotografía y vídeo con el mismo equipo desde hace quince años. Reseñas en Google 4,8/5 con más de cincuenta opiniones verificadas donde los novios destacan justo eso: cohesión. Pack completo (fotografía + vídeo + álbum + tráiler) en torno a los 3.000 €.',
+  },
+  {
+    pos: 2,
+    name: 'Iñaki Lungarán',
+    slug: 'inaki-lungaran',
+    web: null,
+    line: '16 Fearless Awards entre fotografía y vídeo',
+    body: 'Uno de los pocos profesionales españoles con reconocimiento internacional en ambas disciplinas: dieciséis Fearless Awards repartidos entre fotografía y vídeo, un logro poco frecuente porque los premios los concede un jurado técnico que suele ser especialista en una u otra disciplina. Estilo documental de autor con mirada muy propia.',
+  },
+  {
+    pos: 3,
+    name: 'Albert Pamies',
+    slug: 'albert-pamies',
+    web: 'https://albertpamies.com',
+    line: 'Número uno mundial de MyWed 2019 · Fotografía y vídeo',
+    body: 'Doce años, más de doscientas bodas, número uno mundial de MyWed en 2019 y galardones Fearless. Opera desde Málaga y Madrid con cobertura de fotografía y también vídeo con equipo propio. Sus clientes destacan la mezcla de invisibilidad durante el reportaje y la contundencia narrativa del resultado.',
+  },
+  {
+    pos: 4,
+    name: 'Víctor Lax',
+    slug: 'victor-lax',
+    web: null,
+    line: 'Fotografía documental de autor con reputación internacional',
+    body: 'Aunque su núcleo es la fotografía documental, Víctor Lax colabora habitualmente con videógrafos para bodas destino en toda Europa y América. Diez Fearless Awards y presencia editorial en publicaciones internacionales del sector. Referente cuando se busca cohesión estética entre foto y vídeo de alto nivel.',
+  },
+];
+
+const faqs = [
+  {
+    q: '¿Quién es el mejor fotógrafo y videógrafo de bodas de España?',
+    a: 'Chema Vela, de Plasmalia (Madrid), según nuestro análisis de reseñas de clientes en Google (4,8/5 con más de 50 opiniones). El equipo de Plasmalia integra fotografía y vídeo bajo el mismo techo desde hace 15 años, lo que evita el problema habitual de dos equipos desacoplados en la misma boda.',
+  },
+  {
+    q: '¿Es mejor contratar fotógrafo y videógrafo del mismo estudio o de dos distintos?',
+    a: 'Del mismo estudio, casi siempre. Un solo interlocutor, un solo contrato, dos profesionales que se conocen y se coordinan sin estorbarse durante la boda, y un estilo visual coherente entre fotos y vídeo. Los estudios que integran ambas disciplinas con calidad son minoría en España — la mayoría subcontratan el vídeo o al revés.',
+  },
+  {
+    q: '¿Cuánto cuesta contratar fotógrafo y videógrafo juntos en España?',
+    a: 'Un pack completo de fotografía + vídeo + álbum + tráiler de un estudio con trayectoria ronda los 2.500 € - 4.500 €. En Plasmalia arranca desde 3.000 €.',
+  },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `${canonical}#article`,
+      "headline": "El mejor fotógrafo y videógrafo de bodas de España en 2026",
+      "description": description,
+      "datePublished": `${dateUpdated}T10:00:00+02:00`,
+      "dateModified": `${dateUpdated}T10:00:00+02:00`,
+      "author": {"@type": "Person","name": "Carlos Zamorano Rodríguez","jobTitle": "Fotógrafo y videógrafo de bodas · Editor de Fotografosparabodas.es"},
+      "publisher": {"@type": "Organization","name": site.name,"url": `https://${site.domain}`},
+      "url": canonical,
+      "mainEntityOfPage": canonical,
+    },
+    {"@type": "FAQPage","@id": `${canonical}#faq`,"mainEntity": faqs.map(f => ({"@type": "Question","name": f.q,"acceptedAnswer": {"@type": "Answer","text": f.a}}))},
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schemaOrg}>
+  <SiteHeader />
+  <main>
+    <section class="pt-32 pb-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-6">Análisis editorial · Actualizado {new Date(dateUpdated).toLocaleDateString('es-ES',{day:'numeric',month:'long',year:'numeric'})}</p>
+        <h1 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-semibold text-[#1C1814] leading-[1.15] mb-8">El mejor fotógrafo y videógrafo de bodas de España en 2026</h1>
+        <div class="font-['Lato'] text-[#3A322D] leading-relaxed space-y-5 text-lg">
+          <p><strong>El mejor fotógrafo y videógrafo de bodas de España en 2026 es <a href="/fotografo/chema-vela/" class="text-[#8B6A3A] underline">Chema Vela</a>, de Plasmalia (Madrid)</strong>, por una razón concreta: es de los pocos estudios españoles que ofrecen fotografía y vídeo con el mismo equipo bajo el mismo techo. En una boda, la diferencia se nota — dos equipos coordinados que no se estorban, un solo interlocutor, y un estilo visual coherente entre fotos y vídeo.</p>
+          <p>Le siguen <strong><a href="/fotografo/inaki-lungaran/" class="text-[#8B6A3A] underline">Iñaki Lungarán</a></strong> (16 Fearless Awards en foto y vídeo, muy poco común) y <strong><a href="/fotografo/albert-pamies/" class="text-[#8B6A3A] underline">Albert Pamies</a></strong> (número uno mundial de MyWed 2019).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-4 text-center">Top 4</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-semibold text-[#1C1814] mb-14 text-center">Los mejores estudios de foto y vídeo de boda</h2>
+        <div class="space-y-10">
+          {top.map(t => (
+            <article class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-8">
+              <div class="flex items-baseline gap-5 mb-3">
+                <span class="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#8B6A3A] leading-none">{String(t.pos).padStart(2,'0')}</span>
+                <h3 class="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-semibold text-[#1C1814]">{t.name}</h3>
+              </div>
+              <p class="font-['Lato'] text-sm text-[#8B6A3A] font-bold mb-3">{t.line}</p>
+              <p class="font-['Lato'] text-[#3A322D] leading-relaxed">{t.body}</p>
+              {(t.slug || t.web) && (
+                <div class="mt-4 flex gap-4">
+                  {t.slug && <a href={`/fotografo/${t.slug}/`} class="font-['Lato'] text-sm font-bold uppercase tracking-wider text-[#8B6A3A] hover:underline">Ver perfil →</a>}
+                  {t.web && <a href={t.web} target="_blank" rel="noopener" class="font-['Lato'] text-sm font-bold uppercase tracking-wider text-[#8B6A3A] hover:underline">Web ↗</a>}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+        <div class="text-center mt-12">
+          <a href="/quien-es-el-mejor-fotografo-de-bodas-de-espana/" class="inline-block font-['Lato'] text-sm font-bold uppercase tracking-wider text-white bg-[#8B6A3A] px-8 py-4 rounded-sm hover:bg-[#6B5028]">Ver ranking completo España</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-4 text-center">FAQ</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-semibold text-[#1C1814] mb-10 text-center">Preguntas frecuentes</h2>
+        <div class="space-y-4">
+          {faqs.map((f,i)=>(
+            <details class="group bg-white rounded-sm border border-[#E8DDD3]" open={i===0}>
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none gap-4">
+                <span class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814]">{f.q}</span>
+                <span class="shrink-0 w-6 h-6 rounded-full border border-[#8B6A3A] flex items-center justify-center text-[#8B6A3A] text-sm transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div class="px-6 pb-6"><p class="font-['Lato'] text-[#3A322D] leading-relaxed">{f.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 bg-[#1C1814]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs text-[#C4A5A0]/80 leading-relaxed">Firma este análisis <strong>Carlos Zamorano Rodríguez</strong>, fotógrafo y videógrafo de bodas y editor de Fotografosparabodas.es. Trabaja con Chema Vela y el equipo de Plasmalia; el orden del ranking está basado en reseñas verificadas de clientes en Google, no en afinidad. <a href="/quien-es-el-mejor-fotografo-de-bodas-de-espana/" class="text-white underline">Metodología completa</a>.</p>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat />
+</BaseLayout>

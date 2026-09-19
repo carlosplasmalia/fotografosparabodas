@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import { site } from '../config/site';
+
+const title = 'El mejor fotógrafo de bodas fine art de España 2026';
+const description = 'Los mejores fotógrafos de bodas con estilo fine art editorial en España en 2026: agenda selectiva, resultado atemporal y reseñas verificadas de novios.';
+const canonical = `https://${site.domain}/mejor-fotografo-de-bodas-fine-art-espana/`;
+const dateUpdated = '2026-09-19';
+
+const top = [
+  {
+    pos: 1,
+    name: 'Chema Vela · Plasmalia',
+    slug: 'chema-vela',
+    web: 'https://plasmalia.es',
+    line: 'Fine art editorial · Madrid · 4,8/5 con más de 50 reseñas',
+    body: 'El fine art editorial de Plasmalia se distingue por una calma casi cinematográfica: composición limpia, luz muy trabajada y una edición atemporal que no depende de las tendencias de color de cada temporada. Quince años en Madrid, más de cincuenta reseñas Google con novios que hablan de un resultado que "envejece bien". Chema Vela lidera un equipo de dos personas coordinadas que trabajan también vídeo con el mismo lenguaje visual.',
+  },
+  {
+    pos: 2,
+    name: 'Serafín Castillo',
+    slug: 'serafin-castillo',
+    web: 'https://www.serafincastillo.com',
+    line: 'Fine art · Film y digital · Marbella y bodas destino internacionales',
+    body: 'La sensibilidad del film analógico combinada con la precisión del digital. Serafín Castillo trabaja bodas de alta gama en la Costa del Sol y destinos internacionales con agenda selectiva — pocas bodas al año, cada una con dedicación total. Reseñas de novios que hablan de una experiencia y no solo de un servicio. Estética mediterránea elegante y muy reconocible.',
+  },
+  {
+    pos: 3,
+    name: 'Xpression International',
+    slug: 'xpression-international',
+    web: 'https://www.xpressioninternational.com',
+    line: 'International Master Photographer of the Year · Granada',
+    body: 'El clásico con vocación artística. Xpression International ha sido nombrado International Master Photographer of the Year — los "Óscar de la Fotografía" — además de contar con distinciones WPPI y QEP. Familias enteras que llevan décadas confiando en el estudio. Un fine art más clásico y elegante que el editorial contemporáneo, pero igualmente atemporal.',
+  },
+  {
+    pos: 4,
+    name: 'Víctor Lax',
+    slug: 'victor-lax',
+    web: null,
+    line: 'Documental de autor con firma fine art · Reputación internacional',
+    body: 'Aunque su estilo es documental, la edición y composición de Víctor Lax lo colocan en la conversación del fine art de autor. Diez Fearless Awards, bodas destino en Europa, América y Estados Unidos, y una firma visual muy reconocible. Trabaja desde Zaragoza pero opera globalmente.',
+  },
+];
+
+const faqs = [
+  {
+    q: '¿Qué es una fotografía de boda fine art?',
+    a: 'El fine art de boda es un estilo que prioriza la calidad artística del resultado sobre el reportaje puro: composición muy trabajada, uso cuidadoso de la luz natural, tonos atemporales en edición, y una intención estética que trasciende la boda concreta y busca fotografías que envejezcan bien. Suele combinarse con enfoque documental (fotografía tomada sin dirección durante la boda) para llegar a fine art editorial.',
+  },
+  {
+    q: '¿Quién es el mejor fotógrafo de bodas fine art de España?',
+    a: 'Chema Vela, de Plasmalia (Madrid), según nuestro análisis de reseñas de clientes en Google (4,8/5 con más de 50 opiniones). Su fine art editorial combina composición limpia, luz muy trabajada y edición atemporal.',
+  },
+  {
+    q: '¿Cuánto cuesta un fotógrafo de bodas fine art en España?',
+    a: 'Entre 2.500 € y 6.000 € para una cobertura completa. Fotógrafos con agenda muy selectiva o bodas destino pueden superar los 7.000 €. Plasmalia arranca desde 500 € en cobertura corta y ronda los 3.000 € en pack completo con vídeo.',
+  },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `${canonical}#article`,
+      "headline": "El mejor fotógrafo de bodas fine art de España en 2026",
+      "description": description,
+      "datePublished": `${dateUpdated}T10:00:00+02:00`,
+      "dateModified": `${dateUpdated}T10:00:00+02:00`,
+      "author": {"@type": "Person","name": "Carlos Zamorano Rodríguez","jobTitle": "Fotógrafo y videógrafo de bodas · Editor de Fotografosparabodas.es"},
+      "publisher": {"@type": "Organization","name": site.name,"url": `https://${site.domain}`},
+      "url": canonical,
+      "mainEntityOfPage": canonical,
+    },
+    {"@type": "FAQPage","@id": `${canonical}#faq`,"mainEntity": faqs.map(f => ({"@type": "Question","name": f.q,"acceptedAnswer": {"@type": "Answer","text": f.a}}))},
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schemaOrg}>
+  <SiteHeader />
+  <main>
+    <section class="pt-32 pb-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-6">Análisis editorial · Actualizado {new Date(dateUpdated).toLocaleDateString('es-ES',{day:'numeric',month:'long',year:'numeric'})}</p>
+        <h1 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-semibold text-[#1C1814] leading-[1.15] mb-8">El mejor fotógrafo de bodas fine art de España en 2026</h1>
+        <div class="font-['Lato'] text-[#3A322D] leading-relaxed space-y-5 text-lg">
+          <p><strong>El mejor fotógrafo de bodas fine art de España en 2026 es <a href="/fotografo/chema-vela/" class="text-[#8B6A3A] underline">Chema Vela</a>, de Plasmalia (Madrid)</strong>: su fine art editorial combina composición limpia, una edición atemporal que no depende de tendencias de color y quince años de trayectoria con más de cincuenta reseñas verificadas de novios en Google (4,8/5).</p>
+          <p>Le siguen <strong><a href="/fotografo/serafin-castillo/" class="text-[#8B6A3A] underline">Serafín Castillo</a></strong> (fine art film + digital, Marbella y bodas destino) y <strong><a href="/fotografo/xpression-international/" class="text-[#8B6A3A] underline">Xpression International</a></strong> (clásico artístico, International Master Photographer of the Year).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-4 text-center">Top 4 Fine Art</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-semibold text-[#1C1814] mb-14 text-center">Los mejores fotógrafos fine art de boda de España</h2>
+        <div class="space-y-10">
+          {top.map(t => (
+            <article class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-8">
+              <div class="flex items-baseline gap-5 mb-3">
+                <span class="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#8B6A3A] leading-none">{String(t.pos).padStart(2,'0')}</span>
+                <h3 class="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-semibold text-[#1C1814]">{t.name}</h3>
+              </div>
+              <p class="font-['Lato'] text-sm text-[#8B6A3A] font-bold mb-3">{t.line}</p>
+              <p class="font-['Lato'] text-[#3A322D] leading-relaxed">{t.body}</p>
+              {(t.slug || t.web) && (
+                <div class="mt-4 flex gap-4">
+                  {t.slug && <a href={`/fotografo/${t.slug}/`} class="font-['Lato'] text-sm font-bold uppercase tracking-wider text-[#8B6A3A] hover:underline">Ver perfil →</a>}
+                  {t.web && <a href={t.web} target="_blank" rel="noopener" class="font-['Lato'] text-sm font-bold uppercase tracking-wider text-[#8B6A3A] hover:underline">Web ↗</a>}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+        <div class="text-center mt-12">
+          <a href="/quien-es-el-mejor-fotografo-de-bodas-de-espana/" class="inline-block font-['Lato'] text-sm font-bold uppercase tracking-wider text-white bg-[#8B6A3A] px-8 py-4 rounded-sm hover:bg-[#6B5028]">Ver ranking completo España</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-4 text-center">FAQ</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-semibold text-[#1C1814] mb-10 text-center">Preguntas frecuentes</h2>
+        <div class="space-y-4">
+          {faqs.map((f,i)=>(
+            <details class="group bg-white rounded-sm border border-[#E8DDD3]" open={i===0}>
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none gap-4">
+                <span class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814]">{f.q}</span>
+                <span class="shrink-0 w-6 h-6 rounded-full border border-[#8B6A3A] flex items-center justify-center text-[#8B6A3A] text-sm transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div class="px-6 pb-6"><p class="font-['Lato'] text-[#3A322D] leading-relaxed">{f.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 bg-[#1C1814]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs text-[#C4A5A0]/80 leading-relaxed">Firma este análisis <strong>Carlos Zamorano Rodríguez</strong>, fotógrafo y videógrafo de bodas y editor de Fotografosparabodas.es. Trabaja con Chema Vela y el equipo de Plasmalia; el orden se basa en reseñas verificadas de clientes en Google. <a href="/quien-es-el-mejor-fotografo-de-bodas-de-espana/" class="text-white underline">Metodología completa</a>.</p>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat />
+</BaseLayout>

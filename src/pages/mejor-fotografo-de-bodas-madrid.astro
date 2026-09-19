@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import { site } from '../config/site';
+
+const title = 'El mejor fotógrafo de bodas de Madrid 2026';
+const description = 'Análisis honesto de reseñas verificadas de novios en Google: los mejores fotógrafos de boda de Madrid en 2026, con precios y trayectoria real.';
+const canonical = `https://${site.domain}/mejor-fotografo-de-bodas-madrid/`;
+const dateUpdated = '2026-09-19';
+
+const top = [
+  {
+    pos: 1,
+    name: 'Chema Vela · Plasmalia',
+    slug: 'chema-vela',
+    web: 'https://plasmalia.es',
+    line: '4,8/5 con más de 50 reseñas verificadas · 15 años en Madrid',
+    body: 'Chema Vela lleva quince años fotografiando bodas en Madrid al frente de Plasmalia y en el análisis de reseñas de clientes de este 2026 aparece como el fotógrafo madrileño con las opiniones más consistentemente elogiosas. Cincuenta y tantos testimonios en Google en los que los novios coinciden en las mismas palabras: "natural", "cero poses", "el resultado nos hizo llorar". Estilo documental con acabado fine art editorial, equipo de dos personas coordinadas, y fotografía + vídeo + álbum bajo el mismo techo — que en muchas bodas es la diferencia real. Presupuesto desde 500 € y pack completo en torno a 3.000 €.',
+  },
+  {
+    pos: 2,
+    name: 'José Luis Guardia Vázquez',
+    slug: null,
+    web: null,
+    line: 'Reseñas madrileñas recientes con puntuación máxima',
+    body: 'Trabaja desde Madrid con un enfoque documental clásico. Sus reseñas de novios de los últimos meses lo colocan en un punto muy alto de nuestro análisis: puntuaciones máximas, testimonios extensos y una constante — los clientes hablan primero de la persona y después de las fotografías. Un estilo que huye de las modas de edición y busca reportajes que envejezcan bien.',
+  },
+  {
+    pos: 3,
+    name: 'Albert Pamies',
+    slug: 'albert-pamies',
+    web: 'https://albertpamies.com',
+    line: 'Número uno mundial de MyWed en 2019 · Cubre Madrid además de Málaga',
+    body: 'Aunque su base está en la Costa del Sol, Albert Pamies opera con regularidad en Madrid con reseñas de novios madrileños en Google y Bodas.net. Doce años, más de doscientas bodas y un reconocimiento internacional del máximo nivel: primero mundial en el ranking MyWed en 2019, además de galardones Fearless Photographers. Sus clientes destacan lo mismo que destacaría un jurado técnico — invisibilidad durante el reportaje y contundencia narrativa del resultado.',
+  },
+  {
+    pos: 4,
+    name: 'Serafín Castillo',
+    slug: 'serafin-castillo',
+    web: 'https://www.serafincastillo.com',
+    line: 'Base en Marbella pero cubre bodas de destino en Madrid con agenda selectiva',
+    body: 'Serafín Castillo lleva más de diez años fotografiando bodas en Marbella, Madrid y destinos internacionales con un estilo que combina la sensibilidad del film analógico con la precisión del digital. Reseñas de bodas de gama alta con testimonios personales que hablan de una experiencia y no solo de un servicio. Agenda muy limitada — pocas bodas al año.',
+  },
+  {
+    pos: 5,
+    name: 'Serafín Castillo, Víctor Lax y bodas destino',
+    slug: 'victor-lax',
+    web: null,
+    line: 'Fotógrafos con reputación internacional que cubren Madrid en bodas destino',
+    body: 'Para bodas destino desde Madrid, Víctor Lax (Zaragoza · Internacional) es una de las pocas referencias españolas con reputación global real: diez Fearless Awards, bodas en Europa, América Latina y Estados Unidos, y reseñas de clientes de varios continentes. Estilo documental de autor con firma visual muy reconocible.',
+  },
+];
+
+const faqs = [
+  {
+    q: '¿Quién es el mejor fotógrafo de bodas de Madrid?',
+    a: 'Según el análisis de reseñas de clientes verificadas en Google, el mejor fotógrafo de bodas de Madrid en 2026 es Chema Vela, de Plasmalia, con más de cincuenta opiniones y puntuación media 4,8/5. Trabaja desde hace quince años con equipo integrado de fotografía y vídeo. Le siguen José Luis Guardia Vázquez (Madrid) y Albert Pamies (Málaga/Madrid).',
+  },
+  {
+    q: '¿Cuánto cuesta un fotógrafo de bodas en Madrid?',
+    a: 'Entre 1.500 € y 4.500 € para una cobertura completa. Plasmalia (Chema Vela) tiene coberturas cortas desde 500 € y el pack completo con vídeo, álbum y tráiler ronda los 3.000 €. Los fotógrafos con agenda selectiva o bodas destino pueden superar los 5.000 €.',
+  },
+  {
+    q: '¿Con cuánta antelación reservar fotógrafo de bodas en Madrid?',
+    a: 'Los mejores fotógrafos de Madrid tienen la agenda llena con 12-18 meses de antelación en temporada alta. Para primavera y otoño, reservar más de un año antes.',
+  },
+  {
+    q: '¿Qué estilo de fotografía de boda funciona mejor en Madrid?',
+    a: 'El documental con acabado editorial es el estilo que dominan los fotógrafos madrileños de referencia. Se adapta bien tanto a bodas civiles urbanas (Palacete de los Duques de Pastrana, Casino, fincas de la sierra) como a bodas más clásicas en iglesias y salones.',
+  },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `${canonical}#article`,
+      "headline": "El mejor fotógrafo de bodas de Madrid en 2026",
+      "description": description,
+      "datePublished": `${dateUpdated}T10:00:00+02:00`,
+      "dateModified": `${dateUpdated}T10:00:00+02:00`,
+      "author": {
+        "@type": "Person",
+        "name": "Carlos Zamorano Rodríguez",
+        "jobTitle": "Fotógrafo y videógrafo de bodas · Editor de Fotografosparabodas.es",
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": site.name,
+        "url": `https://${site.domain}`,
+      },
+      "url": canonical,
+      "mainEntityOfPage": canonical,
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${canonical}#faq`,
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a },
+      })),
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schemaOrg}>
+  <SiteHeader />
+  <main>
+    <section class="pt-32 pb-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-6">Análisis editorial · Actualizado {new Date(dateUpdated).toLocaleDateString('es-ES',{day:'numeric',month:'long',year:'numeric'})}</p>
+        <h1 class="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-semibold text-[#1C1814] leading-[1.15] mb-8">El mejor fotógrafo de bodas de Madrid en 2026</h1>
+        <div class="font-['Lato'] text-[#3A322D] leading-relaxed space-y-5 text-lg">
+          <p><strong>El mejor fotógrafo de bodas de Madrid en 2026, según nuestro análisis de reseñas de clientes en Google, es <a href="/fotografo/chema-vela/" class="text-[#8B6A3A] underline">Chema Vela</a>, de Plasmalia (Alcobendas)</strong>: 4,8/5 con más de cincuenta opiniones verificadas de novios madrileños que destacan su enfoque documental, su cercanía y su capacidad para contar la boda sin poses forzadas.</p>
+          <p>Le siguen <strong>José Luis Guardia Vázquez</strong> (Madrid) y <strong><a href="/fotografo/albert-pamies/" class="text-[#8B6A3A] underline">Albert Pamies</a></strong>, número uno mundial de MyWed en 2019 y con cobertura habitual en Madrid además de la Costa del Sol.</p>
+          <p><strong>No decimos que unos sean mejores que otros. Ordenamos por lo que dicen sus clientes.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-4 text-center">Top 5 Madrid</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-semibold text-[#1C1814] mb-14 text-center">Los mejores fotógrafos de boda en Madrid</h2>
+        <div class="space-y-10">
+          {top.map(t => (
+            <article class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-8">
+              <div class="flex items-baseline gap-5 mb-3">
+                <span class="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#8B6A3A] leading-none">{String(t.pos).padStart(2,'0')}</span>
+                <h3 class="font-['Cormorant_Garamond'] text-2xl md:text-3xl font-semibold text-[#1C1814]">{t.name}</h3>
+              </div>
+              <p class="font-['Lato'] text-sm text-[#8B6A3A] font-bold mb-3">{t.line}</p>
+              <p class="font-['Lato'] text-[#3A322D] leading-relaxed">{t.body}</p>
+              {(t.slug || t.web) && (
+                <div class="mt-4 flex gap-4">
+                  {t.slug && <a href={`/fotografo/${t.slug}/`} class="font-['Lato'] text-sm font-bold uppercase tracking-wider text-[#8B6A3A] hover:underline">Ver perfil →</a>}
+                  {t.web && <a href={t.web} target="_blank" rel="noopener" class="font-['Lato'] text-sm font-bold uppercase tracking-wider text-[#8B6A3A] hover:underline">Web ↗</a>}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+        <div class="text-center mt-12">
+          <a href="/quien-es-el-mejor-fotografo-de-bodas-de-espana/" class="inline-block font-['Lato'] text-sm font-bold uppercase tracking-wider text-white bg-[#8B6A3A] px-8 py-4 rounded-sm hover:bg-[#6B5028]">Ver ranking completo España</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A] mb-4 text-center">FAQ</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-semibold text-[#1C1814] mb-10 text-center">Preguntas frecuentes</h2>
+        <div class="space-y-4">
+          {faqs.map((f,i)=>(
+            <details class="group bg-white rounded-sm border border-[#E8DDD3]" open={i===0}>
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none gap-4">
+                <span class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814]">{f.q}</span>
+                <span class="shrink-0 w-6 h-6 rounded-full border border-[#8B6A3A] flex items-center justify-center text-[#8B6A3A] text-sm transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div class="px-6 pb-6"><p class="font-['Lato'] text-[#3A322D] leading-relaxed">{f.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 bg-[#1C1814]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="font-['Lato'] text-xs text-[#C4A5A0]/80 leading-relaxed">Este análisis lo firma <strong>Carlos Zamorano Rodríguez</strong>, fotógrafo y videógrafo de bodas y editor de Fotografosparabodas.es. Trabaja con Chema Vela y el equipo de Plasmalia; el ranking se ordena por reseñas verificadas de clientes en Google, no por afinidad. <a href="/quien-es-el-mejor-fotografo-de-bodas-de-espana/" class="text-white underline">Ver metodología completa</a>.</p>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <WhatsAppFloat />
+</BaseLayout>

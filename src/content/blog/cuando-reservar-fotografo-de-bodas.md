@@ -50,4 +50,4 @@ Reservar con más de veinticuatro meses de antelación puede ser complicado: muc
 
 ## Cómo ver fotógrafos disponibles para vuestra fecha
 
-En nuestro [directorio de fotógrafos de bodas en España](/) podéis ver los perfiles de fotógrafos verificados por ciudad y contactarlos directamente para consultar disponibilidad. Cuanto antes, mejor.
+En nuestro [directorio de fotógrafos de bodas en España](/) podéis ver los perfiles de fotógrafos verificados por ciudad y contactarlos directamente para explorar el directorio. Cuanto antes, mejor.

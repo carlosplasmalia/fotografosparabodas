@@ -1,4 +1,6 @@
 ---
+import { site } from '../config/site';
+
 export interface Photographer {
   name: string;
   city: string;
@@ -18,6 +20,7 @@ interface Props {
 }
 
 const { photographer: p } = Astro.props;
+const waText = encodeURIComponent(`Hola, busco fotógrafo de bodas en ${p.city}. ¿Podéis asesorarme?`);
 ---
 
 <article class="bg-white rounded-sm overflow-hidden shadow-sm border border-[#E8DDD3] group">
@@ -79,16 +82,14 @@ const { photographer: p } = Astro.props;
 
     <!-- CTAs -->
     <div class="flex gap-3 mt-5">
-      {p.whatsapp && (
-        <a
-          href={`https://wa.me/${p.whatsapp}?text=Hola%20${encodeURIComponent(p.name)}%2C%20os%20encontré%20en%20fotografosparabodas.es%20y%20me%20gustaría%20consultar%20disponibilidad.`}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-gold flex-1 text-sm py-2.5 text-center"
-        >
-          Consultar vía WhatsApp
-        </a>
-      )}
+      <a
+        href={`https://wa.me/${site.whatsapp}?text=${waText}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-gold flex-1 text-sm py-2.5 text-center"
+      >
+        ¿Buscas fotógrafo? Te asesoramos
+      </a>
       {p.instagram && (
         <a
           href={`https://instagram.com/${p.instagram}`}

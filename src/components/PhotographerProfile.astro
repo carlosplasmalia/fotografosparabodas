@@ -120,12 +120,12 @@ const { photographer: p, featured = false } = Astro.props;
       )}
       <div class="flex flex-col sm:flex-row gap-3">
         <a
-          href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20me%20interesa%20el%20fotógrafo%20${encodeURIComponent(p.name)}%20en%20${encodeURIComponent(p.city)}.%20¿Podéis%20consultarme%20disponibilidad%20y%20precio%3F`}
+          href={`https://wa.me/${site.whatsapp}?text=Hola%2C%20busco%20fot%C3%B3grafo%20de%20bodas%20en%20${encodeURIComponent(p.city)}.%20%C2%BFPod%C3%A9is%20asesorarme%3F`}
           target="_blank"
           rel="noopener noreferrer"
           class:list={[p.profileSlug ? "btn-outline flex-1 text-sm py-3 text-center" : "btn-gold flex-1 text-sm py-3 text-center"]}
         >
-          Consultar disponibilidad
+          ¿Buscas fotógrafo? Te asesoramos
         </a>
 
         {p.instagram && (

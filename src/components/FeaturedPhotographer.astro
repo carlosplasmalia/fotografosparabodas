@@ -9,7 +9,7 @@ interface Props {
 const { photographer: p } = Astro.props;
 
 const waText = encodeURIComponent(
-  `Hola, nos interesa ${p.name} para nuestra boda en ${p.city}. ¿Podéis consultar disponibilidad o recomendarnos opciones similares?`
+  `Hola, busco fotógrafo de bodas en ${p.city}. ¿Podéis asesorarme?`
 );
 ---
 
@@ -46,13 +46,8 @@ const waText = encodeURIComponent(
             target="_blank" rel="noopener noreferrer"
             class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#C4A5A0] hover:text-white transition-colors"
           >
-            Consultar disponibilidad
+            ¿Buscas fotógrafo? Te asesoramos
           </a>
-          {p.phone && (
-            <span class="font-['Lato'] text-xs text-[#6B5E58]">
-              Tel. directo: <a href={`tel:+34${p.phone.replace(/\s/g, '')}`} class="text-[#9A8880] hover:text-white transition-colors">{p.phone}</a>
-            </span>
-          )}
         </div>
       </div>
     </div>

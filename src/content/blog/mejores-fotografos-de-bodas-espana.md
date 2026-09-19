@@ -58,4 +58,4 @@ Si tenéis fecha y ciudad pero no sabéis a quién contratar, podéis consultarn
 
 El servicio es gratuito para las parejas. No cobramos comisión ni intermediación. Respondemos en menos de 24 horas con opciones reales y disponibilidad confirmada.
 
-[Consultar disponibilidad gratis →](/#contacto)
+[¿Buscas fotógrafo? Te asesoramos →](/#contacto)

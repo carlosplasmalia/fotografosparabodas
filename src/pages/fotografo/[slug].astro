@@ -13,7 +13,7 @@ export function getStaticPaths() {
 const { p } = Astro.props;
 
 const waText = encodeURIComponent(
-  `Hola, nos interesa ${p.name} para nuestra boda en ${p.city}. ¿Podéis consultar disponibilidad o recomendarnos opciones similares?`
+  `Hola, busco fotógrafo de bodas en ${p.city}. ¿Podéis asesorarme?`
 );
 const waHref = `https://wa.me/${site.whatsapp}?text=${waText}`;
 
@@ -185,7 +185,7 @@ const schemaBreadcrumb = {
               Os asesoramos gratis: consultamos disponibilidad, comparamos opciones de nuestra red y os ayudamos a decidir. Respuesta en menos de 24 horas.
             </p>
             <a href={waHref} target="_blank" rel="noopener noreferrer" class="btn-gold w-full text-sm py-3 text-center block">
-              Consultar por WhatsApp →
+              ¿Buscas fotógrafo? Te asesoramos
             </a>
             <p class="font-['Lato'] text-[10px] text-[#6B5E58] text-center mt-3">
               Gratis · Sin compromiso · Respuesta en 24h
@@ -250,7 +250,7 @@ const schemaBreadcrumb = {
           Los mejores se llenan con más de un año de antelación. Contadnos vuestra fecha y os decimos qué opciones reales tenéis en {p.city}, gratis y en menos de 24 horas.
         </p>
         <a href={waHref} target="_blank" rel="noopener noreferrer" class="btn-gold text-base px-10 py-4 inline-block">
-          Consultar disponibilidad gratis
+          ¿Buscas fotógrafo? Te asesoramos gratis
         </a>
         <p class="font-['Lato'] text-xs text-[#6B5E58] mt-5">
           O volved a <a href={`/${p.citySlug}/`} class="text-[#8B6A3A] hover:underline">fotógrafos de bodas en {p.city}</a>

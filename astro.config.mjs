@@ -13,7 +13,7 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !/(aviso-legal|cookies|privacidad)/.test(page),
+      filter: (page) => !/(aviso-legal|cookies|privacidad|blog\/mejores-fotografos-de-bodas-espana)/.test(page),
       serialize(item) {
         if (item.url === 'https://fotografosparabodas.es/') {
           return { ...item, changefreq: 'weekly', priority: 1.0 };

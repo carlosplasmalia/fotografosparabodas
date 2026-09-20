@@ -1,0 +1,30 @@
+---
+// Redirect stub: consolida la URL antigua con el hub /quien-es-el-mejor-fotografo-de-bodas-de-espana/
+// GitHub Pages no soporta 301 nativas, así que combinamos canonical + meta refresh + noindex
+// para forzar a Google a sustituir esta URL por la nueva (soft 301 completo).
+const target = 'https://fotografosparabodas.es/quien-es-el-mejor-fotografo-de-bodas-de-espana/';
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={target} />
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <title>Los mejores fotógrafos de bodas de España — hemos actualizado esta guía</title>
+    <meta name="description" content="Hemos publicado una nueva guía completa: los mejores fotógrafos de boda de España en 2026, con análisis de reseñas verificadas de novios." />
+    <style>
+      body { font-family: -apple-system, system-ui, sans-serif; background: #FAF7F2; color: #3A322D; max-width: 620px; margin: 4rem auto; padding: 2rem; line-height: 1.6; }
+      a { color: #8B6A3A; }
+      h1 { font-family: Georgia, 'Cormorant Garamond', serif; font-size: 1.75rem; margin-bottom: 1rem; color: #1C1814; }
+    </style>
+    <script is:inline set:html={`setTimeout(function(){window.location.replace(${JSON.stringify(target)})},50);`} />
+  </head>
+  <body>
+    <h1>Hemos actualizado esta guía</h1>
+    <p>Este artículo ha sido reemplazado por una versión ampliada y ordenada por reseñas verificadas de clientes:</p>
+    <p><strong><a href={target}>¿Quién es el mejor fotógrafo de bodas de España? →</a></strong></p>
+    <p>Si no eres redirigido automáticamente, haz clic en el enlace de arriba.</p>
+  </body>
+</html>

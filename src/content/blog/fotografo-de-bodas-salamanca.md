@@ -48,4 +48,4 @@ Por encima de 2.500€ hay fotógrafos con proyección regional y nacional que t
 
 ## Fotógrafos verificados en Salamanca
 
-Tenemos una selección de [fotógrafos de bodas en Salamanca](/salamanca/) con experiencia en los espacios más emblemáticos de la ciudad. Podéis ver su portfolio y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Salamanca](/#contacto) con experiencia en los espacios más emblemáticos de la ciudad. Podéis ver su portfolio y contactarlos directamente.

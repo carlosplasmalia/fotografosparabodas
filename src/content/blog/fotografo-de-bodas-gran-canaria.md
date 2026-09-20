@@ -42,4 +42,4 @@ Por encima de 4.500€ hay fotógrafos de lujo que trabajan las bodas más exclu
 
 ## Fotógrafos verificados en Gran Canaria
 
-Tenemos una selección de [fotógrafos de bodas en Gran Canaria](/gran-canaria/) con experiencia en los distintos paisajes de la isla. Podéis ver su trabajo y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Gran Canaria](/#contacto) con experiencia en los distintos paisajes de la isla. Podéis ver su trabajo y contactarlos directamente.

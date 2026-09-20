@@ -48,4 +48,4 @@ Por encima de 2.500€ hay fotógrafos con proyección regional y nacional que t
 
 ## Fotógrafos verificados en Burgos
 
-Tenemos una selección de [fotógrafos de bodas en Burgos](/burgos/) con experiencia real en los espacios históricos de la ciudad y la provincia. Podéis ver su trabajo y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Burgos](/#contacto) con experiencia real en los espacios históricos de la ciudad y la provincia. Podéis ver su trabajo y contactarlos directamente.

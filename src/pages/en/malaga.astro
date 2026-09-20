@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeaderEn from '../../components/SiteHeaderEn.astro';
+import SiteFooterEn from '../../components/SiteFooterEn.astro';
+import { site } from '../../config/site';
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Wedding photographers in Málaga and Costa del Sol",
+  "description": "Handpicked wedding photographers for destination weddings in Málaga, Marbella and the Costa del Sol.",
+  "url": "https://fotografosparabodas.es/en/malaga/",
+  "numberOfItems": 1,
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": "Albert Pamies",
+      "areaServed": ["Málaga", "Marbella", "Costa del Sol"],
+      "url": "https://albertpamies.com",
+      "award": ["MyWed #1 Worldwide 2019", "Fearless Photographers USA", "Inspiration Photographers Brazil"]
+    }
+  }]
+};
+
+const alternates = [
+  { hreflang: 'es', href: 'https://fotografosparabodas.es/malaga/' },
+  { hreflang: 'en', href: 'https://fotografosparabodas.es/en/malaga/' },
+  { hreflang: 'x-default', href: 'https://fotografosparabodas.es/en/malaga/' },
+];
+---
+
+<BaseLayout
+  title="Wedding Photographer Málaga & Costa del Sol · Albert Pamies · 2026"
+  description="Award-winning wedding photographer covering Málaga, Marbella and the Costa del Sol. MyWed #1 Worldwide 2019 and Fearless USA. English-speaking, direct booking, no directories."
+  canonical="https://fotografosparabodas.es/en/malaga/"
+  schema={schemaOrg}
+  locale="en"
+  alternates={alternates}
+>
+  <SiteHeaderEn />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <!-- Hero -->
+    <section class="bg-[#1C1814] py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <nav class="flex items-center justify-center gap-2 font-['Lato'] text-xs text-[#6B5E58] mb-6">
+          <a href="/en/" class="hover:text-[#8B6A3A] transition-colors">Home</a>
+          <span>›</span>
+          <span class="text-[#8B6A3A]">Málaga & Costa del Sol</span>
+        </nav>
+        <p class="section-eyebrow text-[#8B6A3A] mb-4">Destination weddings in Spain</p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl font-semibold text-white leading-tight mb-6">
+          Wedding photographer<br/>Málaga & Costa del Sol
+        </h1>
+        <p class="font-['Lato'] text-[#9A8880] text-lg max-w-xl mx-auto leading-relaxed">
+          The photographer we send couples to when they are getting married on the Costa del Sol. One name, not a directory.
+        </p>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-14 bg-[#FAF7F2]">
+      <div class="max-w-2xl mx-auto px-6">
+        <article class="prose-en">
+          <p>
+            The Costa del Sol is where a lot of British, Dutch and German couples end up when they decide to get married in Spain. The venues are set up for foreign weddings, the ceremony can be at 20:30 in June with the sun still up, and there is a small circle of photographers who actually understand how a coastal wedding runs. Albert Pamies is the one we call.
+          </p>
+          <p>
+            He is not the cheapest. He is not on Bodas.net. He is the person you book when you have looked at three reportages by other photographers and thought, we want that but a level up.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Photographer profile -->
+    <section class="py-16 bg-white border-y border-[#E8DDD3]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-3">Featured photographer</p>
+        <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#1C1814] mb-2">Albert Pamies</h2>
+        <p class="font-['Lato'] text-sm text-[#8B6A3A] font-bold tracking-wide uppercase mb-6">
+          Málaga · Marbella · Costa del Sol
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-5">
+            <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] mb-2">Experience</p>
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">12+ years</p>
+          </div>
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-5">
+            <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] mb-2">Style</p>
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">Emotional documentary</p>
+          </div>
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-5">
+            <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] mb-2">Language</p>
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">English & Spanish</p>
+          </div>
+        </div>
+
+        <article class="prose-en">
+          <p>
+            Albert has been shooting weddings on the Costa del Sol for over twelve years. His work has been recognised by Fearless Photographers in the US, and in 2019 he was ranked number one worldwide on MyWed, which is not a small thing given how competitive that ranking is. He also holds a distinction from Inspiration Photographers in Brazil.
+          </p>
+          <p>
+            His style is documentary but emotional. Not the cold, distant kind. He gets close to the family, waits for the moments, and edits with a warm mediterranean palette that ages well. Every couple we have sent to him has come back with a reportage that looks like the coast they got married on.
+          </p>
+          <p>
+            He works with a small number of weddings a year, which is how he keeps the quality where it is. If you are looking at May to October, contact us with at least ten months of notice.
+          </p>
+        </article>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hi%2C%20we%20would%20like%20to%20check%20Albert%20Pamies%27s%20availability%20for%20our%20wedding%20on%20the%20Costa%20del%20Sol.%20Our%20date%20is%20...`}
+            target="_blank" rel="noopener noreferrer"
+            class="btn-gold text-sm py-3 px-6"
+          >
+            Check his availability
+          </a>
+          <a href="https://albertpamies.com" target="_blank" rel="noopener noreferrer" class="btn-outline text-sm py-3 px-5">
+            See his portfolio →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local context -->
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-2xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">What to know</p>
+        <h2 class="section-title mb-8">Weddings on the Costa del Sol,<br/>the honest version</h2>
+        <article class="prose-en">
+          <h3>The light</h3>
+          <p>
+            Midday in July and August is punishing. Ceremonies at 12:00 outdoor look like a passport photo in the wedding reportage. The couples who get the best photos schedule the ceremony between 18:30 and 20:00, do the drinks reception at golden hour, and let the photographer work the couple session between 19:30 and sunset. Albert will walk you through this when you plan the timeline.
+          </p>
+
+          <h3>The venues</h3>
+          <p>
+            Cortijos inland (Ronda, Casares, the Sierra de las Nieves), beach clubs in Marbella and Estepona, cliffside villas in Mijas and Nerja. Each has its own light problem and its own solution. If your venue is a converted finca with white walls and olive trees, the mediterranean palette is going to sing. If it is a modern beach club with a lot of glass and stainless steel, the photographer has to work harder for warmth.
+          </p>
+
+          <h3>The paperwork</h3>
+          <p>
+            Legal weddings in Spain for non-residents are more paperwork than most people expect. Most foreign couples do the legal part in their home country and have a symbolic ceremony in Spain. Your venue coordinator or your wedding planner will help you here. Photographers do not touch this part, but a good one will know your ceremony is symbolic and plan the day around the vows and the readings, not around a registry official.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Other destinations -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-6">Other destinations</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/en/mallorca/" class="btn-outline text-sm px-6 py-2.5">Mallorca</a>
+          <a href="/en/barcelona/" class="btn-outline text-sm px-6 py-2.5">Barcelona & Costa Brava</a>
+        </div>
+        <p class="text-center mt-8 font-['Lato'] text-sm text-[#6B5E58]">
+          Also worth reading, our piece on <a href="/en/style/mediterranean/" class="text-[#8B6A3A] underline">what mediterranean wedding photography actually is</a> and the <a href="/en/blog/destination-wedding-spain-guide/" class="text-[#8B6A3A] underline">honest guide to getting married in Spain from abroad</a>.
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <SiteFooterEn />
+</BaseLayout>
+
+<style is:global>
+  .prose-en h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; font-weight: 600; color: #1C1814; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.2; }
+  .prose-en p { font-family: 'Lato', sans-serif; font-size: 0.9375rem; color: #4A3E38; line-height: 1.85; margin-bottom: 1.25rem; }
+  .prose-en strong { color: #1C1814; font-weight: 700; }
+  .prose-en a { color: #8B6A3A; text-decoration: underline; text-underline-offset: 3px; }
+</style>

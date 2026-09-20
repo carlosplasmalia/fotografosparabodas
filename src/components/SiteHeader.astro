@@ -7,10 +7,11 @@ interface Props {
 const { transparent = false } = Astro.props;
 
 const estilos = [
-  { name: 'Documental', slug: 'documental', desc: 'Natural y espontáneo' },
-  { name: 'Romántico',  slug: 'romantico',  desc: 'Emocional y cálido'   },
-  { name: 'Editorial',  slug: 'editorial',  desc: 'Artístico y de autor'  },
-  { name: 'Clásico',    slug: 'clasico',    desc: 'Elegante y atemporal'  },
+  { name: 'Documental',   slug: 'documental',   desc: 'Natural y espontáneo'     },
+  { name: 'Romántico',    slug: 'romantico',    desc: 'Emocional y cálido'       },
+  { name: 'Editorial',    slug: 'editorial',    desc: 'Artístico y de autor'     },
+  { name: 'Mediterráneo', slug: 'mediterraneo', desc: 'Luz de costa y tonos tierra' },
+  { name: 'Clásico',      slug: 'clasico',      desc: 'Elegante y atemporal'     },
 ];
 
 const guias = [
@@ -194,6 +195,7 @@ const guias = [
       <div class="border-t border-[#E8DDD3] pt-3 space-y-1">
         <a href="/estilo/documental/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Estilo Documental</a>
         <a href="/estilo/romantico/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Estilo Romántico</a>
+        <a href="/estilo/mediterraneo/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Estilo Mediterráneo</a>
         <a href="/blog/" class="block font-['Lato'] text-sm text-[#1C1814] px-2 py-1.5 hover:bg-[#F2E8D5] rounded">Guías para novios</a>
         <a href="/unete/" class="block font-['Lato'] text-sm font-semibold text-[#8B6A3A] px-2 py-1.5">Para fotógrafos →</a>
       </div>

@@ -42,4 +42,4 @@ Por encima de 2.200€ hay fotógrafos con proyección regional que trabajan las
 
 ## Fotógrafos verificados en Badajoz
 
-Tenemos una selección de [fotógrafos de bodas en Badajoz](/badajoz/) con experiencia en la ciudad y en los espacios únicos de la provincia. Podéis ver su portfolio y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Badajoz](/#contacto) con experiencia en la ciudad y en los espacios únicos de la provincia. Podéis ver su portfolio y contactarlos directamente.

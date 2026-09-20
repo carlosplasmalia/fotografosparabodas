@@ -40,4 +40,4 @@ Por encima de 2.400€ hay fotógrafos sevillanos que trabajan la provincia de H
 
 ## Fotógrafos verificados en Huelva
 
-Tenemos una selección de [fotógrafos de bodas en Huelva](/huelva/) con experiencia en los espacios únicos de la provincia. Podéis ver su portfolio y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Huelva](/#contacto) con experiencia en los espacios únicos de la provincia. Podéis ver su portfolio y contactarlos directamente.

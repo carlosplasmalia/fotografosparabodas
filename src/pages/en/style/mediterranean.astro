@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SiteHeaderEn from '../../../components/SiteHeaderEn.astro';
+import SiteFooterEn from '../../../components/SiteFooterEn.astro';
+import { site } from '../../../config/site';
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Mediterranean wedding photography, what it actually is",
+  "description": "The mediterranean style in wedding photography, palette, light, and the difference between a photographer who lives in it and one copying the look.",
+  "url": "https://fotografosparabodas.es/en/style/mediterranean/",
+  "author": { "@type": "Organization", "name": "Wedding Photographers Spain" },
+  "inLanguage": "en"
+};
+
+const alternates = [
+  { hreflang: 'es', href: 'https://fotografosparabodas.es/estilo/mediterraneo/' },
+  { hreflang: 'en', href: 'https://fotografosparabodas.es/en/style/mediterranean/' },
+  { hreflang: 'x-default', href: 'https://fotografosparabodas.es/en/style/mediterranean/' },
+];
+---
+
+<BaseLayout
+  title="Mediterranean Wedding Photography · What It Actually Is · 2026"
+  description="Mediterranean wedding photography explained, palette, coastal light and outdoor ceremony logistics. How to tell photographers who live in it from photographers copying the look."
+  canonical="https://fotografosparabodas.es/en/style/mediterranean/"
+  schema={schemaOrg}
+  locale="en"
+  alternates={alternates}
+>
+  <SiteHeaderEn />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <section class="bg-[#1C1814] py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <nav class="flex items-center justify-center gap-2 font-['Lato'] text-xs text-[#6B5E58] mb-6">
+          <a href="/en/" class="hover:text-[#8B6A3A] transition-colors">Home</a>
+          <span>›</span>
+          <span>Style</span>
+          <span>›</span>
+          <span class="text-[#8B6A3A]">Mediterranean</span>
+        </nav>
+        <p class="section-eyebrow text-[#8B6A3A] mb-4">Style pillar</p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl font-semibold text-white leading-tight mb-6">
+          Mediterranean wedding<br/>photography
+        </h1>
+        <p class="font-['Lato'] text-[#9A8880] text-lg max-w-xl mx-auto">
+          Warm coastal light, earth and blues, outdoor ceremonies. The style that reads a wedding in the Balearics, on the Costa del Sol or on the Catalan coast the way it should be read.
+        </p>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 py-16">
+      <article class="prose-en">
+
+        <h2>What mediterranean wedding photography actually is</h2>
+        <p>
+          The mediterranean style is not a preset. It is not a filter. It is a way of reading a wedding that pairs southern light with a specific palette, earth tones, broken whites, olive greens, coastal blues. A photographer working in this style takes what the venue offers, sunset ceremonies, cocktail hours by the sea, banquets in stone-walled fincas, and looks for the visual coherence you see in weddings shot on the Costa Brava, in Mallorca, Ibiza, the Costa del Sol or the Levante coast.
+        </p>
+        <p>
+          It sits between editorial and pure documentary. There is less art direction than in editorial, but more attention to palette and composition than in documentary. It grew out of real Spanish coastal weddings, not out of translating a foreign look onto Spain.
+        </p>
+
+        <h2>The light and how you work it</h2>
+        <p>
+          Mediterranean light in summer is intense and contrasty at midday, and very soft and golden in the last hour before sunset. A photographer with real practice in this style will avoid harsh midday for the couple portraits and schedule the couple session between 90 and 30 minutes before sunset, when the light comes in low and horizontal and the cal walls and stone pick up a natural warm tone.
+        </p>
+        <p>
+          Indoors, in ermitas, finca courtyards, cortijos, the light is often lateral and clean. A photographer who knows the region knows when to use bounced flash and when to leave the natural light alone, because the texture of the stone and the cal returns a density that a badly measured flash flattens.
+        </p>
+
+        <h2>The palette</h2>
+        <p>
+          Earth tones, ochres, terracottas and beiges. Olive greens and fig-tree greens. Deep sea blues and sky blues. Broken whites of cal and linen. And as accents, the dry yellows of August fields or the pinks of a coastal sunset. The edit stays inside that palette without oversaturating, and does not push cold blue the way a Nordic or American look would.
+        </p>
+        <p>
+          A quick way to recognise the style done well, palette coherence across a whole reportage, from the morning dress preparation to the four in the morning dance floor. If you see a portfolio where every wedding shifts colour temperature, that photographer has not really mastered the style.
+        </p>
+
+        <h2>Where it works, where it does not</h2>
+        <p>
+          It works in outdoor weddings at fincas with stone, olive-grove courtyards, beach or cliffside ceremonies, Andalusian cortijos, Balearic cases, Catalan masías. The stone, the vegetation and the proximity to the sea come into the frame as background characters.
+        </p>
+        <p>
+          It works in coastal cities too, Palma, Valencia, Málaga, Alicante, Ibiza, Menorca, Sitges, Marbella. In Madrid or Bilbao, though, even with an excellent photographer, mediterranean styling feels forced because the scene does not ask for it.
+        </p>
+
+        <h2>Who this style is for</h2>
+        <p>
+          Couples getting married on the coast or in the south who want photos that match the place, and who are not chasing editorial perfection or pure photojournalism. It is especially good for destination weddings, where the couple flew in to marry in Spain and want the reportage to say where they were, not just what they did.
+        </p>
+        <p>
+          It also fits couples who value naturalness over production, and who will plan the day so the light lands right, ceremonies at 19:00 instead of 13:00, banquets that start when the sun is going down, couple sessions agreed with the photographer well in advance.
+        </p>
+
+        <h2>How to choose a mediterranean wedding photographer</h2>
+        <p>
+          Ask for complete reportages shot in venues similar to yours. A good mediterranean photographer has real experience in the Balearics, the Costa Brava, the Costa del Sol or the Levante coast, not two or three anecdotal weddings. Consistency shows up in volume.
+        </p>
+        <p>
+          Look at how they treat skies and sea in the edit. Mediterranean skies are not flat cobalt, they have gradient and texture. The sea shifts colour through the day. A photographer who crushes those details in the edit loses half the style.
+        </p>
+        <p>
+          And ask how they handle hard light. In August, between 12:00 and 17:00, the light is difficult even for the best. A photographer with real practice will tell you how they solve it, not hide the question.
+        </p>
+
+      </article>
+
+      <div class="mt-12 bg-[#F2E8D5] border-l-4 border-[#8B6A3A] rounded-sm p-6">
+        <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] mb-2">
+          Looking for a mediterranean wedding photographer?
+        </p>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] mb-5 leading-relaxed">
+          Tell us your destination and date, we will check availability and send you a shortlist.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hi%2C%20we%20are%20getting%20married%20on%20the%20Spanish%20coast%20and%20looking%20for%20a%20mediterranean%20wedding%20photographer.%20Our%20date%20is%20...`}
+            target="_blank" rel="noopener noreferrer"
+            class="btn-gold text-sm py-2.5 px-5"
+          >
+            Ask us
+          </a>
+          <a href="/en/malaga/" class="btn-outline text-sm py-2.5 px-4">Málaga & Costa del Sol</a>
+          <a href="/en/mallorca/" class="btn-outline text-sm py-2.5 px-4">Mallorca</a>
+          <a href="/en/barcelona/" class="btn-outline text-sm py-2.5 px-4">Barcelona & Costa Brava</a>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/en/blog/destination-wedding-spain-guide/" class="font-['Lato'] text-sm text-[#6B5E58] hover:text-[#8B6A3A] transition-colors">
+          Read the destination wedding guide for Spain →
+        </a>
+      </div>
+    </div>
+
+  </main>
+  <SiteFooterEn />
+</BaseLayout>
+
+<style is:global>
+  .prose-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.875rem; font-weight: 600; color: #1C1814; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+  .prose-en p { font-family: 'Lato', sans-serif; font-size: 0.9375rem; color: #4A3E38; line-height: 1.85; margin-bottom: 1.25rem; }
+  .prose-en strong { color: #1C1814; font-weight: 700; }
+  .prose-en a { color: #8B6A3A; text-decoration: underline; text-underline-offset: 3px; }
+</style>

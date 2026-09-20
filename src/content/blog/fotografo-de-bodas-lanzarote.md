@@ -46,4 +46,4 @@ Por encima de 5.000€ hay fotógrafos con reconocimiento europeo que trabajan e
 
 ## Fotógrafos verificados en Lanzarote
 
-Tenemos una selección de [fotógrafos de bodas en Lanzarote](/lanzarote/) con experiencia en los distintos espacios de la isla y en bodas de destino internacionales. Podéis ver su portfolio y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Lanzarote](/#contacto) con experiencia en los distintos espacios de la isla y en bodas de destino internacionales. Podéis ver su portfolio y contactarlos directamente.

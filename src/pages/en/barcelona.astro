@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeaderEn from '../../components/SiteHeaderEn.astro';
+import SiteFooterEn from '../../components/SiteFooterEn.astro';
+import { site } from '../../config/site';
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Wedding photographers in Barcelona and Costa Brava",
+  "description": "The most awarded Spanish wedding photographer, covering Barcelona, Catalonia and destination weddings worldwide.",
+  "url": "https://fotografosparabodas.es/en/barcelona/",
+  "numberOfItems": 1,
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": "Víctor Lax",
+      "areaServed": ["Barcelona", "Costa Brava", "Catalonia"],
+      "url": "https://victorlax.net",
+      "award": ["Fearless Photographer of the Year 2016", "Fearless Photographer of the Year 2018", "Fearless Photographer of the Year 2019", "130+ Fearless Awards"]
+    }
+  }]
+};
+
+const alternates = [
+  { hreflang: 'es', href: 'https://fotografosparabodas.es/barcelona/' },
+  { hreflang: 'en', href: 'https://fotografosparabodas.es/en/barcelona/' },
+  { hreflang: 'x-default', href: 'https://fotografosparabodas.es/en/barcelona/' },
+];
+---
+
+<BaseLayout
+  title="Wedding Photographer Barcelona · Víctor Lax · Fearless Photographer of the Year"
+  description="Víctor Lax, three-time Fearless Photographer of the Year and the most awarded Spanish wedding photographer. Barcelona, Costa Brava and international destinations."
+  canonical="https://fotografosparabodas.es/en/barcelona/"
+  schema={schemaOrg}
+  locale="en"
+  alternates={alternates}
+>
+  <SiteHeaderEn />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <section class="bg-[#1C1814] py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <nav class="flex items-center justify-center gap-2 font-['Lato'] text-xs text-[#6B5E58] mb-6">
+          <a href="/en/" class="hover:text-[#8B6A3A] transition-colors">Home</a>
+          <span>›</span>
+          <span class="text-[#8B6A3A]">Barcelona & Costa Brava</span>
+        </nav>
+        <p class="section-eyebrow text-[#8B6A3A] mb-4">Destination weddings in Spain</p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl font-semibold text-white leading-tight mb-6">
+          Wedding photographer<br/>Barcelona & Costa Brava
+        </h1>
+        <p class="font-['Lato'] text-[#9A8880] text-lg max-w-xl mx-auto leading-relaxed">
+          The most awarded Spanish wedding photographer. If you want the top of the market in documentary reportage, you want this page.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 bg-[#FAF7F2]">
+      <div class="max-w-2xl mx-auto px-6">
+        <article class="prose-en">
+          <p>
+            Barcelona weddings pull three different crowds. There is the couple getting married in the city itself, at a rooftop venue or a Modernista palace. There is the couple heading up to a Costa Brava masía for a coastal Catalan wedding. And there is the couple flying in from abroad to a private villa somewhere between Sitges and Cadaqués.
+          </p>
+          <p>
+            All three end up looking at Víctor Lax. So do a fair number of couples getting married in London, Paris or New York, because he flies for weddings and books years in advance.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white border-y border-[#E8DDD3]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-3">Featured photographer</p>
+        <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#1C1814] mb-2">Víctor Lax</h2>
+        <p class="font-['Lato'] text-sm text-[#8B6A3A] font-bold tracking-wide uppercase mb-6">
+          Barcelona · Catalonia · International
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-5">
+            <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] mb-2">Style</p>
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">Pure documentary</p>
+          </div>
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-5">
+            <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] mb-2">Fearless Awards</p>
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">130+</p>
+          </div>
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-5">
+            <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] mb-2">Photographer of the Year</p>
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">2016, 2018, 2019</p>
+          </div>
+        </div>
+
+        <article class="prose-en">
+          <p>
+            Talking about Víctor Lax means talking about the most internationally recognised Spanish wedding photographer, full stop. Three times Fearless Photographer of the Year, in 2016, 2018 and 2019. Over 130 Fearless Awards. Nobody in the world has more of them.
+          </p>
+          <p>
+            His style is documentary taken to the level of virtuoso. He sees compositions in ordinary moments that other photographers walk past without noticing. His images are studied in wedding photography workshops across the world. If you follow wedding photography at all, you already know his work.
+          </p>
+          <p>
+            He works from Barcelona for the whole of Spain and internationally. The agenda is selective, as you would expect from a photographer couples fly in from several countries. If you want the highest tier of documentary wedding photography that exists, this is the address.
+          </p>
+        </article>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hi%2C%20we%20would%20like%20to%20check%20V%C3%ADctor%20Lax%27s%20availability%20for%20our%20wedding.%20Our%20date%20is%20...`}
+            target="_blank" rel="noopener noreferrer"
+            class="btn-gold text-sm py-3 px-6"
+          >
+            Check his availability
+          </a>
+          <a href="https://victorlax.net" target="_blank" rel="noopener noreferrer" class="btn-outline text-sm py-3 px-5">
+            See his portfolio →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-2xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">What to know</p>
+        <h2 class="section-title mb-8">Weddings in Barcelona and the Costa Brava,<br/>the local pattern</h2>
+        <article class="prose-en">
+          <h3>Barcelona city weddings</h3>
+          <p>
+            City weddings tend to be shorter. Ceremony at a Modernista venue, cocktails on a rooftop, dinner and dancing at a converted industrial space in Poblenou or 22@. The photographer has to move through the city with you, which sounds simple until you realise the transfer between two venues on a Saturday in June can eat forty minutes. Timeline discipline matters here more than in a single-venue wedding.
+          </p>
+
+          <h3>Costa Brava</h3>
+          <p>
+            The Costa Brava does not photograph like the Mediterranean coast further south. The light is greener and cooler, the pine trees change the colour palette, and the coves have a distinctive turquoise. Photographers who shoot down south can miss this. Víctor grew up shooting Catalan weddings and reads the light of the region without thinking about it.
+          </p>
+
+          <h3>Language</h3>
+          <p>
+            Ceremonies often mix Catalan, Spanish and English. That is not a problem for photography, but if you have international guests and no interpreter, plan for a printed programme so people know what is happening. This does not sound like a photographer detail, until you realise a confused guest is a guest not reacting on camera.
+          </p>
+
+          <h3>The people</h3>
+          <p>
+            Catalan weddings run late. Dinner at 22:00, dancing until 04:00 or 05:00. If you are booking a photographer for eight hours because your friend in London did, you will run out of coverage before the dance floor gets interesting. Ten to twelve hours is more honest for this region.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-6">Other destinations</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/en/malaga/" class="btn-outline text-sm px-6 py-2.5">Málaga & Costa del Sol</a>
+          <a href="/en/mallorca/" class="btn-outline text-sm px-6 py-2.5">Mallorca</a>
+        </div>
+        <p class="text-center mt-8 font-['Lato'] text-sm text-[#6B5E58]">
+          Read next, our piece on <a href="/en/style/mediterranean/" class="text-[#8B6A3A] underline">mediterranean wedding photography</a> and the <a href="/en/blog/destination-wedding-spain-guide/" class="text-[#8B6A3A] underline">destination wedding guide for Spain</a>.
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <SiteFooterEn />
+</BaseLayout>
+
+<style is:global>
+  .prose-en h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; font-weight: 600; color: #1C1814; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.2; }
+  .prose-en p { font-family: 'Lato', sans-serif; font-size: 0.9375rem; color: #4A3E38; line-height: 1.85; margin-bottom: 1.25rem; }
+  .prose-en strong { color: #1C1814; font-weight: 700; }
+  .prose-en a { color: #8B6A3A; text-decoration: underline; text-underline-offset: 3px; }
+</style>

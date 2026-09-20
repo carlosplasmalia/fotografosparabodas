@@ -8,13 +8,15 @@ imagenAlt: "Boda en Sevilla fotografiada al atardecer — estilo emocional"
 featured: false
 ---
 
-Sevilla es uno de los destinos de boda más fotogénicos de España. La luz de Andalucía, los patios con azulejos, las iglesias barrocas y las haciendas del Aljarafe dan a un fotógrafo con buen ojo un material excepcional para trabajar. Pero esa misma riqueza visual puede distraer de lo que de verdad importa: elegir a alguien que sepa capturar lo que pasa entre vosotros, no solo el escenario.
+En julio, en Sevilla, a las doce del mediodía, hace 42 grados. Y aun así hay parejas que planifican la sesión de fotos con su fotógrafo para esa hora, porque "el Alcázar queda mejor con luz de día". El resultado son fotos donde los dos tienen cara de estar sufriendo el calor. Que estaban sufriendo. Los fotógrafos sevillanos que llevan años en esto lo primero que preguntan es a qué hora está planificada cada cosa.
 
-## Por qué la luz de Sevilla lo cambia todo
+La luz de Sevilla es extraordinaria. Pero solo cuando sabes cuándo usarla.
 
-Sevilla tiene uno de los climas más extremos de Europa para trabajar con luz natural. En verano, el sol del mediodía es imposible para fotografía: duro, cenital y poco favorecedor. En primavera y otoño, la luz es extraordinaria, especialmente en las dos horas antes del atardecer.
+## La hora que lo determina todo
 
-Un fotógrafo que trabaja habitualmente en Sevilla ya sabe cómo organizar la jornada para aprovechar esa luz. Sabe que las fotos de pareja a mediodía de agosto en la Plaza de España van a salir forzadas, y que lo inteligente es planificar ese momento para el final del día. Ese tipo de conocimiento práctico importa mucho.
+En primavera y en otoño, las dos horas antes del atardecer en Sevilla producen una luz que casi cualquier fotógrafo puede aprovechar. Dorada, cálida, sin sombras duras. Es el momento que los fotógrafos locales protegen con celo en el timeline del día.
+
+En verano la cosa cambia. El sol del mediodía es duro y cenital, y no hay espacio exterior en Sevilla que aguante bien esa luz. Un fotógrafo con experiencia en la ciudad reorganiza el día para que la sesión de pareja ocurra al final de la tarde. Si el fotógrafo que estáis mirando no tiene ese criterio claro cuando le preguntáis, es una señal de que quizá no conoce el mercado local tanto como dice.
 
 ## Cuándo casarse en Sevilla si la fotografía os importa
 

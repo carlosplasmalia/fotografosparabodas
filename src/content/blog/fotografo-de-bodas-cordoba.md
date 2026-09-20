@@ -8,9 +8,9 @@ imagenAlt: "Boda en Córdoba fotografiada en patio andaluz con geranios"
 featured: false
 ---
 
-Córdoba tiene uno de los cascos históricos más fotografiados de España. La Mezquita-Catedral, el Alcázar de los Reyes Cristianos, los patios con geranios del barrio de la Judería y los cortijos de la campiña ofrecen una variedad de escenarios que hacen de Córdoba un destino fotográfico extraordinario para bodas.
+En mayo, los patios de Córdoba compiten entre sí con un concurso que dura semanas y que lanza a la ciudad a los titulares de medio mundo. Para los fotógrafos de bodas locales, mayo también es el mes de trabajo más intenso del año: la Mezquita, el Alcázar y los propios patios se llenan de ceremonias y sesiones.
 
-Si buscáis fotógrafo de bodas en Córdoba, esta guía os da las claves para elegir bien.
+Hay una tensión real entre aprovechar Córdoba en su mejor momento lumínico y fotográfico (primavera) y hacerlo cuando los espacios son más accesibles y manejables (octubre, noviembre). Esa decisión afecta mucho a lo que podéis pedir al fotógrafo y a cómo tiene que planificar el día.
 
 ## Los espacios más emblemáticos y sus retos fotográficos
 

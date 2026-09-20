@@ -48,4 +48,4 @@ Por encima de 2.500€ hay fotógrafos de otras provincias que eligen Almería c
 
 ## Fotógrafos verificados en Almería
 
-Tenemos una selección de [fotógrafos de bodas en Almería](/almeria/) con experiencia en los espacios más singulares de la provincia. Podéis ver su trabajo y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Almería](/#contacto) con experiencia en los espacios más singulares de la provincia. Podéis ver su trabajo y contactarlos directamente.

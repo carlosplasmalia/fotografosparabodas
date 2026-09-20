@@ -29,10 +29,14 @@ const schemaOrg = {
 ---
 
 <BaseLayout
-  title='Fotógrafo de Bodas en Mallorca — Bodas de Destino · Selección 2026'
+  title='Fotógrafo de Bodas Mallorca · Bodas de Destino en Baleares · 2026'
   description='Selección personalizada de fotógrafos de bodas en Mallorca y Baleares. Fincas de la Tramuntana, posesiones y calas. Español e inglés. Os encontramos el ideal. Gratis, 24 horas.'
   canonical={`https://${site.domain}/${slug}/`}
   schema={schemaOrg}
+  alternates={[
+    { hreflang: 'es', href: 'https://fotografosparabodas.es/mallorca/' },
+    { hreflang: 'en', href: 'https://fotografosparabodas.es/en/mallorca/' },
+  ]}
 >
   <SiteHeader transparent={true} />
   <main>

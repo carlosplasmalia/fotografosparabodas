@@ -8,9 +8,9 @@ imagenAlt: "Boda en Mallorca fotografiada en finca rústica al atardecer"
 featured: false
 ---
 
-Mallorca es uno de los destinos de boda más solicitados de Europa. Cada año se celebran en la isla miles de bodas, muchas de ellas con novios de Alemania, el Reino Unido, los países nórdicos y otras partes de España que eligen Mallorca precisamente por la combinación de mar, paisaje rural y servicios de alta calidad.
+La mitad de los novios que se casan en Mallorca llegan desde fuera de la isla. Eso significa que buscan fotógrafo casi siempre a distancia, comparando portfolios en pantalla, sin haber visto el trabajo en persona y sin poder reunirse en persona antes de firmar.
 
-Todo eso hace que el mercado fotográfico sea muy activo y también muy heterogéneo. Encontrar al fotógrafo adecuado en Mallorca requiere algo más que buscar en Google.
+Es una situación de riesgo que los fotógrafos mallorquines con más experiencia saben gestionar: videollamada previa, contrato detallado, visita al espacio de antemano. Los que no ofrecen eso generan fricciones innecesarias en la distancia, y a veces no llegan a resolverlas hasta el día de la boda.
 
 ## Por qué Mallorca tiene un mercado fotográfico especial
 

@@ -113,11 +113,12 @@ const schemaOrg = {
 
       <div class="mt-14 pt-10 border-t border-[#E8DDD3]">
         <p class="section-eyebrow mb-6">Otros estilos</p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { slug: 'romantico', title: 'Romántico', desc: 'Emoción, luz suave y paletas cálidas' },
-            { slug: 'editorial', title: 'Editorial', desc: 'Composición de moda, estética revista' },
-            { slug: 'clasico',   title: 'Clásico',   desc: 'Elegancia atemporal y posados perfectos' },
+            { slug: 'romantico',    title: 'Romántico',    desc: 'Emoción, luz suave y paletas cálidas' },
+            { slug: 'editorial',    title: 'Editorial',    desc: 'Composición de moda, estética revista' },
+            { slug: 'mediterraneo', title: 'Mediterráneo', desc: 'Luz de costa, tierra y azules' },
+            { slug: 'clasico',      title: 'Clásico',      desc: 'Elegancia atemporal y posados perfectos' },
           ].map(s => (
             <a href={`/estilo/${s.slug}/`} class="group bg-white border border-[#E8DDD3] rounded-sm p-5 hover:shadow-md transition-shadow">
               <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] group-hover:text-[#8B6A3A] transition-colors">{s.title}</h3>

@@ -8,9 +8,9 @@ imagenAlt: "Boda en Tenerife fotografiada con el Teide al fondo"
 featured: false
 ---
 
-Tenerife es el destino de bodas de destino más activo de España fuera de la península. Cada año miles de parejas, la mayoría internacionales, se casan en la isla atraídas por su clima todo el año, su paisaje extraordinario y la variedad de espacios que van desde el desierto del sur hasta los bosques de laurisilva del norte.
+Tenerife tiene niebla en el norte y sol constante en el sur. Tiene un volcán a 3.718 metros y playas volcánicas a nivel del mar. Dependiendo de dónde se celebre la boda, el fotógrafo se enfrenta a condiciones completamente distintas: la luz de los bosques de laurisilva del norte no tiene nada que ver con el desierto dorado de Adeje.
 
-Ese volumen de bodas de destino hace que el mercado fotográfico de Tenerife sea muy activo y también muy competitivo.
+Ese es el primer filtro cuando buscáis fotógrafo en Tenerife: que conozca la zona específica donde vais a casaros, no solo que haya hecho bodas en la isla en algún punto de su carrera.
 
 ## Lo que hace único fotografiar una boda en Tenerife
 

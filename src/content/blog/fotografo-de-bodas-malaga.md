@@ -8,9 +8,9 @@ imagenAlt: "Boda en la Costa del Sol fotografiada al atardecer"
 featured: false
 ---
 
-Málaga y la Costa del Sol son uno de los destinos de boda más solicitados de España, y también uno de los más fotografiados del mundo. El Mediterráneo como fondo, la luz cálida de Andalucía y los espacios que van desde cortijos tradicionales hasta villas de diseño moderno dan opciones para casi cualquier tipo de boda.
+En Marbella, en temporada alta, hay semanas en que se celebran cuatro bodas de alto nivel al mismo tiempo. El mercado fotográfico de la Costa del Sol ha crecido tanto que ya tiene sus propias reglas: fotógrafos locales con agenda llena hasta 2027, estudios internacionales que vuelan desde Londres o Berlín, y también mucho fotógrafo oportunista que trabaja la zona sin la experiencia necesaria.
 
-Pero esa popularidad tiene una cara complicada: hay muchísima oferta fotográfica, de calidad muy variable, y es fácil equivocarse si no sabéis qué mirar.
+Saber distinguirlos importa. Porque la oferta es enorme y el precio no siempre dice lo que debería.
 
 ## La luz de la Costa del Sol y cómo afecta a la fotografía
 

@@ -8,15 +8,17 @@ imagenAlt: "Boda en Madrid fotografiada en estilo fine art — Plasmalia"
 featured: false
 ---
 
-Madrid concentra la mayor oferta de fotógrafos de bodas de España. Eso tiene una cara buena y una cara complicada: hay talento extraordinario, pero también mucho ruido. Esta guía está escrita para que podáis navegar ese mercado con criterio propio y contratar con seguridad.
+Hay más de cien fotógrafos de bodas activos en Madrid. Que exista tanta oferta tiene una ventaja y un problema: hay talento extraordinario, pero encontrarlo requiere más trabajo que en otras ciudades donde el mercado está más acotado.
 
-## Por qué Madrid es diferente al resto de España
+El truco que más ayuda en Madrid es este: antes de mirar precio o Instagram, pedid ver una boda completa. No los mejores quince momentos del portfolio, sino una galería entera de principio a fin. Eso os dice más que cualquier número de seguidores.
 
-En la mayoría de ciudades españolas hay entre cinco y quince fotógrafos de bodas con nivel real. En Madrid hay más de cien. Eso cambia el proceso de búsqueda de manera significativa.
+## Cien fotógrafos: cómo orientarse
 
-La primera consecuencia es que el precio varía muchísimo: desde los 800€ de fotógrafos en sus primeros años hasta los 5.000€ o más de estudios con trayectoria internacional. La segunda es que el marketing puede engañar fácilmente. Un fotógrafo con 50.000 seguidores en Instagram no es necesariamente mejor que uno con 3.000. En Madrid, más que en ningún otro sitio, hay que mirar el trabajo completo, no los highlights.
+En ciudades como Bilbao o Santander hay quizá quince fotógrafos de bodas con nivel real. En Madrid son más de cien. Eso cambia el proceso de búsqueda de manera fundamental.
 
-La tercera diferencia es logística. Las bodas en Madrid suelen tener más invitados, espacios más grandes y jornadas más largas que la media nacional. Aseguraos de que vuestro fotógrafo tiene experiencia específica en ese formato.
+El marketing puede engañar con facilidad. Un fotógrafo con 50.000 seguidores en Instagram no es necesariamente mejor que uno con 3.000. Y el precio tampoco lo dice todo: hay fotógrafos que cobran 2.500€ y tienen trabajo de primer nivel, y estudios que cobran 4.500€ con un portfolio que no justifica ese precio.
+
+Las bodas en Madrid además suelen ser más grandes que la media: más invitados, espacios más amplios, jornadas de doce horas o más. Aseguraos de que vuestro fotógrafo tiene experiencia específica en ese formato, no solo en bodas íntimas de cincuenta personas.
 
 ## Cuánto cuesta un fotógrafo de bodas en Madrid
 

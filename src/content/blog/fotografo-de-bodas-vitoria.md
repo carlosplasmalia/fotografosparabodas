@@ -38,4 +38,4 @@ Por encima de 3.800€ hay fotógrafos con reconocimiento nacional que trabajan 
 
 ## Fotógrafos verificados en Vitoria
 
-Tenemos una selección de [fotógrafos de bodas en Vitoria](/vitoria/) con experiencia en el casco medieval y en los espacios naturales y patrimoniales de Álava. Podéis ver su trabajo y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Vitoria](/#contacto) con experiencia en el casco medieval y en los espacios naturales y patrimoniales de Álava. Podéis ver su trabajo y contactarlos directamente.

@@ -42,4 +42,4 @@ Por encima de 2.600€ hay fotógrafos valencianos con proyección regional que 
 
 ## Fotógrafos verificados en Castellón
 
-Tenemos una selección de [fotógrafos de bodas en Castellón](/castellon/) con experiencia en los distintos espacios de la provincia. Podéis ver su trabajo y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Castellón](/#contacto) con experiencia en los distintos espacios de la provincia. Podéis ver su trabajo y contactarlos directamente.

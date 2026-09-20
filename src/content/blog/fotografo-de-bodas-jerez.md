@@ -44,4 +44,4 @@ Por encima de 2.800€ hay fotógrafos sevillanos o madrileños que trabajan Jer
 
 ## Fotógrafos verificados en Jerez
 
-Tenemos una selección de [fotógrafos de bodas en Jerez](/jerez/) con experiencia en los espacios más singulares de la ciudad y la provincia. Podéis ver su portfolio y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Jerez](/#contacto) con experiencia en los espacios más singulares de la ciudad y la provincia. Podéis ver su portfolio y contactarlos directamente.

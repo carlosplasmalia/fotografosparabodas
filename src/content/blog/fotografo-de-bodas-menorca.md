@@ -42,4 +42,4 @@ Por encima de 5.500€ hay fotógrafos de alto perfil europeo que eligen Menorca
 
 ## Fotógrafos verificados en Menorca
 
-Tenemos una selección de [fotógrafos de bodas en Menorca](/menorca/) con experiencia en los espacios únicos de la isla. Podéis ver su portfolio y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Menorca](/#contacto) con experiencia en los espacios únicos de la isla. Podéis ver su portfolio y contactarlos directamente.

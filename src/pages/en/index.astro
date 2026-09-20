@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeaderEn from '../../components/SiteHeaderEn.astro';
+import SiteFooterEn from '../../components/SiteFooterEn.astro';
+import { site } from '../../config/site';
+
+const destinations = [
+  { name: 'Málaga & Costa del Sol',  slug: 'malaga',    blurb: 'Beach ceremonies, cliffside villas, olive groves inland.' },
+  { name: 'Mallorca',                slug: 'mallorca',  blurb: 'Fincas, coastal cliffs, and northern serra light.' },
+  { name: 'Barcelona & Costa Brava', slug: 'barcelona', blurb: 'City weddings, coastal masías, Catalan seafood.' },
+];
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": ["WebSite", "Organization"],
+  "@id": "https://fotografosparabodas.es/en/#organization",
+  "name": "Wedding Photographers Spain",
+  "url": "https://fotografosparabodas.es/en/",
+  "description": "Handpicked wedding photographers for destination weddings in Spain.",
+  "areaServed": { "@type": "Country", "name": "Spain" },
+  "knowsAbout": ["Destination wedding photography", "Wedding reportage", "Spain wedding photographers"],
+};
+
+const alternates = [
+  { hreflang: 'es', href: 'https://fotografosparabodas.es/' },
+  { hreflang: 'en', href: 'https://fotografosparabodas.es/en/' },
+  { hreflang: 'x-default', href: 'https://fotografosparabodas.es/en/' },
+];
+---
+
+<BaseLayout
+  title="Wedding Photographers in Spain · Handpicked, No Directories · 2026"
+  description="A small, curated list of the best wedding photographers in Spain. For couples flying in from the UK, US, Germany, France or Italy to get married in Málaga, Mallorca, Barcelona, Granada or the islands."
+  canonical="https://fotografosparabodas.es/en/"
+  schema={schemaOrg}
+  locale="en"
+  alternates={alternates}
+  ogImage="/images/og-home.jpg"
+>
+  <SiteHeaderEn transparent={true} />
+  <main>
+
+    <!-- Hero -->
+    <section class="relative min-h-[85vh] flex items-center justify-center bg-[#1C1814] overflow-hidden">
+      <img
+        src="/images/hero-boda-800.webp"
+        srcset="/images/hero-boda-800.webp 800w, /images/hero-boda.webp 1440w"
+        sizes="100vw"
+        alt="Destination wedding in Spain"
+        class="absolute inset-0 w-full h-full object-cover opacity-45"
+      />
+      <div class="relative z-10 max-w-3xl mx-auto px-6 text-center py-32">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#C4A5A0] mb-6">
+          Destination weddings in Spain
+        </p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-semibold text-white leading-tight mb-6">
+          The photographers we would<br/>actually book ourselves
+        </h1>
+        <p class="font-['Lato'] text-lg text-[#E8DDD3] max-w-xl mx-auto mb-10 leading-relaxed">
+          A short list of Spanish wedding photographers with real awards, a real backlog, and reportages you can look at end to end without wincing. If you are flying in from London, Berlin, New York or Paris to get married here, this is the page you wanted to find.
+        </p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="#destinations" class="btn-gold text-sm py-3 px-6">See destinations</a>
+          <a href="#contact" class="btn-outline text-sm py-3 px-6" style="color:white;border-color:rgba(255,255,255,0.4)">Ask us a question</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-2xl mx-auto px-6">
+        <article class="prose-en">
+          <p>
+            Most wedding photography directories in Spain are pay to play. You fill in a form, someone forwards it to fifteen photographers, and you spend the next week on the phone with people who barely speak English and quote whatever the day looks like. That is not what this is.
+          </p>
+          <p>
+            We keep the list short on purpose. Every photographer here has been shooting weddings in Spain for at least eight years, has award recognition from Fearless, MyWed, WPJA or ISPWP, and knows what to do when the light goes hard at 14:00 in August. They speak English. They send you a real quote in a real PDF. And they will tell you honestly whether your date is free before we introduce anyone.
+          </p>
+          <p>
+            Below are the destinations we cover. If yours is not listed, it is because we have not found the right photographer for it yet, not because we would not.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-eyebrow mb-4">Destinations</p>
+          <h2 class="section-title mb-4">Where we shoot<br/>and what to expect there</h2>
+          <span class="gold-divider"></span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {destinations.map(d => (
+            <a
+              href={`/en/${d.slug}/`}
+              class="group bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-6 hover:shadow-md transition-shadow"
+            >
+              <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814] group-hover:text-[#8B6A3A] transition-colors">
+                {d.name}
+              </h3>
+              <p class="font-['Lato'] text-sm text-[#6B5E58] mt-3 leading-relaxed">
+                {d.blurb}
+              </p>
+              <span class="inline-block mt-4 font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#8B6A3A]">
+                See photographers →
+              </span>
+            </a>
+          ))}
+        </div>
+        <p class="text-center mt-10 font-['Lato'] text-sm text-[#6B5E58]">
+          Getting married somewhere else in Spain? <a href="#contact" class="text-[#8B6A3A] underline">Tell us where</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- What actually happens -->
+    <section class="py-20 bg-[#F2E8D5]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">How this works</p>
+        <h2 class="section-title mb-8">What actually happens when you write to us</h2>
+        <article class="prose-en">
+          <p>
+            You send us your date, your destination, and whatever you have decided about the venue. We check who is free that day. Usually two or three photographers, sometimes only one, occasionally none, because Spanish wedding photographers book out twelve to fourteen months ahead and we would rather tell you than pretend.
+          </p>
+          <p>
+            You get an email from us with the reportages, the awards, the day rate, and what is included. No forms, no login, no upsells. If you want to book someone, you deal with them directly from then on. If our shortlist is not what you wanted, we say so and we do not push it.
+          </p>
+          <p>
+            We do not charge couples for the shortlist. Photographers pay us a flat referral fee if you actually book them, which is why we have every incentive to send you the right person and not the one paying most this month.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Style pillar -->
+    <section class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-4">Style pillar</p>
+        <h2 class="section-title mb-4">Mediterranean wedding photography</h2>
+        <span class="gold-divider"></span>
+        <p class="font-['Lato'] text-[#6B5E58] mt-6 leading-relaxed">
+          If you are getting married on a Spanish coast or on an island, the photographers you want understand a specific palette, coastal light, and outdoor ceremony logistics. We wrote a piece on what mediterranean wedding photography actually is, and how to spot the difference between someone who lives in it and someone who is copying the look from Pinterest.
+        </p>
+        <a href="/en/style/mediterranean/" class="btn-outline text-sm py-2.5 px-5 mt-8 inline-block">Read the piece →</a>
+      </div>
+    </section>
+
+    <!-- Guide callout -->
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-3xl mx-auto px-6 bg-white border border-[#E8DDD3] rounded-sm p-8 md:p-10">
+        <p class="section-eyebrow mb-4">Long read</p>
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-semibold text-[#1C1814] mb-4">
+          Getting married in Spain from abroad, the honest guide
+        </h2>
+        <p class="font-['Lato'] text-sm text-[#6B5E58] leading-relaxed mb-6">
+          The paperwork, the timelines, the venues that actually work in August, and the things nobody tells you about shooting a Spanish wedding on the coast. Written for couples flying in from the UK, US, Germany, France or Italy.
+        </p>
+        <a href="/en/blog/destination-wedding-spain-guide/" class="btn-gold text-sm py-2.5 px-5 inline-block">Read the guide</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-[#1C1814]">
+      <div class="max-w-2xl mx-auto px-6 text-center">
+        <p class="font-['Lato'] text-xs font-bold tracking-widest uppercase text-[#C4A5A0] mb-4">
+          Enquire
+        </p>
+        <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-white mb-6">
+          Tell us your date and destination
+        </h2>
+        <p class="font-['Lato'] text-[#9A8880] mb-10 leading-relaxed">
+          Reply usually the same day, always within 48 hours. English or Spanish, whichever you prefer.
+        </p>
+        <a
+          href={`https://wa.me/${site.whatsapp}?text=Hi%2C%20we%20are%20getting%20married%20in%20Spain%20and%20need%20a%20photographer.%20Our%20date%20is%20...`}
+          target="_blank" rel="noopener noreferrer"
+          class="btn-gold text-base py-3 px-8 inline-block"
+        >
+          Write on WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <SiteFooterEn />
+</BaseLayout>
+
+<style is:global>
+  .prose-en p { font-family: 'Lato', sans-serif; font-size: 0.9375rem; color: #4A3E38; line-height: 1.85; margin-bottom: 1.25rem; }
+  .prose-en strong { color: #1C1814; font-weight: 700; }
+  .prose-en a { color: #8B6A3A; text-decoration: underline; text-underline-offset: 3px; }
+  .prose-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.875rem; font-weight: 600; color: #1C1814; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+</style>

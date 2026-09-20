@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import { site } from '../config/site';
 
+interface AlternateLink { hreflang: string; href: string; }
+
 interface Props {
   title?: string;
   description?: string;
@@ -9,6 +11,8 @@ interface Props {
   noindex?: boolean;
   ogImage?: string;
   schema?: Record<string, unknown>;
+  locale?: 'es' | 'en';
+  alternates?: AlternateLink[];
 }
 
 const {
@@ -18,7 +22,11 @@ const {
   noindex = false,
   ogImage = '/images/og-home.jpg',
   schema,
+  locale = 'es',
+  alternates,
 } = Astro.props;
+
+const ogLocale = locale === 'en' ? 'en_US' : 'es_ES';
 
 const schemaOrg = schema ?? {
   "@context": "https://schema.org",
@@ -35,7 +43,7 @@ const schemaOrg = schema ?? {
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,6 +53,10 @@ const schemaOrg = schema ?? {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+
+    {alternates && alternates.map(a => (
+      <link rel="alternate" hreflang={a.hreflang} href={a.href} />
+    ))}
 
     <!-- Fonts: autoalojadas, preload del subset crítico -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-normal.woff2" crossorigin />
@@ -60,7 +72,7 @@ const schemaOrg = schema ?? {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content={site.name} />
-    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:image" content={`https://${site.domain}${ogImage}`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />

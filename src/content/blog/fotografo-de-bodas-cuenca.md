@@ -50,4 +50,4 @@ Por encima de 2.400€ hay fotógrafos de Madrid que trabajan Cuenca como destin
 
 ## Fotógrafos verificados en Cuenca
 
-Tenemos una selección de [fotógrafos de bodas en Cuenca](/cuenca/) con experiencia en los espacios únicos de la ciudad. Podéis ver su portfolio y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Cuenca](/#contacto) con experiencia en los espacios únicos de la ciudad. Podéis ver su portfolio y contactarlos directamente.

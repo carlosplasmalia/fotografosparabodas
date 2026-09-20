@@ -8,9 +8,9 @@ imagenAlt: "Boda en Toledo fotografiada en el casco histórico con la catedral a
 featured: false
 ---
 
-Toledo es la ciudad más fotogénica de Castilla-La Mancha y una de las más reconocibles de España. El conjunto histórico declarado Patrimonio de la Humanidad por la UNESCO, la catedral gótica, el Alcázar, las sinagogas medievales y la vista del Tajo desde las laderas opuestas componen una escenografía sin equivalente en la península.
+Toledo está a 70 kilómetros de Madrid. Eso es suficiente para que muchas parejas madrileñas elijan Toledo como destino de boda sin tener que volar ni pedir a todos los invitados que reserven hotel para varios días.
 
-Por esa razón, Toledo atrae bodas de destino de Madrid y sus alrededores con una frecuencia que muchos no esperan. La distancia desde la capital (menos de una hora) y la concentración de espacios únicos en pocos kilómetros cuadrados la convierten en un mercado fotográfico más activo de lo que su tamaño haría suponer.
+El resultado es un mercado fotográfico más activo de lo que el tamaño de la ciudad haría suponer. Y con una particularidad: los fotógrafos de Toledo conocen los permisos, los horarios y los accesos del casco histórico con un detalle que un fotógrafo de Madrid que viaja para la ocasión no puede tener. La catedral, el Alcázar y las sinagogas tienen reglas propias y ventanas de acceso concretas. Conocerlas de antemano marca la diferencia.
 
 ## El casco histórico: un laberinto con luz propia
 

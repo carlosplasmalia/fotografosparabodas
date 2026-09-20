@@ -16,8 +16,8 @@ const schemaOrg = {
 ---
 
 <BaseLayout
-  title="Fotografía Editorial de Bodas — Estética Vogue para vuestro día · 2026"
-  description="El estilo editorial en fotografía de bodas: dirección creativa, composición de moda y resultado de revista. Qué implica, qué obtenéis y cómo elegir al fotógrafo."
+  title="Fotógrafo de Bodas Editorial · Fotografía de Boda con Estilo Editorial · 2026"
+  description="Fotógrafo de bodas editorial en España: dirección creativa, composición de moda y resultado de revista. Fotografía de boda con estilo editorial, para parejas que buscan una estética Vogue."
   canonical={`https://${site.domain}/estilo/editorial/`}
   schema={schemaOrg}
 >
@@ -119,11 +119,12 @@ const schemaOrg = {
 
       <div class="mt-14 pt-10 border-t border-[#E8DDD3]">
         <p class="section-eyebrow mb-6">Otros estilos</p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { slug: 'documental', title: 'Documental', desc: 'La boda tal como fue, sin poses' },
-            { slug: 'romantico',  title: 'Romántico',  desc: 'Emoción, luz suave y paletas cálidas' },
-            { slug: 'clasico',    title: 'Clásico',    desc: 'Elegancia atemporal y posados perfectos' },
+            { slug: 'documental',   title: 'Documental',   desc: 'La boda tal como fue, sin poses' },
+            { slug: 'romantico',    title: 'Romántico',    desc: 'Emoción, luz suave y paletas cálidas' },
+            { slug: 'mediterraneo', title: 'Mediterráneo', desc: 'Luz de costa, tierra y azules' },
+            { slug: 'clasico',      title: 'Clásico',      desc: 'Elegancia atemporal y posados perfectos' },
           ].map(s => (
             <a href={`/estilo/${s.slug}/`} class="group bg-white border border-[#E8DDD3] rounded-sm p-5 hover:shadow-md transition-shadow">
               <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1C1814] group-hover:text-[#8B6A3A] transition-colors">{s.title}</h3>

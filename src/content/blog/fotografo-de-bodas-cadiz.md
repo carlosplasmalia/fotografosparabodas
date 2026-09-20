@@ -48,4 +48,4 @@ Por encima de 2.800€ hay fotógrafos sevillanos o madrileños que trabajan Cá
 
 ## Fotógrafos verificados en Cádiz
 
-Tenemos una selección de [fotógrafos de bodas en Cádiz](/cadiz/) con trayectoria verificada en la ciudad y en la provincia. Podéis ver su portfolio y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Cádiz](/#contacto) con trayectoria verificada en la ciudad y en la provincia. Podéis ver su portfolio y contactarlos directamente.

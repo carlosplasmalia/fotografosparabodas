@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeaderEn from '../../components/SiteHeaderEn.astro';
+import SiteFooterEn from '../../components/SiteFooterEn.astro';
+import { site } from '../../config/site';
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Wedding photographers in Mallorca and the Balearics",
+  "description": "Editorial fine art wedding photographer covering Mallorca and the Balearic Islands, specialised in destination weddings.",
+  "url": "https://fotografosparabodas.es/en/mallorca/",
+  "numberOfItems": 1,
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": "Sandra Mañas",
+      "areaServed": ["Mallorca", "Balearic Islands"],
+      "url": "https://sandramanas.com",
+      "award": ["ISPWP Member Spotlight", "Work published in Tatler and Vogue"]
+    }
+  }]
+};
+
+const alternates = [
+  { hreflang: 'es', href: 'https://fotografosparabodas.es/mallorca/' },
+  { hreflang: 'en', href: 'https://fotografosparabodas.es/en/mallorca/' },
+  { hreflang: 'x-default', href: 'https://fotografosparabodas.es/en/mallorca/' },
+];
+---
+
+<BaseLayout
+  title="Wedding Photographer Mallorca · Sandra Mañas · Destination Fine Art · 2026"
+  description="Editorial fine art wedding photographer covering Mallorca and the Balearics. ISPWP Spotlight, work in Tatler and Vogue. English-speaking, direct booking, destination weddings."
+  canonical="https://fotografosparabodas.es/en/mallorca/"
+  schema={schemaOrg}
+  locale="en"
+  alternates={alternates}
+>
+  <SiteHeaderEn />
+  <main class="pt-16 bg-[#FAF7F2]">
+
+    <section class="bg-[#1C1814] py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <nav class="flex items-center justify-center gap-2 font-['Lato'] text-xs text-[#6B5E58] mb-6">
+          <a href="/en/" class="hover:text-[#8B6A3A] transition-colors">Home</a>
+          <span>›</span>
+          <span class="text-[#8B6A3A]">Mallorca</span>
+        </nav>
+        <p class="section-eyebrow text-[#8B6A3A] mb-4">Destination weddings in Spain</p>
+        <h1 class="font-['Cormorant_Garamond'] text-5xl font-semibold text-white leading-tight mb-6">
+          Wedding photographer<br/>Mallorca & the Balearics
+        </h1>
+        <p class="font-['Lato'] text-[#9A8880] text-lg max-w-xl mx-auto leading-relaxed">
+          Editorial fine art for the couples who chose Mallorca because it looks the way it does.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 bg-[#FAF7F2]">
+      <div class="max-w-2xl mx-auto px-6">
+        <article class="prose-en">
+          <p>
+            Half of the weddings in Mallorca every summer are international. British, German, Swiss, French and Nordic couples fly in with a planner, a florist, and often a hair and makeup team from home. The photographer, though, has to be local. It is one of the few vendors who cannot be flown in without paying a real premium, and it is the vendor whose work you live with forever.
+          </p>
+          <p>
+            Sandra Mañas is our photographer for Mallorca. Her portfolio is the one couples show us when they say, we want something like this. It usually is.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white border-y border-[#E8DDD3]">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="section-eyebrow mb-3">Featured photographer</p>
+        <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#1C1814] mb-2">Sandra Mañas</h2>
+        <p class="font-['Lato'] text-sm text-[#8B6A3A] font-bold tracking-wide uppercase mb-6">
+          Palma · Mallorca · Balearic Islands
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-5">
+            <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] mb-2">Specialty</p>
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">Destination weddings</p>
+          </div>
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-5">
+            <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] mb-2">Style</p>
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">Editorial fine art</p>
+          </div>
+          <div class="bg-[#FAF7F2] border border-[#E8DDD3] rounded-sm p-5">
+            <p class="font-['Lato'] text-[10px] font-bold tracking-widest uppercase text-[#8B6A3A] mb-2">Language</p>
+            <p class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1C1814]">Spanish & English</p>
+          </div>
+        </div>
+
+        <article class="prose-en">
+          <p>
+            Sandra shoots editorial fine art, which in her hands means light, texture, restraint. Her work has been highlighted by ISPWP, the international wedding photojournalism association, and her images have appeared in publications like Tatler and Vogue, according to her own website. That is unusual for a Balearic photographer.
+          </p>
+          <p>
+            She covers the whole island. Fincas in the Tramuntana, the coastal calas, the possessions in the Pla de Mallorca. She has shot weddings in Menorca and Ibiza too. She speaks Spanish and English at a level that lets her run the day directly with international couples, which matters more than it should have to be said.
+          </p>
+          <p>
+            Fees for Mallorca destination weddings start at a level that reflects the market. Sandra will send you her actual price sheet if you ask. No packages hidden until you enquire.
+          </p>
+        </article>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hi%2C%20we%20would%20like%20to%20check%20Sandra%20Ma%C3%B1as%27s%20availability%20for%20our%20wedding%20in%20Mallorca.%20Our%20date%20is%20...`}
+            target="_blank" rel="noopener noreferrer"
+            class="btn-gold text-sm py-3 px-6"
+          >
+            Check her availability
+          </a>
+          <a href="https://sandramanas.com" target="_blank" rel="noopener noreferrer" class="btn-outline text-sm py-3 px-5">
+            See her portfolio →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#FAF7F2]">
+      <div class="max-w-2xl mx-auto px-6">
+        <p class="section-eyebrow mb-4">What to know</p>
+        <h2 class="section-title mb-8">Getting married in Mallorca,<br/>the parts nobody puts on the website</h2>
+        <article class="prose-en">
+          <h3>The season</h3>
+          <p>
+            Peak season runs May to early October. July and August are hottest and busiest. Photographers on the island book fifteen to eighteen months out for June and September. If your date is 2027, start now. If your date is next month, tell us and we will be honest about who is left.
+          </p>
+
+          <h3>The venues that work</h3>
+          <p>
+            The northern fincas in the Serra de Tramuntana have the best light in the afternoon. The southern possessions have flatter terrain and more space for large marquees. Cala Bassa and the east coast calas are gorgeous for smaller intimate weddings but access can be tricky for older guests. Sandra has photographed in most of them and will tell you what to expect from each.
+          </p>
+
+          <h3>The paperwork for foreign couples</h3>
+          <p>
+            Legal weddings in Spain for foreign residents require paperwork that takes months. Most international couples marry legally at home and do a symbolic ceremony in Mallorca. Ask your planner. If you do not have a planner, ask us and we will introduce you to someone who does this all year.
+          </p>
+
+          <h3>Flying kit vs local kit</h3>
+          <p>
+            Flying a photographer from London or Berlin sounds cheaper on paper. In practice, once you add flights, two nights of accommodation and the equipment shipping, you are usually not saving much. And you lose the local knowledge, which matters when the ceremony runs late and someone has to figure out where the flash rebounds off a limestone finca wall.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="section-eyebrow mb-6">Other destinations</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/en/malaga/" class="btn-outline text-sm px-6 py-2.5">Málaga & Costa del Sol</a>
+          <a href="/en/barcelona/" class="btn-outline text-sm px-6 py-2.5">Barcelona & Costa Brava</a>
+        </div>
+        <p class="text-center mt-8 font-['Lato'] text-sm text-[#6B5E58]">
+          Read next, our piece on <a href="/en/style/mediterranean/" class="text-[#8B6A3A] underline">mediterranean wedding photography</a> and the <a href="/en/blog/destination-wedding-spain-guide/" class="text-[#8B6A3A] underline">destination wedding guide for Spain</a>.
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <SiteFooterEn />
+</BaseLayout>
+
+<style is:global>
+  .prose-en h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; font-weight: 600; color: #1C1814; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.2; }
+  .prose-en p { font-family: 'Lato', sans-serif; font-size: 0.9375rem; color: #4A3E38; line-height: 1.85; margin-bottom: 1.25rem; }
+  .prose-en strong { color: #1C1814; font-weight: 700; }
+  .prose-en a { color: #8B6A3A; text-decoration: underline; text-underline-offset: 3px; }
+</style>

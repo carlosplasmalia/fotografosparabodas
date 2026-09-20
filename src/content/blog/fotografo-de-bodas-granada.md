@@ -8,9 +8,9 @@ imagenAlt: "Boda en Granada con la Alhambra al fondo — fotografía de bodas"
 featured: false
 ---
 
-Granada tiene uno de los fondos fotográficos más reconocibles del mundo: la Alhambra. Pero las bodas en Granada van mucho más allá de ese escenario único. Los cortijos de la Alpujarra, las cuevas del Sacromonte, el Albaicín y las fincas de la Vega granadina ofrecen una variedad de espacios que hace de Granada un destino de boda con enorme riqueza visual.
+Para hacer fotos en la Alhambra necesitáis permiso expreso. El trámite no se gestiona el día de la boda: hay que pedirlo con meses de antelación, en horarios limitados y con cuotas por zona que se agotan. Un fotógrafo que trabaja habitualmente en Granada ya sabe esto. Uno que no lo sabe puede prometeros la Alhambra y no poder cumplir.
 
-Si buscáis fotógrafo de bodas en Granada, esta guía os ayuda a encontrar al que mejor encaja con vuestro espacio y vuestro estilo.
+Ese detalle práctico resume bien lo que diferencia a los fotógrafos locales de los que trabajan Granada de manera esporádica. El conocimiento del terreno, en esta ciudad, vale tanto como el talento.
 
 ## La Alhambra: el espacio más solicitado y más complicado
 

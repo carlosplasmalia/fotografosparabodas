@@ -52,4 +52,4 @@ Los meses de mayo a octubre concentran prácticamente toda la temporada de bodas
 
 ## Fotógrafos verificados en Ibiza
 
-Tenemos una selección de [fotógrafos de bodas en Ibiza](/ibiza/) con experiencia en las fincas y espacios más solicitados de la isla y en bodas de destino internacionales. Podéis ver su trabajo y contactarlos directamente.
+Tenemos una selección de [fotógrafos de bodas en Ibiza](/#contacto) con experiencia en las fincas y espacios más solicitados de la isla y en bodas de destino internacionales. Podéis ver su trabajo y contactarlos directamente.
